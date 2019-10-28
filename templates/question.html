@@ -1,0 +1,67 @@
+{% include 'header.html' %}
+
+<div>
+{{ '# ' + question['filename'] }}<br><br>
+<!--
+{% if question['question_markdown'] %}
+    {{ question['question_markdown']|markdown }}
+{% else %}
+    {% set qlines = question['question'].split('\n') %}
+    {% for qline in qlines %}
+    {{ qline | safe}} <br>
+    {% endfor %}
+{% endif %}
+-->
+{% if '<markdown>' in question['question'] %}
+    {{ question['question_markdown']|markdown }}
+{% else %}
+    {% set qlines = question['question'].split('\n') %}
+    {% for qline in qlines %}
+    {{ qline | safe}} <br>
+    {% endfor %}
+{% endif %}
+</div>
+<br>
+<div>
+<form method="POST" action="{{ action_url }}">
+{% for choice in question['choices'] %}
+
+    {% if '<markdown>' in choice %}
+
+        {% if selected and selected == choice %}
+        <input type="radio" name="answer" value="{{ choice }}" checked>
+        {{ choice|markdown }} <br>
+        {% else %}
+        <input type="radio" name="answer" value="{{ choice }}">
+        {{ choice|markdown }} <br>
+        {% endif %}
+
+    {% else %}
+
+        {% if selected and selected == choice %}
+        <input type="radio" name="answer" value="{{ choice }}" checked>{{ choice }} <br>
+        {% else %}
+        <input type="radio" name="answer" value="{{ choice }}">{{ choice }} <br>
+        {% endif %}
+
+    {% endif %}
+
+{% endfor %}
+<br>
+{% if previous_question %}
+{{ form.lastq }}
+{% endif %}
+{% if next_question %}
+{{ form.nextq }}
+{% endif %}
+<br>
+<br>
+{{ question_number }} of {{ questions_total }}
+<br>
+{{ form.finished }}
+{{ form.csrf_token }}
+</form>
+</div>
+<br>
+
+{% include 'footer.html' %}

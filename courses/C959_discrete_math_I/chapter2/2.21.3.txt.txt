@@ -1,0 +1,22 @@
+Indicate whether the functions defined below are injective, surjective, neither, or both:
+
+1) h: Z → Z. h(x) = x - 4.
+
+neither injective nor surjective
+injective but not surjective
+surjective but not injective
+both injective and surjective x
+
+2) t: Z → Z. t(x) = 2x.
+
+neither injective nor surjective
+injective but not surjective x
+surjective but not injective
+both injective and surjective
+
+3) f: Z → Z. f(x) = [(x+1)/2]
+
+neither injective nor surjective
+injective but not surjective
+surjective but not injective x
+both injective and surjective

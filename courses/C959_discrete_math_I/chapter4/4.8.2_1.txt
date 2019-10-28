@@ -1,0 +1,22 @@
+<markdown>
+matrix A
+--------
+|||
+|---|---|
+|4|-1|
+|-7|2|
+
+matrix B
+--------
+|||
+|---|---|
+|2|1|
+|7|4|
+
+</markdown>
+
+
+1) A and B are inverse matrices
+
+True x
+False

@@ -1,0 +1,7 @@
+Use the laws of propositional logic to prove that each statement is a tautology.
+
+(a) (p ∧ q) → (p ∨ r)
+
+(b) p → (r → p)
+
+(c) ¬r ∨ (¬r → p)

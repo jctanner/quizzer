@@ -1,0 +1,23 @@
+Which expressions are in disjunctive normal form?
+
+1) xy + w
+
+True
+False
+
+3) x + y + z
+
+True x
+False
+
+4) xyw
+
+True x
+False
+
+5) (x+y)w
+
+True
+False x
+
+

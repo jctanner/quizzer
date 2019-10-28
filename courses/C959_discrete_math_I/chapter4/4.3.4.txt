@@ -1,0 +1,84 @@
+<markdown>
+matrix A
+--------
+||||
+|---|---|---|
+|0|-2|-5|
+|3|1|4|
+
+matrix B
+--------
+||||
+|---|---|---|
+|6|0|0|
+|0|-3|0|
+|0|0|-4|
+
+matrix C
+--------
+||||
+|---|---|---|
+|1|0|0|
+|0|1|0|
+|0|0|1|
+
+matrix D
+--------
+|||
+|---|---|
+|0|0|
+|0|0|
+|0|0|
+|0|0|
+
+</markdown>
+
+1) A is a diagonal matrix
+
+True
+False x
+
+2) A12 = 3?
+
+True
+False x
+
+3) A23 = 4 ?
+
+True x
+False
+
+4) B is a diagonal matrix
+
+True x
+False
+
+5) 0 is a diagonal entry of B
+
+True
+False x
+
+6) -3 is a diagonal entry of B
+
+True x
+False
+
+7) B is the identity matrix I3
+
+True
+False x
+
+8) C is a diagonal matrix
+
+True x
+False
+
+9) C is the idenity matrix I3
+
+True x
+False
+
+10) D is a zero matrix
+
+True x
+False

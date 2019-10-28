@@ -1,0 +1,27 @@
+p	q	p ⊕ q
+T	T	1?
+T	F	2?
+F	T	3?
+F	F	4?
+
+
+1) What is the truth value for the square labeled 1?
+
+T
+F x
+
+2) What is the truth value for the square labeled 2?
+
+T x
+F
+
+3) What is the truth value for the square labeled 3?
+
+T x
+F
+
+4) What is the truth value for the square labeled 4?
+
+T
+F x
+

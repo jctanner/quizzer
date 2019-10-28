@@ -1,0 +1,28 @@
+Refer to the undirected graph provided below:
+
+<image>7.8.2.PNG</image>
+
+1) Which of the following sequences of vertices is not a walk in the graph?
+
+a,b,e,f,e
+a,b,e,b,c
+a,b,c,e,g x
+
+2) What is the length of the walk: a,b,e,g,e,b
+
+3
+5 x
+6
+
+
+3) What is the length of the walk: a,e,a
+
+1
+2 x
+3
+
+4) Which of the following walks is a closed walk?
+
+a,b,e,f,e,b
+b,a,b,e,g,e,b x
+a,b,c,f

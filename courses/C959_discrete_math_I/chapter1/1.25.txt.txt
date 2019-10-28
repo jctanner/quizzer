@@ -1,0 +1,8 @@
+1) If the domain of a universal statement is small, it may be easiest to prove the statement by checking each element individually. A proof of this kind is called a proof by _____
+
+direct
+exhaustion x
+counterexample
+indirect/contradiction
+contrapositive
+cases

@@ -1,0 +1,10 @@
+(a) p ↔ q and (p → q) ∧ (q → p)
+
+equivalent x
+not equivalent
+
+(b) ¬(p ↔ q) and ¬p ↔ q
+
+equivalent x
+not equivalent 
+

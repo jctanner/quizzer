@@ -1,0 +1,12 @@
+If a person buys at least 400 cups of coffee in a year, then there is at least one day in which the person has bought at least two cups of coffee.
+
+Suppose that the person has bought less than two cups of coffee each day and has also bought at least 400 cups of coffee in the year. If the person buys less than two cups of coffee in a day, she has bought at most 1 cup of coffee each day. Since there are at most 366 days in a year, the total number of cups of coffee that the person could have bought is at most 366, which contradicts the assumption that the person has bought at least 400 cups of coffee in the year.
+
+1) What type of proof is this?
+
+direct
+exhaustion
+counterexample
+indirect/contradiction x
+contrapositive
+cases

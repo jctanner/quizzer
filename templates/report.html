@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+
+<div>
+<b>SCORE: {{ report.score }}%</b>
+<br>
+total questions: {{ report.total_questions }}
+<br>
+total answered: {{ report.total_answered }}
+<br>
+total correct: {{ report.total_correct }}
+<br>
+total incorrect: {{ report.total_incorrect }}
+</div>
+
+<div>
+{% if report.incorrect %}
+{% for question in report.incorrect %}
+---------------------------------------------------------------------<br>
+    <div>
+    {{ '# ' + report['questions'][question]['filename'] }}<br>
+    <b>QUESTION:</b> <br>
+    {% set qlines = report['questions'][question]['question'].split('\n') %}
+    {% for qline in qlines %}
+    {{ qline }}<br>
+    {% endfor %}
+    <br>
+    <b>ANSWER:</b><br>
+    {{ report['questions'][question]['answer'] }}<br>
+    <br>
+    </div>
+<br>
+<b>HINT:</b><br>
+{{ report['questions'][question][hint] }}<br>
+{% endfor %}
+{% endif %}
+</div>
+
+{% include 'footer.html' %}

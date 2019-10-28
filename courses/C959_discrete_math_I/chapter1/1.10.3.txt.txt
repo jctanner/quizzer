@@ -1,0 +1,19 @@
+(a) p → q and q → p
+
+equivalent
+not equivalent x
+
+(b) ¬p → q and ¬p ∨ q
+
+equivalent
+not equivalent x
+
+(c) (p → q) ∧ (r → q) and (p ∧ r) → q
+
+equivalent
+not equivalent x
+
+(d) p ∧ (p → q) and p ∨ q
+
+equivalent
+not equivalent x

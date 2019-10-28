@@ -1,0 +1,109 @@
+Which law is demonstrated by the example?
+
+CHOICES:
+Idempotent
+Associative
+Commutative
+Distributive
+Identity
+Domination
+Double negation
+Complement 
+De Morgan
+Absorption
+Conditional identities
+
+
+a) p ∨ p ≡ p
+
+Idempotent
+
+
+b) p ∧ p ≡ p
+
+Idempotent
+
+c) ( p ∨ q ) ∨ r ≡ p ∨ ( q ∨ r )
+
+Associative
+
+d) ( p ∧ q ) ∧ r ≡ p ∧ ( q ∧ r )
+
+Associative
+
+e) p ∨ q ≡ q ∨ p
+
+Commutative
+
+f) p ∧ q ≡ q ∧ p
+
+Commutative
+
+g) p ∨ ( q ∧ r ) ≡ ( p ∨ q ) ∧ ( p ∨ r )
+
+Distributive
+
+h) p ∧ ( q ∨ r ) ≡ ( p ∧ q ) ∨ ( p ∧ r )
+
+Distributive
+
+i) p ∨ F ≡ p
+
+Identity
+
+j) p ∧ T ≡ p
+
+Identity
+
+k) p ∧ F ≡ F
+
+Domination
+
+l) p ∨ T ≡ T
+
+Domination
+
+m) ¬¬p ≡ p
+
+Double negation
+
+n) p ∧ ¬p ≡ F
+
+Complement 
+
+o) ¬T ≡ F
+
+Complement 
+
+p) p ∨ ¬p ≡ T
+
+Complement 
+
+q) ¬F ≡ T
+
+Complement 
+
+r) ¬( p ∨ q ) ≡ ¬p ∧ ¬q
+
+De Morgan
+
+s) ¬( p ∧ q ) ≡ ¬p ∨ ¬q
+
+De Morgan
+
+t) p ∨ (p ∧ q) ≡ p
+
+Absorption
+
+u) p ∧ (p ∨ q) ≡ p
+
+Absorption
+
+v) p → q ≡ ¬p ∨ q
+
+Conditional identities
+
+w) p ↔ q ≡ ( p → q ) ∧ ( q → p )
+
+
+Conditional identities

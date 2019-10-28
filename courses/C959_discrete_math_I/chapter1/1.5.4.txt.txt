@@ -1,0 +1,3 @@
+(a) Give a logical expression with variables p, q, and r that is true if p and q are false and r is true and is otherwise false.
+
+¬p ∧ ¬q ∧ r

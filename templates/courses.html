@@ -1,0 +1,7 @@
+{% include 'header.html' %}
+
+{% for coursename in coursenames %}
+<a href="{{ '/course/' + coursename }}">{{ coursename }}</a><br>
+{% endfor %}
+
+{% include 'footer.html' %}

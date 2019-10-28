@@ -1,0 +1,42 @@
+Theorem: For every positive integer x, if x^3 is even, then x is even.
+
+According to contrapositive ...
+
+Let x be a positive integer. Assume A. We will prove that B.
+
+If x is odd, then it can be written as C for some integer k. Plug in the expression for x into x3 to get D. The expression for x3 can be written as E. Since (4k^3 + 6k^2 + 3k) is an integer, we can conclude that x^3 is odd.
+
+1) What is the correct expression for A?
+
+x^3 is even
+x^3 is odd
+x is even
+x is odd x
+
+2) What is the correct expression for B?
+
+x^3 is even
+x^3 is odd x
+x is even
+x is odd
+
+3) What is the correct expression for C?
+
+2k
+2k+1 x
+k^3
+
+HINT: An odd integer is equal to 2k+1 for some integer k.
+
+4) What is the correct expression for D?
+
+8k^3 + 12k^2 + 6k + 1
+8k^3
+
+
+5) What is the best expression for E? Both choices are equal to x^3, but one does a better job showing x^3 is odd.
+
+2(4k^3 + 6k^2 + 3k) + 1 x
+8k^3 12k^2 + 6k + 1
+
+HINT: The goal is to show that x^3 can be expressed as 2c+1 for some integer c.

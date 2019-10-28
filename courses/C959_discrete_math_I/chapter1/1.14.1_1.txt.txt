@@ -1,0 +1,45 @@
+Is the logical expression a proposition?
+
+P(x): x is even
+T(x,y): 2^x = y
+E(x,y,z): x^y = z
+
+a) P(3)
+
+True x
+False
+
+b) ¬P(3)
+
+True x
+False
+
+c) T(5, 32)
+
+True x
+False
+
+d) T(5, x)
+
+True
+False x
+
+e) E(6, 2, 36)
+
+True x
+False
+
+f) E(2, y, 7)
+
+True
+False x
+
+g) P(3) ∨ T(5, 32)
+
+True x
+False
+
+h) T(5, 16) → E(6, 3, 36)
+
+True x
+False

@@ -1,0 +1,7 @@
+if x is a real number and x < 1, then x^2 < x
+
+1) Which statement is a counterexample for the statement above?
+
+x = 2
+x = 1
+x = -1 x

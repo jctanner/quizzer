@@ -1,0 +1,19 @@
+(a) 5 is an odd number and 3 is a negative number.
+
+Since 3 is not a negative number, the proposition is false.
+
+(b) 5 is an odd number or 3 is a negative number.
+
+5 is an odd number, so the proposition is true.
+
+(c) 8 is an odd number or 4 is not an odd number.
+
+4 is not an odd number, so the proposition is true.
+
+(d) 6 is an even number and 7 is odd or negative.
+
+7 is odd and 6 is even, so the proposition is true.
+
+(e) It is not true that 7 is an odd number or 8 is an even number.
+
+It is true that 7 is odd or 8 is even, so the proposition is false.

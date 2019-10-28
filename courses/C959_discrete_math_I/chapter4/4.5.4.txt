@@ -1,0 +1,59 @@
+<matrix>-1,0;0,2;-3,4</matrix>
+multiplied by ...
+<matrix>1,0;3,-2</matrix>
+equals ...
+<matrix>a,b;c,d;e,f</matrix>
+
+1) What is a?
+
+-1 x
+0
+6
+-4
+9
+-8
+
+2) What is b?
+
+-1
+0 x
+6
+-4
+9
+-8
+
+3) what is c?
+
+-1
+0
+6 x
+-4
+9
+-8
+
+4) What is d?
+
+-1
+0
+6
+-4 x
+9
+-8
+
+5) What is e?
+
+-1
+0
+6
+-4
+9 x
+-8
+
+6) What if f?
+
+-1
+0
+6
+-4
+9
+-8 x

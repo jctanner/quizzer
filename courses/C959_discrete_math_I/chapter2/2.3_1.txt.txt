@@ -1,0 +1,65 @@
+Which number set is each of the following in?
+
+N
+Z
+Q
+R
+
+
+1) 0, 1, 2, …
+
+N x
+Z
+Q
+R
+
+2) …, -2, -1, 0, 1, 2, …
+
+N
+Z x
+Q
+R
+
+3) 0, 1/2, 5.23, -5/3
+
+N
+Z
+Q x
+R
+
+4) 0, 1/2, 5.23, -5/3, π
+
+N
+Z
+Q
+R x
+
+5) The set of natural numbers: All integers greater than or equal to 0.
+
+N x
+Z
+Q
+R
+
+
+6) The set of all integers.
+
+N
+Z x
+Q
+R
+
+
+7) The set of rational numbers: All real numbers that can be expressed as a/b, where a and b are integers and b ≠ 0.
+
+N
+Z
+Q x
+R
+
+8) The set of real numbers.
+
+N
+Z
+Q
+R x

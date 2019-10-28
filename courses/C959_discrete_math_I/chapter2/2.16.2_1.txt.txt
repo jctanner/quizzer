@@ -1,0 +1,25 @@
+Define the sets A, B, C, D, and E as follows:
+
+A = {x ∈ R: x < -2}
+B = {x ∈ R: x > 2}
+C = {x ∈ R: |x| < 2}
+D = {x ∈ R: |x| ≤ 2}
+E = {x ∈ R: x ≤ -2}
+
+Use the definitions for A, B, C, D, and E to answer the questions.
+
+
+1) Do the sets A, B, and C form a partition of R?
+
+True
+False x
+
+2) Do the sets A, B, and D form a partition of R?
+
+True x
+False
+
+3) Do the sets B, D, and E form a partition of R?
+
+True
+False x

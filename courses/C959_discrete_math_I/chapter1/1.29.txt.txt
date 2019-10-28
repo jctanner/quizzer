@@ -1,0 +1,9 @@
+1) A _____ proof starts by assuming that the theorem is false and then shows that some logical inconsistency arises as a result of this assumption.
+
+
+direct
+exhaustion
+counterexample
+indirect/contradiction x
+contrapositive
+cases

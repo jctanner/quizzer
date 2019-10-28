@@ -1,0 +1,77 @@
+(a)
+Have a nice day.
+
+question 
+command x
+proposition
+
+(b)
+The soup is cold.
+
+question 
+command
+proposition x
+
+
+(c)
+The patient has diabetes.
+
+question 
+command
+proposition x
+
+
+(d)
+The light is on.
+
+question 
+command
+proposition x
+
+
+(e)
+It's a beautiful day.
+
+question 
+command
+proposition x
+
+
+(f)
+Do you like my new shoes?
+
+question x
+command
+proposition
+
+
+(g)
+The sky is purple.
+
+question 
+command
+proposition x
+
+
+(h)
+2 + 3 = 6
+
+question 
+command
+proposition x
+
+
+(i)
+Every prime number is even.
+
+question 
+command
+proposition x
+
+
+(j)
+There is a number that is larger than 17.
+
+question 
+command
+proposition x

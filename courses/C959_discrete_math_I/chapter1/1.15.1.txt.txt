@@ -1,0 +1,27 @@
+For the following questions, the domain for the variable x is the set of all positive integers. The first three questions use predicates O and M which are defined as follows:
+
+O(x): x is odd
+M(x): x is an integer multiple of 4 (e.g., 4, 8, 12,...)
+
+Indicate whether each quantified statement is true or false:
+
+1) ∃x (O(x) ∧ M(x))
+
+True
+False x
+
+2) ∃x (¬O(x) ∧ ¬M(x))
+
+True x
+False
+
+3) ∀x (M(x) → ¬O(x))
+
+True x
+False
+
+4) ∀x ((x = 1) ∨ (x2 ≠ x))
+
+True x
+False
+

@@ -1,0 +1,38 @@
+Show whether each logical expression is a tautology, contradiction or neither.
+
+(a) (p ∨ q) ∨ (q → p)
+
+Contradiction
+Tautology x
+Neither
+
+(b) (p → q) ↔ (p ∧ ¬q)
+
+Contradiction x
+Tautology
+Neither
+
+(c) (p → q) ↔ p
+
+Contradiction
+Tautology
+Neither x
+
+
+(d) (p → q) ∨ p
+
+Contradiction
+Tautology x
+Neither
+
+(e) (¬p ∨ q) ↔ (p ∧ ¬q)
+
+Contradiction x
+Tautology
+Neither
+
+(f) (¬p ∨ q) ↔ (¬p ∧ q)
+
+Contradiction
+Tautology
+Neither x 

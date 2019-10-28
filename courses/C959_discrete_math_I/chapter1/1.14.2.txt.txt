@@ -1,0 +1,19 @@
+1) x is odd
+
+proposition
+predicate x
+
+2) 23 is a prime number
+
+proposition x
+predicate
+
+3) 1/(1+x) < 1
+
+proposition
+predicate x
+
+4) 16 = x^2
+
+proposition
+predicate x

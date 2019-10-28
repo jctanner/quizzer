@@ -1,0 +1,12 @@
+If a group of 9 kids have won a total of 100 trophies, then at least one of the 9 kids has won at least 12 trophies.
+
+Suppose that each kid has less than 12 trophies and the total number of trophies owned by all the kids is 100. If each kid has less than 12 trophies, the most trophies any kid can have is 11. If there are 9 kids, then the total number of trophies is at most 9·11 = 99, which contradicts the fact that the total number of trophies is 100.
+
+1) What type of proof is this?
+
+direct
+exhaustion
+counterexample
+indirect/contradiction x
+contrapositive
+cases

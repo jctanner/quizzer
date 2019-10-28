@@ -1,0 +1,27 @@
+1) A _____ is an open walk in which no edge occurs more than once.
+
+trail x
+circuit
+path
+cycle
+
+2) A _____ is a closed walk in which no edge occurs more than once.
+
+trail
+circuit x
+path
+cycle
+
+3) A _____ is a trail in which no vertex occurs more than once.
+
+trail
+circuit
+path x
+cycle
+
+4) A _____ is a circuit of length at least 1 in which no vertex occurs more than once, except the first and last vertices which are the same.
+
+trail
+circuit
+path
+cycle x

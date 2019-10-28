@@ -1,0 +1,27 @@
+1) The expression ∃x P(x) is a proposition.
+
+True x
+False
+
+HINT: The variable x is bound, so the statement is either true or false.
+
+2) The expression (∃x S(x)) ∨ R(x) is a proposition.
+
+True
+False x
+
+HINT: The variable x in R(x) is a free variable, so the statement is not a proposition.
+
+3) The expression ∃x (S(x) ∨ R(x)) has a free variable.
+
+True
+False x
+
+HINT: Both occurrences of x are bound by the existential quantifier.
+
+4) The expression ∀x P(x) ∨ ∃x Q(x) is a proposition.
+
+True x
+False
+
+HINT: The quantifier ∀ binds the variable x in P(x). Therefore ∀x P(x) is a proposition. The quantifier ∃ binds the variable x in Q(x). Therefore ∃x Q(x) is a proposition. ∀x P(x) ∨ ∃x Q(x) is the disjunction of two propositions and is therefore a proposition.

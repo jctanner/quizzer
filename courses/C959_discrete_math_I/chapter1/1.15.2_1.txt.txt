@@ -1,0 +1,40 @@
+Predicates P and Q are defined below. The domain of discourse is the set of all positive integers.
+
+P(x): x is prime
+Q(x): x is a perfect square (i.e., x = y^2, for some integer y)
+
+Indicate whether each logical expression is a proposition.
+
+a) ∃x Q(x)
+
+True x
+False
+
+b) ∀x Q(x) ∧ ¬P(x)
+
+True
+False x
+
+HINT: Not a proposition because the variable x in P(x) is not bound by the quantifier.
+
+c) ∀x Q(x) ∨ P(3)
+
+True x
+False
+
+HINT: Proposition. The proposition is true. ∀x Q(x) is false because not every positive integer is a perfect square, but P(3) is true because 3 is prime. Therefore ∀x Q(x) ∨ P(3) is true.
+
+d) ∃x (Q(x) ∧ P(x))
+
+True x
+False
+
+HINT: Proposition. The proposition is false because there is no positive integer that is a perfect square and prime.
+
+e) ∀x (¬Q(x) ∨ P(x))
+
+True x
+False
+
+HINT: Proposition. The proposition is false. One possible counterexample is x = 4.
+

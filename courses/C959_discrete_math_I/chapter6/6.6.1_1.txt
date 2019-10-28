@@ -1,0 +1,38 @@
+<image>6.6.1_1.PNG</image>
+
+1) What is the in-degree of vertex d?
+
+1
+2 x
+3
+
+2) What is the out-degree of vertex c?
+
+2
+3 x
+4
+
+3) What is the head of edge (b,c)?
+
+b 
+c x
+
+4) What is the tail of edge (g,f)?
+
+g x
+f
+
+5) Is a,g,f,c,d a walk in the graph?
+
+True
+False
+
+6) Is a,g,f,c,d a trail?
+
+True
+False
+
+7) Is a,g,f,c,d a path?
+
+True
+False

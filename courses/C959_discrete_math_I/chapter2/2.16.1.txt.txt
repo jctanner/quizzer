@@ -1,0 +1,17 @@
+1) Two sets, A and B, are said to be _____ if their intersection is empty (A ∩ B = ∅)
+
+disjoint x
+pairwise disjoint
+partition
+
+2) A sequence of sets, A1, A2, ..., An, is _____ if every pair of distinct sets in the sequence is disjoint (i.e., Ai ∩ Aj = ∅ for any i and j in the range from 1 through n where i ≠ j).
+
+disjoint
+pairwise disjoint x
+partition
+
+3) A _____ of a non-empty set A is a collection of non-empty subsets of A such that each element of A is in exactly one of the subsets.
+
+disjoint
+pairwise disjoint
+partition x

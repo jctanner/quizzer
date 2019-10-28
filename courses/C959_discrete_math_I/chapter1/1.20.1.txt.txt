@@ -1,0 +1,16 @@
+¬q 
+p → q
+-----
+∴ ¬p
+
+1) The conclusion is
+
+p → q
+¬p x
+¬q
+
+2) The proposition ¬q is:
+
+a hypothesis x
+the conclusion
+an argument

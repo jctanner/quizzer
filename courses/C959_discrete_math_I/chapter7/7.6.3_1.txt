@@ -1,0 +1,9 @@
+Each question shows a pair of graphs which are not isomorphic. 
+
+<image>7.6.3_1.PNG</image>
+
+1) Select the graph property that shows that the pair is not isomorphic.
+
+has a degree 2 vertex
+has a degree 4 vertex
+number of edges x

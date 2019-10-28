@@ -1,0 +1,24 @@
+Express the following compound propositions in English using the following definitions:
+
+p: I am going to a movie tonight.
+q: I am going to the party tonight.
+
+(a) ¬p
+
+I am not going to a movie tonight.
+
+(b)p ∧ q
+
+I am going to a movie and the party tonight.
+
+(c) p ∧ ¬q
+
+I am going to a movie and not the party tonight.
+
+(d) ¬p ∨ ¬q
+
+I am either not going to a movie or not going to the party (or neither) tonight.
+
+(e) ¬(p ∧ q)
+
+It is not true that I am going to a movie and the party tonight.

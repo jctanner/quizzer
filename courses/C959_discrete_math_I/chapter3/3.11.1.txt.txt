@@ -1,0 +1,29 @@
+Which of the following Boolean expressions are satisfiable? If an expression is satisfiable, then give an assignment to the variables that causes the expression to evaluate to 1.
+
+1) (¬x + ¬z)(x + y)(¬y + z)
+
+True x
+False
+
+HINT: Satisfiable: the assignment x = 1, y = z = 0 is a satisfying assignment. The assignment x = 0, y = z = 1 is also a satisfying assignment.
+
+2) (¬x + ¬z)(x + y)(¬y + z)(x + ¬y + ¬z)
+
+True x
+False
+
+HINT: Satisfiable: x = 1, y = z = 0.
+
+3) (¬x + ¬z)(x + y)(¬y + z)(x + ¬y + ¬z)(¬x + y + z)
+
+True
+False x
+
+HINT: Not satisfiable.
+
+4) (¬x + ¬z)(x + y)(¬y + z)(x + ¬y + ¬z)(¬x + y + ¬z)
+
+True x
+False
+
+HINT: Satisfiable: x = 1, y = z = 0.

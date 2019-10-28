@@ -1,0 +1,23 @@
+According to each definition of functions f and g, is true that f = g?
+
+1) f: R → R, f(x) = x^2 + 1
+
+	g: R → R+, g(x) = (x + 1)^2 - 2x
+
+equal
+not equal
+
+2) f: R → R, f(x) = |x|
+
+	g: R → R, g(x) = sqrt(x^2)
+
+equal x
+not equal
+
+3) X = {0, 1, 2}
+
+	f: X → X, f(x) = (x - 1)^2
+	g: X → X, g(0) = 1, g(1) = 0, g(2) = 1
+
+equal x
+not equal

@@ -1,0 +1,47 @@
+Match the logically equivalent propositions.
+
+
+1) ¬∃x(¬P(x) ∧ Q(x))
+
+∃x P(x)
+∃x (¬P(x) ∨ Q(x))
+∀x (¬P(x) ∧ ¬Q(x))
+∀x (P(x) ∨ ¬Q(x))
+
+HINT: De Morgan's law says that ¬∀x ¬P(x) ≡ ∃x ¬¬P(x).
+      The double negation law can be used to replace ¬¬P(x) with P(x).
+
+2) ¬∀x (P(x) ∧ ¬Q(x))
+
+∃x P(x)
+∃x (¬P(x) ∨ Q(x)) x
+∀x (¬P(x) ∧ ¬Q(x))
+∀x (P(x) ∨ ¬Q(x))
+
+HINT: De Morgan's law says that ¬∀x (P(x) ∧ ¬Q(x)) ≡ ∃x ¬(P(x) ∧ ¬Q(x)).
+      De Morgan's law for propositions can be applied to show that
+      ∃x ¬(P(x) ∧ ¬Q(x)) ≡ ∃x (¬P(x) ∨ ¬¬Q(x)).
+      Finally, the double negation law can be used to replace ¬¬Q(x) with Q(x).
+
+
+3) ¬∃x (P(x) ∨ Q(x))
+
+∃x P(x)
+∃x (¬P(x) ∨ Q(x))
+∀x (¬P(x) ∧ ¬Q(x)) x
+∀x (P(x) ∨ ¬Q(x))
+
+HINT: De Morgan's law says that ¬∃x (P(x) ∨ Q(x)) ≡ ∀x ¬(P(x) ∨ Q(x)).
+      De Morgan's law for propositions can be applied to show that ∀x ¬(P(x) ∨ Q(x)) ≡ ∀x (¬P(x) ∧ ¬Q(x)).
+
+4) ¬∀x ¬P(x)
+
+∃x P(x) x
+∃x (¬P(x) ∨ Q(x))
+∀x (¬P(x) ∧ ¬Q(x))
+∀x (P(x) ∨ ¬Q(x)) x
+
+HINT: De Morgan's law says that ¬∃x (¬P(x) ∧ Q(x)) ≡ ∀x ¬(¬P(x) ∧ Q(x)).
+      De Morgan's law for propositions can be applied to show that
+      ∀x ¬(¬P(x) ∧ Q(x)) ≡ ∀x (¬¬P(x) ∨ ¬Q(x)).
+      Finally, the double negation law can be used to replace ¬¬P(x) with P(x).

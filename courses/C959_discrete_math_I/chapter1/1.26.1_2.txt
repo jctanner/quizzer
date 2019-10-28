@@ -1,0 +1,22 @@
+statement: For every integer n such that 0 ≤ n < 4, 2^(n+2) > 3^n.
+
+The only integers n such that 0 ≤ n < 4, are n = 0, n = 1, n = 2, and n = 3
+
+When n = 0, 2^(n+2) = 4 and 3^n = 1. 4 > 1.
+When n = 1, 2^(n+2) = 8 and 3^n = 3. 8 > 3
+When n = 2, 2^(n+2) = 16 and 3^n = 9. 16 > 9
+When n = 3, 2^(n+2) = 32 and 3^n = 27. 32 > 27
+
+1) Is the proof valid?
+
+True x
+False
+
+2) What type of proof is this?
+
+direct
+exhaustion x
+counterexample
+indirect/contradiction
+contrapositive
+cases

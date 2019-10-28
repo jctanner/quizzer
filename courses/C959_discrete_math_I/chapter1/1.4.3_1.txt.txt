@@ -1,0 +1,19 @@
+(a) February has 31 days or the number 5 is an integer.
+
+Inclusive or: True. Exclusive or: True.
+
+(b) The number π is an integer or the sun revolves around the earth.
+
+Inclusive or: False. Exclusive or: False.
+
+(c) 20 nickels are worth one dollar or whales are mammals.
+
+Inclusive or: True. Exclusive or: False.
+
+(d) There are eight days in a week or there are seven days in a week.
+
+Inclusive or: True. Exclusive or: True.
+
+(e) January has exactly 31 days or April has exactly 30 days.
+
+Inclusive or: True. Exclusive or: False.

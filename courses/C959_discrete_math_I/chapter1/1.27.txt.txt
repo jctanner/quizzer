@@ -1,0 +1,8 @@
+1) In a _____ proof of a conditional statement, the hypothesis p is assumed to be true and the conclusion c is proven as a direct result of the assumption
+
+direct x
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive
+cases

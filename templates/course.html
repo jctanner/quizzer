@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+
+<b>{{ coursename }}</b><br>
+<ul>
+    <li><a href="{{ '/quiz/' + coursename + '/all' }}">start course quiz</a></li>
+    <li><a href="{{ '/test/' + coursename + '/all' }}">start course test</a></li>
+</ul>
+<br>
+{% for chaptername in chapternames %}
+<b>{{ chaptername }}</b>
+<ul>
+<a href="{{ '/quiz/' + coursename + '/' + chaptername }}">start chapter quiz</a> <br>
+<a href="{{ '/test/' + coursename + '/' + chaptername }}">start chapter test</a> <br>
+</ul>
+    {% if report %}
+        <ul>
+        {% if chaptername in report[coursename] %}
+        <table style="width:30%;text-align:right">
+            <tr>
+                <th>section</th>
+                <th>correct</th>
+                <th>incorrect</th>
+            </tr>
+        {% for section,results in report[coursename][chaptername].items() %}
+            <tr>
+                <td><a href="{{ '/quiz/' + coursename + '/' + chaptername + '/' + section|string }}">{{ section }}</a> </td>
+                <td><progress value="{{ results['correct'] }}" max="{{ results['total'] }}"></progress></td>
+                <td><progress value="{{ results['incorrect'] }}" max="{{ results['total'] }}"></progress></td>
+            </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+        </ul>
+    {% endif %}
+
+{% endfor %}
+
+{% include 'footer.html' %}

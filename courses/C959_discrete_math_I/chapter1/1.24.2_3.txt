@@ -1,0 +1,7 @@
+Among any two consecutive integer, there is an odd number and an even number.
+
+1) Which of the expressions if equivalent to the statement above?
+
+Let x and y be two integers. Then x is odd and y is even or x is even and y is odd.
+Let x be an integer. Then x is odd and x+1 is even.
+Let x be an integer. Then x is odd and x+1 is even or x is even and x+1 is odd. x

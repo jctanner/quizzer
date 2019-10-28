@@ -1,0 +1,21 @@
+The domain for all the variables in the following predicates is the set of positive integers:
+
+P(x): x is a prime number
+L(x, y): x < y
+S(x, y, z): x^2 + y^2 >= z^2
+
+
+1) P(7)
+
+True x
+False
+
+2) L(6,6)
+
+True
+False x
+
+3) S(3,4,5)
+
+True x
+False

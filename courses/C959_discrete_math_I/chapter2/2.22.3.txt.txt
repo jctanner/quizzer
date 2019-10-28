@@ -1,0 +1,9 @@
+2) Let X = { u, v, w, x }. Define a function g: X → X to be: g = { (u, v), (v, w), (w, w), (x, u) }. Does g have an inverse?
+
+True
+False x
+
+3) Define a function h: Z → Z to be h(x) = -x. Does h have an inverse?
+
+True x
+False

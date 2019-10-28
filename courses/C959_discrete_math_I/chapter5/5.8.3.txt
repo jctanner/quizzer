@@ -1,0 +1,21 @@
+1) summation k=1 to 4; 4k
+
+40 x
+41
+50
+36
+
+
+2) summation k=0 to 2; (k+1)^2
+
+14 x
+15
+20
+
+3) summation a=3 to 5; ((a+1)(a+2))/2
+
+46 x
+45
+40
+51
+
