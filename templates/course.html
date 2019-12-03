@@ -9,8 +9,8 @@
 {% for chaptername in chapternames %}
 <b>{{ chaptername }}</b>
 <ul>
-<a href="{{ '/quiz/' + coursename + '/' + chaptername }}">start chapter quiz</a> <br>
-<a href="{{ '/test/' + coursename + '/' + chaptername }}">start chapter test</a> <br>
+<a href="{{ '/quiz/' + coursename + '/' + chaptername|string }}">start chapter quiz</a> <br>
+<a href="{{ '/test/' + coursename + '/' + chaptername|string }}">start chapter test</a> <br>
 </ul>
     {% if report %}
         <ul>
@@ -23,7 +23,7 @@
             </tr>
         {% for section,results in report[coursename][chaptername].items() %}
             <tr>
-                <td><a href="{{ '/quiz/' + coursename + '/' + chaptername + '/' + section|string }}">{{ section }}</a> </td>
+                <td><a href="{{ '/quiz/' + coursename + '/' + chaptername|string + '/' + section|string }}">{{ section }}</a> </td>
                 <td><progress value="{{ results['correct'] }}" max="{{ results['total'] }}"></progress></td>
                 <td><progress value="{{ results['incorrect'] }}" max="{{ results['total'] }}"></progress></td>
             </tr>

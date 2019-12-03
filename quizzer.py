@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 
+import csv
 import datetime
 import json
 import os
@@ -24,6 +25,9 @@ from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
 from wtforms import StringField
 from wtforms import SubmitField
+
+
+from Levenshtein import jaro_winkler
 
 
 class SimpleDB:
@@ -107,9 +111,50 @@ class Quizzer:
 
         for df in datafiles:
 
+            # handle csv files differently ...
+            if df.endswith('.csv'):
+                path_parts = df.split('/')
+                course = path_parts[1]
+                if course not in self.courses:
+                    self.courses[course] = {}
+
+                with open(df, 'r') as csvfile:
+                    csvreader = csv.reader(csvfile)
+                    for row in csvreader:
+                        if row[0] == 'section':
+                            continue
+                        #print(row)
+                        tinfo = row[0].strip('"').strip("'")
+                        term = row[1]
+                        definition = row[2]
+                        chapter = tinfo.split('.')[0]
+                        section = int(tinfo.split('.')[1])
+                        try:
+                            subsection = tinfo.split('.')[2]
+                        except IndexError:
+                            subsection = 0
+
+                        if chapter not in self.courses[course]:
+                            self.courses[course][chapter] = []
+
+                        data = self.empty_question
+                        data['filename'] = df
+                        data['course'] = course
+                        data['chapter'] = chapter
+                        data['section'] = section
+                        data['question'] = definition
+                        data['answer'] = term
+                
+                        self.questions.append(data)
+
+                # fill in choices
+                self.randomize_choices(df)
+                continue
+
             if not df.endswith('.txt'):
                 continue
 
+            # handle the custom text file format ...
             with open(df, 'r') as f:
                 lines = f.readlines()
 
@@ -203,6 +248,31 @@ class Quizzer:
 
             if data['question'] and data not in self.questions:
                 self.questions.append(data)
+
+
+    def randomize_choices(self, filename):
+        qs = []
+        for idq,question in enumerate(self.questions):
+            if question['filename'] == filename:
+                qs.append([idq, question])
+
+        all_choices = [x[1]['answer'] for x in qs]
+
+        for question in qs:
+            answer = question[1]['answer']
+            choices = [answer, random.choice(all_choices), random.choice(all_choices)]    
+
+            matches = []
+            for ac in all_choices:
+                if ac == answer:
+                    continue
+                jw = jaro_winkler(answer, ac)
+                matches.append([jw, ac])
+            matches = sorted(matches, key=lambda x: x[0])
+            choices.append(matches[-1][1])
+            choices.append(matches[-2][1])
+            self.questions[question[0]]['choices'] = choices[:]
+            #import epdb; epdb.st()
 
     def fix_hints(self):
         for idq,question in enumerate(self.questions):
@@ -449,7 +519,7 @@ class Quizzer:
 
         for question in self.questions:
             if coursename and question['course'] != coursename:
-                ctoninue
+                continue
             if question['course'] not in report:
                 report[question['course']] = {}        
             if question['chapter'] not in report[question['course']]:

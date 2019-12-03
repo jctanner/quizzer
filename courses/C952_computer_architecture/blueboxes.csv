@@ -1,0 +1,313 @@
+section,word,definition
+2.1,server,"A computer used for running larger programs for multiple users, often simultaneously, and typically accessed only via a network."
+2.1,supercomputer,A class of computers with the highest performance and cost; they are configured as servers and typically cost tens to hundreds of millions of dollars.
+2.1,embeddded computer,A computer inside another device used for running one predetermined application or collection of software
+2.1,Personal mobile devices (PMDs),"are small wireless devices to connect to the Internet; they rely on batteries for power, and software is installed by downloading apps. Conventional examples are smart phones and tablets."
+2.1,cloud computing,refers to large collections of servers that provide services over the Internet; some providers rent dynamically varying numbers of servers as a utility.
+2.1,software as a service (Saas),"delivers software and data as a service over the Internet, usually via a thin program such as a browser that runs on local client devices, instead of binary code that must be installed, and runs wholly on that device. Examples include web search and social networking."
+2.1,multicore processor,"A microprocessor containing multiple processors (""cores"") in a single integrated circuit."
+2.1,acronym,"A word constructed by taking the initial letters of a string of words. For example: RAM is an acronym for Random Access Memory, and CPU is an acronym for Central Processing Unit."
+2.1,terabyte,"Originally 1,099,511,627,776 (240) bytes, although communications and secondary storage systems developers started using the term to mean 1,000,000,000,000 (1012) bytes. To reduce confusion, we now use the term tebibyte (TiB) for 240 bytes, defining terabyte (TB) to mean 1012 bytes. The figure below shows the full range of decimal and binary values and names."
+2.3,systems software,"Software that provides services that are commonly useful, including operating systems, compilers, loaders, and assemblers."
+2.3,operating system,Supervising program that manages the resources of a computer for the benefit of the programs that run on that computer.
+2.3,compiler,A program that translates high-level language statements into assembly language statements.
+2.3,binary digit,Also called a bit. One of the two numbers in base 2 (0 or 1) that are the components of information
+2.3,instruction,A command that computer hardware understands and obeys.
+2.3,assembler,A program that translates a symbolic version of instructions into the binary version.
+2.3,assembly language,A symbolic representation of machine instructions.
+2.3,machine language,A binary representation of machine instructions.
+2.3,high-level programming language,"A portable language such as C, C++, Java, or Visual Basic that is composed of words and algebraic notation that can be translated by a compiler into assembly language."
+2.4,input device,"A mechanism through which the computer is fed information, such as a keyboard."
+2.4,output device,"A mechanism that conveys the result of a computation to a user, such as a display, or to another computer."
+2.4,liquid crystal display,A display technology using a thin layer of liquid polymers that can be used to transmit or block light according to whether a charge is applied.
+2.4,active matrix display,A liquid crystal display using a transistor to control the transmission of light at each individual pixel.
+2.4,pixel,"The smallest individual picture element. Screens are composed of hundreds of thousands to millions of pixels, organized in a matrix."
+2.4,integrated circuit,Also called a chip. A device combining dozens to millions of transistors.
+2.4,central processor unit (CPU),"Also called processor. The active part of the computer, which contains the datapath and control and which adds numbers, tests numbers, signals I/O devices to activate, and so on."
+2.4,datapath,The component of the processor that performs arithmetic operations.
+2.4,control,"The component of the processor that commands the datapath, memory, and I/O devices according to the instructions of the program."
+2.4,memory,The storage area in which programs are kept when they are running and that contains the data needed by the running programs.
+2.4,Dynamic random access memory (DRAM),Memory built as an integrated circuit; it provides random access to any location. Access times are 50 nanoseconds and cost per gigabyte in 2012 was $5 to $10.
+2.4,cache memory,"A small, fast memory that acts as a buffer for a slower, larger memory."
+2.4,Static random access memory (SRAM),"Also memory built as an integrated circuit, but faster and less dense than DRAM."
+2.4,Instruction set architecture,"Also called architecture. An abstract interface between the hardware and the lowest-level software that encompasses all the information necessary to write a machine language program that will run correctly, including instructions, registers, memory access, I/O, and so on."
+2.4,Application binary interface (ABI),The user portion of the instruction set plus the operating system interfaces used by application programmers. It defines a standard for binary portability across computers.
+2.4,Implementation,Hardware that obeys the architecture abstraction.
+2.4,volatile memory,"Storage, such as DRAM, that retains data only if it is receiving power."
+2.4,nonvolatile memory,A form of memory that retains data even in the absence of a power source and that is used to store programs between runs. A DVD disk is nonvolatile.
+2.4,main memory,Also called primary memory. Memory used to hold programs while they are running; typically consists of DRAM in today's computers.
+2.4,secondary memory,Nonvolatile memory used to store programs and data between runs; typically consists of flash memory in PMDs and magnetic disks in servers.
+2.4,magnetic disk,"Also called hard disk. A form of nonvolatile secondary memory composed of rotating platters coated with a magnetic recording material. Because they are rotating mechanical devices, access times are about 5 to 20 milliseconds and cost per gigabyte in 2012 was $0.05 to $0.10."
+2.4,flash memory,A nonvolatile semiconductor memory. It is cheaper and slower than DRAM but more expensive per bit and faster than magnetic disks. Access times are about 5 to 50 microseconds and cost per gigabyte in 2012 was $0.75 to $1.00.
+2.4,local area network,"A network designed to carry data within a geographically confined area, typically within a single building."
+2.4,wide area network,A network extended over hundreds of kilometers that can span a continent.
+2.5,transistor,An on/off switch controlled by an electric signal.
+2.5,Very large-scale integrated (VLSI),circuit: A device containing hundreds of thousands to millions of transistors.
+2.5,silicon,A natural element that is a semiconductor.
+2.5,semiconductor,A substance that does not conduct electricity well.
+2.5,silicon crystal ingot,A rod composed of a silicon crystal that is between 8 and 12 inches in diameter and about 12 to 24 inches long.
+2.5,wafer,"A slice from a silicon ingot no more than 0.1 inches thick, used to create chips."
+2.5,defect,A microscopic flaw in a wafer or in patterning steps that can result in the failure of the die containing that defect.
+2.5,die,"The individual rectangular sections that are cut from a wafer, more informally known as chips."
+2.5,yield,The percentage of good dies from the total number of dies on the wafer.
+2.6,response time,"Also called execution time. The total time required for the computer to complete a task, including disk accesses, memory accesses, I/O activities, operating system overhead, CPU execution time, and so on."
+2.6,throughput,"Also called bandwidth. Another measure of performance, it is the number of tasks completed per unit time."
+2.6,cpu execution time,Also called CPU time. The actual time the CPU spends computing for a specific task.
+2.6,user cpu time,The CPU time spent in a program itself.
+2.6,system cpu time,The CPU time spent in the operating system performing tasks on behalf of the program.
+2.6,clock cycle,"Also called tick, clock tick, clock period, clock, or cycle. The time for one clock period, usually of the processor clock, which runs at a constant rate."
+2.6,clock period,The length of each clock cycle.
+2.6,Clock cycles per instruction,Average number of clock cycles per instruction for a program or program fragment.
+2.6,instruction count,The number of instructions executed by the program.
+2.6,instruction mix,A measure of the dynamic frequency of instructions across one or many programs.
+2.9,workload,A set of programs run on a computer that is either the actual collection of applications run by a user or constructed from real programs to approximate such a mix. A typical workload specifies both the programs and the relative frequencies.
+2.9,benchmark,A program selected for use in comparing computer performance.
+2.10',ahmdahl's law,A rule stating that the performance enhancement possible with a given improvement is limited by the amount that the improved feature is used. It is a quantitative version of the law of diminishing returns.
+2.10',Million instructions per second (MIPS),A measurement of program execution speed based on the number of millions of instructions. MIPS is computed as the instruction count divided by the product of the execution time and 106.
+3.1,instruction set,The vocabulary of commands understood by a given architecture.
+3.1,stored-program concept,"The idea that instructions and data of many types can be stored in memory as numbers and thus be easy to change, leading to the stored-program computer."
+3.3,word,"A natural unit of access in a computer, usually a group of 32 bits"
+3.3,doubleword,"Another natural unit of access in a computer, usually a group of 64 bits; corresponds to the size of a register in the LEGv8 architecture."
+3.3,data transfer instruction,A command that moves data between memory and registers.
+3.3,address,A value used to delineate the location of a specific data element within a memory array.
+3.3,alignment restriction,A requirement that data be aligned in memory on natural boundaries.
+3.4,binary digit,"Also called binary bit. One of the two numbers in base 2, 0 or 1, that are the components of information."
+3.4,least significant bit,The rightmost bit in an LEGv8 doubleword.
+3.4,most significant bit,The leftmost bit in an LEGv8 doubleword..
+3.4,two's complement,"A signed number representation where a leading 0 indicates a positive number and a leading 1 indicates a negative number. The complement of a value is obtained by complementing each bit (0 → 1 or 1 → 0), and then adding one to the result (explained further below)."
+3.4,one's complement,"A notation that represents the most negative value by 10 … 000two and the most positive value by 01 … 11two, leaving an equal number of negatives and positives but ending up with two zeros, one positive (00 … 00two) and one negative (11 … 11two). The term is also used to mean the inversion of every bit in a pattern: 0 to 1 and 1 to 0."
+3.4,biased notation,"A notation that represents the most negative value by 00 … 000two and the most positive value by 11 … 11two, with 0 typically having the value 10 … 00two, thereby biasing the number such that the number plus the bias has a non-negative representation."
+3.4,instruction format,A form of representation of an instruction composed of fields of binary numbers.
+3.4,machine language,Binary representation used for communication within a computer system.
+3.4,hexadecimal,Numbers in base 16
+3.4,opcode,The field that denotes the operation and format of an instruction.
+3.6,AND,A logical bit- by-bit operation with two operands that calculates a 1 only if there is a 1 in both operands.
+3.6,OR,A logical bit-by-bit operation with two operands that calculates a 1 if there is a 1 in either operand.
+3.6,NOT,"A logical bit-by-bit operation with one operand that inverts the bits; that is, it replaces every 1 with a 0, and every 0 with a 1."
+3.6,EOR,"A logical bit-by-bit operation with two operands that calculates the exclusive OR of the two operands. That is, it calculates a 1 only if the values are different in the two operands."
+3.7,conditional branch,An instruction that tests a value and that allows for a subsequent transfer of control to a new address in the program based on the outcome of the test.
+3.7,basic block,A sequence of instructions without branches (except possibly at the end) and without branch targets or branch labels (except possibly at the beginning).
+3.7,branch address table,Also called branch table. A table of addresses of alternative instruction sequences.
+3.8,procedure,A stored subroutine that performs a specific task based on the parameters with which it is provided.
+3.8,branch-and-link instruction,An instruction that branches to an address and simultaneously saves the address of the following instruction in a register (LR or X30 in LEGv8).
+3.8,return address,A link to the calling site that allows a procedure to return to the proper address; in LEGv8 it is stored in register LR (X30).
+3.8,caller,The program that instigates a procedure and provides the necessary parameter values.
+3.8,callee,A procedure that executes a series of stored instructions based on parameters provided by the caller and then returns control to the caller.
+3.8,program counter (PC),The register containing the address of the instruction in the program being executed.
+3.8,stack,A data structure for spilling registers organized as a last-in- first-out queue.
+3.8,stack pointer,"A value denoting the most recently allocated address in a stack that shows where registers should be spilled or where old register values can be found. In LEGv8, it is register SP."
+3.8,push,Add element to stack.
+3.8,pop,remove element from stack
+3.8,global pointer,The register that is reserved to point to the static area.
+3.8,procedure frame,Also called activation record. The segment of the stack containing a procedure's saved registers and local variables.
+3.8,frame pointer,A value denoting the location of the saved registers and local variables for a given procedure.
+3.8,text segment,The segment of a UNIX object file that contains the machine language code for routines in the source file.
+3.10',PC-relative addressing,An addressing regime in which the address is the sum of the program counter (PC) and a constant in the instruction.
+3.10',Addressing mode,One of several addressing regimes delimited by their varied use of operands and/or addresses.
+3.11,data race,"Two memory accesses form a data race if they are from different threads to same location, at least one is a write, and they occur one after another."
+3.12,assembly language,A symbolic language that can be translated into binary machine language.
+3.12,pseudoinstruction,A common variation of assembly language instructions often treated as if it were an instruction in its own right.
+3.12,symbol table,A table that matches names of labels to the addresses of the memory words that instructions occupy.
+3.12,linker,Also called link editor. A systems program that combines independently assembled machine language programs and resolves all undefined labels into an executable file.
+3.12,executable file,"A functional program in the format of an object file that contains no unresolved references. It can contain symbol tables and debugging information. A ""stripped executable"" does not contain that information. Relocation information may be included for the loader."
+3.12,loader,A systems program that places an object program in main memory so that it is ready to execute.
+3.12,Dynamically linked libraries,Library routines that are linked to a program during execution.
+3.12,Java bytecode,Instruction from an instruction set designed to interpret Java programs.
+3.12,Java Virtual Machine,The program that interprets Java bytecodes
+3.12,Just In Time Compilter (JIT),"The name commonly given to a compiler that operates at runtime, translating the interpreted code segments into the native code of the computer."
+3.15,loop-unrolling,"A technique to get more performance from loops that access arrays, in which multiple copies of the loop body are made and instructions from different iterations are scheduled together."
+3.15,public,A Java keyword that allows a method to be invoked by any other method.
+3.15,protected,A Java keyword that restricts invocation of a method to other methods in that package.
+3.15,package,Basically a directory that contains a group of related classes.
+3.15,static method,A method that applies to the whole class rather to an individual object. It is unrelated to static in C.
+3.18,General-purpose register (GPR),A register that can be used for addresses or for data with virtually any instruction.
+3.22,accumulator,"Archaic term for register. On-line use of it as a synonym for ""register"" is a fairly reliable indication that the user has been around quite a while."
+3.22,load-store architecture,Also called register-register architecture. An instruction set architecture in which all operations are between registers and data memory may only be accessed via loads or stores.
+4.2,ALU,"Hardware that performs addition, subtraction, and usually logical operations such as AND and OR."
+4.4,dividend,a number being divided
+4.4,divisor,a number that the dividend is divided by
+4.4,quotient,the primary result of a division; a number that when multiplied by the divisor and added to the remainder produces the dividend
+4.4,remainder,the secondary result of a division; a number that when added to the product of the quotient and the divisor produces the dividend
+4.5,scientific notation,A notation that renders numbers with a single digit to the left of the decimal point.
+4.5,normalized,A number in floating-point notation that has no leading 0s.
+4.5,floating point,Computer arithmetic that represents numbers in which the binary point is not fixed.
+4.5,fraction,"The value, generally between 0 and 1, placed in the fraction field. The fraction is also called the mantissa."
+4.5,exponent,"In the numerical representation system of floating-point arithmetic, the value that is placed in the exponent field."
+4.5,overflow (floating-point),A situation in which a positive exponent becomes too large to fit in the exponent field.
+4.5,underflow (floating-point),A situation in which a negative exponent becomes too large to fit in the exponent field.
+4.5,double precision,A floating-point value represented in a 64-bit doubleword.
+4.5,single precision,A floating-point value represented in a 32-bit word
+4.5,exception,Also called interrupt. An unscheduled event that disrupts program execution; used to detect overflow.
+4.5,interrupt,An exception that comes from outside of the processer. (Some architectures use the term interrupt for all exceptions.
+4.5,guard,The first of two extra bits kept on the right during intermediate calculations of floating-point numbers; used to improve rounding accuracy.
+4.5,round,"Method to make the intermediate floating-point result fit the floating-point format; the goal is typically to find the nearest number that can be represented in the format. It is also the name of the second of two extra bits kept on the right during intermediate floating-point calculations, which improves rounding accuracy."
+4.5,Units in the last place (ulp),The number of bits in error in the least significant bits of the significand between the actual number and the number that can be represented.
+4.5,sticky bit,A bit used in rounding in addition to guard and round that is set whenever there are nonzero bits to the right of the round bit.
+4.5,fused multiply add,"A floating-point instruction that performs both a multiply and an add, but rounds only once after the add."
+5.2,combinational element,"An operational element, such as an AND gate or an ALU"
+5.2,state element,"A memory element, such as a register or a memory"
+5.2,clocking methodology,The approach used to determine when data is valid and stable relative to the clock.
+5.2,Edge-triggered clocking,A clocking scheme in which all state changes occur on a clock edge
+5.2,Control signal,"A signal used for multiplexor selection or for directing the operation of a functional unit; contrasts with a data signal, which contains information that is operated on by a functional unit."
+5.2,Asserted,The signal is logically high or true.
+5.2,Deasserted,The signal is logically low or false.
+5.3,datapath element,"A unit used to operate on or hold data within a processor. In the LEGv8 implementation, the datapath elements include the instruction and data memories, the register file, the ALU, and adders."
+5.3,program counter (PC),The register containing the address of the instruction in the program being executed.
+5.3,sign-extend,A state element that consists of a set of registers that can be read and written by supplying a register number to be accessed.
+5.3,branch target address,"The address specified in a branch, which becomes the new program counter (PC) if the branch is taken. In the LEGv8 architecture, the branch target is given by the sum of the offset field of the instruction and the address of the branch."
+5.3,branch taken,A branch where the branch condition is satisfied and the program counter (PC) becomes the branch target. All unconditional branches are taken branches.
+5.3,branch not taken,A branch where the branch condition is false and the program counter (PC) becomes the address of the instruction that sequentially follows the branch.
+5.4,truth table,"From logic, a representation of a logical operation by listing all the values of the inputs and then in each case showing what the resulting outputs should be."
+5.4,don't-care term,An element of a logical function in which the output does not depend on the values of all the inputs. Don't-care terms may be specified in different ways.
+5.4,opcode,The field that denotes the operation and format of an instruction.
+5.4,single-cycle implementation,"Also called single clock cycle implementation. An implementation in which an instruction is executed in one clock cycle. While easy to understand, it is too slow to be practical."
+5.5,pipelining,"An implementation technique in which multiple instructions are overlapped in execution, much like an assembly line."
+5.5,structural hazard,When a planned instruction cannot execute in the proper clock cycle because the hardware does not support the combination of instructions that are set to execute.
+5.5,data hazard,Also called a pipeline data hazard. When a planned instruction cannot execute in the proper clock cycle because data that is needed to execute the instruction are not yet available.
+5.5,forwarding,Also called bypassing. A method of resolving a data hazard by retrieving the missing data element from internal buffers rather than waiting for it to arrive from programmer-visible registers or memory.
+5.5,load-use data hazard,A specific form of data hazard in which the data being loaded by a load instruction has not yet become available when it is needed by another instruction.
+5.5,pipeline stall,Also called bubble. A stall initiated in order to resolve a hazard.
+5.5,control hazard,"Also called branch hazard. When the proper instruction cannot execute in the proper pipeline clock cycle because the instruction that was fetched is not the one that is needed; that is, the flow of instruction addresses is not what the pipeline expected"
+5.5,branch prediction,A method of resolving a branch hazard that assumes a given outcome for the conditional branch and proceeds from that assumption rather than waiting to ascertain the actual outcome
+5.5,Latency (pipeline),The number of stages in a pipeline or the number of stages between two instructions during execution.
+5.7,nop,An instruction that does no operation to change state
+5.8,flush,"To discard instructions in a pipeline, usually due to an unexpected event"
+5.8,dynamic branch prediction,Prediction of branches at runtime using runtime information
+5.8,Branch prediction buffer,Also called branch history table. A small memory that is indexed by the lower portion of the address of the branch instruction and that contains one or more bits indicating whether the branch was recently taken or not.
+5.8,Branch target buffer,"A structure that caches the destination PC or destination instruction for a branch. It is usually organized as a cache with tags, making it more costly than a simple prediction buffer"
+5.8,correlating predictor,A branch predictor that combines local behavior of a particular branch and global information about the behavior of some recent number of executed branches.
+5.8,tournament branch predictor,A branch predictor with multiple predictions for each branch and a selection mechanism that chooses which predictor to enable for a given branch.
+5.9,exception,Also called interrupt. An unscheduled event that disrupts program execution; used to detect overflow.
+5.9,interrupt,An exception that comes from outside of the processor. (Some architectures use the term interrupt for all exceptions.)
+5.9,vectored interrupt,An interrupt for which the address to which control is transferred is determined by the cause of the exception.
+5.9,imprecise interrupt,Also called imprecise exception. Interrupts or exceptions in pipelined computers that are not associated with the exact instruction that was the cause of the interrupt or exception.
+5.9,precise interrupt,Also called precise exception. An interrupt or exception that is always associated with the correct instruction in pipelined computers.
+5.10',instruction level parallelism,The parallelism among instructions.
+5.10',multiple issue,A scheme whereby multiple instructions are launched in one clock cycle.
+5.10',static multiple issue,An approach to implementing a multiple-issue processor where many decisions are made by the compiler before execution.
+5.10',dynamic multiple issue,An approach to implementing a multiple-issue processor where many decisions are made during execution by the processor
+5.10',issue slots,"The positions from which instructions could issue in a given clock cycle; by analogy, these correspond to positions at the starting blocks for a sprint"
+5.10',speculation,An approach whereby the compiler or processor guesses the outcome of an instruction to remove it as a dependence in executing other instructions.
+5.10',issue packet,The set of instructions that issues together in one clock cycle; the packet may be determined statically by the compiler or dynamically by the processor.
+5.10',Very Long Instruction Word (VLIW),"A style of instruction set architecture that launches many operations that are defined to be independent in a single wide instruction, typically with many separate opcode fields."
+5.10.1,single issue,when one instruction is launched per clock cycle
+5.10.1,ILP,The parallelism between instructions.
+5.10.1,speculation,An approach whereby the compiler or processor guesses the outcome of an instruction to remove it as a dependence in executing other instructions.
+5.10.1,use latency,Number of clock cycles between a load instruction and an instruction that can use the result of the load without stalling the pipeline.
+5.10.1,loop unrolling,"A technique to get more performance from loops that access arrays, in which multiple copies of the loop body are made and instructions from different iterations are scheduled together."
+5.10.1,register renaming,The renaming of registers by the compiler or hardware to remove antidependences.
+5.10.1,Antidependence,"Also called name dependence. An ordering forced by the reuse of a name, typically a register, rather than by a true dependence that carries a value between two instructions."
+5.10.1,superscalar,An advanced pipelining technique that enables the processor to execute more than one instruction per clock cycle by selecting them during execution.
+5.10.1,Dynamic pipeline scheduling,Hardware support for reordering the order of instruction execution to avoid stalls.
+5.10.1,commit unit,The unit in a dynamic or out-of-order execution pipeline that decides when it is safe to release the result of an operation to programmer-visible registers and memory
+5.10.1,reservation station,A buffer within a functional unit that holds the operands and the operation.
+5.10.1,reorder buffer,The buffer that holds results in a dynamically scheduled processor until it is safe to store the results to memory or a register.
+5.10.1,Out-of-order execution,A situation in pipelined execution when an instruction blocked from executing does not cause the following instructions to wait.
+5.10.1,In-order commit,A commit in which the results of pipelined execution are written to the programmer visible state in the same order that instructions are fetched.
+5.11.1,Microarchitecture,"The organization of the processor, including the major functional units, their interconnection, and control."
+5.11.1,Architectural registers,"The instruction set of visible registers of a processor; for example, in LEGv8, these are the 32 integer and 32 floating-point registers."
+5.15.1,Instruction latency,The inherent execution time for an instruction.
+6.1.1,Temporal locality,The locality principle stating that if a data location is referenced then it will tend to be referenced again soon.
+6.1.1,Spatial locality,"The locality principle stating that if a data location is referenced, data locations with nearby addresses will tend to be referenced soon"
+6.1.1,Memory hierarchy,"A structure that uses multiple levels of memories; as the distance from the processor increases, the size of the memories and the access time both increase"
+6.1.1,Block (or line),The minimum unit of information that can be either present or not present in a cache.
+6.1.2,hit rate,The fraction of memory accesses found in a level of the memory hierarchy.
+6.1.2,miss rate,The fraction of memory accesses not found in a level of the memory hierarchy.
+6.1.2,hit time,"The time required to access a level of the memory hierarchy, including the time needed to determine whether the access is a hit or a miss."
+6.1.2,miss penality,"The time required to fetch a block into a level of the memory hierarchy from the lower level, including the time to access the block, transmit it from one level to the other, insert it in the level that experienced the miss, and then pass the block to the requestor."
+6.2.1,track,One of thousands of concentric circles that make up the surface of a magnetic disk.
+6.2.1,sector,One of the segments that make up a track on a magnetic disk; a sector is the smallest amount of information that is read or written on a disk.
+6.2.1,seek,The process of positioning a read/write head over the proper track on a disk.
+6.2.1,rotational latency,Also called rotational delay. The time required for the desired sector of a disk to rotate under the read/write head; usually assumed to be half the rotation time.
+6.3.1,Direct-mapped cache,A cache structure in which each memory location is mapped to exactly one location in the cache.
+6.3.1,tag,A field in a table used for a memory hierarchy that contains the address information required to identify whether the associated block in the hierarchy corresponds to a requested word.
+6.3.1,valid bit,A field in the tables of a memory hierarchy that indicates that the associated block in the hierarchy contains valid data.
+6.3.1,cache miss,A request for data from the cache that cannot be filled because the data are not present in the cache.
+6.3.1,Write-through,"A scheme in which writes always update both the cache and the next lower level of the memory hierarchy, ensuring that data are always consistent between the two."
+6.3.1,write buffer,A queue that holds data while the data are waiting to be written to memory.
+6.3.1,write back,"A scheme that handles writes by updating values only to the block in the cache, then writing the modified block to the lower level of the hierarchy when the block is replaced."
+6.3.8,split cache,"A scheme in which a level of the memory hierarchy is composed of two independent caches that operate in parallel with each other, with one handling instructions and one handling data."
+6.4.2,Fully associative cache,A cache structure in which a block can be placed in any location in the cache.
+6.4.2,Set-associative cache,A cache that has a fixed number of locations (at least two) where each block can be placed.
+6.4.4,Least recently used (LRU),A replacement scheme in which the block replaced is the one that has been unused for the longest time.
+6.4.5,Multilevel cache,"A memory hierarchy with multiple levels of caches, rather than just a cache and main memory."
+6.4.10,Global miss rate,The fraction of references that miss in all levels of a mutlilevel cache.
+6.4.10,Local miss rate,The fraction of references to one level of a cache that miss; used in multilevel hierarchies.
+6.5.2,error detection code,"A code that enables the detection of an error in data, but not the precise location and, hence, correction of the error."
+6.7.0,virtual memory,"A technique that uses main memory as a ""cache"" for secondary storage."
+6.7.0,physical address,An address in main memory.
+6.7.0,protection,"A set of mechanisms for ensuring that multiple processes sharing the processor, memory, or I/O devices cannot interfere, intentionally or unintentionally, with one another by reading or writing each other's data. These mechanisms also isolate the operating system from a user process."
+6.7.0,page fault,An event that occurs when an accessed page is not present in main memory.
+6.7.0,virtual address,An address that corresponds to a location in virtual space and is translated by address mapping to a physical address when memory is accessed.
+6.7.0,address translation,Also called address mapping. The process by which a virtual address is mapped to an address used to access memory.
+6.7.0,segmentation,"A variable-size address mapping scheme in which an address consists of two parts: a segment number, which is mapped to a physical address, and a segment offset."
+6.7.0,page table,"The table containing the virtual to physical address translations in a virtual memory system. The table, which is stored in memory, is typically indexed by the virtual page number; each entry in the table contains the physical page number for that virtual page if the page is currently in memory."
+6.7.2,swap space,The space on the disk reserved for the full virtual memory space of a process.
+6.7.2,reference bit,Also called use bit or access bit. A field that is set whenever a page is accessed and that is used to implement LRU or other replacement schemes.
+6.7.4,Translation-lookaside buffer (TLB),A cache that keeps track of recently used address mappings to try to avoid an access to the page table.
+6.7.7,Virtually addressed cache,A cache that is accessed with a virtual address rather than a physical address.
+6.7.7,aliasing,A situation in which two addresses access the same object; it can occur in virtual memory when there are two virtual addresses for the same physical page.
+6.7.7,physically addressed cache,A cache that is addressed by a physical address.
+6.7.7,supervisor mode,Also called kernal mode. A mode indicating that a running process is an operating system process.
+6.7.7,system call,"A special instruction that transfers control from user mode to a dedicated location in supervisor code space, invoking the exception mechanism in the process."
+6.7.7,context switch,A changing of the internal state of the processor to allow a different process to use the processor that includes saving the state needed to return to the currently executing process.
+6.7.9,exception enable,Also called interrupt enable. A signal or action that controls whether the process responds to an exception or not; necessary for preventing the occurrence of exceptions during intervals before the processor has safely saved the state needed to restart.
+6.7.9,restartable instruction,An instruction that can resume execution after an exception is resolved without the exception's affecting the result of the instruction.
+6.8.4,three Cs model,"A cache model in which all cache misses are classified into one of three categories: compulsory misses, capacity misses, and conflict misses."
+6.8.4,compulsory miss,Also called cold-start miss. A cache miss caused by the first access to a block that has never been in the cache.
+6.8.4,capacity miss,"A cache miss that occurs because the cache, even with full associativity, cannot contain all the blocks needed to satisfy the request."
+6.8.4,conflict miss,Also called collision miss. A cache miss that occurs in a set-associative or direct-mapped cache when multiple blocks compete for the same set and that are eliminated in a fully associative cache of the same size.
+6.9.1,finite-state machine,"A sequential logic function consisting of a set of inputs and outputs, a next-state function that maps the current state and the inputs to a new state, and an output function that maps the current state and possibly the inputs to a set of asserted outputs"
+6.9.1,next-state machine,"A combinational function that, given the inputs and the current state, determines the next state of a finite-state machine."
+6.10.2,false sharing,When two unrelated shared variables are located in the same cache block and the full block is exchanged between processors even though the processors are accessing different variables.
+6.11.1,Redundant arrays of inexpensive disks (RAID),An organization of disks that uses an array of small and inexpensive disks so as to increase both performance and reliability.
+6.11.1,striping ,Allocation of logically sequential blocks to separate disks to allow higher performance than a single disk can deliver.
+6.11.1,mirroring,Writing identical data to multiple disks to increase data availability.
+6.11.1,protection group,The group of data disks or blocks that share a common check disk or block.
+6.11.1,hot-swapping,Replacing a hardware component while the system is running.
+6.11.1,standby spares,Reserve hardware resources that can immediately take the place of a failed component.
+6.13.2,nonblocking cache,A cache that allows the processor to make references to the cache while the cache is handling an earlier miss.
+6.17.1,prefetching,A technique in which data blocks needed in the future are brought into the cache early by using special instructions that specify the address of the block.
+7.1.0,multiprocessor,"A computer system with at least two processors. This computer is in contrast to a uniprocessor, which has one, and is increasingly hard to find today."
+7.1.0,Task-level parallelism or process-level parallelism,Utilizing multiple processors by running independent programs simultaneously.
+7.1.0,parallel processing program,A single program that runs on multiple processors simultaneously.
+7.1.0,cluster,A set of computers connected over a local area network that function as a single large multiprocessor.
+7.1.0,multicore processor,"A microprocessor containing multiple processors (""cores"") in a single integrated circuit. Virtually all microprocessors today in desktops and servers are multicore."
+7.1.0,Shared memory multiprocessor (SMP),A parallel processor with a single physical address space.
+7.2.1,strong scaling,Speed-up achieved on a multiprocessor without increasing the size of the problem.
+7.2.1,weak scaling,Speed-up achieved on a multiprocessor while increasing the size of the problem proportionally to the increase in the number of processors.
+7.3.1,"SISD or single instruction stream, single data stream",A uniprocessor
+7.3.1,"MIMD or multiple instruction streams, multiple data streams",A multiprocessor.
+7.3.1,"SPMD or single program, multiple data streams","The conventional MIMD programming model, where a single program runs across all processors."
+7.3.1,"SIMD or single instruction stream, multiple data streams","The same instruction is applied to many data streams, as in a vector processor."
+7.3.1,Data-level parallelism,Parallelism achieved by performing the same operation on independent data.
+7.3.1,vector lane,"One or more vector functional units and a portion of the vector register file. Inspired by lanes on highways that increase traffic speed, multiple lanes execute vector operations simultaneously."
+7.4.1,Hardware multithreading,Increasing utilization of a processor by switching to another thread when one thread is stalled.
+7.4.1,thread,"A thread includes the program counter, the register state, and the stack. It is a lightweight process; whereas threads commonly share a single address space, processes don't"
+7.4.1,process,"A process includes one or more threads, the address space, and the operating system state. Hence, a process switch usually invokes the operating system, but not a thread switch"
+7.4.1,fine-grained multithreading,A version of hardware multithreading that implies switching between threads after every instruction.
+7.4.1,Coarse-grained multithreading,"A version of hardware multithreading that implies switching between threads only after significant events, such as a last-level cache miss"
+7.4.1,Simultaneous multithreading (SMT),"A version of multithreading that lowers the cost of multithreading by utilizing the resources needed for multiple issue, dynamically scheduled microarchitecture."
+7.5.1,Uniform memory access (UMA),A multiprocessor in which latency to any word in main memory is about the same no matter which processor requests the access.
+7.5.1,Nonuniform memory access (NUMA),A type of single address space multiprocessor in which some memory accesses are much faster than others depending on which processor asks for which word.
+7.5.1,Synchronization,"The process of coordinating the behavior of two or more processes, which may be running on different processors."
+7.5.1,lock,A synchronization device that allows access to data to only one processor at a time.
+7.5.1,reduction,A function that processes a data structure and returns a single value.
+7.5.1,openmp,"An API for shared memory multiprocessing in C, C++, or Fortran that runs on UNIX and Microsoft platforms. It includes compiler directives, a library, and runtime directives."
+7.7.1,message passing,Communicating between multiple processors by explicitly sending and receiving information.
+7.7.1,send message routine,A routine used by a processor in machines with private memories to pass a message to another processor.
+7.7.1,receive message routine,A routine used by a processor in machines with private memories to accept a message from another processor.
+7.7.1,clusters,Collections of computers connected via I/O over standard network switches to form a message-passing multiprocessor.
+7.7.1,Software as a service (SaaS),"Rather than selling software that is installed and run on customers' own computers, software is run at a remote site and made available over the Internet typically via a Web interface to customers. SaaS customers are charged based on use versus on ownership."
+7.8.1,network bandwidth,"Informally, the peak transfer rate of a network; can refer to the speed of a single link or the collective transfer rate of all links in the network."
+7.8.1,bisection bandwidth,The bandwidth between two equal parts of a multiprocessor. This measure is for a worst case split of the multiprocessor.
+7.8.1,full connected network,A network that connects processor-memory nodes by supplying a dedicated communication link between every node.
+7.8.1,multistage network,A network that supplies a small switch at each node.
+7.8.1,crossbar network,A network that allows any node to communicate with any other node in one pass through the network.
+7.9.1,Memory-mapped I/O,"An I/O scheme in which portions of the address space are assigned to I/O devices, and reads and writes to those addresses are interpreted as commands to the I/O device."
+7.9.1,Direct memory access (DMA),A mechanism that provides a device controller with the ability to transfer data directly to or from the memory without involving the processor.
+7.9.1,Interrupt-driven I/O,An I/O scheme that employs interrupts to indicate to the processor that an I/O device needs attention.
+7.9.1,Device driver,A program that controls an I/O device that is attached to the computer.
+7.9.1,Polling,The process of periodically checking the status of an I/O device to determine the need to service the device.
+7.9.10,Pthreads,A UNIX API for creating and manipulating threads. It is structured as a library.
+7.9.10,Arithmetic intensity,The ratio of floating-point operations in a program to the number of data bytes accessed by a program from main memory.
