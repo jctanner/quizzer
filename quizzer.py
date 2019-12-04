@@ -264,10 +264,10 @@ class Quizzer:
 
             matches = []
             for ac in all_choices:
-                if ac == answer:
+                if ac.lower() == answer.lower():
                     continue
                 jw = jaro_winkler(answer, ac)
-                matches.append([jw, ac])
+                matches.append([str(jw).lower(), str(ac).lower()])
             matches = sorted(matches, key=lambda x: x[0])
             choices.append(matches[-1][1])
             choices.append(matches[-2][1])
@@ -381,20 +381,24 @@ class Quizzer:
                 x['course'] == coursename and \
                 x['chapter'] == chaptername
             ]
-            count = len(choices)
+            if len(choices) < count:
+                count = len(choices)
         if section:
             choices = [x for x in self.questions if \
                 x['course'] == coursename and \
                 x['chapter'] == chaptername and \
                 x['section'] == section
             ]
-            count = len(choices)
+            if len(choices) < count:
+                count = len(choices)
 
         for counter in range(0, count):
             qid = None
 
             while qid is None or qid in qids:
-                print('getting new random question (%s possible, % so far)' % (count, len(qids)))
+                if len(qids) >= count:
+                    break
+                print('get new random question (%s possible, %s so far)' % (count, len(qids)))
                 qs = random.choice(self.questions)
                 if qs['answer'] is None:
                     continue
@@ -405,6 +409,8 @@ class Quizzer:
                 if section and qs['section'] != section:
                     continue
                 qid = self.questions.index(qs)
+            if len(qids) >= count:
+                break
             qids.append(qid)
 
         if not qids:
@@ -491,23 +497,51 @@ class Quizzer:
 
         data = self.get_cached_answers()
 
-        for fn in correct_files:
-            path_parts = fn.split('/')
-            course = path_parts[1]
-            chapter = path_parts[2]
-            key = course + '-' + chapter
-            if fn not in data[key]['byfile']:
-                data[key]['byfile'][fn] = []
-            data[key]['byfile'][fn].append(True)
+        if correct_files or incorrect_files:
 
-        for fn in incorrect_files:
-            path_parts = fn.split('/')
-            course = path_parts[1]
-            chapter = path_parts[2]
-            key = course + '-' + chapter
-            if fn not in data[key]['byfile']:
-                data[key]['byfile'][fn] = []
-            data[key]['byfile'][fn].append(False)
+            for fn in correct_files:
+                path_parts = fn.split('/')
+                course = path_parts[1]
+                chapter = path_parts[2]
+                key = course + '-' + chapter
+                if key not in data:
+                    continue
+                    #import epdb; epdb.st()
+                if fn not in data[key]['byfile']:
+                    data[key]['byfile'][fn] = []
+                data[key]['byfile'][fn].append(True)
+
+            for fn in incorrect_files:
+                path_parts = fn.split('/')
+                course = path_parts[1]
+                chapter = path_parts[2]
+                key = course + '-' + chapter
+                if key not in data:
+                    continue
+                    #import epdb; epdb.st()
+                if fn not in data[key]['byfile']:
+                    data[key]['byfile'][fn] = []
+                data[key]['byfile'][fn].append(False)
+
+        elif correct_qids or incorrect_qids:
+
+            for qid in incorrect_qids:
+                thisq = self.questions[qid]
+                course = thisq['course']
+                chapter = thisq['chapter']
+                key = course + '-' + chapter
+                if qid not in data[key]['byqid']:
+                    data[key]['byqid'][qid] = []
+                data[key]['byqid'][qid].append(False)
+
+            for qid in correct_qids:
+                thisq = self.questions[qid]
+                course = thisq['course']
+                chapter = thisq['chapter']
+                key = course + '-' + chapter
+                if qid not in data[key]['byqid']:
+                    data[key]['byqid'][qid] = []
+                data[key]['byqid'][qid].append(False)
 
         with open(self.cachefile, 'w') as f:
             f.write(json.dumps(data))
