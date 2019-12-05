@@ -1,0 +1,7 @@
+1) What does extending to 16 bits yield given -6 in 8-bit 2’s complement 11111010?
+
+00000000 11111010
+11111111 11111010 x
+11111010 11111111
+11111100 11111010
+

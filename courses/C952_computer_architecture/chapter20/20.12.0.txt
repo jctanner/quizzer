@@ -1,0 +1,7 @@
+1) Which factor in parallel processing is bound by Amdahl’s Law?
+
+Memory Hierarchy
+Application Hierarchy
+Strong Scaling x
+Weak Scaling
+

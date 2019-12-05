@@ -1,0 +1,11 @@
+One washer takes 35 minutes
+One dryer takes 20 minutes
+One folder takes 50 minutes
+
+1) How many minutes does it take to wash, dry, and fold four loads of laundry using a pipelining approach, given the information above?
+
+105
+205
+255 x
+305
+

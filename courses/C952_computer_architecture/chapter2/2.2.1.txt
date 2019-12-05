@@ -1,0 +1,14 @@
+1) The computing industry has not improved quite as rapidly as the transportation industry.
+
+true
+false x
+
+2) The agricultural and industrial revolutions each transformed society. Computers have led to a relatively recent information revolution.
+
+true x
+false
+
+3) Computer improvements have led to previously undreamt applications like cell phones, but most signs suggest the improvements are now coming to an end.
+
+true
+false x

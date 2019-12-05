@@ -1,0 +1,10 @@
+Given the following 8-bit integer binary variables:
+     X1 = 01010101
+     X2 = 10011111
+
+1) What is the value in X3 after the following command: SUB X3, X2, X1
+
+011110010
+Overflow or Carry Flag
+011110100
+01001010 x

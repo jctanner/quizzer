@@ -1,0 +1,7 @@
+1) A program with 1,000e9 instructions runs alone on a CPU. The CPU clock rate is 5e9 cycles per second, i.e., 5 GHz. The average number of cycles per instruction is 3. How many seconds is the CPU performance for the task?
+
+0.000006
+0.006
+600 x
+600000.0
+

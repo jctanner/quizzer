@@ -1,0 +1,7 @@
+1) A program requires 1,258,000,980 instructions to execute on a processor running at 3 GHz. Suppose that on average the number of clock cycles per instruction is 4. If the average number of clock cycles per instruction is reduced from 4 to 3, how much will overall performance improve by? 
+
+33.33% x
+75.0%
+66.66%
+25%
+

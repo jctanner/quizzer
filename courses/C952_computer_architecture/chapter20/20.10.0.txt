@@ -1,0 +1,7 @@
+1) An instruction set has 8 steps and each step takes one clock cycle. What is the average number of cycles needed to complete each instruction set using a pipelined process to complete 100 instruction sets? 
+
+1.07 x
+800
+0.08 
+107
+

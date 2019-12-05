@@ -1,0 +1,11 @@
+A protein string matching code takes 4 days to execute. 35% of computational time is spent doing integer instructions and 65% of the time is spent doing I/O. Which of the following is an example of strong scaling? Which is an example of weak scaling?
+
+1) Reducing computational time by 100% results in reducing computational time by 14 days when the code is run 10 times
+
+strong scaling
+weak scaling x
+
+2) Reducing computational time by 100% results in reducing computational time by 1.4 days or a speedup of 53.85%.
+
+strong scaling x
+weak scaling

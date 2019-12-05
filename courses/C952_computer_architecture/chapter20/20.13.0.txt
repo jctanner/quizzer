@@ -1,0 +1,5 @@
+1) A protein string matching code takes 4 days to execute. 35% of computational time is spent doing integer instructions and 65% of the time is spent doing I/O. Which of the following is an example of Amdahl’s law?
+
+Reducing computational time of integer instructions can at best result in reducing computational time by 1.4 days or a speedup of 53.85%. x
+Reducing computational time can at best result in reducing computational time by 1.4 days each time the code is run. 
+

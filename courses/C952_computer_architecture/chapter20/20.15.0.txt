@@ -1,0 +1,7 @@
+1) Given 8 sets of ARM instructions that take the same amount of time and processing power to execute, about how much faster would the instructions complete if executed 5000 times using a pipelining methodology? 
+
+2 times
+4 times
+8 times x
+16 times
+
