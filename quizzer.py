@@ -413,9 +413,6 @@ class Quizzer:
                 break
             qids.append(qid)
 
-        if not qids:
-            import epdb; epdb.st()
-
         qids = sorted(qids, key=lambda x: self.questions[x]['filename'])
 
         self.sessions[sessionid] = {
@@ -438,6 +435,7 @@ class Quizzer:
         session = self.sessions[sessionid]
         correct = []
         incorrect = []
+        incorrect_selections = {}
         unanswered = []
 
         correct_files = set() 
@@ -452,6 +450,7 @@ class Quizzer:
             else:
                 incorrect.append(qid)
                 incorrect_files.add(question['filename'])
+                incorrect_selections[qid] = session['answers'][qid]
     
         data = {}
         data['total_questions'] = len(session['qids'])
@@ -463,8 +462,9 @@ class Quizzer:
         for x in session['qids']:
             data['questions'][x] = self.questions[x]
         data['incorrect'] = incorrect[:]
+        data['incorrect_selections'] = incorrect_selections
 
-        self.set_cached_answers(correct_files, incorrect_files, correct, incorrect)
+        self.set_cached_answers(correct_files, incorrect_files, correct, incorrect, incorrect_selections)
 
         return data
 
@@ -493,7 +493,7 @@ class Quizzer:
 
         return data
 
-    def set_cached_answers(self, correct_files, incorrect_files, correct_qids, incorrect_qids):
+    def set_cached_answers(self, correct_files, incorrect_files, correct_qids, incorrect_qids, incorrect_selections):
 
         data = self.get_cached_answers()
 
@@ -664,7 +664,9 @@ class Quizzer:
             'chapter': question['chapter'],
             'section': question['section'],
             'questionid': questionid,
+            'choices': question['choices'],
             'correct': answer == question['answer'],
+            'selected': question['answer'],
             'answer': answer
         }
         self.db.insert(**kwargs)

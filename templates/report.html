@@ -27,6 +27,9 @@ total incorrect: {{ report.total_incorrect }}
     <b>ANSWER:</b><br>
     {{ report['questions'][question]['answer'] }}<br>
     <br>
+    <b>SELECTED:</b><br>
+    {{ report['incorrect_selections'][question] }}
+    <br>
     </div>
 <br>
 <b>HINT:</b><br>
