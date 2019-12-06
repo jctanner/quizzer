@@ -6,3 +6,5 @@
 0.006
 600.0
 6000 x
+
+HINT: number of cycles = instruction count * CPI ... CPU time = (12 * 10^10)(500 * 10^10) = 12*500*10 = 6000
