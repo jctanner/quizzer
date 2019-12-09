@@ -1,0 +1,39 @@
+Indicate whether each name refers to a LEGv8 register.
+
+1) X0
+
+True x
+False
+
+2) X32
+
+True 
+False x
+
+HINT: X30 is the highest-numbered X register.
+
+3) X
+
+True
+False x
+
+HINT: The X must be followed by a number 0-30, or ZR.
+
+4) XZR
+
+True x
+False
+
+HINT: The XZR register always contains 0 (ZR is short for ZERO), which can be convenient for assembly programmers.
+
+5) XONE
+
+True
+False x
+
+6) Memory[0]
+
+True
+False x
+
+HINT: Memory[0] refers to a memory location, not a register. A register is a fast location for data, but only relatively few registers exist in LEGv8. In contrast, over 4 quintillion memory locations exist in MIPS.

@@ -1,0 +1,19 @@
+1) In the instruction (ADD a, b, c); a, b, and c are operands. In such an arithmetic instruction, each operand comes from special hardware called a _____.
+
+register x
+operand
+bit
+shift
+
+2) In the LEGv8 architecture, each register is _____ bits wide.
+
+64 x
+32
+16
+8
+
+3) More registers may benefit an assembly program, but may lead to a _____ clock frequency.
+
+slower x
+faster
+broken

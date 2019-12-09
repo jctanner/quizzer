@@ -1,0 +1,38 @@
+Assume X22 has 5000, and doublewords addressed 5000..5002 have the data shown:
+
+	5000: 99
+	5001: 77
+	5002: 323
+
+1) What address will be computed by: LDUR X9, [X22, #2]
+
+5002 x
+5001
+5000
+
+HINT: [X22, #2] computes the address as 2 + (the value in X22), so 2 + 5000, or 5002.
+
+2) What value will be put in X9 by: LDUR X9, [X22, 0]
+
+99 x
+77
+323
+
+HINT: [X22, #0] will compute the address 0 + 5000, or 5000. The value in the doubleword at address 5000 is 99. Thus, 99 will be put in X9.
+
+
+3) What value will be put in X10 by: LDUR X10, [X22, #2]
+
+323 x
+77
+99
+
+HINT: [X22, #2] will compute the address 2 + 5000, or 5002. The value in the doubleword at address 5002 is 323. Thus, 323 will be put in X10.
+
+4) Assume X21 has 5001. What value will be put in X11 by: LDUR X11, [X21, #1]
+
+323 x
+77
+99
+
+HINT: [X21, #1] will compute the address 1 + 5001, or 5002. The value in the word at address 5002 is 323. Thus, 323 will be put in X11.

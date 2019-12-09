@@ -1,0 +1,6 @@
+1) Given the importance of registers, what is the rate of increase in the number of registers in a chip over time?
+
+Very fast, like Moore's Law
+Very Slow x
+
+HINT: Since programs are usually distributed in the language of the computer, there is inertia in instruction set architecture, and so the number of registers increases only as fast as new instruction sets become viable

@@ -1,0 +1,11 @@
+1) A LEGv8 add instruction that computes: z = x + y
+
+ADD z, x, y x
+ADD x, y, z
+ADD y, x, z
+
+2) A LEGv8 add instruction that computes: a = a + b
+
+ADD a, a, b x
+ADD a, b, a
+ADD b, a, a

@@ -392,29 +392,40 @@ class Quizzer:
             if len(choices) < count:
                 count = len(choices)
 
-        for counter in range(0, count):
-            qid = None
+        if len(choices) <= count:
+            qids = [self.questions.index(x) for x in choices]
 
-            while qid is None or qid in qids:
+        else:
+            for counter in range(0, count):
+                qid = None
+
+                while qid is None or qid in qids:
+                    if len(qids) >= count:
+                        break
+
+                    print('get new random question (%s possible, %s so far)' % (count, len(qids)))
+                    #if len(qids) == 3:
+                    #    import epdb; epdb.st()
+
+                    #qs = random.choice(self.questions)
+                    qs = random.choice(choices)
+                    if len(qids) >= len(choices):
+                        break
+                    if qs['answer'] is None:
+                        continue
+                    if qs['course'] != coursename:
+                        continue
+                    if chaptername != 'all' and qs['chapter'] != chaptername:
+                        continue
+                    if section and qs['section'] != section:
+                        continue
+                    qid = self.questions.index(qs)
+
                 if len(qids) >= count:
                     break
-                print('get new random question (%s possible, %s so far)' % (count, len(qids)))
-                qs = random.choice(self.questions)
-                if qs['answer'] is None:
-                    continue
-                if qs['course'] != coursename:
-                    continue
-                if chaptername != 'all' and qs['chapter'] != chaptername:
-                    continue
-                if section and qs['section'] != section:
-                    continue
-                qid = self.questions.index(qs)
-            if len(qids) >= count:
-                break
-            qids.append(qid)
+                qids.append(qid)
 
         qids = sorted(qids, key=lambda x: self.questions[x]['filename'])
-
         self.sessions[sessionid] = {
             'started': datetime.datetime.now(),
             'finished': None,

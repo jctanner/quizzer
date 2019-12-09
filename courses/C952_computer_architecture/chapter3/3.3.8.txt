@@ -1,0 +1,45 @@
+1) Each doubleword consists of _____ bytes.
+
+1
+4
+8 x
+
+HINT: Each LEGv8 word has 64 bits, meaning 8 bytes (a byte is 8 bits).
+
+2) Does every byte in memory have a unique address?
+
+Yes x
+No
+
+HINT: Thus, each byte is addressable. However, programmers usually access memory by words and doublewords.
+
+3) An array A has a base address of 2000. A[0] is thus at address 2000. What is the address of A[1]?
+
+2000
+2001
+2008 x
+
+HINT: Each byte has an address. So A[0]'s first byte is at 2000, second at 2001, third at 2002, fourth at 2003, fifth at 2004, sixth at 2005, seventh at 2006, and eighth at 2007. Thus, A[1] starts at 2008.
+
+4) An array A has a base address of 2000. What is the address of A[9]?
+
+2009
+2072 x
+2080
+
+HINT: Each doubleword has 8 bytes, each with an address. So the array's elements are at 2000, 2008, 2016, etc. Thus, A[9] is at 2000 + 9 × 8 = 2072.
+
+5) Assuming X22 has 5000, is the following an acceptable instruction? LDUR X9, [X22, #7]
+
+Yes
+No x
+
+HINT: LDUR is a load register instruction and the computed address must be a valid doubleword address. Doubleword addresses are multiples of 8, so 7 + 5000, or 5007, is not a valid doubleword address. A different instruction exists to load a particular byte.
+
+6) Consider the 64-bit binary number 11100000 00000000 00000000 00000000 00000000 00000000 00000000 00000001, stored in the doubleword with address 5000. For a big-endian architecture, what value is stored in byte 5007?
+
+11100000
+00000000
+00000001 x
+
+HINT: In a big-endian architecture, the highest byte is put into the leftmost byte of a word (5000), so the lowest byte is put into the rightmost byte (5007).

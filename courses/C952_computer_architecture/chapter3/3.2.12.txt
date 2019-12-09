@@ -1,0 +1,21 @@
+Indicate whether each is a valid LEGv8 instruction.
+
+1) ADD X1, X2, X3
+
+True x
+False
+
+2) ADDI X1, X2, 50
+
+True x
+False
+
+3) LDUR X1, [X35, 20]
+
+True x
+False 
+
+4) BRANCH 2500
+
+True
+False x

@@ -1,0 +1,14 @@
+1) Of a doubleword's 64 bits, what is the leftmost bit numbered?
+
+64
+63 x
+
+HINT: The numbering of the rightmost bit starts with 0, so the leftmost bit is numbered with 63 rather than 64.
+
+2) Given the following 64-bit number, what is the most significant bit's value? 1000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+
+1 x
+0
+
+HINT: The leftmost bit is the most significant bit, meaning the bit with the greatest weight. Using the term "most significant bit" versus "leftmost bit" helps prevent confusion if a word is drawn vertically.
+
