@@ -7,3 +7,4 @@
 60
 600
 
+HINT: In this problem, we are given the total number of clock cycles. (number of cycles = instruction count * CPI). So we don't need the instruction count or the CPI ... cpu time = ((12 * 10^10)/(5 * 10^9) = 24

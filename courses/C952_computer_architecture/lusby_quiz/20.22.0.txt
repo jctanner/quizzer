@@ -5,3 +5,4 @@
 66.66%
 25%
 
+HINT: CPU time = (IC * CPI) / Clock Rate ... speedup = old/new
