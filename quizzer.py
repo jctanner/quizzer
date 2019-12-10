@@ -447,6 +447,7 @@ class Quizzer:
         correct = []
         incorrect = []
         incorrect_selections = {}
+        incorrect_hints = {}
         unanswered = []
 
         correct_files = set() 
@@ -462,6 +463,7 @@ class Quizzer:
                 incorrect.append(qid)
                 incorrect_files.add(question['filename'])
                 incorrect_selections[qid] = session['answers'][qid]
+                incorrect_hints[qid] = question.get('hint')
     
         data = {}
         data['total_questions'] = len(session['qids'])
@@ -474,6 +476,7 @@ class Quizzer:
             data['questions'][x] = self.questions[x]
         data['incorrect'] = incorrect[:]
         data['incorrect_selections'] = incorrect_selections
+        data['incorrect_hints'] = incorrect_hints
 
         self.set_cached_answers(correct_files, incorrect_files, correct, incorrect, incorrect_selections)
 
