@@ -6,6 +6,6 @@ Given the following 8-bit integer binary variables:
 
 11110010
 01001010
-1111010 x
+11110100 x
 Overflow or Carry Flag
 
