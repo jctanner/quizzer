@@ -5,7 +5,13 @@ A protein string matching code takes 4 days to execute. 35% of computational tim
 strong scaling
 weak scaling x
 
+HINT: Strong scaling is the improvement you get on a single problem. So the total improvement is bound by the part you don’t improve.
+
+
 2) Reducing computational time by 100% results in reducing computational time by 1.4 days or a speedup of 53.85%.
 
 strong scaling x
 weak scaling
+
+HINT: Strong scaling is the improvement you get on a single problem. So the total improvement is bound by the part you don’t improve.
+
