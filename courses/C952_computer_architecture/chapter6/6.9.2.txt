@@ -1,0 +1,14 @@
+1) The cache controller is designed using a _____ .
+
+truth table
+finite-state machine x
+
+HINT: The cache controller requires multistep control for which a finite state machine model is well-suited.
+
+2) A finite-state machine consists of a combinational control logic block and a temporary register used to hold the _____ state.
+
+current
+next x
+previous
+
+HINT: The current state specify which control signals are asserted. The current state and inputs to the combinational control logic are used to determine the next state.
