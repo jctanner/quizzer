@@ -1,0 +1,27 @@
+1) The original design for a superscalar processor was a two-issue machine called _____
+
+cheetah x
+gazelle
+chimp
+deer
+
+2) _____ is a static multiple issue approach that was used in processors found in Cydrome and Multiflow mini-supercomputers.
+
+VLIW x
+ILP
+ISA
+
+HINT: VLIW processors, short for "very long instruction word", had higher costs and worse performance than RISC microprocessors, and therefore were less popular.
+
+3) _____ is a more compiler-intensive approach to multiple issue that removed many VLIW drawbacks.
+
+EPIC x
+IA-64
+VLIW
+
+4) _______ is an approach that uses aggressive loop unrolling and path prediction and has been used to exploit higher levels of ILP.
+
+Trace Scheduling x
+EPIC
+IA-64
+VLIW
