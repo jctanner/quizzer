@@ -1,5 +1,9 @@
 {% include 'header.html' %}
 
+<!--
+{{ question }}
+-->
+
 <div>
 {{ '# ' + question['filename'] }}<br><br>
 <!--
@@ -24,29 +28,39 @@
 <br>
 <div>
 <form method="POST" action="{{ action_url }}">
-{% for choice in question['choices'] %}
-
-    {% if '<markdown>' in choice %}
-
-        {% if selected and selected == choice %}
-        <input type="radio" name="answer" value="{{ choice }}" checked>
-        {{ choice|markdown }} <br>
-        {% else %}
-        <input type="radio" name="answer" value="{{ choice }}">
-        {{ choice|markdown }} <br>
-        {% endif %}
-
+{% if question['answer']|is_list %}
+    {% for choice in question['choices'] %}
+    {% if selected and selected == choice %}
+    <input type="checkbox" name="answer" value="{{ choice }}" checked>{{ choice }} <br>
     {% else %}
+    <input type="checkbox" name="answer" value="{{ choice }}">{{ choice }} <br>
+    {% endif %}
+    {% endfor %}
+{% else %}
+    {% for choice in question['choices'] %}
 
-        {% if selected and selected == choice %}
-        <input type="radio" name="answer" value="{{ choice }}" checked>{{ choice }} <br>
+        {% if '<markdown>' in choice %}
+
+            {% if selected and selected == choice %}
+            <input type="radio" name="answer" value="{{ choice }}" checked>
+            {{ choice|markdown }} <br>
+            {% else %}
+            <input type="radio" name="answer" value="{{ choice }}">
+            {{ choice|markdown }} <br>
+            {% endif %}
+
         {% else %}
-        <input type="radio" name="answer" value="{{ choice }}">{{ choice }} <br>
+
+            {% if selected and selected == choice %}
+            <input type="radio" name="answer" value="{{ choice }}" checked>{{ choice }} <br>
+            {% else %}
+            <input type="radio" name="answer" value="{{ choice }}">{{ choice }} <br>
+            {% endif %}
+
         {% endif %}
 
-    {% endif %}
-
-{% endfor %}
+    {% endfor %}
+{% endif %}
 <br>
 {% if previous_question %}
 {{ form.lastq }}
