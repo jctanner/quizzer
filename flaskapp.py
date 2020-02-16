@@ -25,6 +25,7 @@ from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
 from wtforms import StringField
 from wtforms import SubmitField
+from wtforms import TextField
 
 from pprint import pprint
 
@@ -39,6 +40,11 @@ class QuestionForm(FlaskForm):
     nextq = SubmitField(label='nextq')
     lastq = SubmitField(label='lastq')
     finished = SubmitField(label='finished')
+
+
+class QuestionSearchForm(FlaskForm):
+    querystring = TextField('querystring')
+    submit = SubmitField(label='search')
 
 
 app = Flask(__name__)
@@ -71,13 +77,28 @@ def images(imagefile):
     return send_file(imagefile, mimetype='image/png')
 
 
-@app.route('/course/<coursename>')
+@app.route('/course/<coursename>', methods=['GET', 'POST'])
 def course(coursename):
+
+    searchform = QuestionSearchForm()
+
+    if request.method == 'POST':
+        qs = searchform.data['querystring']
+        sessionid = qz.get_session(coursename, None, querystring=qs, count=99)
+        return redirect(url_for('session', sessionid=sessionid))
+
     chapternames = sorted(list(qz.courses[coursename].keys()))
     chapternames = [x for x in chapternames if qz.chapter_has_questions(coursename, x)]
     report = qz.get_cached_answers_report_by_chapter(coursename=coursename)
     pprint(report)
-    return render_template('course.html', qz=qz, coursename=coursename, chapternames=chapternames, report=report)
+    return render_template(
+        'course.html',
+        qz=qz,
+        coursename=coursename,
+        chapternames=chapternames,
+        report=report,
+        searchform=searchform
+    )
 
 
 @app.route('/quiz/<coursename>/<chaptername>')
@@ -137,11 +158,17 @@ def session(sessionid, questionid=None):
             next_question=next_question
         )
 
-    print(form.data)
-    answer = form.data['answer']
-    print('RESPONSE: %s' % answer)
-    if answer is not None and answer.strip():
-        qz.set_session_answer(sessionid, questionid, answer)
+    # multiple select questions ...
+    if isinstance(qz.questions[questionid]['answer'], list):
+        answers = request.form.getlist('answer')
+        if answers:
+            qz.set_session_answer(sessionid, questionid, sorted(answers))
+    else:
+        print(form.data)
+        answer = form.data['answer']
+        print('RESPONSE: %s' % answer)
+        if answer is not None and answer.strip():
+            qz.set_session_answer(sessionid, questionid, answer)
 
     if form.data['nextq'] is True:
         r_question = qz.sessions[sessionid]['qids'][question_number+1]

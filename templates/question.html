@@ -30,7 +30,7 @@
 <form method="POST" action="{{ action_url }}">
 {% if question['answer']|is_list %}
     {% for choice in question['choices'] %}
-    {% if selected and selected == choice %}
+    {% if selected and selected == choice or (selected and choice in selected) %}
     <input type="checkbox" name="answer" value="{{ choice }}" checked>{{ choice }} <br>
     {% else %}
     <input type="checkbox" name="answer" value="{{ choice }}">{{ choice }} <br>

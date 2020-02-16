@@ -29,6 +29,10 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {% if coursename is defined %}
+    <a class="navbar-brand" href="/">Simple Tester</a><a class="navbar-brand" href="/course/{{ coursename }}">/  {{ coursename }}</a>
+    {% else %}
     <a class="navbar-brand" href="/">Simple Tester</a>
+    {% endif %}
 </nav>
 <div id='body' style='padding-left:10px;padding-top:10px'>

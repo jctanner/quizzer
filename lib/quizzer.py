@@ -85,7 +85,7 @@ class Quizzer:
                     if 'answer' in qs:
                         data['answer'] = qs['answer']
                     else:
-                        data['answer'] = qs['answers']
+                        data['answer'] = sorted(qs['answers'])
                     data['choices'] = qs.get('choices', [])
                     data['filename'] = df
                     #data['hint'] = '\n'.join(qs.get('hints', []))
@@ -377,7 +377,7 @@ class Quizzer:
 
             self.questions[qid]['question'] = body
 
-    def get_session(self, coursename, chaptername, section=None, count=10):
+    def get_session(self, coursename, chaptername, section=None, count=10, querystring=None):
         coursename = str(coursename)
         chaptername = str(chaptername)
         if section:
@@ -403,6 +403,22 @@ class Quizzer:
             ]
             if len(choices) < count:
                 count = len(choices)
+        elif querystring:
+            querystring = querystring.lower()
+            choices = []
+            for qs in self.questions:
+                if qs['course'] != coursename:
+                    continue
+                if querystring in qs['question'].lower():
+                    choices.append(qs)
+                    continue
+                matched = False
+                for qc in qs['choices']:
+                    if querystring in qc.lower():
+                        matched = True
+                if matched:
+                    choices.append(qs)
+            count = len(choices)
 
         if len(choices) <= count:
             qids = [self.questions.index(x) for x in choices]
@@ -442,6 +458,7 @@ class Quizzer:
         if qids:
             qnext = qids[0]
         self.sessions[sessionid] = {
+            'querystring': querystring,
             'started': datetime.datetime.now(),
             'finished': None,
             'qids': qids[:],
