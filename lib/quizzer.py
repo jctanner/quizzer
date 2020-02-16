@@ -95,6 +95,9 @@ class Quizzer:
 
                     if len(data['answer']) == 1:
                         data['answer'] = data['answer'][0]
+                    
+                    if 'title' in qs:
+                        data['chapter_title'] = qs['title']
 
                     if data['answer'] and data['choices']:
                         self.questions.append(data)
@@ -375,6 +378,10 @@ class Quizzer:
             self.questions[qid]['question'] = body
 
     def get_session(self, coursename, chaptername, section=None, count=10):
+        coursename = str(coursename)
+        chaptername = str(chaptername)
+        if section:
+            section = str(section)
         sessionid = str(uuid.uuid4())
         qids = []
 
@@ -431,11 +438,14 @@ class Quizzer:
                 qids.append(qid)
 
         qids = sorted(qids, key=lambda x: self.questions[x]['filename'])
+        qnext = None
+        if qids:
+            qnext = qids[0]
         self.sessions[sessionid] = {
             'started': datetime.datetime.now(),
             'finished': None,
             'qids': qids[:],
-            'next': qids[0],
+            'next': qnext,
             'answers': {}
         }
 
@@ -763,3 +773,17 @@ class Quizzer:
             print('')
             #import epdb; epdb.st()
         #import epdb; epdb.st()
+
+    def get_course_chapter_title(self, coursename, chaptername):
+        qs = [x for x in self.questions if x['course'] == str(coursename) and x['chapter'] == str(chaptername)]
+        for _qs in qs:
+            if 'chapter_title' in _qs:
+                return _qs['chapter_title']
+        #import epdb; epdb.st()
+        return ''
+
+    def chapter_has_questions(self, coursename, chaptername):
+        qs = [x for x in self.questions if x['course'] == str(coursename) and x['chapter'] == str(chaptername)]
+        if qs:
+            return True
+        return False

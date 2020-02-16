@@ -53,6 +53,11 @@ def is_list(var):
     """Convert a string to all caps."""
     return isinstance(var, list)
 
+@app.template_filter()
+def to_json(data):
+    """ pretty printed json """
+    return json.dumps(data, indent=2, sort_keys=True)
+
 
 @app.route('/')
 def root():
@@ -69,9 +74,10 @@ def images(imagefile):
 @app.route('/course/<coursename>')
 def course(coursename):
     chapternames = sorted(list(qz.courses[coursename].keys()))
+    chapternames = [x for x in chapternames if qz.chapter_has_questions(coursename, x)]
     report = qz.get_cached_answers_report_by_chapter(coursename=coursename)
     pprint(report)
-    return render_template('course.html', coursename=coursename, chapternames=chapternames, report=report)
+    return render_template('course.html', qz=qz, coursename=coursename, chapternames=chapternames, report=report)
 
 
 @app.route('/quiz/<coursename>/<chaptername>')

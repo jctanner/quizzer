@@ -1,5 +1,11 @@
 {% include 'header.html' %}
 
+{% if report %}
+<!--
+{{ report|to_json|safe }}
+-->
+{% endif %}
+
 <b>{{ coursename }}</b><br>
 <ul>
     <li><a href="{{ '/quiz/' + coursename + '/all' }}">start course quiz</a></li>
@@ -7,21 +13,25 @@
 </ul>
 <br>
 {% for chaptername in chapternames %}
-<b>{{ chaptername }}</b>
+<b>({{ chaptername }}) {{ qz.get_course_chapter_title(coursename, chaptername) }}</b>
 <ul>
 <a href="{{ '/quiz/' + coursename + '/' + chaptername|string }}">start chapter quiz</a> <br>
 <a href="{{ '/test/' + coursename + '/' + chaptername|string }}">start chapter test</a> <br>
 </ul>
     {% if report %}
         <ul>
-        {% if chaptername in report[coursename] %}
+        {% if chaptername|string in report[coursename|string] %}
         <table style="width:30%;text-align:right">
             <tr>
                 <th>section</th>
                 <th>correct</th>
                 <th>incorrect</th>
             </tr>
-        {% for section,results in report[coursename][chaptername].items() %}
+        {% for section,results in report[coursename|string][chaptername|string].items() %}
+            <!--
+            {{ section }}
+            {{ results|to_json|safe }}
+            -->
             <tr>
                 <td><a href="{{ '/quiz/' + coursename + '/' + chaptername|string + '/' + section|string }}">{{ section }}</a> </td>
                 <td><progress value="{{ results['correct'] }}" max="{{ results['total'] }}"></progress></td>
