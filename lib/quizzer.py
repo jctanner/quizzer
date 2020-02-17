@@ -473,6 +473,14 @@ class Quizzer:
             print(list(self.sessions.keys()))
         return self.sessions[sessionid]['next']
 
+    def get_session_coursename(self, sessionid):
+        session = self.sessions[sessionid]
+        for qid in session['qids']:
+            question = self.questions[qid]
+            if question['course']:
+                return question['course']
+        return None
+
     def get_session_report(self, sessionid):
 
         session = self.sessions[sessionid]

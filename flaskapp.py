@@ -59,6 +59,7 @@ def is_list(var):
     """Convert a string to all caps."""
     return isinstance(var, list)
 
+
 @app.template_filter()
 def to_json(data):
     """ pretty printed json """
@@ -185,7 +186,8 @@ def session(sessionid, questionid=None):
 @app.route('/report/<sessionid>')
 def report(sessionid):
     this_report = qz.get_session_report(sessionid)
-    return render_template('report.html', report=this_report)
+    coursename = qz.get_session_coursename(sessionid)
+    return render_template('report.html', report=this_report, coursename=coursename)
 
 
 def main():
