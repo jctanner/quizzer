@@ -10,6 +10,7 @@ import re
 import os
 import uuid
 
+from functools import lru_cache
 from pprint import pprint
 
 from Levenshtein import jaro_winkler
@@ -473,6 +474,7 @@ class Quizzer:
             print(list(self.sessions.keys()))
         return self.sessions[sessionid]['next']
 
+    @lru_cache
     def get_session_coursename(self, sessionid):
         session = self.sessions[sessionid]
         for qid in session['qids']:
@@ -481,6 +483,7 @@ class Quizzer:
                 return question['course']
         return None
 
+    @lru_cache
     def get_session_report(self, sessionid):
 
         session = self.sessions[sessionid]
@@ -600,6 +603,7 @@ class Quizzer:
         with open(self.cachefile, 'w') as f:
             f.write(json.dumps(data))
 
+    @lru_cache
     def get_cached_answers_report_by_chapter(self, coursename=None):
 
         report = {}
@@ -656,6 +660,7 @@ class Quizzer:
         pprint(report)
         return report
 
+    @lru_cache
     def __get_cached_answers_report_by_chapter(self, coursename=None):
         ds = self.get_cached_answers().copy()
         report = {}
@@ -704,7 +709,7 @@ class Quizzer:
 
         return report
         
-
+    @lru_cache
     def get_session_selected_answer(self, sessionid, questionid):
         answer = self.sessions[sessionid]['answers'].get(questionid)
         return answer
@@ -799,6 +804,7 @@ class Quizzer:
             #import epdb; epdb.st()
         #import epdb; epdb.st()
 
+    @lru_cache
     def get_course_chapter_title(self, coursename, chaptername):
         qs = [x for x in self.questions if x['course'] == str(coursename) and x['chapter'] == str(chaptername)]
         for _qs in qs:
@@ -807,6 +813,7 @@ class Quizzer:
         #import epdb; epdb.st()
         return ''
 
+    @lru_cache
     def chapter_has_questions(self, coursename, chaptername):
         qs = [x for x in self.questions if x['course'] == str(coursename) and x['chapter'] == str(chaptername)]
         if qs:
