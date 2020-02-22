@@ -483,7 +483,6 @@ class Quizzer:
                 return question['course']
         return None
 
-    @lru_cache
     def get_session_report(self, sessionid):
 
         session = self.sessions[sessionid]
@@ -603,7 +602,6 @@ class Quizzer:
         with open(self.cachefile, 'w') as f:
             f.write(json.dumps(data))
 
-    @lru_cache
     def get_cached_answers_report_by_chapter(self, coursename=None):
 
         report = {}
@@ -660,7 +658,6 @@ class Quizzer:
         pprint(report)
         return report
 
-    @lru_cache
     def __get_cached_answers_report_by_chapter(self, coursename=None):
         ds = self.get_cached_answers().copy()
         report = {}
@@ -708,8 +705,7 @@ class Quizzer:
                     report[course][chapter][section] = {'total': total, 'correct': correct, 'incorrect': incorrect}
 
         return report
-        
-    @lru_cache
+
     def get_session_selected_answer(self, sessionid, questionid):
         answer = self.sessions[sessionid]['answers'].get(questionid)
         return answer
