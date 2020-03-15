@@ -91,8 +91,9 @@ def course(coursename):
         sessionid = qz.get_session(coursename, None, querystring=qs, count=99)
         return redirect(url_for('session', sessionid=sessionid))
 
-    chapternames = sorted(list(qz.courses[coursename].keys()))
-    chapternames = [x for x in chapternames if qz.chapter_has_questions(coursename, x)]
+    #chapternames = sorted(list(qz.courses[coursename].keys()))
+    #chapternames = [x for x in chapternames if qz.chapter_has_questions(coursename, x)]
+    chapternames = qz.get_course_chapternames(coursename)
     report = qz.get_cached_answers_report_by_chapter(coursename=coursename)
     pprint(report)
     return render_template(

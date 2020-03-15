@@ -73,29 +73,48 @@ class Quizzer:
                 total_added = 0
                 for qs in jdata:
 
-                    try:
-                        section = int(qs['module'])
-                    except ValueError as e:
-                        section = 99
+                    section = 0
+                    if 'module' in qs:
+                        try:
+                            section = int(qs['module'])
+                        except ValueError as e:
+                            section = 99
+                    #elif 'page' in qs:
+                    #     section = int(qs['page'])
                     if section not in self.courses[course]:
                         self.courses[course][section] = []
                     #import epdb; epdb.st()
 
                     data = copy.deepcopy(self.empty_question)
                     data['course'] = course
-                    if 'answer' in qs:
-                        data['answer'] = qs['answer']
+                    # special handling for vocab screwup ...
+                    if not qs.get('choices') and qs.get('answer'):
+                        data['question'] = qs['answer']
+                        data['answer'] = qs['question']
                     else:
-                        data['answer'] = sorted(qs['answers'])
+                        if 'answer' in qs:
+                            data['answer'] = qs['answer']
+                        else:
+                            data['answer'] = sorted(qs['answers'])
                     data['choices'] = qs.get('choices', [])
+                    #if not data['choices']:
+                    #    data['choices'] = [data['answer']]
                     data['filename'] = df
                     #data['hint'] = '\n'.join(qs.get('hints', []))
-                    data['question'] = qs['question']
+                    if not data['question']:
+                        data['question'] = qs['question']
                     data['chapter'] = qs['unit']
                     data['section'] = section
 
                     if len(data['answer']) == 1:
                         data['answer'] = data['answer'][0]
+                    
+                    if len(data['choices']) == 0:
+                        data['choices'] = [data['answer']]
+                        choices = [x['question'] for x in jdata if not x.get('choices')]
+                        for x in range(0,2):
+                            data['choices'].append(random.choice(choices))
+                        #import epdb; epdb.st()
                     
                     if 'title' in qs:
                         data['chapter_title'] = qs['title']
@@ -103,6 +122,13 @@ class Quizzer:
                     if data['answer'] and data['choices']:
                         self.questions.append(data)
                         total_added += 1
+                    #else:
+                    #    self.questions.append(data)
+                    #    total_added += 1
+                    #    #import epdb; epdb.st()
+
+                    #if 'the means by which a society organizes itself' in qs.get('answer', ''):
+                    #    import epdb; epdb.st()
 
                 #self.randomize_choices(df)
                 print('%s added out of %s' % (total_added, len(jdata)))
@@ -820,9 +846,15 @@ class Quizzer:
         #import epdb; epdb.st()
         return ''
 
-    @lru_cache
     def chapter_has_questions(self, coursename, chaptername):
         qs = [x for x in self.questions if x['course'] == str(coursename) and x['chapter'] == str(chaptername)]
+        if str(chaptername) == '0':
+            import epdb; epdb.st()
         if qs:
             return True
         return False
+    
+    def get_course_chapternames(self, coursename):
+        chapternames = [x['chapter'] for x in self.questions if x['course'] == coursename]
+        chapternames = sorted(set(chapternames))
+        return chapternames
