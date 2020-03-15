@@ -602,6 +602,17 @@ class Quizzer:
         with open(self.cachefile, 'w') as f:
             f.write(json.dumps(data))
 
+    def total_questions(self, course=None, chapter=None, section=None):
+        qs = self.questions[:]
+        if course:
+            qs = [x for x in qs if str(x['course']) == str(course)]
+        if chapter:
+            qs = [x for x in qs if str(x['chapter']) == str(chapter)]
+        if section:
+            qs = [x for x in qs if str(x['section']) == str(section)]
+
+        return len(qs)
+
     def get_cached_answers_report_by_chapter(self, coursename=None):
 
         report = {}
@@ -643,7 +654,7 @@ class Quizzer:
                 report[_section[0]][_section[1]][section] = {
                     'total': 0,
                     'correct': 0,
-                    'incorrect': 0
+                    'incorrect': 0,
                 }
 
         for row in rows:
@@ -653,7 +664,7 @@ class Quizzer:
             else:
                 report[row['course']][row['chapter']][row['section']]['incorrect'] += 1
 
-
+        #import epdb; epdb.st()
         pprint(sections)
         pprint(report)
         return report

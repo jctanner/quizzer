@@ -6,7 +6,7 @@
 -->
 {% endif %}
 
-<b>{{ coursename }}</b><br>
+<b>{{ coursename }} ({{qz.total_questions(course=coursename)}} total)</b><br>
 <ul>
     <li><a href="{{ '/quiz/' + coursename + '/all' }}">start course quiz</a></li>
     <li><a href="{{ '/test/' + coursename + '/all' }}">start course test</a></li>
@@ -21,7 +21,7 @@
 </ul>
 
 {% for chaptername in chapternames %}
-<b>({{ chaptername }}) {{ qz.get_course_chapter_title(coursename, chaptername) }}</b>
+<b>({{ chaptername }}) {{qz.get_course_chapter_title(coursename, chaptername)}} ({{qz.total_questions(course=coursename, chapter=chaptername)}} total)</b>
 <ul>
 <a href="{{ '/quiz/' + coursename + '/' + chaptername|string }}">start chapter quiz</a> <br>
 <a href="{{ '/test/' + coursename + '/' + chaptername|string }}">start chapter test</a> <br>
@@ -32,6 +32,7 @@
         <table style="width:30%;text-align:right">
             <tr>
                 <th>section</th>
+                <th>total</th>
                 <th>correct</th>
                 <th>incorrect</th>
             </tr>
@@ -42,6 +43,7 @@
             -->
             <tr>
                 <td><a href="{{ '/quiz/' + coursename + '/' + chaptername|string + '/' + section|string }}">{{ section }}</a> </td>
+                <td>{{ qz.total_questions(course=coursename, chapter=chaptername, section=section) }}</td>
                 <td><progress value="{{ results['correct'] }}" max="{{ results['total'] }}"></progress></td>
                 <td><progress value="{{ results['incorrect'] }}" max="{{ results['total'] }}"></progress></td>
             </tr>

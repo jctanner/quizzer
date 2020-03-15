@@ -63,7 +63,10 @@ def is_list(var):
 @app.template_filter()
 def to_json(data):
     """ pretty printed json """
-    return json.dumps(data, indent=2, sort_keys=True)
+    try:
+        return json.dumps(data, indent=2, sort_keys=True)
+    except TypeError:
+        return json.dumps(data, indent=2, sort_keys=False)
 
 
 @app.route('/')
