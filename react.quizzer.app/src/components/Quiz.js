@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import QuestionPage from './Question';
 import { InlineQuestion } from './Question';
@@ -9,13 +9,18 @@ import { InlineReport } from './Report';
 function getCourseIdFromCurrentUrl() {
     // http://localhost:3000/courses/C960_discrete_math_II/quiz
     const thisPath = window.location.pathname;
-    console.log(thisPath);
+    console.log('thisPath', thisPath);
     const thisPathParts = thisPath.split('/');
     const totalParts = thisPathParts.length;
     return thisPathParts[totalParts - 2];
 };
 
-function QuizPage() {
+
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+
+function QuizPage({ multiplechoice }) {
 
     const [ courseID, setCourseID ] = useState(null);
     const [ sessionID, setSessionID ] = useState(null);
@@ -24,21 +29,43 @@ function QuizPage() {
     const [ timeStarted, setTimeStarted ] = useState(null);
     const [ timeFinished, setTimeFinished ] = useState(null);
     const [ currentQuestionIndex, setCurrentQuestionIndex ] = useState(0);
+    const [ isMultipleChoice, setIsMultipleChoice ] = useState(true);
 
     if ( courseID === null) {
         setCourseID(getCourseIdFromCurrentUrl());
     }
 
-    const fetchQuiz = async () => {
-        const quizData = await fetch('/api/quiz/' + courseID)
-            .then(res => res.json())
-        console.log('quizData', quizData);
-        setTimeStarted(quizData.started);
-        setTimeFinished(quizData.finished);
-        setSessionID(quizData.sessionid);
-        setQuestionIDs(quizData.questions);
-    };
+    //setIsMultipleChoice(getMutipleChoiceUrlQuery());
+    let query = useQuery();
+    if (query.get("multiplechoice") !== null) {
+        setIsMultipleChoice(true);
+    }
 
+    /*
+    fetch(questionApiUrl)
+                    .then(res => res.json())
+                    .then((data) => {
+    */
+
+    const fetchQuiz = async () => {
+
+        let quizurl = null;
+        if (isMultipleChoice) { 
+            quizurl = '/api/quiz/' + courseID + '?muliplechoice=1'
+        } else {
+            quizurl = '/api/quiz/' + courseID
+        }
+        console.log('quizurl', quizurl)
+        await fetch(quizurl)
+            .then(res => res.json())
+            .then((quizData) => {
+                console.log('quizData', quizData);
+                setTimeStarted(quizData.started);
+                setTimeFinished(quizData.finished);
+                setSessionID(quizData.sessionid);
+                setQuestionIDs(quizData.questions);
+            })
+    };
 
     const handleSubmit = (e) => { 
         const d = new Date();

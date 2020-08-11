@@ -17,14 +17,23 @@ db.run('CREATE TABLE IF NOT EXISTS answers(datetime text, sessionid text, course
 
 let userSessions = [];
 
+/*****************************************************
+ * FUNCTION: strip the file extension from a filename
+*****************************************************/
 function removeFileExtension(filename) {
+    if ( ! filename.includes('.json') ) { 
+        return filename
+    }
     const li = filename.lastIndexOf('.');
     const newfn = filename.substr(0, li);
     return newfn
 };
 
+/*****************************************************
+ * FUNCTION: is a question a multiple-choice question?
+*****************************************************/
 function fileHasChoices(courseName, filename) {
-    const rfilename = 'server/data/courses/' + courseName + '/' + filename
+    const rfilename = 'server/data/courses/' + courseName + '/' + removeFileExtension(filename) + '.json'
     let filedata = fs.readFileSync(rfilename);
     let jData = JSON.parse(filedata);
     if ( jData.choices.length === 0 ) {
@@ -33,6 +42,9 @@ function fileHasChoices(courseName, filename) {
     return true
 };
 
+/*****************************************************
+ * CONST: hash of courses and their questions
+*****************************************************/
 const courseList = fs.readdirSync('server/data/courses')
 console.log(courseList)
 let coursesFiles = {};
@@ -44,12 +56,12 @@ for (let i=0; i<courseList.length; i++) {
     coursesFiles[courseList[i]] = courseQuestionList
 }
 
-//app.get('/api/message', (req, res) => res.send('hello from the API!'))
-//app.get('/api/users', (req, res) => res.json(users))
-
 app.get('/api/courses', (req, res) => res.json(courseList))
 app.get('/api/courses/:courseName', (req, res) => res.json(req.params))
 
+/*****************************************************
+ * API: return a list of questions for course
+*****************************************************/
 app.get('/api/courses/:courseName/questions', function (req, res) {
     console.log(req.params)
     let questionList = [...coursesFiles[req.params.courseName]]
@@ -57,9 +69,24 @@ app.get('/api/courses/:courseName/questions', function (req, res) {
     return res.json(questionList)
 });
 
+/*****************************************************
+ * API: return question data and prev+next question
+*****************************************************/
 app.get('/api/courses/:courseName/questions/:questionID', function (req, res) {
     const filename = 'server/data/courses/' + req.params.courseName + '/' + req.params.questionID + '.json'
+
+    // FIXME: return null data for null filenames
     console.log(filename)
+    if (filename === undefined) {
+        return res.json({
+            'qid': req.params.questionID,
+            'next': null,
+            'previous': null,
+            'filename': filename,
+        })
+
+    }
+
     let filedata = fs.readFileSync(filename);
     let jData = JSON.parse(filedata);
 
@@ -94,12 +121,19 @@ app.get('/api/courses/:courseName/questions/:questionID', function (req, res) {
     })
 });
 
+/*****************************************************
+ * API: get a set of quiz questions
+*****************************************************/
 app.get('/api/quiz/:courseName', async function (req, res) {
+    console.log('------------------------------------------')
     console.log(req.params)
     let questionList = [...coursesFiles[req.params.courseName]]
+    //let multiplechoice = req.query.multiplechoice
+    //console.log(multiplechoice)
+    multiplechoice = true;
 
+    // get rid of already answered questions
     let answered = []
-
     let sql = "SELECT * FROM answers"
     sql += " WHERE "
     sql += "coursename=" + '"' + req.params.courseName + '"'
@@ -107,35 +141,36 @@ app.get('/api/quiz/:courseName', async function (req, res) {
         await db.all(sql, (err, rows)=>{
             let rownum = 0;
             rows.forEach((row) => {
-                console.log(row)
+                //console.log(row)
                 answered.push(row.questionid)
             })
         })
     } catch(error) {
         throw('error running ' + sql)
     }
-
-    // var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-    // var filtered = array.filter(function(value, index, arr){ return value > 5;});
-    //filtered => [6, 7, 8, 9]
-    //array => [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-    const filtered = questionList.filter(function(value, indx, arr){
+    let filtered = questionList.filter(function(value, indx, arr){
         return (answered.includes(value) === false);
     });
-    console.log(filtered)
+
+    // clear out non-multiplechoice questions if requested ...
+    filtered = filtered.filter(function(value, indx, arr){
+        return (fileHasChoices(req.params.courseName, value));
+    });
+
     questionList = filtered;
 
+    // select a random set of questions from the list
     let quizList = [];
     for (let i=0; i<10; i++) {
         const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
-        console.log('push', randomQuestion);
+        //console.log('push', randomQuestion);
         quizList.push(randomQuestion);
     };
-    console.log('quizList', quizList);
+    //console.log('quizList', quizList);
     quizList.sort(compareVersions);
-    console.log('quizList.sorted ...', quizList);
-    //console.log(quizList);
+    //console.log('quizList.sorted ...', quizList);
 
+    // start a session
     const d = new Date();
     const thisSession = {
         "started": d.getTime(),
@@ -144,10 +179,13 @@ app.get('/api/quiz/:courseName', async function (req, res) {
         "questions": [...quizList]
     };
     userSessions.push(thisSession);
-    console.log(thisSession);
+    //console.log(thisSession);
     return res.json(thisSession);
 });
 
+/*****************************************************
+ * API: get quiz results for all questions
+*****************************************************/
 app.get('/api/results/:courseName', async function (req, res) {
     const courseName = req.params.courseName
     let questionList = [...coursesFiles[courseName]]
@@ -209,6 +247,9 @@ app.get('/api/results/:courseName', async function (req, res) {
     //return res.json({'coursename': courseName, 'questionlist': questionList, 'stats': questionStats});
 });
 
+/*****************************************************
+ * API: post quiz results
+*****************************************************/
 app.post('/api/results', function (req, res) {
     console.log('--------------------')
     //console.log(req)
