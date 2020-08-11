@@ -1,0 +1,20 @@
+(a) ¬(p ∨ ¬q) and ¬p ∧ q
+
+equivalent x
+not equivalent
+
+
+(b) ¬(p ∨ ¬q) and ¬p ∧ ¬q
+
+equivalent
+not equivalent x
+
+(c) p ∧ (p → q) and p → q
+
+equivalent
+not equivalent x
+
+(d) p ∧ (p → q) and p ∧ q
+
+equivalent x
+not equivalent

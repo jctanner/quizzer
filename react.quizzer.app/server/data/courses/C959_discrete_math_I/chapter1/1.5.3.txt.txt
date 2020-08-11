@@ -1,0 +1,19 @@
+Consider the following pieces of identification a person might have in order to apply for a credit card:
+
+B: Applicant presents a birth certificate.
+D: Applicant presents a driver's license.
+M: Applicant presents a marriage license.
+
+Write a logical expression for the requirements under the following conditions:
+
+(a) The applicant must present either a birth certificate, a driver's license or a marriage license.
+
+B ∨ D ∨ M
+
+(b) The applicant must present at least two of the following forms of identification: birth certificate, driver's license, marriage license.
+
+(B ∧ M) ∨ (B ∧ D) ∨ (M ∧ D)
+
+(c) Applicant must present either a birth certificate or both a driver's license and a marriage license.
+
+B ∨ (D ∧ M)

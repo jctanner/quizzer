@@ -1,0 +1,10 @@
+1) A program runs alone on a CPU. The clock cycle time is 500e-10. It takes 12e10 clock cycles to complete the program. How many seconds is the CPU performance for the task?
+
+0.0024
+0.024
+24000
+0.006
+600.0
+6000 x
+
+HINT: number of cycles = instruction count * CPI ... CPU time = (12 * 10^10)(500 * 10^10) = 12*500*10 = 6000

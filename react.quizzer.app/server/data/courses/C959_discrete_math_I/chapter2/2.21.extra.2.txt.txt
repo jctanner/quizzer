@@ -1,0 +1,26 @@
+A ...
+<image>bijective.PNG</image>
+
+B ...
+<image>injective.PNG</image>
+
+C...
+<image>surjective.PNG</image>
+
+1) Which of these is injective?
+
+A
+B x
+C
+
+2) Which of these is surjective?
+
+A
+B
+C x
+
+3) Which of these is bijective?
+
+A x
+B
+C

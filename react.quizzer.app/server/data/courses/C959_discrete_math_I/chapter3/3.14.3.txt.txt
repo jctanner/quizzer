@@ -1,0 +1,28 @@
+Match the Boolean expression with the corresponding minimized expression.
+
+1) xy + ¬xy
+
+x + y¬z
+1
+y x
+x
+
+2) x + (¬z(y + z))
+x + y¬z x
+1
+y
+x
+
+3) ¬x¬y + ¬x¬y + xy + x¬y
+
+x + y¬z
+1 x
+y
+x
+
+4) xy + x
+
+x + y¬z
+1
+y
+x x

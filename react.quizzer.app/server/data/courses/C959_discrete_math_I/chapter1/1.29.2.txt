@@ -1,0 +1,25 @@
+Match the type of the proof to its logical format. In each case the theorem being proved is p → q
+
+1) Assume p. Follow a series of steps to conclude q.
+
+proof by contradiction
+direct proof x
+proof by contrapositive
+
+HINT: A direct proof assumes the hypothesis p and reaches the conclusion q.
+
+2) Assume ¬q. Follow a series of steps to conclude ¬p.
+
+proof by contradiction
+direct proof
+proof by contrapositive x
+
+HINT: The contrapositive of p → q is ¬q → ¬p. Therefore, a proof by contrapositive assumes ¬q and reasons that ¬p must then be true.
+
+3) Assume p ∧ ¬q. Follow a series of logical steps to conclude r ∧ ¬r for some proposition.
+
+proof by contradiction
+direct proof
+proof by contrapositive
+
+HINT: A proof by contradiction assumes that the negation of the theorem ¬(p → q), which is logically equivalent to p ∧ ¬q, and uses the assumption to reach some contradiction r ∧ ¬r.

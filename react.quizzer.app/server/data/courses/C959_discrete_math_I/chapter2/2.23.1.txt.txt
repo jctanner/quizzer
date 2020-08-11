@@ -1,0 +1,17 @@
+1) Let X = { u, v, w, x }. Define a function g: X → X to be: g = { (u, v), (v, w), (w, x), (x, u) }. What is g^-1(x)?
+
+u
+v
+w x
+x
+
+HINT: g(w) = x. Therefore, g^-1(x) = w.
+
+2) Let h: {0, 1}3 → {0, 1}3. For x ∈ {0, 1}3, h(x) is obtained by moving the middle bit of x to the beginning of x. For example, h(101) = 011. What is h^-1(100)?
+
+010 x
+100
+001
+111
+
+HINT: h(010) = 100. Therefore, h^-1(100) = 010.

@@ -1,0 +1,10 @@
+<image>1.39.1.PNG</image>
+
+1) What type of proof is this?
+
+direct
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive
+cases x

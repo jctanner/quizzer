@@ -1,0 +1,39 @@
+1) for every x ∈ A, xRx
+
+reflexive x
+anti-reflexive
+transitive
+symmetric
+anti-symmetric
+
+2) for every x ∈ A, it is not true that xRx
+
+reflexive
+anti-reflexive x
+transitive
+symmetric
+anti-symmetric
+
+3) for every x,y, z ∈ A, xRy and yRz imply that xRz
+
+reflexive
+anti-reflexive
+transitive x
+symmetric
+anti-symmetric
+
+4) for every x,y ∈ A, xRy implies that yRx
+
+reflexive
+anti-reflexive
+transitive
+symmetric x
+anti-symmetric
+
+5) for every x,y ∈ A, xRy and yRx imply that x = y
+
+reflexive
+anti-reflexive
+transitive
+symmetric
+anti-symmetric x

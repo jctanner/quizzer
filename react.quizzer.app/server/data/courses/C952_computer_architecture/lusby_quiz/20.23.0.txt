@@ -1,0 +1,9 @@
+1) A program requires 1.0e6 instructions to execute on a processor running at 3 GHz. Suppose that 40% of the instructions execute in four cycles, 25% in two cycles, and 35% in one cycle. How many seconds does the program take to execute?
+
+0.00082 x
+0.08167
+816.67
+81666.7
+
+
+HINT: CPI = (.40)4 + (.25)2 + (.35)1 ... CPU time = CPI / CPS(ghz)

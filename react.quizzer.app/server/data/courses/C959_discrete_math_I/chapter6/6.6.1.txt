@@ -1,0 +1,40 @@
+<image>6.6.1.PNG</image>
+
+1) The tail of edge (a,b) is?
+
+a x
+b
+c
+d
+
+2) The head of edge (a,b) is?
+
+a
+b x
+c
+d
+
+3) The in-degree of c is ?
+
+1
+2 x
+3
+4
+
+HINT: There are two edges pointing into c
+
+4) The out-degree of b is ?
+
+1 x
+2
+3
+4
+
+HINT: there is one edge pointing out of b
+
+5) The in-degree of d is?
+
+1 x
+2
+3
+4

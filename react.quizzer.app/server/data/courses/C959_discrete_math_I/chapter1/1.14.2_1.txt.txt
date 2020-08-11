@@ -1,0 +1,31 @@
+In this problem, the domain of discourse is the set of all integers. Which statements are true?
+
+(a) ∃x (x + x = 1)
+
+True
+False x
+
+(b) ∃x (x + 2 = 1)
+
+True x
+False
+
+(c) ∀x (x2 − x ≠ 1)
+
+True x
+False
+
+(d) ∀x (x2 − x ≠ 0)
+
+True
+False x
+
+(e) ∀x (x2 > 0)
+
+True
+False x
+
+(f) ∃x (x2 > 0)
+
+True x
+False

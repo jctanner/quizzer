@@ -1,0 +1,16 @@
+<image>gate_xnor.png</image>
+
+1) 1 XNOR 0 = ?
+
+1
+0
+
+2) 1 XNOR 1 = ?
+
+1
+0
+
+3) 0 XNOR 0 = ?
+
+1
+0

@@ -1,0 +1,19 @@
+The diagram below shows two graphs:
+
+
+<image>7.6.2.PNG</image>
+
+1) Is the following function from the vertices of G1 to the vertices of G2 an isomorphism? f(1) = 4; f(2) = 1; f(3) = 2; f(4) = 3.
+
+True
+False x
+
+HINT: {2, 3} is an edge in G1. However f(2) = 1 and f(3) = 2 and {1, 2} is not an edge in G2.
+
+
+2) Is the following function from the vertices of G1 to the vertices of G2 an isomorphism? f(1) = 4; f(2) = 1; f(3) = 3; f(4) = 2.
+
+True x
+False
+
+HINT: Yes. For every pair of vertices (v and w) in G1, {v, w} is an edge in G1 if and only if {f(v), f(w)} is an edge in G2

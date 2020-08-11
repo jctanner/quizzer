@@ -1,0 +1,8 @@
+1) If X22 has 1000, what address does this instruction compute? STUR X9, [X22, #40]
+
+1040 x
+1000
+975
+805
+
+HINT: [X22, #40] computes 40 + (the value in X22), so 40 + 1000, or 1040.

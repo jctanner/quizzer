@@ -1,0 +1,7 @@
+The average of two real numbers is less than or equal to at least one of the two numbers.
+
+1) Which of the expressions is equivalent to the statement above?
+
+if x and y are real numbers, then (x+y)/2 <= x + y
+if x and y are real numbers, then (x+y)/2 <= (x+y)/2 <= y x
+if x and y are real numbers, then (x+y)/2 <= x and (x+y)/2 <= y

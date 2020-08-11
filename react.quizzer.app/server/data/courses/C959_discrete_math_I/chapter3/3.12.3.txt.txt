@@ -1,0 +1,16 @@
+<image>gate_xor.png</image>
+
+1) 1 XOR 0 =?
+
+1 x
+0
+
+2) 1 XOR 1 = ?
+
+1
+0 x
+
+3) 0 XOR 0 = ?
+
+1
+0 x

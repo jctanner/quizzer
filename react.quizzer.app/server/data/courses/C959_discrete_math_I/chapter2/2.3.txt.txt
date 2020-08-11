@@ -1,0 +1,27 @@
+Which number set is each of the following in?
+
+N
+Z
+Q
+R
+
+1) 1
+
+N x
+Z x
+Q
+R x
+
+2) 2/3
+
+N
+Z
+Q x
+R
+
+3) π
+
+N
+Z
+Q
+R x

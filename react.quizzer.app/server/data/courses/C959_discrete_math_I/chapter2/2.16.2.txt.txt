@@ -1,0 +1,33 @@
+For each question, indicate whether the sets form a partition of the universal set.
+
+1) The universal set is R.
+	
+	A1 = { x ∈ R: x ≤ -4 }
+	A2 = { x ∈ R: -4 < x < 4 }
+	A3 = { x ∈ R: x ≥ 4 }
+
+A1, A2 and A3 form a partition of R x
+A1, A2 and A3 are not mutually disjoint
+A1 ∪ A2 ∪ A3 ≠ R
+
+
+2) The universal set is Z+.
+
+	A1 = { x ∈ Z+: x is prime }
+	A2 = { x ∈ Z+: x is odd and x is a composite number }
+	A3 = { x ∈ Z+: x is even }
+	A4 = { 1 }
+
+A1, A2, A3 and A4 form a partition of Z+
+A1, A2, A3 and A4 are not mutually disjoint x
+A1 ∪ A2 ∪ A3 ∪ A4 ≠ Z+
+
+
+3) The universal set is Z.
+
+	O = { x ∈ Z: x is odd }
+	E = { x ∈ Z: x is even }
+
+O and E form a partition of Z x
+O and E are not disjoint
+O ∪ E ≠ Z

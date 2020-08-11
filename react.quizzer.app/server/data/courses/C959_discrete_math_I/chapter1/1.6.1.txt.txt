@@ -1,0 +1,31 @@
+The propositional variables, p, q, and s have the following truth assignments: p = T, q = T, s = F. Give the truth value for each proposition.
+
+(a) p ∨ ¬q
+
+True x
+False
+
+(b) (p ∧ q) ∨ s
+
+True x
+False
+
+(c) p ∧ (q ∨ s)
+
+True x
+False
+
+(d) p ∧ ¬(q ∨ s)
+
+True
+False x
+
+(e) ¬(q ∧ p ∧ ¬s)
+
+True
+False x
+
+(f) ¬(p ∧ ¬(q ∧ s))
+
+True
+False x

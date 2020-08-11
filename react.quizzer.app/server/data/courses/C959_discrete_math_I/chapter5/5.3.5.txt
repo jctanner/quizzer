@@ -1,0 +1,19 @@
+Select the explicit formula for the nth term of the sequence.
+
+1) {5,10,15,20,25,...}
+
+an = 5 + n
+an = 5^n
+an = 5n x
+
+2) {-5,10,-15,20,-25,...}
+
+an = 1^(-n)5n
+an = (-1)^n * 5n x
+an = 1^n(-5n)
+
+4) {2,-4,6,-8,10,...}
+
+an = (1)^(n+1) * 2n
+an = (-1)^(n+1) * 2n x
+an = (-1_^(n+1) * n^2

@@ -1,0 +1,44 @@
+<markdown>
+matrix A
+--------
+|||
+|---|---|
+|3|5|
+|2|4|
+
+matrix B
+--------
+|||
+|---|---|
+|A|B|
+|C|D|
+</markdown>
+
+
+1) If matrix B is the inverse matrix of matrix A, what is the value for A?
+
+2 x
+-(5/2)
+-1
+(3/2)
+
+2) If matrix B is the inverse matrix of matrix A, what is the value for B?
+
+2
+-(5/2) x
+-1
+(3/2)
+
+3) If matrix B is the inverse matrix of matrix A, what is the value for C?
+
+2
+-(5/2)
+-1 x
+(3/2)
+
+4) If matrix B is the inverse matrix of matrix A, what is the value for D?
+
+2
+-(5/2)
+-1
+(3/2) x

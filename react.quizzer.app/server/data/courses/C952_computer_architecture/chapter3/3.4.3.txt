@@ -1,0 +1,13 @@
+1) What is 1110(base two) in base ten?
+
+14 x
+10
+12
+11
+
+2) What is 3(base ten) as a 4-bit base two number?
+
+0011 x
+1100
+0101
+0001

@@ -1,0 +1,15 @@
+Four processors (1, 2, 3, and 4) have clock frequencies of 100 Mhz, 200 Mhz, 300 Mhz, and 500 Mhz, respectively. 
+
+Suppose:
+Processor 1 can execute an instruction with an average of 4 steps.
+Processor 2 can execute an instruction with an average of 2 steps.
+Processor 3 can execute an instruction with an average of 2 steps.
+Processor 4 can execute an instruction with an average of 4 steps.
+
+1) Which processor should be selected to improve performance for the execution of the same instruction set? 
+
+Processor 1
+Processor 2
+Processor 3 x
+Processor 4
+

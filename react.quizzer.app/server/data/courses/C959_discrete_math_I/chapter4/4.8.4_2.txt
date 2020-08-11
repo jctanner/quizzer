@@ -1,0 +1,16 @@
+<markdown>
+matrix A
+--------
+|||
+|---|---|
+|0|-1|
+|7|3|
+
+</markdown>
+
+1) Does A^-1 exist?
+
+True x
+False
+
+HINT: Because the determinant is not zero, A^-1 does exist.

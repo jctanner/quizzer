@@ -1,0 +1,120 @@
+1) What type of proof is this?
+
+	Theorem: If x - 3 = 0, then x^2 - 2x - 3 = 0.
+
+	Assume x - 3 = 0
+	Add 3 to both sides of the equation: x = 3
+	Plug in x = 3 into the expression x^2 - 2x -3
+	x^2 - 2 - 3 = 3^2 - 2*3 - 3 = 9 - 6 - 3 = 0
+
+direct x
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive
+cases
+
+2) What type of proof is this?
+
+	Thoerem: If n is an odd integer, then n^2 is an odd integer.
+
+	Assume that n is an odd integer.
+	Since n is odd, n = 2k + 1, for some integer k. Plug the expression for n into n^2
+	Since k is an integer, then (2k2 + 2k) is also an integer. Since n2 = 2c + 1, where c = 2k2 + 2k is an integer, then n2 is odd.
+
+direct x
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive
+cases
+
+3) What type of proof is this?
+
+	Theorem: If x is a real number and x ≤ 3, then 12 - 7x + x2 ≥ 0
+
+	Assume that for real number x, x ≤ 3
+	Subtract x from both sides of the inequality 3 ≥ x to get 3 - x ≥ 0
+	Since 4 - x is one larger than 3 - x, then: 4 -x > 3 - x ≥ 0
+	Since 3 - x ≥ 0 and 4 - x ≥ 0, the product of (3 - x) and (4 - x) is also at least 0: (3-x)(4-x) ≥ 0
+	multiplying out the two terms gives: 12 - 7x + x^2 ≥ 0
+
+direct x
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive
+cases
+
+
+4) What type of proof is this?
+
+	Theorem: For every real number x, if x^3 + 2x + 1 ≤ 0, then x ≤ 0.
+
+	Assume x > 0, where x is a real number
+	If x > 0, then 2x > 0 and x^3 > 0
+	Since x^3, 2x and 1 are all greater than 0, their sum is also greater than zero
+	x^3 + 2x + 1 > 0, therefore theorem is true
+
+direct
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive x
+cases
+
+5) What type of proof is this?
+
+	Theorem: There is no smallest positive real number.
+
+	Assume there is a smallest positive real number called r
+	Since r is positive, r/2 is also positive. Since r is positive, r > r/2
+	r/2 is a positive real number that is smaller than r
+	this contradicts the assumption that r is the smallest positive real number
+
+
+direct
+exhaustion
+counterexample
+indirect/contradiction x
+contrapositive
+cases
+
+
+6) What type of proof is this?
+
+	Theorem: If x is an integer, then x2 + 5x - 1 is odd.
+
+	x is even ...
+	x^2 + 5x - 1 = (2k)^2 + 5(2k) - 1 = 2(2k^2 + 5k - 1) + 1
+
+	x is odd ...
+	x^2 + 5x - 1 = (2k + 1)^2 + 5(2k + 1) -1 = (4k^2 + 4k + 1) + (10k + 5) - 1
+	= 4k^2 + 14k + 4 + 1 = 2(2k^2 + 7l + 2) + 1
+	
+
+	Since k is an integer, (2k2 + 7k +2) is also an integer. Therefore, x2 + 5x - 1 is equal to 2 times an integer plus 1 and x2 + 5x - 1 is odd.
+
+direct
+exhaustion
+counterexample
+indirect/contradiction x
+contrapositive
+cases x
+
+7) What type of proof is this?
+
+	Theorem: If x and y are real numbers, then max(x, y) + min(x, y) = x + y.
+
+	x ≤ y ...
+	x ≤ y. If x ≤ y, then min(x, y) = x and max(x, y) = y. Therefore max(x, y) + min(x, y) = x + y.	
+		
+	x > y ...
+	x > y. If x > y, then min(x, y) = y and max(x, y) = x. Therefore max(x, y) + min(x, y) = x + y.
+
+direct
+exhaustion
+counterexample
+indirect/contradiction x
+contrapositive
+cases x

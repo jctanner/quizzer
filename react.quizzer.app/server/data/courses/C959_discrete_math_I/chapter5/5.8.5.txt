@@ -1,0 +1,29 @@
+Find the sum of each arithmetic series
+
+1) 1.4 + 1.6 + 1.8 + 2.0 + 2.2 + 2.4 + 2.6 + 2.8
+
+16.8 x
+16.1
+17.4
+15.8
+
+HINT: d = a2 - a1 ; an = a1 + d(n-1) ; sum = (n(a1 + an))/2
+
+2) 13 + 21 + 29 + ... + 69
+
+328 x
+127
+400
+258
+
+HINT: d = a2 - a1 ; an = a1 + d(n-1) ; sum = (n(a1 + an))/2
+
+
+3) summation k=1 to 10 of 5 - 6k
+
+-280 x
+280
+-260
+260
+
+HINT: d = a2 - a1 ; an = a1 + d(n-1) ; sum = (n(a1 + an))/2

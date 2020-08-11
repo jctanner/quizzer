@@ -1,0 +1,21 @@
+<image>6.6.2.PNG</image>
+
+1) Select the ordered pair which is an edge of the graph
+
+(b,c)
+(c,b) x
+(c,c)
+
+2) In the graph above, which vertex has the largest in-degree?
+
+a
+b b
+c
+d
+
+3) In the graph above, which vertex has the smallest out-degree?
+
+a x
+b
+c
+d

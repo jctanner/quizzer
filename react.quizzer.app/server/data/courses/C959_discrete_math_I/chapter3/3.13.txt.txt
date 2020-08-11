@@ -1,0 +1,7 @@
+<image>circuit_1.png</image>
+
+1) What is the final output?
+
+1 x
+0
+

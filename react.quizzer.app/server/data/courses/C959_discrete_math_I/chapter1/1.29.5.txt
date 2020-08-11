@@ -1,0 +1,14 @@
+Below are the steps for a proof by contradiction of the following theorem:
+
+Theorem: There is no smallest positive real number.
+
+* Assume there is a smallest positive real number called r.
+* Since r is positive, r/2 is also positive. Since r is positive, r > r/2.
+* r/2 is a positive real number that is smaller than r.
+* This contradicts the assumption that r is the smallest positive real number.
+
+1) What type of proof is this?
+
+proof by contradiction x
+direct proof
+proof by contrapositive

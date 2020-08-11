@@ -1,0 +1,8 @@
+1) An instruction set has 10 steps and each step takes one clock cycle. How many cycles are needed to complete each instruction set using a pipelined process to complete 100 instruction sets?
+
+1.09
+1000
+10 
+109 x
+1090
+

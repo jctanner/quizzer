@@ -1,0 +1,9 @@
+1) A Boolean expression that is a sum of products of literals is said to be in ____ normal form (abbreviated as ____)
+
+disjunctive DNF x
+conjunctive CNF
+
+2) A Boolean expression that is a product of sums of literals is said to be in ____ normal form (abbreviated as ____)
+
+disjunctive DNF
+conjunctive CNFx 

@@ -1,0 +1,9 @@
+The difference of two odd integers is even.
+
+1) Which of the expressions is equivalent to the statement above?
+
+if x and y are integers and x and y are both odd, then (x-y) is even. x
+if x and y are integers and (x-y) is odd, then x is even or y is even.
+if x and y are integers and x and y are both even, then (x-y) is odd.
+
+HINT: The hypothesis of the statement is that there are two integers that are odd. The conclusion is that their difference (x - y) is even.

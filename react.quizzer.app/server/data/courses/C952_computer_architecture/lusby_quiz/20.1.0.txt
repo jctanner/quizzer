@@ -1,0 +1,27 @@
+1) A number or processors function asynchronously and independently.
+
+MIMD x
+SPMD
+SIMD
+SISD
+
+2) Tasks are split up and run simultaneously on multiple processors with different input in order to obtain results faster.
+
+MIMD
+SPMD x
+SIMD
+SISD
+
+3) The same instruction applied to multiple data streams.
+
+MIMD
+SPMD
+SIMD x
+SISD
+
+4) The same instruction applied to a single data stream.
+
+MIMD
+SPMD
+SIMD
+SISD x

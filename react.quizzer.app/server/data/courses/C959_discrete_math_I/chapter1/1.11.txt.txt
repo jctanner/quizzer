@@ -1,0 +1,6 @@
+a) ¬(p ∨ q) ≡ (¬p ∧ ¬q)
+
+True x
+False
+
+HINT: De Morgan's Law

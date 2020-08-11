@@ -1,0 +1,38 @@
+The Hasse diagram below depicts a partial order on the set {a,b,c,d,e,f,g,h}
+
+<image>6.14.3.PNG</image>
+
+1) Are f and D comparable?
+
+True x
+False
+
+HINT: There is a single segment between f and d
+
+2) Are C and A comparable?
+
+True
+False x
+
+HINT: There is no path of line segments connecting c and a
+
+3) Are H and E comparable?
+
+True
+False x
+
+HINT: The only paths of line segments connecting h and e change directions. The path form h to a to e goes up and then down.
+
+4) Are G and A comparable?
+
+True
+False x
+
+HINT: The only paths of line segments connecting g and a change directions. The path from a to b to g goes up and then down. The path from a to e to g goes down and then up.
+
+5) Are B and E comparable?
+
+True x
+False
+
+HINT: The path from e to a to b travels only upwards along line segments.

@@ -1,0 +1,29 @@
+Consider the following statement:
+
+For every real number x, if 0 ≤ x ≤ 3, then 15 - 8x + x^2 > 0
+
+1) What would be the starting assumption in a direct proof of the statement above?
+
+0 <= x <= 3 x
+15 - 8x + x^2 > 0
+15 - 8x + x^2 <= 0
+
+2) What would be proven in a direct proof of the statement, given the assumption?
+
+0 <= x <= 3
+15 - 8x + x^2 > 0 x
+15 - 8x + x^2 <= 0
+
+3) What would be the starting assumption in a proof by contrapositive of the statement above?
+
+0 <= x <= 3
+15 - 8x + x^2 > 0
+15 - 8x + x^2 <= 0 x
+
+4) What would be proven in a proof by contrapositive of the statement, given the assumption?
+
+0 <= x <= 3
+x < 0 or x > 3 x
+x < 0 and x < 3
+
+HINT: It is impossible for a number x to be less than 0 and greater than 3. In a proof by contrapositive, one needs to show that the hypothesis is false.

@@ -1,0 +1,15 @@
+{2,4,8,16,32,...2^n}
+
+1) What is the 8th term in the sequence?
+
+2^n
+48
+200
+256 x
+
+2) What is the 18th term in the sequence?
+
+262144
+262141
+262142
+262143

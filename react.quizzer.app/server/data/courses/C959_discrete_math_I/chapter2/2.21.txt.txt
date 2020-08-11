@@ -1,0 +1,19 @@
+1) A function f: X → A is _____ or one-to-one if x1 ≠ x2 implies that f(x1) ≠ f(x2). That is, f maps different elements in X to different elements in A.
+
+injective x
+surjective
+bijective
+
+2) A function f: X → A is _____ or onto if the range of f is equal to the target A. That is, for every a ∈ A, there is an x ∈ X such that f(x) = a
+
+injective
+surjective x
+bijective
+
+
+3) A function is _____ if it is both injective and surjective
+
+bilateral
+bipedal
+bifocal
+bijective

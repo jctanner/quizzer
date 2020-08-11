@@ -1,0 +1,12 @@
+The graph below shows a partially constructed spanning tree. The edges in red are included in the partial tree.
+
+<image>7.15.1.PNG</image>
+
+1) Which edge when added will create a spanning tree?
+
+a,e only
+a,f only
+c,d only
+any of the above x
+
+HINT: Any of the four edges not included will create a spanning tree when included. A spanning tree of a connected graph G is a subgraph of G which contains all the vertices in G and is a tree.

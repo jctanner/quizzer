@@ -1,0 +1,8 @@
+1) Which feature of the IBM 360/91 was incorporated in into the majority of microprocessors developed in the 21sts century?
+
+Branch prediction allowed the processor to proceed with the next instruction
+Algorithm innovations allowed the improved parallel execution of instructions x
+Pipeline innovations allowed for reservation stations and the commit unit
+Pipeline innovations allowed for dynamically scheduled pipelined processors
+
+HINT: 

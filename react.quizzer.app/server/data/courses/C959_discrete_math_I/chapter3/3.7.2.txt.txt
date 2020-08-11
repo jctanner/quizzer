@@ -1,0 +1,26 @@
+Which expressions are in conjunctive normal form?
+
+1) z(xy + w)
+
+True
+False x
+
+2) (x + y + z)(w + y)
+
+True x
+False
+
+4) (x + y + z)w
+
+True x
+False
+
+5) x + y + z
+
+True x
+False
+
+6) xyw
+
+True x
+False

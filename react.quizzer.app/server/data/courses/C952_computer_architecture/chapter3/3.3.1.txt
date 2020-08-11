@@ -1,0 +1,32 @@
+Example 3.3.1: Compiling a C Assignment Using Registers.
+
+It is the compiler's job to associate program variables with registers. Take, for instance, the assignment statement from our earlier example:
+
+	f = (g + h) - (i + j);
+
+The variables f, g, h, i, and j are assigned to the registers X19, X20, X21, X22, and X23, respectively. What is the compiled LEGv8 code?
+
+Answer
+
+The compiled program is very similar to the prior example, except we replace the variables
+with the register names mentioned above plus two temporary registers, X9 and X10, which
+correspond to the temporary variables above:
+
+	ADD X9, X20, X21	// register X9 contains g + h
+	ADD X10, X22, X23	// register X10 contains i + j
+	SUB X19, X9, X10	// f gets X9 - X10, which is (g + h) - (i + j)
+
+
+1) With what register did the compiler associate variable g?
+
+X20 x
+X19
+
+HINT: The example stated that g was associated with X20, which is also consistent with the instruction ADD X9, X20, X21 computing g + h.
+
+2) Could the compiler have associated g with X26, assuming X26 wasn't used for something else?
+
+Yes x
+No
+
+HINT: The compiler can use any available register for each variable.

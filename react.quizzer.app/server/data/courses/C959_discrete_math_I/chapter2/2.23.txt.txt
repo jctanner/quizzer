@@ -1,0 +1,15 @@
+Finding the inverse of a function ...
+
+1) Let X = {1, 4, 5, 7}. Define l: X → A to be l(x) = 1/x. What is l^-1(1/4)?
+
+4 x
+5
+1/4
+-4
+
+2) Let m: {0,1}^4 → {0,1}^4. For x ∈ {0,1}4, m(x) is obtained by reversing the order of the bits. What is m-1(1010)?
+
+0101 x
+1010
+0001
+1001

@@ -1,0 +1,7 @@
+1) A protein string matching code takes 4 days to execute. 35% of computational time is spent doing integer instructions and 65% of the time is spent doing I/O. Which of the following is an example of Amdahl’s law?
+
+Reducing computational time of integer instructions can at best result in reducing computational time by 1.4 days or a speedup of 53.85%. x
+Reducing computational time can at best result in reducing computational time by 1.4 days each time the code is run. 
+
+HINT: Strong scaling is the improvement you get on a single problem. So the total improvement is bound by the part you don’t improve. If we reduce the time spent on integer instruction to 0, then we have CPU time = (integer instuctions)(0.0) + (I/0)(.65). For a speedup of speedup = 1 - (old/new) = 1 - (1.0/.65) ~= .5385 This is strong scaling which is bound by Amdahl’s law.
+ 

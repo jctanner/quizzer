@@ -1,0 +1,13 @@
+The figure below shows a directed graph and it's corresponding matrix A with two missing entries
+
+<image>6.10.2.PNG</image>
+
+1) What is the correct value for A(2,1)?
+
+0 x
+1
+
+2) What is the correct value for A(4,3)?
+
+0
+1 x

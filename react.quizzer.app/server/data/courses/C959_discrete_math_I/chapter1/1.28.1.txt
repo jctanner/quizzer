@@ -1,0 +1,22 @@
+<image>1.28.1.PNG</image>
+
+1) What type of proof is this?
+
+direct
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive x
+cases
+
+2) What conditional form does this prove?
+
+p → c x
+¬c → ¬p
+
+3) What is the contrapositive of p → c ?
+
+c → p
+¬c → p
+c → ¬p
+¬c → ¬p x

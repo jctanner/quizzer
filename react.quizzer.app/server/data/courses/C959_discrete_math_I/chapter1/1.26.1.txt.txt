@@ -1,0 +1,19 @@
+Below is a list of false statements. Match each assignment to the statement for which it is a counterexample.
+
+1) For every integer x such that x > 1, 2^x < x^2
+
+x = -1
+x = 1
+x = 5 x
+
+2) For all real numbers x, x ≠ x^2
+
+x = -1
+x = 1 x
+x = 5
+
+3) For all real numbers x, -x ≠ x^2
+
+x = -1 x
+x = 1
+x = 5

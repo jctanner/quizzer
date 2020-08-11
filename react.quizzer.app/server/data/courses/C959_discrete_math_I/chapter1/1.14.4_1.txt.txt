@@ -1,0 +1,41 @@
+The domain for this problem is a set . The table below shows the value of three predicates for each of the elements in the domain. For example,  is false because the truth value in row , column Q is F.
+
+	P	Q	R
+a	T	T	F
+b	T	F	F
+c	T	F	F
+d	T	F	F
+
+
+Is this statment true or false?
+
+(a) ∀x P(x)
+
+True x
+False
+
+(b) ∃x P(x)
+
+True x
+False
+
+(c) ∀x Q(x)
+
+True
+False x
+
+(d) ∃x Q(x)
+
+True x
+False
+
+(e) ∀x R(x)
+
+True
+False x
+
+(f) ∃x R(x)
+
+
+True
+False x

@@ -1,0 +1,36 @@
+<markdown>
+matrix A
+--------
+<matrix>3,-1;0,4</matrix>
+
+matrix B
+--------
+<matrix>0,1,-2;1,0,3;-1,5,2</matrix>
+
+matrix C
+--------
+<matrix>2,-2;1,0</matrix>
+
+matrix D
+--------
+<matrix>1,0;0,3;-2,5</matrix>
+
+1) The only matrices for which both products exists are A and C?
+
+True x
+False
+
+2) A*C = <matrix>6,-10;3,-1</matrix>
+
+True
+False x
+
+3) D*C = <matrix>2,-2;3,0;-1,-4</matrix>
+
+True
+False x
+
+4) B*D = <matrix>4,-7;-5,15;-5,25</matrix>
+
+True x
+False

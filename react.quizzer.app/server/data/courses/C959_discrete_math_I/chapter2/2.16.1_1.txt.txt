@@ -1,0 +1,24 @@
+Define the sets A, B, C, D, and E as follows:
+
+A = {1, 2, 6}
+B = {2, 3, 4}
+C = {5}
+D = {x ∈ Z: 1 ≤ x ≤ 6}
+E = {x ∈ Z: 1 < x < 6}
+
+Use the defintions for A, B, C, D, and E to answer the questions.
+
+1) Do the sets A, B, and C form a partition of the set D?
+
+True
+False x
+
+2) Do the sets B and C form a partition of the set D?
+
+True
+False x
+
+3) Do the sets B and C form a partition of the set E?
+
+True x
+False

@@ -6,6 +6,7 @@ import json
 import os
 import time
 from collections import OrderedDict
+import bs4
 from bs4 import BeautifulSoup
 from logzero import logger
 from selenium import webdriver
@@ -18,6 +19,41 @@ from pprint import pprint
 #from wgu_page_extractors import get_page_vocab
 #from wgu_page_extractors import get_page_quiz_urls
 #from wgu_page_extractors import get_page_learning_check
+
+
+def can_eval(text):
+    evaled = False
+    try:
+        eval(text)
+        evaled = True
+    except Exception as e:
+        pass
+    return evaled
+
+
+def is_div_paragraph(soup):
+    '''
+    <div class="answer">
+    <p>This is the last permutation, so there is no next permutation.</p>
+    </div>
+    '''
+
+    '''
+    answer_div = soup.find('div', {'class': 'answer'})
+    if not answer_div:
+        return False
+    '''
+
+    #paragraph = answer_div.find('p')
+    paragraph = soup.find('p')
+    if not paragraph:
+        return False
+
+    children = [x for x in paragraph.children]
+    if len(children) != 1:
+        return False
+
+    return True
 
 
 class ScrapeDMII:
@@ -113,7 +149,7 @@ class ScrapeDMII:
                 f.write(json.dumps(section_urls))
 
         # DEBUG: only allow up to chapter 3
-        section_urls = [x for x in section_urls if x[0][0] in ['1', '2', '3', '4']]
+        #section_urls = [x for x in section_urls if x[0][0] in ['1', '2', '3', '4']]
 
         with open(cachefile, 'w') as f:
             f.write(json.dumps(section_urls))
@@ -146,6 +182,61 @@ class ScrapeDMII:
                 self.driver.find_element_by_xpath(xpath).click()
                 time.sleep(1)
 
+    def clean_question_div(self, this_question_div):
+        # is there anything else around the question that can be removed?
+        if not this_question_div.find('div', {'class': 'flex-row'}):
+            question = this_question_div.prettify()
+        else:
+            flex_row = this_question_div.find('div', {'class': 'flex-row'})
+
+            if flex_row.children:
+                children = [x for x in flex_row.children]
+                children = [x for x in children if x != '\n']
+                children = [x.prettify() for x in children]
+
+                newsrc = '<div>' + ''.join(children) + '</div>'
+                print(newsrc)
+                newsoup = BeautifulSoup(newsrc, 'html.parser')
+                print(newsoup)
+                #import epdb; epdb.st()
+                question = newsoup.prettify()
+            else:
+                print('no children in flexrow')
+                import epdb; epdb.st()
+
+        return question
+
+
+    def clean_choice_div(self, this_choice_div):
+        '''
+        <div class=zb-radio-button>
+            <label>     <-- get children of this ..
+                <span class=MathJax>
+                <svg>
+                    <g>
+        '''
+
+        def elem_to_string(elem):
+            if isinstance(elem, bs4.element.Tag):
+                return elem.prettify()
+            elif isinstance(elem, bs4.element.NavigableString):
+                return str(elem).replace('\n', '')
+            else:
+                import epdb; epdb.st()
+
+        label = this_choice_div.find('label')
+        children = [x for x in label.children]
+        if len(children) == 1:
+            #import epdb; epdb.st()
+            return children[0]
+
+        # [<class 'bs4.element.NavigableString'>, <class 'bs4.element.Tag'>]
+        newdiv = '<div>' + ''.join([elem_to_string(x) for x in children]) + '</div>'
+        newsoup = BeautifulSoup(newdiv, 'html.parser')
+        #import epdb; epdb.st()
+        return newsoup
+
+
     def scrape_activity_containers(self):
         # ITERATE THROUGH ACTIVITY CONTAINERS ...
         activity_containers = self.soup.findAll('div', {'class': 'interactive-activity-container'})
@@ -168,6 +259,7 @@ class ScrapeDMII:
                 answer = None
                 qd_xpath = '//*[@id="%s"]' % qd.attrs['id']
                 choices = []
+                correct_choice_index = None
 
                 # check if true/false/etc radio buttons
                 radio_divs = qd.findAll('div', {'class': 'zb-radio-button'})
@@ -176,12 +268,17 @@ class ScrapeDMII:
                     radio_ids = []
                     for rd in radio_divs:
                         if 'math' in rd.prettify().lower():
-                            choices.append(rd.prettify())
+                            newrd = self.clean_choice_div(rd)
+                            choices.append(newrd.prettify())
                         else:
-                            choices.append(rd.text.strip())
+                            newrd = self.clean_choice_div(rd)
+                            if isinstance(newrd, bs4.element.Tag):
+                                choices.append(newrd.text.strip())
+                            else:
+                                choices.append(newrd.strip())
                         radio_ids.append(rd.attrs['id'])
                     #for radio_id in radio_ids:
-                    for rd in radio_divs:
+                    for idrd,rd in enumerate(radio_divs):
                         radio_id = rd.attrs['id']
                         xpath = '//*[@id="%s"]' % radio_id
 
@@ -198,6 +295,7 @@ class ScrapeDMII:
                         qd = self.soup.find(id=qd.attrs['id'])
                         is_correct = qd.find('div', {'class': 'correct'})
                         if is_correct:
+                            correct_choice_index = idrd
                             answer = rd.text.strip()
                             break
 
@@ -220,8 +318,23 @@ class ScrapeDMII:
                 else:
                     import epdb; epdb.st()
 
+                # log<mn>7</mn>
+                # '2\n 4\n\n·3' vs 2^4 * 3 vs 24*3
+                #if input_type == 'fieldset' and answer not in choices:
+                #    import epdb; epdb.st()
+
+                if input_type == 'input' and '=' in answer:
+                    import epdb; epdb.st()
+
+                # remove the label with 1), A., A) 1. ... etc ..
+                if this_question_div.find('div', {'class': 'label'}):
+                    this_question_div.find('div', {'class': 'label'}).decompose()
+                    question = this_question_div.prettify()
+
+                question = self.clean_question_div(this_question_div)
+
                 #fn = 'questions/%s_activity_%s.json' % (question_section_number, idqd)
-                fn = os.path.join(self.cdir, 'questions', '%s_activity_%s.json' % (question_section_number, idqd))
+                fn = os.path.join(self.cdir, 'questions', '%s-activity-%s.json' % (question_section_number, idqd))
                 print('writing %s ...' % fn)
                 with open(fn, 'w') as f:
                     jdata = {
@@ -230,10 +343,12 @@ class ScrapeDMII:
                         'input_type': input_type,
                         'instructions': instructions_div, 
                         'question': question,
+                        'correct_choice_index': correct_choice_index,
                         'choices': choices,
                         'answer': answer,
                         'explanation': explanation
                     }
+                    print(json.dumps(jdata, indent=2))
                     try:
                         f.write(json.dumps(jdata))
                     except Exception as e:
@@ -243,49 +358,129 @@ class ScrapeDMII:
                 #import epdb; epdb.st()
 
     def scrape_exercise_containers(self):
-            #if section[0].startswith('1.4'):
-            exercise_divs = self.soup.findAll('div', {'class': 'exercise-content-resource'})
-            if exercise_divs:
-                for ed in exercise_divs:
-                    title_div = ed.find('div', {'class': 'static-container-title'})
 
-                    this_question_section = title_div.text.strip()
-                    question_section_number = this_question_section.split()[1].replace(':', '')
 
-                    instructions_div = ed.find('div', {'class': 'setup'}).prettify()
-                    question_sets = ed.findAll('div', {'class': 'question-set-question'})
-                    for idqs,qs in enumerate(question_sets):
+        ignore = [
+            '1.7.1',
+            '2.4.1',
+            '2.5.2',
+            '2.24.1',
+            '3.17.1',
+            '3.17.3',
+            '3.21.2',
+            '4.3.1',
+            '4.4.3',
+            '4.5.1',
+            '4.5.2',
+            '4.7.1',
+            '4.8.1',
+            '4.8.2',
+            '4.9.1',
+            '4.9.2',
+            '4.9.3',
+            '4.9.4',
+            '4.10.2',
+            '4.10.4',
+            '4.12.1',
+            '4.16.1',
+            '4.16.5',
+            '4.18.2',
+        ]
 
-                        question_div = qs.find('div', {'class': 'question'}).prettify()
-                        answer_div = None
-                        try:
-                            answer_div = qs.find('div', {'class': 'answer'}).prettify()
-                        except Exception as e:
-                            pass
+        #if section[0].startswith('1.4'):
+        exercise_divs = self.soup.findAll('div', {'class': 'exercise-content-resource'})
+        if exercise_divs:
+            for ed in exercise_divs:
+                title_div = ed.find('div', {'class': 'static-container-title'})
 
-                        jdata = {
-                            'section': title_div.text.strip(),
-                            'qid': idqs,
-                            'instructions': instructions_div, 
-                            'question': question_div,
-                            'choices': [],
-                            'answer': answer_div,
-                            'explanation': None
-                        }
+                this_question_section = title_div.text.strip()
+                question_section_number = this_question_section.split()[1].replace(':', '')
 
-                        #fn = 'questions/%s_exercise_%s.json' % (question_section_number, idqs)
-                        fn = os.path.join(self.cdir, 'questions', '%s_exercise_%s.json' % (question_section_number, idqs))
-                        #fn = os.path.join(self.cdir, 'questions', '%s_activity_%s.json' % (question_section_number, idqd))
-                        print('writing %s ...' % fn)
-                        try:
-                            with open(fn, 'w') as f:
-                                f.write(json.dumps(jdata))
-                        except Exception as e:
-                            print(e)
-                            import epdb; epdb.st()
+                instructions_div = ed.find('div', {'class': 'setup'}).prettify()
+                question_sets = ed.findAll('div', {'class': 'question-set-question'})
+                for idqs,qs in enumerate(question_sets):
+
+                    # remove the label with 1), A., A) 1. ... etc ..
+                    if qs.find('div', {'class': 'label'}):
+                        qs.find('div', {'class': 'label'}).decompose()
+
+                    question_div = qs.find('div', {'class': 'question'})
+                    question = self.clean_question_div(question_div)
+
+                    answer_div = None
+                    try:
+                        answer_div = qs.find('div', {'class': 'answer'})
+                    except Exception as e:
+                        pass
+
+                    answer = None
+                    if answer_div:
+
+                        print('-----------------------------------')
+                        print(question_section_number)
+                        print('-----------------------------------')
+
+                        if question_section_number in ignore:
+                            answer = answer_div.prettify()
+
+                        # (1, 2, 3, 4, 5, 7, 6)
+                        elif can_eval(answer_div.text.strip()):
+                            answer = answer_div.text.strip()
+
+                        elif is_div_paragraph(answer_div):
+                            answer = answer_div.find('p').text.strip()
+
+                        elif not answer_div.find('span', {'class': 'MathJax_SVG'}):
+                            if '=' in answer_div.text:
+                                answer = answer_div.text.strip().rstrip('.').split('=')[-1].strip()
+                            elif answer_div.text.strip().isdigit():
+                                try:
+                                    answer = answer_div.text.strip()
+                                except Exception as e:
+                                    print(e)
+                                    import epdb; epdb.st()
+                            else:
+                                print('CLEAN ME!!!')
+                                answer = answer_div.prettify()
+                                import epdb; epdb.st()
+                        else:
+                            print('MATHJAX!!!')
+                            if answer_div.find('script'):
+                                answer = answer_div.find('script').text.strip()
+                                print('%s == %s' % (question_section_number, answer))
+                            else:
+                                import epdb; epdb.st()
+
+                    jdata = {
+                        'section': title_div.text.strip(),
+                        'qid': idqs,
+                        'instructions': instructions_div, 
+                        'input_type': None,
+                        'question': question,
+                        'choices': [],
+                        'correct_choice_index': None,
+                        'answer': answer,
+                        'explanation': None
+                    }
+
+                    print(json.dumps(jdata, indent=2))
+
+                    fn = os.path.join(self.cdir, 'questions', '%s-exercise-%s.json' % (question_section_number, idqs))
+                    print('writing %s ...' % fn)
+                    try:
+                        with open(fn, 'w') as f:
+                            f.write(json.dumps(jdata))
+                    except Exception as e:
+                        print(e)
+                        import epdb; epdb.st()
 
     def iterate_toc(self):
         for section in self.toc:
+
+            chapter = int(section[0].split('.')[0])
+            chapter_section = int(section[0].split('.')[1].split()[0])
+            if chapter < 4 or (chapter == 4 and chapter_section < 16):
+                continue
 
             # 1.14.1 true/false questions ...
             #if not section[0].startswith('2.18'):
@@ -336,135 +531,6 @@ class ScrapeDMII:
             logger.error(e)
         self.driver.get(self.zybook_url)
         time.sleep(5)
-
-    '''
-    def iterate_course_pages(self):
-
-        ds = []
-
-        for pagenumber,paged in self.toc['pages'].items():
-
-            unit = paged['unit']
-            module = paged['module']
-            title = paged['title']
-            url = self.base_url + paged['url']
-            pdir = os.path.join(self.cdir, '%s.%s.%s. %s' % (unit, module, pagenumber, title))
-            print(pdir)
-            print('\t%s' % url)
-
-            pmeta = {
-                'cache': pdir,
-                'url': url,
-                'unit': unit,
-                'module': module,
-                'title': title,
-                'pagenum': pagenumber,
-                'title': title,
-            }
-
-            if not os.path.exists(pdir):
-                self.driver.get(url)
-                time.sleep(4)
-
-                os.makedirs(pdir)
-                src = self.driver.page_source
-                soup = BeautifulSoup(src, 'html.parser')
-
-                with open(os.path.join(pdir, 'meta.json'), 'w') as f:
-                    f.write(json.dumps(pmeta, indent=2, sort_keys=True))
-                with open(os.path.join(pdir, 'page.html'), 'w') as f:
-                    f.write(soup.prettify())
-            
-            if 'unit test' not in title.lower():
-                page_vocab = get_page_vocab(pdir)
-                if page_vocab:
-                    for k,v in page_vocab.items():
-                        ds.append({
-                            'unit': unit,
-                            'module': module,
-                            'page': pagenumber,
-                            'title': title,
-                            'question': k,
-                            'answer': v,
-                        })
-
-                page_questions = get_page_learning_check(pdir)
-                if page_questions:
-                    for pq in page_questions:
-                        ds.append({
-                            'unit': unit,
-                            'module': module,
-                            'page': pagenumber,
-                            'title': title,
-                            'question': pq['question'],
-                            'answers': pq['answers'],
-                            'hints': pq['hints']
-                        })
-                    #import epdb; epdb.st()
-                
-                quizes = get_page_quiz_urls(pdir)
-                for quiz in quizes:
-                    qquestions = process_test(
-                        self,
-                        self.base_url + quiz[0],
-                        title=quiz[1],
-                        page_meta=pmeta
-                    )
-                    for qquestion in qquestions:
-                        ds.append({
-                            'unit': unit,
-                            'module': module,
-                            'page': pagenumber,
-                            'title': quiz[1],
-                            'question': qquestion['question'],
-                            'answers': qquestion['answers'],
-                            'hints': qquestion['feedback']
-                        })
-                        #import epdb; epdb.st()
-        
-        tests = []
-        for unit, unitd in self.toc['tests'].items():
-            if not unitd.get('unit_test'):
-                continue
-            tests.append(unitd)
-        tests = sorted(tests, key=lambda x: int(x['unit_number']))
-        for testd in tests:
-            pdir = os.path.join(self.cdir, '%s.%s.%s. %s' % (
-                testd['unit_test'],
-                0,
-                0,
-                testd['unit_title']
-            ))
-            tquestions = process_test(
-                self,
-                self.base_url + testd['unit_test'],
-                title=testd['unit_title'],
-                page_meta={
-                    'cache': pdir,
-                    'module': '0',
-                    'pagenum':  0,
-                    'unit': testd['unit_number'],
-                    'url': testd['unit_test']
-                }
-            )
-            for tq in tquestions:
-                ds.append({
-                    'unit': unit,
-                    'module': 'test',
-                    'page': 0,
-                    'question': tq['question'],
-                    'choices': tq['choices'],
-                    'answers': tq['answers'],
-                    'hints': tq['feedback']
-                })
-                #import epdb; epdb.st()
-    
-        logger.info('writing out all questions to json file')
-        with open(os.path.join(self.cdir, 'questions.json'), 'w') as f:
-            f.write(json.dumps(ds, indent=2, sort_keys=True))
-        
-        import epdb; epdb.st()
-    '''
 
     def get_page_meta(self, pagedir):
         mfile = os.path.join(pagedir, 'meta.json')

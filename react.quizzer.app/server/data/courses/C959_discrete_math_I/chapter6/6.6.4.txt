@@ -1,0 +1,27 @@
+<image>6.6.4.PNG</image>
+
+1) The sequence {1,2,4} is an open walk.
+
+True
+False x
+
+HINT: The edges are ot present, so it is not a walk at all.
+
+2) The sequence {2,3,2,2} is a closed walk.
+
+True x
+False
+
+HINT: The first and last vertices are the same, so it is a closed walk.
+
+3) The sequence {1,2,3,2} is an open walk.
+
+True x
+False
+
+HINT: All edges are present in the graph, so it is a walk. The first and last vertices are not the same, so it is an open walk.
+
+4) The sequence {2,2,2,} is a closed walk.
+
+True x
+False

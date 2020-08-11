@@ -1,0 +1,21 @@
+For a given function, which programming language likely takes the most lines of source code?
+
+LEGv8 assembly language, C, Java
+
+1) LEGv8 assembly language
+
+1 (most lines) x
+2
+3
+
+2) C
+
+1 (most lines)
+2 x
+3
+
+3) Java
+
+1 (most lines)
+2
+3 x

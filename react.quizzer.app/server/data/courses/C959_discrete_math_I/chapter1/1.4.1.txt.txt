@@ -1,0 +1,29 @@
+Express each English statement using logical operations ∨, ∧, ¬ and the propositional variables t, n, and m defined below. The use of the word "or" means inclusive or.
+
+t: The patient took the medication.
+n: The patient had nausea.
+m: The patient had migraines.
+
+(a) The patient had nausea and migraines.
+
+n ∧ m
+
+(b) The patient took the medication, but still had migraines.
+
+t ∧ m
+
+(c) The patient had nausea or migraines.
+
+n ∨ m
+
+(d) The patient did not have migraines.
+
+¬m
+
+(e) Despite the fact that the patient took the medication, the patient had nausea.
+
+t ∧ n
+
+(f) There is no way that the patient took the medication.
+
+¬t

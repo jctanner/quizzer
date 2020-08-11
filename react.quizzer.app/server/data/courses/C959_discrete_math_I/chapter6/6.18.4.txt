@@ -1,0 +1,9 @@
+Let A = { a, b, c, d, e }. Consider the equivalence relation R on A:
+
+	{ (c, d), (a, e), (a, a), (b, b), (d, c), (c, c), (e, a), (d, d), (e, e) }.
+
+1) What is the partition defined by the equivalence relation R?
+
+{c,b},{d,a},{e}
+{c,d},{a,e},{b} x
+{c,b,e},{d,a}

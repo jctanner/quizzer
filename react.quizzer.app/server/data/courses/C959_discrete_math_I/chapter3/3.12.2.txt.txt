@@ -1,0 +1,16 @@
+<image>gate_nor.png</image>
+
+1) 1 NOR 1 = ?
+
+1
+0 x
+
+2) 1 NOR 0 = ?
+
+1
+0 x
+
+3) 0 NOR 0 = ?
+
+1 x
+0

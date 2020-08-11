@@ -1,0 +1,24 @@
+1) Given A = <matrix>5,-4;-6,5</matrix>, what is A^-1 ?
+
+<matrix>(5/2),2;3,(5/2)</matrix>
+<matrix>5,4;6,5</matrix> x
+does not exist
+
+2) Given A = <matrix>(2/5),(-3/5);(4/5),(-6/5)</matrix>, what is A^-1 ?
+
+<matrix>(-6/5),(3/5);(-4/5),(2/5)</matrix>
+<matrix>-6,3;-4,2</matrix>
+does not exist x
+
+
+3) Given A = <matrix>-2,3;-5,9</matrix>, what is A^-1 ?
+
+<matrix>-3,1;(-5/3),(2/3)</matrix> x
+<matrix>9,-3;5,-2</matrix>
+does not exist
+
+4) Given A = <matrix>.6,.5;-.4,.5</matrix>, what is A^-1 ?
+
+<matrix>6,-5;4,6</matrix>
+<matrix>1,-1;.8,1.2</matrix> x
+does not exist

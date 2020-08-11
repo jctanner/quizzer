@@ -1,0 +1,30 @@
+<markdown>
+matrix A
+--------
+|||
+|---|---|
+|a|b|
+|c|d|
+
+</markdown>
+
+1) What is the determinant of matrix A?
+
+1/(ad - bc) x
+1/(ab - cd)
+ab / cd
+ad / bc
+
+2) What two positions are flipped to find the inverse matrix?
+
+a,d x
+a,b
+c,b
+b,d
+
+3) What two positions are multiplied by -1 to find the inverse matrix?
+
+a,d
+a,b
+c,b x
+b,d

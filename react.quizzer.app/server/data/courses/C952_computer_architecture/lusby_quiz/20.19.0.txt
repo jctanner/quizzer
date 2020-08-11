@@ -1,0 +1,10 @@
+1) A program runs alone on a CPU. The CPU clock rate is 5e9 cycles per second, i.e., 5 GHz. It takes 12e10 clock cycles to complete the program. How many seconds is the CPU performance for the task?
+
+2.4
+24 x
+240
+6.0
+60
+600
+
+HINT: In this problem, we are given the total number of clock cycles. (number of cycles = instruction count * CPI). So we don't need the instruction count or the CPI ... cpu time = ((12 * 10^10)/(5 * 10^9) = 24

@@ -1,0 +1,17 @@
+1) A ____ f that maps elements of a set X to elements of a set Y, is a subset of X × Y such that for every x ∈ X, there is exactly one y ∈ Y for which (x, y) ∈ f.
+
+function x
+domain
+target
+
+2) f: X → Y is the notation to express the fact that f is a function from X to Y. The set X is called the ____ of f.
+
+function
+domain x
+target
+
+3) f: X → Y is the notation to express the fact that f is a function from X to Y. The set Y is the ____ of f.
+
+function
+domain
+target x

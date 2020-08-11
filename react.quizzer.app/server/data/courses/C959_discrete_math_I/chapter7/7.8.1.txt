@@ -1,0 +1,57 @@
+The sequences given below are all walks in a graph. For each sequence give all the attributes from the list below that apply to that sequence.
+
+1) A, B, C, D, A, C 
+
+Open walk x
+Closed walk
+Circuit
+Path
+Cycle
+
+2) A, B, C, D, B, A 
+
+Open walk
+Closed walk x
+Trail
+Path
+Cycle
+
+3) A, C, D, E, B, A
+
+Open walk
+Closed walk x
+Trail
+Path
+
+4) A, C, D, E, C, B, A
+
+Open walk
+Closed walk c
+Trail
+Path
+Cycle
+
+5) A, C, D, E, B
+
+Open walk x
+Closed walk
+Circuit
+Cycle
+
+6) A, B, A
+
+Open walk
+Closed walk x
+Trail
+Circuit
+Path
+Cycle
+
+7) A
+
+
+Open walk
+Trail
+Circuit x
+Path
+Cycle

@@ -1,0 +1,34 @@
+Refer to the undirected graph provided below:
+
+<image>7.8.4.PNG</image>
+
+1) Which of the following sequence of vertices is a circuit in the graph?
+
+a,b,e,b
+a,e,f,g,e,a
+a,e,f,g,a x
+b,g,f,c,b
+
+HINT: This sequence is a closed walk with no repeated edges there fore the sequence is a circuit.
+
+2) Which of the following sequence of vertices is a trail in the graph?
+
+a,b,e,b
+a,e,f,g,e,b,a
+a,e,f,g,e,b x
+
+HINT: The sequence of vertices is an open walk in which no edge occurs more than once, so the sequence is a trail.
+
+3) Is the following walk a path? a,e,f,g,e
+
+True
+False x
+
+HINT: vertex E is repeated in the walk, therefore is is not a path.
+
+4) Is the following closed walk a cycle? a,b,c,f,e,a
+
+True x
+False
+
+HINT: No edge can occur more than once.

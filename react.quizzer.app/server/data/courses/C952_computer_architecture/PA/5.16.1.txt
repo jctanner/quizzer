@@ -1,0 +1,39 @@
+1) CDC 6600
+
+The first supercomputer. x
+Out-of-order instruction commits led to this unpopular situation.
+An approach that uses dynamic hazard detection, generalized forwarding, and reservation stations.
+The computer that introduced Tomasulo's algorithm.
+A computer that used a four-stage pipeline to overlap fetch, decode and execute.
+
+2) Tomasulo's algorithm
+
+The first supercomputer.
+Out-of-order instruction commits led to this unpopular situation.
+An approach that uses dynamic hazard detection, generalized forwarding, and reservation stations. x
+The computer that introduced Tomasulo's algorithm.
+A computer that used a four-stage pipeline to overlap fetch, decode and execute.
+
+3) IBM 7030
+
+The first supercomputer.
+Out-of-order instruction commits led to this unpopular situation.
+An approach that uses dynamic hazard detection, generalized forwarding, and reservation stations.
+The computer that introduced Tomasulo's algorithm.
+A computer that used a four-stage pipeline to overlap fetch, decode and execute. x
+
+4) IBM 360/91
+
+The first supercomputer.
+Out-of-order instruction commits led to this unpopular situation.
+An approach that uses dynamic hazard detection, generalized forwarding, and reservation stations.
+The computer that introduced Tomasulo's algorithm. x
+A computer that used a four-stage pipeline to overlap fetch, decode and execute.
+
+5) Imprecise interrupts
+
+The first supercomputer.
+Out-of-order instruction commits led to this unpopular situation. x
+An approach that uses dynamic hazard detection, generalized forwarding, and reservation stations.
+The computer that introduced Tomasulo's algorithm.
+A computer that used a four-stage pipeline to overlap fetch, decode and execute.

@@ -1,0 +1,41 @@
+Assume the propositions p, q, r, and s have the following truth values:
+
+p is true
+q is true
+r is false
+s is false
+
+What are the truth values for the following compound propositions?
+
+1) s → q
+
+True x
+False
+
+2) (r ↔ s) ∧ q
+
+True x
+False
+
+3) q → ¬ r
+
+True x
+False
+
+4) (q ∧ s) → p
+
+True x
+False
+
+5) (p ↔ r) ∧ (¬r ∧ ¬s)
+
+True
+False x
+
+6) q → ¬(r ∨ q)
+
+True
+False x
+
+
+

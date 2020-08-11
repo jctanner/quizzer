@@ -1,0 +1,4 @@
+a) Which has precedence?
+
+Boolean multiplication x
+Boolean addition

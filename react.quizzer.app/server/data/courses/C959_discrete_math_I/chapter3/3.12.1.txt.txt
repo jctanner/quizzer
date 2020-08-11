@@ -1,0 +1,16 @@
+<image>gate_nand.png</image>
+
+1) 0 NAND 1 = ?
+
+1 x
+0
+
+2) 1 NAND 1 = ?
+
+1
+0 x
+
+3) 0 NAND 0 = ?
+
+1 x
+0

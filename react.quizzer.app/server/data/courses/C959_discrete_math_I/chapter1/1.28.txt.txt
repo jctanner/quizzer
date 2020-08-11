@@ -1,0 +1,8 @@
+1) A _____ proof, proves a conditional theorem of the form p → c by showing that the contrapositive ¬c → ¬p is true. In other words, ¬c is assumed to be true and ¬p is proven as a result of ¬c.
+
+direct
+exhaustion
+counterexample
+indirect/contradiction
+contrapositive x
+cases

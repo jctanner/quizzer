@@ -1,0 +1,8 @@
+<image>function_or_not.PNG</image>
+
+1) Which of these is a valid function?
+
+1 x
+2
+
+HINT: A can not have many B

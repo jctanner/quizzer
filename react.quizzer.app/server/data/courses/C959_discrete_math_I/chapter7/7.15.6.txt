@@ -1,0 +1,36 @@
+Consider breadth-first search run on the graph below starting from vertex a:
+
+<image>7.15.6.PNG</image>
+
+1) How many children does vertex a have in the resulting BFS tree?
+
+0
+1
+2
+3 x
+4
+
+2) How many children does vertex b have in the resulting BFS tree?
+
+0 x
+1
+2
+3
+4
+
+
+3) How many children does vertex e have in the resulting BFS tree?
+
+0 x
+1
+2
+3
+4
+
+4) How many children does vertex f have in the resulting BFS tree?
+
+0
+1
+2 x
+3
+4
