@@ -73,19 +73,20 @@ app.get('/api/courses/:courseName/questions', function (req, res) {
  * API: return question data and prev+next question
 *****************************************************/
 app.get('/api/courses/:courseName/questions/:questionID', function (req, res) {
-    const filename = 'server/data/courses/' + req.params.courseName + '/' + req.params.questionID + '.json'
 
     // FIXME: return null data for null filenames
-    console.log(filename)
-    if (filename === undefined) {
+    if (req.params.questionID === undefined || req.params.questionID === "undefined") {
         return res.json({
             'qid': req.params.questionID,
             'next': null,
             'previous': null,
-            'filename': filename,
+            'filename': null,
         })
 
     }
+
+    const filename = 'server/data/courses/' + req.params.courseName + '/' + req.params.questionID + '.json'
+    console.log(filename)
 
     let filedata = fs.readFileSync(filename);
     let jData = JSON.parse(filedata);
