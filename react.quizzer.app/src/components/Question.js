@@ -3,9 +3,11 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 
+import { postSessionAnswer } from '../Api';
+
 
 // A SINGLE QUESTION
-function Question() {
+function QuestionPage() {
    
     console.log('question page ...');
 
@@ -18,7 +20,7 @@ function Question() {
 
     const handleSelect = (e) => {
         console.log(e);
-        console.log('selected value', e.currentTarget.value);
+        console.log('selected Zvalue', e.currentTarget.value);
         setUserChoice(e.currentTarget.value);
     };
 
@@ -143,16 +145,28 @@ export const InlineQuestion = (props) => {
 
     console.log(questionApiUrl)
 
+    /*
     const handleSelect = (e) => {
-        console.log(e);
-        console.log('selected value', e.currentTarget.value);
+
+        console.log('handleselect.post...');
+        //postSessionAnswer(props.sessionid, props.courseName, props.questionID, e.currentTarget.value, null)
+
+        console.log(e.target.value);
+        console.log('selected Xvalue', e.currentTarget.value);
         setUserChoice(e.currentTarget.value);
+
+        //console.log('handleselect.post...');
+        //postSessionAnswer(props.sessionid, props.courseName, props.questionID, e.currentTarget.value, null)
     };
 
     const handleOnChange = (e) => {
         console.log(e.target.value);
+        console.log('typed value', e.currentTarget.value);
         setUserChoice(e.target.value);
+        console.log('handleOnChange.post...');
+        postSessionAnswer(props.sessionid, props.courseName, props.questionID, e.currentTarget.value, null)
     };
+    */
 
     const toggleAnswer = (e) => {
         if ( answerHidden === true ) {
@@ -165,11 +179,12 @@ export const InlineQuestion = (props) => {
     useEffect(() => {
 
         const fetchQuestionData = async () => {
-            console.log('fetching ' + questionApiUrl)
+            //console.log('fetching ' + questionApiUrl)
             const newQuestionData = await fetch(questionApiUrl)
                 .then(res => res.json());
-            console.log(newQuestionData);
+            //console.log(newQuestionData);
             setQuestionData(newQuestionData);
+            props.setCurrentQuestionData(newQuestionData);
         };
 
         fetchQuestionData();
@@ -200,13 +215,14 @@ export const InlineQuestion = (props) => {
                 <form>
                     <fieldset>
                     { questionData.choices.map((choice, index) => (
-                        <div>
+                        <div key={ index }>
                             <input 
-                                onChange={ props.handleOnChange }
+                                onChange={ props.handleSelect }
                                 checked={ choice === props.currentSelection }
                                 type="radio"
                                 value={ choice }
                                 key={ index }
+                                id={ index }
                             />
                             { choice.includes('<div')
                                 ? <div dangerouslySetInnerHTML={ { __html: choice } }></div>
@@ -250,4 +266,4 @@ export const InlineQuestion = (props) => {
 
 }
 
-export default Question;
+export default QuestionPage;

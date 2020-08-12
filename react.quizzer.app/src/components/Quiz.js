@@ -6,6 +6,8 @@ import QuestionPage from './Question';
 import { InlineQuestion } from './Question';
 import { InlineReport } from './Report';
 
+import { postSessionAnswer } from '../Api';
+
 function getCourseIdFromCurrentUrl() {
     // http://localhost:3000/courses/C960_discrete_math_II/quiz
     const thisPath = window.location.pathname;
@@ -29,6 +31,8 @@ function QuizPage({ multiplechoice }) {
     const [ timeStarted, setTimeStarted ] = useState(null);
     const [ timeFinished, setTimeFinished ] = useState(null);
     const [ currentQuestionIndex, setCurrentQuestionIndex ] = useState(0);
+    const [ currentQuestionData, setCurrentQuestionData ] = useState(null);
+    const [ currentChoiceIndex, setCurrentChoiceIndex ] = useState(null);
     const [ isMultipleChoice, setIsMultipleChoice ] = useState(true);
 
     if ( courseID === null) {
@@ -87,12 +91,17 @@ function QuizPage({ multiplechoice }) {
 
     // radio box selected ...
     const handleSelect = (e) => {
-        console.log(e);
+        console.log('e', e);
+        console.log('e.currentTargte', e.currentTarget);
         console.log('selected value', e.currentTarget.value);
         //setUserChoice(e.currentTarget.value);
         const newAnswers = [...userAnswers];
         newAnswers[currentQuestionIndex] = e.currentTarget.value;
         setUserAnswers([...newAnswers]);
+
+        console.log('currentQuestionData', currentQuestionData);
+        const choiceIndex = parseInt(e.currentTarget.id);
+        postSessionAnswer(sessionID, courseID, questionIDs[currentQuestionIndex], null, choiceIndex)
     };
 
     // input box typed in ...
@@ -130,11 +139,14 @@ function QuizPage({ multiplechoice }) {
                     <hr/>
 
                     <InlineQuestion
+                        key={ questionIDs[currentQuestionIndex] }
+                        sessionid={ sessionID }
                         courseName={ courseID }
                         questionID={ questionIDs[currentQuestionIndex] }
                         currentSelection={ userAnswers[currentQuestionIndex] }
                         handleSelect={ handleSelect }
                         handleOnChange={ handleOnChange }
+                        setCurrentQuestionData={ setCurrentQuestionData }
                     />
                 </div>
             }

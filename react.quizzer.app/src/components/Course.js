@@ -175,11 +175,15 @@ function CoursePage() {
         	<h2>COURSE: { courseName }</h2>
 			<ul>
 				<li>
+                    <button>
                     <Link to={ "/courses/" + courseName + '/quiz' }>start quiz</Link>
+                    </button>
                 </li>
+                {/*
 				<li>
                     <Link to={ "/courses/" + courseName + '/quiz?multiplechoice=1' } multiplechoice={ true }>start mulitple-choice quiz</Link>
                 </li>
+                */}
 				<li>
                 start test
                 </li>

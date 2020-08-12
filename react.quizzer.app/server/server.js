@@ -1,6 +1,7 @@
 const compareVersions = require('compare-versions')
 const express = require('express')
 const moment = require('moment')
+const { v4: uuidv4 } = require('uuid');
 const app = express()
 app.use(express.json());
 const port = 4000
@@ -13,7 +14,9 @@ var db = new sqlite3.Database("./server/database/quizzer.db")
 db.run('CREATE TABLE IF NOT EXISTS courses(name text)');
 db.run('CREATE TABLE IF NOT EXISTS sessions(coursename text, sessionid text, datetime text)');
 db.run('CREATE TABLE IF NOT EXISTS scores(datetime text, coursename text, sessionid text, score real)');
-db.run('CREATE TABLE IF NOT EXISTS answers(datetime text, sessionid text, coursename text, questionid text, correct bool)');
+
+//sql += " (datetime, sessionid, coursename, questionid, answer, choiceindex, correct) VALUES"
+db.run('CREATE TABLE IF NOT EXISTS answers(datetime text, sessionid text, coursename text, questionid text, answer text, choiceindex integer, correct bool, PRIMARY KEY (sessionid, coursename, questionid))');
 
 let userSessions = [];
 
@@ -40,6 +43,19 @@ function fileHasChoices(courseName, filename) {
         return false
     }
     return true
+};
+
+/*****************************************************
+ * FUNCTION: get question data
+*****************************************************/
+function getQuestionData(courseName, questionid) {
+
+    const filename = 'server/data/courses/' + courseName + '/' + questionid + '.json'
+
+    let filedata = fs.readFileSync(filename);
+    let jData = JSON.parse(filedata);
+
+    return jData;
 };
 
 /*****************************************************
@@ -176,7 +192,7 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     const thisSession = {
         "started": d.getTime(),
         'finished': null,
-        "sessionid": "00000",
+        "sessionid": uuidv4(),
         "questions": [...quizList]
     };
     userSessions.push(thisSession);
@@ -247,6 +263,56 @@ app.get('/api/results/:courseName', async function (req, res) {
     //return res.json({'coursename': courseName, 'questionlist': questionList});
     //return res.json({'coursename': courseName, 'questionlist': questionList, 'stats': questionStats});
 });
+
+/*****************************************************
+ * API: post session answer
+*****************************************************/
+app.post('/api/session/answer', function (req, res) {
+    console.log(req.body);
+
+    const thisDate = moment.utc().format('YYYY-MM-DDTHH:MM:SS')
+    const sessionid = req.body.sessionid;
+    const coursename = req.body.coursename;
+    const questionid = req.body.questionid;
+    const answer = req.body.answer;
+    const choiceindex = req.body.choiceindex;
+
+    // check if the answer is correct or not
+    const qData = getQuestionData(coursename, questionid)
+    let isCorrect = 0;
+    if (choiceindex !== null && choiceindex !== undefined && choiceindex !== 'null') {
+        if (choiceindex === qData.correct_choice_index) {
+            isCorrect = 1;
+        }
+    }
+
+    let sql = "INSERT OR REPLACE INTO answers"
+    sql += " (datetime, sessionid, coursename, questionid, answer, choiceindex, correct) VALUES"
+    sql += "("
+    sql += "'" + thisDate + "'"
+    sql += " ,"
+    sql += "'" + sessionid + "'"
+    sql += " ,"
+    sql += "'" + coursename + "'"
+    sql += " ,"
+
+    sql += "'" + questionid + "'"
+    sql += " ,"
+
+    sql += "'" + answer + "'"
+    sql += " ,"
+
+    sql += choiceindex.toString()
+    sql += " ,"
+
+    sql += isCorrect
+
+    sql += ")"
+    console.log(sql);
+    db.run(sql);
+
+    return res.json({'msg': 'ok'})
+})
 
 /*****************************************************
  * API: post quiz results
