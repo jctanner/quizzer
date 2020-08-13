@@ -7,16 +7,20 @@ app.use(express.json());
 const port = 4000
 const fs = require('fs')
 
-var sqlite3 = require('sqlite3').verbose()
-var db = new sqlite3.Database(':memory:')
-var db = new sqlite3.Database("./server/database/quizzer.db")
+// https://www.sqlite.org/datatype3.html
+const boolTrue = 1
+const boolFalse = 0
 
-db.run('CREATE TABLE IF NOT EXISTS courses(name text)');
-db.run('CREATE TABLE IF NOT EXISTS sessions(coursename text, sessionid text, datetime text)');
-db.run('CREATE TABLE IF NOT EXISTS scores(datetime text, coursename text, sessionid text, score real)');
+//var sqlite3 = require('sqlite3').verbose()
+//var db = new sqlite3.Database(':memory:')
+//var db = new sqlite3.Database("./server/database/quizzer.db")
+var sqlite = require("better-sqlite3")
+var db = new sqlite("./server/database/quizzer.db")
 
-//sql += " (datetime, sessionid, coursename, questionid, answer, choiceindex, correct) VALUES"
-db.run('CREATE TABLE IF NOT EXISTS answers(datetime text, sessionid text, coursename text, questionid text, answer text, choiceindex integer, correct bool, PRIMARY KEY (sessionid, coursename, questionid))');
+db.exec('CREATE TABLE IF NOT EXISTS courses(name text)');
+db.exec('CREATE TABLE IF NOT EXISTS sessions(coursename text, sessionid text, started text, finished text, qidsjson text, PRIMARY KEY (sessionid))');
+db.exec('CREATE TABLE IF NOT EXISTS scores(datetime text, coursename text, sessionid text, score real)');
+db.exec('CREATE TABLE IF NOT EXISTS answers(datetime text, sessionid text, coursename text, questionid text, answer text, choiceindex integer, correct bool, PRIMARY KEY (sessionid, coursename, questionid))');
 
 let userSessions = [];
 
@@ -69,7 +73,18 @@ for (let i=0; i<courseList.length; i++) {
     let courseQuestionList = courseFileList.map((filename) => {
         return removeFileExtension(filename);
     })
+
+    if ( courseList[i] === 'C960_discrete_math_II' ) {
+        // clear out non-multiplechoice questions if requested ...
+        filtered = courseQuestionList.filter(function(value, indx, arr){
+            return (fileHasChoices(courseList[i], value));
+        });
+        courseQuestionList = filtered
+        console.log('after filters: ', courseQuestionList.length)
+    }
+
     coursesFiles[courseList[i]] = courseQuestionList
+    console.log('after filters: ', coursesFiles[courseList[i]].length)
 }
 
 app.get('/api/courses', (req, res) => res.json(courseList))
@@ -142,8 +157,11 @@ app.get('/api/courses/:courseName/questions/:questionID', function (req, res) {
  * API: get a set of quiz questions
 *****************************************************/
 app.get('/api/quiz/:courseName', async function (req, res) {
+
     console.log('------------------------------------------')
     console.log(req.params)
+    const courseName = req.params.courseName
+
     let questionList = [...coursesFiles[req.params.courseName]]
     //let multiplechoice = req.query.multiplechoice
     //console.log(multiplechoice)
@@ -151,27 +169,21 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 
     // get rid of already answered questions
     let answered = []
-    let sql = "SELECT * FROM answers"
-    sql += " WHERE "
-    sql += "coursename=" + '"' + req.params.courseName + '"'
-    try {
-        await db.all(sql, (err, rows)=>{
-            let rownum = 0;
-            rows.forEach((row) => {
-                //console.log(row)
-                answered.push(row.questionid)
-            })
-        })
-    } catch(error) {
-        throw('error running ' + sql)
-    }
+    let sql = `SELECT DISTINCT(questionid) FROM answers WHERE coursename='${courseName}'`;
+    console.log(sql)
+    let rows = db.prepare(sql).all()
+    console.log(rows)
+    rows.forEach((row) => {
+        //console.log(row)
+        answered.push(row.questionid)
+    })
     let filtered = questionList.filter(function(value, indx, arr){
         return (answered.includes(value) === false);
     });
 
     // clear out non-multiplechoice questions if requested ...
     filtered = filtered.filter(function(value, indx, arr){
-        return (fileHasChoices(req.params.courseName, value));
+        return (fileHasChoices(courseName, value));
     });
 
     questionList = filtered;
@@ -187,12 +199,21 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     quizList.sort(compareVersions);
     //console.log('quizList.sorted ...', quizList);
 
-    // start a session
+    //db.exec('CREATE TABLE IF NOT EXISTS sessions(coursename text, sessionid text, started text, finished text, qidsjson text, PRIMARY KEY (sessionid))');
     const d = new Date();
+    const started = d.getTime()
+    const sessionid = uuidv4()
+    const qidsjson = JSON.stringify(quizList)
+    sql = "INSERT INTO sessions (sessionid, started, coursename, qidsjson) VALUES "
+    sql += `('${sessionid}', '${started}', '${courseName}', '${qidsjson}')`
+    console.log(sql)
+    db.exec(sql)
+
+    // start a session
     const thisSession = {
-        "started": d.getTime(),
+        "started": started,
         'finished': null,
-        "sessionid": uuidv4(),
+        "sessionid": sessionid,
         "questions": [...quizList]
     };
     userSessions.push(thisSession);
@@ -203,14 +224,20 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 /*****************************************************
  * API: get quiz results for all questions
 *****************************************************/
-app.get('/api/results/:courseName', async function (req, res) {
+app.get('/api/stats/:courseName', async function (req, res) {
     const courseName = req.params.courseName
     let questionList = [...coursesFiles[courseName]]
     questionList.sort(compareVersions);
 
-    let questionStats = {};
+    let questionStats = {
+        total: questionList.length,
+        answered: 0,
+        unanswered: 0,
+        questionlist: questionList,
+        questions: {}
+    };
     for (let i=0; i<questionList.length; i++) {
-        questionStats[questionList[i]] = {
+        questionStats.questions[questionList[i]] = {
             coursename: courseName,
             questionid: questionList[i],
             total: 0,
@@ -219,49 +246,35 @@ app.get('/api/results/:courseName', async function (req, res) {
         }
     }
 
-    let sql = "SELECT * FROM answers"
-    sql += " WHERE "
-    sql += "coursename=" + '"' + courseName + '"'
 
-    try {
-        await db.all(sql, (err, rows)=>{
-            //console.log(err)
-            //console.log(rows)
+    let answered = []
+    let unanswered = [...questionList]
 
-            let rownum = 0;
-            rows.forEach((row) => {
-                rownum += 1
-                console.log(rownum)
-                console.log(row)
+    rows = db.prepare(
+        `SELECT * FROM answers WHERE coursename='${courseName}'`
+    ).all()
+    console.log(rows)
+    rows.forEach((row) => {
+        //console.log(row)
 
-                const qid = row.questionid
-                console.log(qid)
+        if (!answered.includes(row.questionid)) {
+            answered.push(row.questionid)
+        }
 
-                if ( questionStats[qid] ) { 
-                    questionStats[qid].total += 1
+        questionStats.questions[row.questionid].total += 1
+        if (row.correct === boolTrue) {
+            questionStats.questions[row.questionid].correct += 1
+        } else {
+            questionStats.questions[row.questionid].incorrect += 1
+        }
+    })
 
-                    if ( row.correct === 1 ) {
-                        questionStats[qid].correct += 1
-                    } else { 
-                        questionStats[qid].incorrect += 1
-                    }
+    questionStats.answered = answered.length;
+    questionStats.unanswered = unanswered.length;
+  
+    return res.json(questionStats)
 
-                    console.log(questionStats[qid])
-                }
-            })
 
-            //console.log(questionStats);
-            //return res.json({'coursename': courseName, 'questionlist': questionList, 'stats': questionStats});
-            //res.render('coursename': courseName, 'questionlist': questionList, 'stats': questionStats);
-            res.send({'coursename': courseName, 'questionlist': questionList, 'stats': questionStats});
-
-        })
-    } catch(error) {
-        throw('error running ' + sql)
-    }
-
-    //return res.json({'coursename': courseName, 'questionlist': questionList});
-    //return res.json({'coursename': courseName, 'questionlist': questionList, 'stats': questionStats});
 });
 
 /*****************************************************
@@ -309,7 +322,7 @@ app.post('/api/session/answer', function (req, res) {
 
     sql += ")"
     console.log(sql);
-    db.run(sql);
+    db.exec(sql);
 
     return res.json({'msg': 'ok'})
 })
@@ -317,6 +330,7 @@ app.post('/api/session/answer', function (req, res) {
 /*****************************************************
  * API: post quiz results
 *****************************************************/
+/*
 app.post('/api/results', function (req, res) {
     console.log('--------------------')
     //console.log(req)
@@ -370,9 +384,79 @@ app.post('/api/results', function (req, res) {
 
     return res.json({'msg': 'ok'})
 });
+*/
+
+/*****************************************************
+ * API: get quiz results
+*****************************************************/
+app.get('/api/results/:sessionid', async function (req, res) {
+    const sessionid = req.params.sessionid
+    let rows = []
+
+    // https://stackoverflow.com/a/47963102
+    rows = db.prepare(
+        `SELECT * FROM sessions WHERE sessionid='${sessionid}'`
+    ).all()
+    console.log(rows)
+    const sessionData = rows[0]
+    const sessionQuestionIds = JSON.parse(sessionData.qidsjson)
+    const totalQuestions = sessionQuestionIds.length
+
+    // how many were answered?
+    rows = db.prepare(
+        `SELECT COUNT(*) FROM answers WHERE sessionid='${sessionid}'`
+    ).all()
+    console.log(rows)
+    const totalAnswered = rows[0]['COUNT(*)']
+
+    // how many were correct?
+    rows = db.prepare(
+        `SELECT COUNT(*) FROM answers WHERE sessionid='${sessionid}' AND correct=${boolTrue}`
+    ).all()
+    console.log(rows)
+    const totalCorrect = rows[0]['COUNT(*)']
+
+    // what was correct and what was incorrect
+    rows = db.prepare(
+        `SELECT questionid,correct FROM answers WHERE sessionid='${sessionid}'`
+    ).all()
+    console.log(rows)
+    let correct = []
+    let incorrect = []
+    let unanswered = [...sessionQuestionIds]
+    rows.forEach((row) => {
+        if ( row.correct === boolTrue ) {
+            correct.push(row.questionid)
+        } else {
+            incorrect.push(row.questionid)
+        }
+
+        const ix = unanswered.indexOf(row.questionid)
+        unanswered.splice(ix, 1)
+    })
+
+    // what is the score?
+    const score = (totalCorrect / totalQuestions ) * 100
+
+    console.log(`sending results for ${sessionid} ...`)
+
+    return res.json({
+        'courseName': sessionData.coursename,
+        'started': sessionData.started,
+        sessionQuestionIds,
+        totalAnswered,
+        totalCorrect,
+        totalQuestions,
+        score,
+        correct,
+        incorrect,
+        unanswered
+    })
+})
+
+
+
 
 app.get('/', (req, res) => res.send('Hello World!'))
-
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
-
 //db.close()

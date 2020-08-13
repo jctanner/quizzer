@@ -1,7 +1,8 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 
 import { useEffect, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 
 import DataTable from 'react-data-table-component';
 
@@ -93,8 +94,9 @@ function QuestionRow(props) {
 function CoursePage() {
 
     const [questionList, setQuestionList] = useState([]);
-    const [questionStats, setQuestionStats] = useState({});
+    const [courseStats, setCourseStats] = useState({});
     const [tableData, setTableData] = useState([]);
+    const history = useHistory();
 
 	let { courseName } = useParams();
     const tableColumns = [
@@ -124,18 +126,17 @@ function CoursePage() {
             setQuestionList(newQuestionList);
         };
 
-        const fetchQuestionStats = async () => {
-            const courseStatsUrl = '/api/results/' + courseName;
+        const fetchCourseStats = async () => {
+            const courseStatsUrl = '/api/stats/' + courseName;
             const newStats = await fetch(courseStatsUrl)
                 .then(res => res.json());
-            //console.log(newStats.stats);
-            setQuestionStats(newStats.stats);
+            setCourseStats(newStats);
 
             let newTableData = [];
             for (let i=0; i<newStats.questionlist.length; i++) {
                 const qid = newStats.questionlist[i];
                 console.log(qid);
-                let thisRowData = newStats.stats[qid];
+                let thisRowData = newStats.questions[qid];
                 thisRowData.id = i;
                 if ( thisRowData.total > 0 ) {
                     thisRowData.average = (thisRowData.correct / thisRowData.total) * 100;
@@ -145,14 +146,12 @@ function CoursePage() {
                 console.log(thisRowData);
                 newTableData.push(thisRowData);
             }
-            //console.log(newTableData);
             setTableData(newTableData);
-            //console.log(tableData);
 
         };
 
-        fetchQuestionList();
-        fetchQuestionStats();
+        //fetchQuestionList();
+        fetchCourseStats();
 
         /*
         let newTableData = [];
@@ -170,24 +169,23 @@ function CoursePage() {
     }, [courseName]);
 
 
+    const startQuiz = () => {
+        //<Link to={ "/courses/" + courseName + '/quiz' }>start quiz</Link>
+        const quizUrl = '/courses/' + courseName + '/quiz';
+        history.push(quizUrl)
+    };
+
 	return (
 		<div>
         	<h2>COURSE: { courseName }</h2>
-			<ul>
-				<li>
-                    <button>
-                    <Link to={ "/courses/" + courseName + '/quiz' }>start quiz</Link>
-                    </button>
-                </li>
-                {/*
-				<li>
-                    <Link to={ "/courses/" + courseName + '/quiz?multiplechoice=1' } multiplechoice={ true }>start mulitple-choice quiz</Link>
-                </li>
-                */}
-				<li>
-                start test
-                </li>
-			</ul>
+            <ul>
+                <li id='statstotal'>total: { courseStats.total }</li>
+                <li id='statsanswered'>answered: { courseStats.answered }</li>
+            </ul>
+            <hr/>
+            <Button onClick={startQuiz}>start quiz</Button>
+            <Button onClick={startQuiz}>start test</Button>
+            <hr/>
             <DataTable
                 //title="questions"
                 noHeader={ true }

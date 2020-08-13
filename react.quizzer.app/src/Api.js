@@ -28,3 +28,16 @@ export const postSessionAnswer = (sessionid, coursename, questionid, answer, cho
         .then(response => response.json());
 }
 
+// /api/results/:sessionid'
+/*
+    const fetchQuestionList = async () => {
+        const courseApiUrl = '/api/courses/' + courseName;
+        const newQuestionList = await fetch(courseApiUrl + '/questions')
+            .then(res => res.json());
+        setQuestionList(newQuestionList);
+*/
+export const getSessionResults = (sessionid) => {
+    const sessionResultsUrl = '/api/results/' + sessionid;
+    const qData = fetch(sessionResultsUrl).then(res => res.json())
+    return qData;
+}
