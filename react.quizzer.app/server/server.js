@@ -195,11 +195,8 @@ app.get('/api/quiz/:courseName', async function (req, res) {
         //console.log('push', randomQuestion);
         quizList.push(randomQuestion);
     };
-    //console.log('quizList', quizList);
     quizList.sort(compareVersions);
-    //console.log('quizList.sorted ...', quizList);
 
-    //db.exec('CREATE TABLE IF NOT EXISTS sessions(coursename text, sessionid text, started text, finished text, qidsjson text, PRIMARY KEY (sessionid))');
     const d = new Date();
     const started = d.getTime()
     const sessionid = uuidv4()
@@ -234,7 +231,8 @@ app.get('/api/stats/:courseName', async function (req, res) {
         answered: 0,
         unanswered: 0,
         questionlist: questionList,
-        questions: {}
+        questions: {},
+        score_history: []
     };
     for (let i=0; i<questionList.length; i++) {
         questionStats.questions[questionList[i]] = {
@@ -246,14 +244,15 @@ app.get('/api/stats/:courseName', async function (req, res) {
         }
     }
 
-
+    let sessionIDs = []
+    let sessionInfo = {}
     let answered = []
     let unanswered = [...questionList]
 
     rows = db.prepare(
         `SELECT * FROM answers WHERE coursename='${courseName}'`
     ).all()
-    console.log(rows)
+    //console.log(rows)
     rows.forEach((row) => {
         //console.log(row)
 
@@ -261,17 +260,47 @@ app.get('/api/stats/:courseName', async function (req, res) {
             answered.push(row.questionid)
         }
 
+        if (!sessionIDs.includes(row.sessionid)) {
+            sessionIDs.push(row.sessionid)
+            sessionInfo[row.sessionid] = {
+                sessionid: row.sessionid,
+                date: row.datetime,
+                correct: 0,
+                incorrect: 0,
+                score: 0
+            }
+        }
+
         questionStats.questions[row.questionid].total += 1
         if (row.correct === boolTrue) {
             questionStats.questions[row.questionid].correct += 1
+            sessionInfo[row.sessionid]['correct'] += 1
         } else {
             questionStats.questions[row.questionid].incorrect += 1
+            sessionInfo[row.sessionid]['incorrect'] += 1
         }
     })
 
     questionStats.answered = answered.length;
     questionStats.unanswered = unanswered.length;
-  
+
+    sessionIDs.forEach(sessionID => {
+        console.log(sessionID);
+        rows = db.prepare(
+            `SELECT * FROM sessions WHERE sessionid='${sessionID}'`
+        ).all()
+        const thisSessionData = rows[0]
+        const thisSessionQuestionIds = JSON.parse(thisSessionData.qidsjson)
+        const thisTotalQuestions = thisSessionQuestionIds.length
+        sessionInfo[sessionID].total = thisTotalQuestions
+        sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+
+    })
+
+    console.log(sessionInfo)
+    console.log(Object.values(sessionInfo))
+    questionStats.score_history = Object.values(sessionInfo)
+
     return res.json(questionStats)
 
 
@@ -326,65 +355,6 @@ app.post('/api/session/answer', function (req, res) {
 
     return res.json({'msg': 'ok'})
 })
-
-/*****************************************************
- * API: post quiz results
-*****************************************************/
-/*
-app.post('/api/results', function (req, res) {
-    console.log('--------------------')
-    //console.log(req)
-    console.log(req.body)
-
-    const thisDate = moment.utc().format('YYYY-MM-DDTHH:MM:SS')
-    console.log(thisDate)
-
-    //db.run('CREATE TABLE scores(coursename text, sessionid text, score real)');
-    //db.run('CREATE TABLE answers(datetime text, sessionid text, coursename text, questionid text, correct bool)');
-
-    let sql = "INSERT INTO scores (datetime, coursename, sessionid, score) VALUES"
-    sql += "("
-    sql += "'" + thisDate + "'"
-    sql += " ,"
-    sql += "'" + req.body.coursename + "'"
-    sql += " ,"
-    sql += "'" + req.body.sessionid + "'"
-    sql += " ,"
-    sql += req.body.score
-    sql += ")"
-    console.log(sql);
-    db.run(sql);
-
-    const allQuestions = req.body.correct.concat(req.body.incorrect);
-    for (let i=0; i<allQuestions.length; i++) {
-        console.log(i);
-        const thisId = allQuestions[i]
-        console.log(thisId)
-        let isCorrect = false
-        if (req.body.correct.includes(thisId)) {
-            isCorrect = true
-        }
-        console.log(isCorrect);
-
-        sql = "INSERT INTO answers (datetime, sessionid, coursename, questionid, correct) VALUES"
-        sql += "("
-        sql += "'" + thisDate + "'"
-        sql += " ,"
-        sql += "'" + req.body.sessionid + "'"
-        sql += " ,"
-        sql += "'" + req.body.coursename + "'"
-        sql += " ,"
-        sql += "'" + thisId + "'"
-        sql += " ,"
-        sql += isCorrect
-        sql += ")"
-        console.log(sql);
-        db.run(sql);
-    }
-
-    return res.json({'msg': 'ok'})
-});
-*/
 
 /*****************************************************
  * API: get quiz results
