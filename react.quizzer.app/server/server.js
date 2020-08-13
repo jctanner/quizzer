@@ -265,9 +265,12 @@ app.get('/api/stats/:courseName', async function (req, res) {
             sessionInfo[row.sessionid] = {
                 sessionid: row.sessionid,
                 date: row.datetime,
+                label: row.datetime,
+                text: row.datetime,
                 correct: 0,
                 incorrect: 0,
-                score: 0
+                score: 0,
+                y: 0
             }
         }
 
@@ -294,7 +297,8 @@ app.get('/api/stats/:courseName', async function (req, res) {
         const thisTotalQuestions = thisSessionQuestionIds.length
         sessionInfo[sessionID].total = thisTotalQuestions
         sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
-
+        sessionInfo[sessionID].y = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+        sessionInfo[sessionID].value = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
     })
 
     console.log(sessionInfo)

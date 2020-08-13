@@ -4,6 +4,7 @@ import { Button } from 'reactstrap';
 import { useEffect, useState } from 'react';
 import { Link, useHistory, useParams } from "react-router-dom";
 
+import BarChart from 'react-bar-chart';
 import DataTable from 'react-data-table-component';
 
 const customStyles = {
@@ -96,7 +97,11 @@ function CoursePage() {
     const [questionList, setQuestionList] = useState([]);
     const [courseStats, setCourseStats] = useState({});
     const [tableData, setTableData] = useState([]);
+    const [chartOptions, setChartOptions] = useState({});
+    const [scoreHistory, setScoreHistory] = useState([]);
     const history = useHistory();
+
+    const chartMargin = {top: 20, right: 20, bottom: 30, left: 40};
 
 	let { courseName } = useParams();
     const tableColumns = [
@@ -132,6 +137,24 @@ function CoursePage() {
                 .then(res => res.json());
             setCourseStats(newStats);
 
+            /*
+            // define the chart options
+            const chartOpts = {
+                animationEnabled: true,
+                theme: 'light2',
+                title: { text: 'score history' },
+                axisX: { title: 'time' },
+                axisY: { title: 'score' },
+                data: [{
+                    type: 'bar',
+                    dataPoints: courseStats.score_history
+                }]
+            }
+            setChartOptions(chartOpts);
+            */
+            setScoreHistory(newStats.score_history)
+
+            // build the rows for the table ...
             let newTableData = [];
             for (let i=0; i<newStats.questionlist.length; i++) {
                 const qid = newStats.questionlist[i];
@@ -182,6 +205,13 @@ function CoursePage() {
                 <li id='statstotal'>total: { courseStats.total }</li>
                 <li id='statsanswered'>answered: { courseStats.answered }</li>
             </ul>
+            <BarChart
+                margin={ chartMargin }
+                ylabel='score'
+                width={ 800 }
+                height={ 200 }
+                data={ scoreHistory }
+                />
             <hr/>
             <Button onClick={startQuiz}>start quiz</Button>
             <Button onClick={startQuiz}>start test</Button>
