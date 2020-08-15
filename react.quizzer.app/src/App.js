@@ -1,8 +1,10 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CoursePage from './components/Course';
 import QuestionPage from './components/Question';
 import QuizPage from './components/Quiz';
+import SessionPage from './components/Session';
 
 import { useEffect, useState } from 'react';
 
@@ -69,6 +71,7 @@ function App() {
                     <Route path="/courses/:courseName/quiz" component={ QuizPage }/>
 					<Route path="/courses/:courseName/questions/:questionId" component={ QuestionPage } />
 					<Route path="/courses/:courseName" component={ CoursePage } />
+					<Route path="/sessions/:sessionid" component={ SessionPage } />
                     <Route component={ NotFound } />
 				</Switch>
 			</div>

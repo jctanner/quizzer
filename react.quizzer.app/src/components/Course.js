@@ -7,6 +7,8 @@ import { Link, useHistory, useParams } from "react-router-dom";
 import BarChart from 'react-bar-chart';
 import DataTable from 'react-data-table-component';
 
+import moment from 'moment';
+
 const customStyles = {
     headRows: {
         style: {
@@ -49,7 +51,7 @@ const conditionalRowStyles = [
     {
         when: row => row.average > 79,
         style: {
-            backgroundColor: 'green',
+            backgroundColor: 'lightgreen',
             maxHeight: '10px',
         }
     },
@@ -63,7 +65,7 @@ const conditionalRowStyles = [
     {
         when: row => row.total > 0 && row.average < 60,
         style: {
-            backgroundColor: 'red',
+            backgroundColor: 'pink',
             maxHeight: '10px',
         }
     },
@@ -113,12 +115,17 @@ function CoursePage() {
         {name: 'incorrect', selector: 'incorrect', compact: true, right: true}
     ];
 
-    const handleRowClicked = (row) => {
+    const handleQuestionRowClicked = (row) => {
         console.log(row);
         const rowQuestionId = row.questionid;
         const questionUrl = '/courses/' + courseName + '/questions/' + rowQuestionId;
-        //history.push(questionUrl);
         window.location = questionUrl;
+    };
+
+    const handleSessionClicked = (sessionid) => {
+        console.log(sessionid)
+        const sessionUrl = '/sessions/' + sessionid;
+        window.location = sessionUrl;
     };
 
     useEffect(() => {
@@ -186,30 +193,67 @@ function CoursePage() {
 	return (
 		<div>
         	<h2>COURSE: { courseName }</h2>
-            <ul>
-                <li id='statstotal'>total: { courseStats.total }</li>
-                <li id='statsanswered'>answered: { courseStats.answered }</li>
-            </ul>
-            <BarChart
-                margin={ chartMargin }
-                ylabel='score'
-                width={ 800 }
-                height={ 200 }
-                data={ scoreHistory }
+            <hr/>
+
+            <div>
+                <span style={{ padding: "10px" }}>
+                    <Button onClick={startQuiz} color="warning">start quiz</Button>
+                </span>
+                <span style={{ padding: "10px" }}>
+                    <Button onClick={startQuiz} color="danger">start test</Button>
+                </span>
+            </div>
+            <hr/>
+
+            <div>
+                <span style={{ float: "left", width: "50%" }}>
+                    <h5>stats</h5>
+                    <ul>
+                        <li id='statstotal'>total: { courseStats.total }</li>
+                        <li id='statsanswered'>answered: { courseStats.answered }</li>
+                    </ul>
+                    <BarChart
+                        margin={ chartMargin }
+                        ylabel='score'
+                        width={ 800 }
+                        height={ 200 }
+                        data={ scoreHistory }
+                        />
+                </span>
+                <span style={{ float: "right", width: "50%" }}>
+                    <h5>sessions</h5>
+                    { courseStats.sessionids !== undefined &&
+                        courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>
+                            <li key={sessionid} id={sessionid} onClick={() => handleSessionClicked(sessionid)}>
+                                <div>
+                                <span style={{ padding: "5px" }}>
+                                    { moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD") }
+                                </span>
+                                <span style={{ padding: "5px" }}>
+                                    { courseStats.session_info[sessionid].score }
+                                </span>
+                                <span style={{ padding: "5px" }}>
+                                    { sessionid }
+                                </span>
+                                </div>
+                            </li> 
+                        )
+                    }
+                </span>
+            </div>
+            <hr/>
+
+            <div>
+                <DataTable
+                    noHeader={ true }
+                    dense={ true }
+                    columns={ tableColumns }
+                    data={ tableData }
+                    onRowClicked={ handleQuestionRowClicked }
+                    customStyles={customStyles}
+                    conditionalRowStyles={conditionalRowStyles}
                 />
-            <hr/>
-            <Button onClick={startQuiz}>start quiz</Button>
-            <Button onClick={startQuiz}>start test</Button>
-            <hr/>
-            <DataTable
-                noHeader={ true }
-                dense={ true }
-                columns={ tableColumns }
-                data={ tableData }
-                onRowClicked={ handleRowClicked }
-                customStyles={customStyles}
-                conditionalRowStyles={conditionalRowStyles}
-            />
+            </div>
 		</div>
 	);
 }

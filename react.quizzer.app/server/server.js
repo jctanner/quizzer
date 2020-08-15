@@ -50,6 +50,26 @@ function fileHasChoices(courseName, filename) {
 };
 
 /*****************************************************
+ * FUNCTION: is the fill-in-the-blank answer an int?
+*****************************************************/
+function fileHasIntegerInputAnswer(courseName, filename) {
+    const rfilename = 'server/data/courses/' + courseName + '/' + removeFileExtension(filename) + '.json'
+    let filedata = fs.readFileSync(rfilename);
+    let jData = JSON.parse(filedata);
+
+    if ( jData.choices.length !== 0 ) {
+        return false
+    }
+
+    if ( ! parseInt(jData.answer) ) {
+        return false
+    }
+
+    return true
+};
+
+
+/*****************************************************
  * FUNCTION: get question data
 *****************************************************/
 function getQuestionData(courseName, questionid) {
@@ -77,7 +97,7 @@ for (let i=0; i<courseList.length; i++) {
     if ( courseList[i] === 'C960_discrete_math_II' ) {
         // clear out non-multiplechoice questions if requested ...
         filtered = courseQuestionList.filter(function(value, indx, arr){
-            return (fileHasChoices(courseList[i], value));
+            return (fileHasChoices(courseList[i], value) || fileHasIntegerInputAnswer(courseList[i], value) );
         });
         courseQuestionList = filtered
         console.log('after filters: ', courseQuestionList.length)
@@ -181,16 +201,37 @@ app.get('/api/quiz/:courseName', async function (req, res) {
         return (answered.includes(value) === false);
     });
 
+    if (filtered.length === 0) {
+        filtered = [...questionList]
+    }
+
+
     // clear out non-multiplechoice questions if requested ...
-    filtered = filtered.filter(function(value, indx, arr){
+    let mulipleChoiceFiltered = filtered.filter(function(value, indx, arr){
         return (fileHasChoices(courseName, value));
     });
 
-    questionList = filtered;
+    let integerValFiltered = filtered.filter(function(value, indx, arr){
+        return (fileHasIntegerInputAnswer(courseName, value));
+    });
+
+    let combinedFiltered = []
+    let fSets = [mulipleChoiceFiltered, integerValFiltered]
+    fSets.forEach((fSet, fIndex) => {
+        fSet.forEach((qid, qindex) => {
+            if (! combinedFiltered.includes(qid) ) {
+                combinedFiltered.push(qid)
+            }
+        })
+    })
+
+    //questionList = filtered;
+    questionList = combinedFiltered;
 
     // select a random set of questions from the list
     let quizList = [];
     for (let i=0; i<10; i++) {
+        console.log(questionList.length);
         const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
         quizList.push(randomQuestion);
 
@@ -234,6 +275,7 @@ app.get('/api/stats/:courseName', async function (req, res) {
     questionList.sort(compareVersions);
 
     let questionStats = {
+        coursename: courseName,
         total: questionList.length,
         answered: 0,
         unanswered: 0,
@@ -260,8 +302,9 @@ app.get('/api/stats/:courseName', async function (req, res) {
     rows = db.prepare(
         `SELECT * FROM answers WHERE coursename='${courseName}'`
     ).all()
-    //console.log(rows)
-    rows.forEach((row) => {
+    
+    let sessionIndex = 0
+    rows.forEach((row, row_index) => {
         //console.log(row)
 
         if (!answered.includes(row.questionid)) {
@@ -269,12 +312,13 @@ app.get('/api/stats/:courseName', async function (req, res) {
         }
 
         if (!sessionIDs.includes(row.sessionid)) {
+            sessionIndex += 1
             sessionIDs.push(row.sessionid)
             sessionInfo[row.sessionid] = {
                 sessionid: row.sessionid,
                 date: row.datetime,
-                label: row.datetime,
-                text: row.datetime,
+                label: sessionIndex,
+                text: sessionIndex,
                 correct: 0,
                 incorrect: 0,
                 score: 0,
@@ -296,6 +340,14 @@ app.get('/api/stats/:courseName', async function (req, res) {
         }
     })
 
+    // get the section for display on the coursepage datatable ...
+    questionList.forEach((questionid, qid) => {
+        if ( questionStats.questions[questionid].section === null ||  questionStats.questions[questionid].section === undefined ) {
+            const qData = getQuestionData(courseName, questionid)
+            questionStats.questions[questionid].section = qData.section
+        }
+    });
+
     questionStats.answered = answered.length;
     questionStats.unanswered = unanswered.length;
     questionStats.sessionids = sessionIDs;
@@ -308,6 +360,7 @@ app.get('/api/stats/:courseName', async function (req, res) {
         const thisSessionData = rows[0]
         const thisSessionQuestionIds = JSON.parse(thisSessionData.qidsjson)
         const thisTotalQuestions = thisSessionQuestionIds.length
+        sessionInfo[sessionID].date = thisSessionData.started
         sessionInfo[sessionID].total = thisTotalQuestions
         sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
         sessionInfo[sessionID].y = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
@@ -317,6 +370,7 @@ app.get('/api/stats/:courseName', async function (req, res) {
     console.log(sessionInfo)
     console.log(Object.values(sessionInfo))
     questionStats.score_history = Object.values(sessionInfo)
+    questionStats.session_info = sessionInfo
 
     return res.json(questionStats)
 
@@ -343,6 +397,10 @@ app.post('/api/session/answer', function (req, res) {
         if (choiceindex === qData.correct_choice_index) {
             isCorrect = 1;
         }
+    } else {
+        if ( answer === qData.answer ) {
+            isCorrect = 1;
+        }
     }
 
     let sql = "INSERT OR REPLACE INTO answers"
@@ -361,7 +419,11 @@ app.post('/api/session/answer', function (req, res) {
     sql += "'" + answer + "'"
     sql += " ,"
 
-    sql += choiceindex.toString()
+    if ( choiceindex !== null ) {
+        sql += choiceindex.toString()
+    } else {
+        sql += 'null'
+    }
     sql += " ,"
 
     sql += isCorrect
@@ -426,7 +488,6 @@ app.get('/api/results/:sessionid', async function (req, res) {
     const score = (totalCorrect / totalQuestions ) * 100
 
     console.log(`sending results for ${sessionid} ...`)
-
     return res.json({
         'courseName': sessionData.coursename,
         'started': sessionData.started,
@@ -437,7 +498,7 @@ app.get('/api/results/:sessionid', async function (req, res) {
         score,
         correct,
         incorrect,
-        unanswered
+        unanswered,
     })
 })
 

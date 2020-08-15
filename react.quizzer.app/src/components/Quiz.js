@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from "react-router-dom";
 
@@ -111,6 +112,8 @@ function QuizPage({ multiplechoice }) {
         const newAnswers = [...userAnswers];
         newAnswers[currentQuestionIndex] = e.currentTarget.value;
         setUserAnswers([...newAnswers]);
+
+        postSessionAnswer(sessionID, courseID, questionIDs[currentQuestionIndex], e.target.value, null)
     };
 
     useEffect(() => {
@@ -133,9 +136,17 @@ function QuizPage({ multiplechoice }) {
             { ( timeFinished === null ) &&
 
                 <div>
-                    <button onClick={ goToPreviousQuestion }>prev</button>
-                    <button onClick={ goToNextQuestion }>next</button>
-                    <button onClick={ handleSubmit }>submit</button>
+                    <div>
+                        <span style={{ padding: "5px" }}>
+                            <Button color="info" onClick={ goToPreviousQuestion }>prev</Button>
+                        </span>
+                        <span style={{ padding: "5px" }}>
+                            <Button color="success" onClick={ goToNextQuestion }>next</Button>
+                        </span>
+                        <span style={{ padding: "50px" }}>
+                            <Button color="danger" onClick={ handleSubmit }>submit</Button>
+                        </span>
+                    </div>
                     <hr/>
 
                     <InlineQuestion

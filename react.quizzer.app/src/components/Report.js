@@ -5,28 +5,41 @@ import { Link, useParams } from "react-router-dom";
 import { getSessionResults } from '../Api';
 
 
-const InlineQuestionDiv = ({ id, sessionData, question }) => {
+const InlineQuestionDiv = ({ id, index, courseName, sessionData, question }) => {
     console.log(question);
+    let mark = '(u)';
+    let color = 'gray';
+
     const isCorrect = sessionData.correct.includes(question);
-    let mark = '(!)'
     if ( isCorrect ) {
-        mark = '(c)'
+        mark = '(c)';
+        color = 'green';
     } else {
         if ( ! sessionData.unanswered.includes(question) ) {
-            mark = '(x)'
+            mark = '(x)';
+            color = 'red';
         }
     }
 
+    const handleQuestionClicked = (questionid) => {
+        const questionUrl = '/courses/' + sessionData.courseName + '/questions/' + questionid;
+        window.location = questionUrl;
+    };
+
     return (
-        <li>
-            <div>{ mark }</div>
-            <div>{ question }</div>
+        <li style={{ color: color }} onClick={() => handleQuestionClicked(question)}>
+            <div>
+            <span>{ index }</span>
+            <span style={{ padding: "5px" }}>{ mark }</span>
+            <span>{ question }</span>
+            </div>
         </li>
     )
 }
 
 const InlineQuestionListReport = (props) => {
 
+    const courseName = props.sessionData.coursename;
     const sessionData = props.sessionData;
     const questionIds = props.questionIds;
     console.log(questionIds)
@@ -36,6 +49,8 @@ const InlineQuestionListReport = (props) => {
         { questionIds.map((questionid, index) =>
             <InlineQuestionDiv
                 id={ index }
+                index={ index }
+                courseName={ courseName }
                 sessionData={ sessionData }
                 question={ questionid }
             />
@@ -66,7 +81,7 @@ export const InlineReport = (props) => {
 
     return (
         <div>
-            <p>REPORT!!!</p>
+            <h5>{ sessionData.courseName } session report</h5>
             <p>SCORE: { sessionData.score }%</p>
             <p>{ sessionData.totalCorrect } out of { sessionData.totalQuestions } correct</p>
             <p>answered { sessionData.totalAnswered } out of { sessionData.totalQuestions } correct</p>
