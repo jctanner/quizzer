@@ -192,8 +192,15 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     let quizList = [];
     for (let i=0; i<10; i++) {
         const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
-        //console.log('push', randomQuestion);
         quizList.push(randomQuestion);
+
+        /*
+        // remove this question from the available list
+        filtered = questionList.filter(function(value, indx, arr){
+            return (! questionList.includes(randomQuestion));
+        });
+        questionList = filtered;
+        */
     };
     quizList.sort(compareVersions);
 
@@ -232,7 +239,8 @@ app.get('/api/stats/:courseName', async function (req, res) {
         unanswered: 0,
         questionlist: questionList,
         questions: {},
-        score_history: []
+        score_history: [],
+        sessionids: []
     };
     for (let i=0; i<questionList.length; i++) {
         questionStats.questions[questionList[i]] = {
@@ -274,6 +282,10 @@ app.get('/api/stats/:courseName', async function (req, res) {
             }
         }
 
+        // get the section for display on the coursepage datatable ...
+        const qData = getQuestionData(courseName, row.questionid)
+        questionStats.questions[row.questionid].section = qData.section
+
         questionStats.questions[row.questionid].total += 1
         if (row.correct === boolTrue) {
             questionStats.questions[row.questionid].correct += 1
@@ -286,6 +298,7 @@ app.get('/api/stats/:courseName', async function (req, res) {
 
     questionStats.answered = answered.length;
     questionStats.unanswered = unanswered.length;
+    questionStats.sessionids = sessionIDs;
 
     sessionIDs.forEach(sessionID => {
         console.log(sessionID);

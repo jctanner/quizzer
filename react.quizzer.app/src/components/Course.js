@@ -106,6 +106,7 @@ function CoursePage() {
 	let { courseName } = useParams();
     const tableColumns = [
         {name: 'questionid', selector: 'questionid', compact: true},
+        {name: 'section', selector: 'section', compact: true},
         {name: 'average', selector: 'average', compact: true, right: true, sortable: true},
         {name: 'total attempts', selector: 'total', compact: true, right: true, sortable: true},
         {name: 'correct', selector: 'correct', compact: true, right: true},
@@ -136,22 +137,6 @@ function CoursePage() {
             const newStats = await fetch(courseStatsUrl)
                 .then(res => res.json());
             setCourseStats(newStats);
-
-            /*
-            // define the chart options
-            const chartOpts = {
-                animationEnabled: true,
-                theme: 'light2',
-                title: { text: 'score history' },
-                axisX: { title: 'time' },
-                axisY: { title: 'score' },
-                data: [{
-                    type: 'bar',
-                    dataPoints: courseStats.score_history
-                }]
-            }
-            setChartOptions(chartOpts);
-            */
             setScoreHistory(newStats.score_history)
 
             // build the rows for the table ...
@@ -173,7 +158,7 @@ function CoursePage() {
 
         };
 
-        //fetchQuestionList();
+        fetchQuestionList();
         fetchCourseStats();
 
         /*
@@ -217,12 +202,8 @@ function CoursePage() {
             <Button onClick={startQuiz}>start test</Button>
             <hr/>
             <DataTable
-                //title="questions"
                 noHeader={ true }
-                //compact={ true }
                 dense={ true }
-                //striped={ true } 
-                //responsive={ true }
                 columns={ tableColumns }
                 data={ tableData }
                 onRowClicked={ handleRowClicked }
