@@ -68,6 +68,29 @@ function fileHasIntegerInputAnswer(courseName, filename) {
     return true
 };
 
+/*****************************************************
+ * FUNCTION: int or fraction or power?
+*****************************************************/
+function fileHasSafeAnswer(courseName, filename) {
+    const rfilename = 'server/data/courses/' + courseName + '/' + removeFileExtension(filename) + '.json'
+    let filedata = fs.readFileSync(rfilename);
+    let jData = JSON.parse(filedata);
+
+    let valid = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789^/'.split('')
+
+    let answer = jData.answer
+    if ( answer === null || answer === undefined ) {
+        return false
+    }
+    for (let i=0; i<answer.length; i++) {
+        if (! valid.includes(answer.charAt(i))) {
+            return false
+        }
+    }
+
+    return true
+};
+
 
 /*****************************************************
  * FUNCTION: get question data
@@ -97,7 +120,7 @@ for (let i=0; i<courseList.length; i++) {
     if ( courseList[i] === 'C960_discrete_math_II' ) {
         // clear out non-multiplechoice questions if requested ...
         filtered = courseQuestionList.filter(function(value, indx, arr){
-            return (fileHasChoices(courseList[i], value) || fileHasIntegerInputAnswer(courseList[i], value) );
+            return (fileHasChoices(courseList[i], value) || fileHasIntegerInputAnswer(courseList[i], value)  || fileHasSafeAnswer(courseList[i], value));
         });
         courseQuestionList = filtered
         console.log('after filters: ', courseQuestionList.length)
@@ -206,6 +229,7 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     }
 
 
+    /*
     // clear out non-multiplechoice questions if requested ...
     let mulipleChoiceFiltered = filtered.filter(function(value, indx, arr){
         return (fileHasChoices(courseName, value));
@@ -227,6 +251,7 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 
     //questionList = filtered;
     questionList = combinedFiltered;
+    */
 
     // select a random set of questions from the list
     let quizList = [];
