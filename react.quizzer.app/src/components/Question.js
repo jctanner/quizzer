@@ -58,16 +58,28 @@ function QuestionPage() {
         <div>
             { questionData.section }
             <hr/>
-           
+
+            {/*
             { (questionData.instructions) && 
                 <div>
                     <h4>instructions</h4>
                     <div dangerouslySetInnerHTML={ { __html: questionData.instructions } }></div>
                 </div>
             }
+            */}
+            { (questionData.images && questionData.images.instructions !== null && questionData.images.instructions !== undefined) &&
+                <img src={ '/images/' + courseName + '/' + questionData.images.instructions }/>
+            }
+            <br/>
 
+            {/*
             <h3>question</h3>
             <div dangerouslySetInnerHTML={ { __html: questionData.question } }></div>
+            */}
+            { (questionData.images && questionData.images.question) &&
+                <img src={ '/images/' + courseName + '/' + questionData.images.question }/>
+            }
+
             <hr/>
             { (questionData.input_type === "fieldset") && 
                 <div>
@@ -88,6 +100,10 @@ function QuestionPage() {
                                 : choice
                             }
                             {/*{ ' ' + choice }*/}
+                            { (questionData.images && questionData.images.choices) &&
+                                <img src={ '/images/' + courseName + '/' + questionData.images.choices[index] }/>
+                            }
+
                         </div>
                     ))}
                     </fieldset>
@@ -142,31 +158,7 @@ export const InlineQuestion = (props) => {
     const [questionData, setQuestionData] = useState([]);
 
     const questionApiUrl = '/api/courses/' + props.courseName + '/questions/' + props.questionID;
-
     console.log(questionApiUrl)
-
-    /*
-    const handleSelect = (e) => {
-
-        console.log('handleselect.post...');
-        //postSessionAnswer(props.sessionid, props.courseName, props.questionID, e.currentTarget.value, null)
-
-        console.log(e.target.value);
-        console.log('selected Xvalue', e.currentTarget.value);
-        setUserChoice(e.currentTarget.value);
-
-        //console.log('handleselect.post...');
-        //postSessionAnswer(props.sessionid, props.courseName, props.questionID, e.currentTarget.value, null)
-    };
-
-    const handleOnChange = (e) => {
-        console.log(e.target.value);
-        console.log('typed value', e.currentTarget.value);
-        setUserChoice(e.target.value);
-        console.log('handleOnChange.post...');
-        postSessionAnswer(props.sessionid, props.courseName, props.questionID, e.currentTarget.value, null)
-    };
-    */
 
     const toggleAnswer = (e) => {
         if ( answerHidden === true ) {
@@ -198,16 +190,27 @@ export const InlineQuestion = (props) => {
         <div>
             { questionData.section }
             <hr/>
-           
+
+            {/*
             { (questionData.instructions) && 
                 <div>
                     <h4>instructions</h4>
                     <div dangerouslySetInnerHTML={ { __html: questionData.instructions } }></div>
                 </div>
+            */}
+            { (questionData.images && questionData.images.instructions !== null && questionData.images.instructions !== undefined) &&
+                <img src={ '/images/' + props.courseName + '/' + questionData.images.instructions }/>
             }
+            <br/>
 
+            {/*
             <h3>question</h3>
             <div dangerouslySetInnerHTML={ { __html: questionData.question } }></div>
+            */}
+            { (questionData.images && questionData.images.question) &&
+                <img src={ '/images/' + props.courseName + '/' + questionData.images.question }/>
+            }
+
             <hr/>
             { (questionData.input_type === "fieldset") && 
                 <div>
@@ -227,6 +230,12 @@ export const InlineQuestion = (props) => {
                             { choice.includes('<div')
                                 ? <div dangerouslySetInnerHTML={ { __html: choice } }></div>
                                 : choice
+                            }
+                            { (questionData.images && questionData.images.choices) &&
+                                <div>
+                                    <br/>
+                                    <img src={ '/images/' + props.courseName + '/' + questionData.images.choices[index] }/>
+                                </div>
                             }
                         </div>
                     ))}

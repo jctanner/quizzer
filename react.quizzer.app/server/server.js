@@ -113,6 +113,9 @@ console.log(courseList)
 let coursesFiles = {};
 for (let i=0; i<courseList.length; i++) {
     let courseFileList = fs.readdirSync('server/data/courses/' + courseList[i])
+    courseFileList = courseFileList.filter(function(value, indx, arr){
+        return value.includes('.json')
+    })
     let courseQuestionList = courseFileList.map((filename) => {
         return removeFileExtension(filename);
     })
@@ -132,6 +135,17 @@ for (let i=0; i<courseList.length; i++) {
 
 app.get('/api/courses', (req, res) => res.json(courseList))
 app.get('/api/courses/:courseName', (req, res) => res.json(req.params))
+
+/*****************************************************
+ * WEB: get quiz results for all questions
+*****************************************************/
+app.get('/images/:courseName/:imageName', async function (req, res) {
+    let fileName = 'data/courses/' + req.params.courseName
+    fileName += '/images/'
+    fileName += req.params.imageName
+    console.log(fileName)
+    res.sendFile(fileName, { root: __dirname });
+});
 
 /*****************************************************
  * API: return a list of questions for course

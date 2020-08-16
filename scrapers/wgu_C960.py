@@ -10,8 +10,10 @@ import bs4
 from bs4 import BeautifulSoup
 from logzero import logger
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 from pprint import pprint
+from logzero import logger
 
 #from wgu_tests import process_test
 #from wgu_toc import read_toc
@@ -60,6 +62,7 @@ class ScrapeDMII:
 
     def __init__(self):
         self.toc = None
+        self.image_coordinates = {}
         self.username = os.environ.get('WGU_USERNAME')
         self.password = os.environ.get('WGU_PASSWORD')
         assert self.username
@@ -88,7 +91,9 @@ class ScrapeDMII:
         self.ff_driver = '/home/jtanner/Downloads/geckodriver/geckodriver'
         #self.ff_driver = '/mnt/c/Users/jtanner/Downloads/geckodriver-v0.26.0-win64'
         #import epdb; epdb.st()
+
         self.driver = webdriver.Firefox(executable_path=self.ff_driver)
+        self.driver.maximize_window()
 
     @property
     def soup(self):
@@ -106,7 +111,68 @@ class ScrapeDMII:
         self.toc = self.get_toc()
         self.iterate_toc()
         #import epdb; epdb.st()
-    
+
+    def get_screenshot_at_coordinates(self, coordinates, filename):
+        # driver.save_screenshot("screenshot.png")
+        import epdb; epdb.st()
+
+    def _get_element_screenshot(self, elem, filename):
+        # self.cdir = 'cache/C960'
+        filedir = os.path.join(self.cdir, 'questions', 'images')
+        if not os.path.exists(filedir):
+            os.makedirs(filedir)
+        filepath = os.path.join(filedir, filename)
+        logger.debug('writing image to %s ...' % filepath)
+        try:
+            with open(filepath, 'wb') as f:
+                f.write(elem.screenshot_as_png)
+            return True
+        except Exception as e:
+            print('Unable to write %s: %s' % (filepath, e))
+            return False
+
+    def get_screenshot_by_id(self, elemid, filename):
+        elem = self.driver.find_element_by_id(elemid)
+        self._get_element_screenshot(elem, filename)
+
+    def get_screenshot_by_classname(self, classname, filename):
+        '''NOT SAFE IF DUPLICATES'''
+        elem = self.driver.find_element_by_class_name(classname)
+        self._get_element_screenshot(elem, filename)
+
+    def _get_screenshot_by_elem_with_soup(self, elems, soup, filename):
+        def strip_formatting(intext):
+            intext = intext.replace('\xa0', '')
+            intext = intext.replace('\n', '')
+            intext = intext.replace(' ', '')
+            intext = intext.strip()
+            return intext
+
+        thiselem = None
+        for elem in elems:
+            elemsoup = BeautifulSoup(elem.get_attribute('innerHTML'), 'html.parser')
+            if elem.text == soup.text.strip():
+                thiselem = elem
+            elif strip_formatting(elem.text) == strip_formatting(soup.text):
+                thiselem = elem
+            elif strip_formatting(elemsoup.text) == strip_formatting(soup.text):
+                thiselem = elem
+
+        if not thiselem or thiselem is None:
+            import epdb; epdb.st()
+
+        return self._get_element_screenshot(thiselem, filename)
+
+    def get_screenshot_by_classname_with_soup(self, classname, soup, filename):
+        ''' find the matching element with class and text'''
+        elems = self.driver.find_elements_by_class_name(classname)
+        return self._get_screenshot_by_elem_with_soup(elems, soup, filename)
+
+    def get_screenshot_by_tagname_with_soup(self, tagname, soup, filename):
+        ''' find the matching element with class and text'''
+        elems = self.driver.find_elements_by_tag_name(tagname)
+        return self._get_screenshot_by_elem_with_soup( elems, soup, filename)
+
     def get_toc(self):
 
         cachefile = os.path.join(self.cdir, 'toc.json')
@@ -250,16 +316,50 @@ class ScrapeDMII:
             question_section_number = title_div.text.split(':')[0]
             question_divs = ac.findAll('div', {'class': 'question-set-question'})
 
+            instructions_img = None
+            if instructions_div:
+                idiv = ac.find('div', {'class': 'activity-instructions'})
+                fn = '%s-activity-instructions_div.png' % (question_section_number)
+                instructions_img = fn
+                if 'id' in idiv.attrs:
+                    self.get_screenshot_by_id(idiv.attrs['id'], fn)
+                else:
+                    self.get_screenshot_by_classname_with_soup('activity-instructions', idiv, fn)
+
             # ITERATE THROUGH QUESTIONS ...
             for idqd,qd in enumerate(question_divs):
 
+                qmeta = {
+                    'title': title_div.text,
+                    'section': question_section_number,
+                    'qid': idqd,
+                    'images': {
+                        'instructions': instructions_img,
+                        'question': None,
+                        'choices': []
+                    }
+                }
+
                 # input, fieldset|multiplechoice ...
                 input_type = None
-
                 answer = None
+                explanation = None
                 qd_xpath = '//*[@id="%s"]' % qd.attrs['id']
                 choices = []
                 correct_choice_index = None
+
+                '''
+                # screenshot the whole question div
+                fn = '%s.%s-activity-question_div.png' % (question_section_number, idqd)
+                self.get_screenshot_by_id(qd.attrs['id'], fn)
+                '''
+
+                # screenshot the question without inputs ...
+                this_question_div = qd.find('div', {'class': 'question'})
+                this_question_text_div = this_question_div.find('div', {'class': 'text'})
+                fn = '%s.%s-activity-question.png' % (question_section_number, idqd)
+                self.get_screenshot_by_classname_with_soup('text', this_question_text_div, fn)
+                qmeta['images']['question'] = fn
 
                 # check if true/false/etc radio buttons
                 radio_divs = qd.findAll('div', {'class': 'zb-radio-button'})
@@ -288,6 +388,17 @@ class ScrapeDMII:
                         except Exception as e:
                             print(e)
                             continue
+
+                        # screenshot this choice ...
+                        if radio_button.text.lower() not in ['true', 'false', 'yes', 'no']:
+                            fn = '%s.%s-activity-choice-%s.png' % (question_section_number, idqd, idrd)
+                            radio_button_soup = BeautifulSoup(radio_button.get_attribute('innerHTML'), 'html.parser')
+                            radio_button_label_soup = radio_button_soup.find('label')
+                            self.get_screenshot_by_tagname_with_soup('label', radio_button_label_soup, fn)
+                            qmeta['images']['choices'].append(fn)
+                        else:
+                            qmeta['images']['choices'].append(None)
+
                         radio_button.find_element_by_tag_name('label').click()
                         time.sleep(2)
 
@@ -304,7 +415,16 @@ class ScrapeDMII:
                 question = this_question_div.prettify()
                 if not answer:
                     answer = qd.find('div', {'class': 'answers'}).text.strip()
-                explanation = qd.find('div', {'class': 'explanation'}).prettify()
+
+                explanation = None
+                explanation_div = qd.find('div', {'class': 'explanation'})
+                if explanation_div:
+                    explanation = explanation_div.prettify()
+                    fn = '%s-activity-explanation_div.png' % (question_section_number)
+                    if 'id' in explanation_div.attrs:
+                        self.get_screenshot_by_id(explanation_div.attrs['id'], fn)
+                    else:
+                        self.get_screenshot_by_classname_with_soup('explanation', explanation_div, fn)
 
                 # remove the text input boxes ...
                 if this_question_div.find('div', {'class': 'input'}):
@@ -335,7 +455,7 @@ class ScrapeDMII:
 
                 #fn = 'questions/%s_activity_%s.json' % (question_section_number, idqd)
                 fn = os.path.join(self.cdir, 'questions', '%s-activity-%s.json' % (question_section_number, idqd))
-                print('writing %s ...' % fn)
+                logger.info('writing %s ...' % fn)
                 with open(fn, 'w') as f:
                     jdata = {
                         'section': title_div.text,
@@ -348,6 +468,7 @@ class ScrapeDMII:
                         'answer': answer,
                         'explanation': explanation
                     }
+                    jdata['images'] = qmeta['images']
                     print(json.dumps(jdata, indent=2))
                     try:
                         f.write(json.dumps(jdata))
@@ -358,7 +479,6 @@ class ScrapeDMII:
                 #import epdb; epdb.st()
 
     def scrape_exercise_containers(self):
-
 
         ignore = [
             '1.7.1',
@@ -386,6 +506,7 @@ class ScrapeDMII:
             '4.16.5',
             '4.18.2',
         ]
+        ignore = []
 
         #if section[0].startswith('1.4'):
         exercise_divs = self.soup.findAll('div', {'class': 'exercise-content-resource'})
@@ -395,17 +516,45 @@ class ScrapeDMII:
 
                 this_question_section = title_div.text.strip()
                 question_section_number = this_question_section.split()[1].replace(':', '')
-
+                instructions_div_1 = ed.find('div', {'class': 'setup'})
                 instructions_div = ed.find('div', {'class': 'setup'}).prettify()
+
+                instructions_img = None
+                if instructions_div:
+                    idiv = ed.find('div', {'class': 'setup'})
+                    fn = '%s-exercise-instructions_div.png' % (question_section_number)
+                    instructions_img = fn
+                    if 'id' in idiv.attrs:
+                        self.get_screenshot_by_id(idiv.attrs['id'], fn)
+                    else:
+                        self.get_screenshot_by_classname_with_soup('setup', idiv, fn)
+
                 question_sets = ed.findAll('div', {'class': 'question-set-question'})
                 for idqs,qs in enumerate(question_sets):
+
+                    qmeta = {
+                        'title': title_div.text,
+                        'section': question_section_number,
+                        'qid': idqs,
+                        'images': {
+                            'instructions': instructions_img,
+                            'question': None,
+                            'choices': []
+                        }
+                    }
 
                     # remove the label with 1), A., A) 1. ... etc ..
                     if qs.find('div', {'class': 'label'}):
                         qs.find('div', {'class': 'label'}).decompose()
 
                     question_div = qs.find('div', {'class': 'question'})
+                    question_text_div = qs.find('div', {'class': 'text'})
                     question = self.clean_question_div(question_div)
+
+                    fn = '%s.%s-exercise-question.png' % (question_section_number, idqs)
+                    self.get_screenshot_by_classname_with_soup('text', question_text_div, fn)
+                    qmeta['images']['question'] = fn
+                    #import epdb; epdb.st()
 
                     answer_div = None
                     try:
@@ -442,7 +591,7 @@ class ScrapeDMII:
                             else:
                                 print('CLEAN ME!!!')
                                 answer = answer_div.prettify()
-                                import epdb; epdb.st()
+                                #import epdb; epdb.st()
                         else:
                             print('MATHJAX!!!')
                             if answer_div.find('script'):
@@ -462,11 +611,12 @@ class ScrapeDMII:
                         'answer': answer,
                         'explanation': None
                     }
+                    jdata['images'] = qmeta['images']
 
                     print(json.dumps(jdata, indent=2))
 
                     fn = os.path.join(self.cdir, 'questions', '%s-exercise-%s.json' % (question_section_number, idqs))
-                    print('writing %s ...' % fn)
+                    logger.info('writing %s ...' % fn)
                     try:
                         with open(fn, 'w') as f:
                             f.write(json.dumps(jdata))
@@ -477,30 +627,31 @@ class ScrapeDMII:
     def iterate_toc(self):
         for section in self.toc:
 
+            logger.info('-------------------------------------------------------')
+            logger.info(section)
+            logger.info('-------------------------------------------------------')
+
             chapter = int(section[0].split('.')[0])
             chapter_section = int(section[0].split('.')[1].split()[0])
-            if chapter < 4 or (chapter == 4 and chapter_section < 16):
-                continue
 
-            # 1.14.1 true/false questions ...
-            #if not section[0].startswith('2.18'):
-            #    continue
-            #import epdb; epdb.st()
+            if chapter < 3 or (chapter == 3 and chapter_section < 17):
+                continue
 
             checkpattern = os.path.join(self.cdir, 'questions', str(section[0].split()[0]) + '.*.json')
             existing = glob.glob(checkpattern)
-            #if existing:
-            #    continue
-            #import epdb; epdb.st()
 
             url = self.zybook_base_url + section[1]
-            print('option page: %s' % url)
+            logger.debug('option page: %s' % url)
             self.driver.get(url)
             time.sleep(2)
 
+            logger.info('revealing answers ...')
             self.reveal_answers()
+            logger.info('expanding dropdowns ...')
             self.expand_dropdowns()
+            logger.info('scraping activities ...')
             self.scrape_activity_containers()
+            logger.info('scraping exercises ...')
             self.scrape_exercise_containers()
 
     def login(self):
