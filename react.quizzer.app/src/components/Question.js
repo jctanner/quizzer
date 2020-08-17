@@ -71,6 +71,7 @@ function QuestionPage() {
                 <img src={ '/images/' + courseName + '/' + questionData.images.instructions }/>
             }
             <br/>
+            <br/>
 
             {/*
             <h3>question</h3>
@@ -201,6 +202,7 @@ export const InlineQuestion = (props) => {
             { (questionData.images && questionData.images.instructions !== null && questionData.images.instructions !== undefined) &&
                 <img src={ '/images/' + props.courseName + '/' + questionData.images.instructions }/>
             }
+            <br/>
             <br/>
 
             {/*
