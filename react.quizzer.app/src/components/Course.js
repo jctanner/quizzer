@@ -101,6 +101,7 @@ function CoursePage() {
     const [tableData, setTableData] = useState([]);
     const [chartOptions, setChartOptions] = useState({});
     const [scoreHistory, setScoreHistory] = useState([]);
+    const [searchText, setSearchText] = useState(null);
     const history = useHistory();
 
     const chartMargin = {top: 20, right: 20, bottom: 30, left: 40};
@@ -114,6 +115,11 @@ function CoursePage() {
         {name: 'correct', selector: 'correct', compact: true, right: true},
         {name: 'incorrect', selector: 'incorrect', compact: true, right: true}
     ];
+
+    const handleOnChangeSearch = (e) => {
+        console.log(e.target.value);
+        setSearchText(e.target.value);
+    };
 
     const handleQuestionRowClicked = (row) => {
         console.log(row);
@@ -161,6 +167,18 @@ function CoursePage() {
                 console.log(thisRowData);
                 newTableData.push(thisRowData);
             }
+
+            if ( searchText !== null && searchText !== "") {
+                newTableData = newTableData.filter(function(row, index, arr) {
+                    if ( row.section === undefined ) {
+                        return false;
+                    }; 
+                    return row.section.includes(searchText);
+                    //console.log(row);
+                    //return true;
+                });
+            };
+
             setTableData(newTableData);
 
         };
@@ -181,7 +199,7 @@ function CoursePage() {
         return () => {
             console.log('cleanup');
         };
-    }, [courseName]);
+    }, [courseName, searchText]);
 
 
     const startQuiz = () => {
@@ -242,8 +260,15 @@ function CoursePage() {
                 </span>
             </div>
             <hr/>
+            <hr/>
 
             <div>
+                <input
+                    key="table_filter"
+                    onChange={ handleOnChangeSearch }
+                    style={{ width: '100%' }}
+                    placeholder="search ..."
+                />
                 <DataTable
                     noHeader={ true }
                     dense={ true }

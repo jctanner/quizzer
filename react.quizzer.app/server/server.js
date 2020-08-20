@@ -23,6 +23,7 @@ db.exec('CREATE TABLE IF NOT EXISTS scores(datetime text, coursename text, sessi
 db.exec('CREATE TABLE IF NOT EXISTS answers(datetime text, sessionid text, coursename text, questionid text, answer text, choiceindex integer, correct bool, PRIMARY KEY (sessionid, coursename, questionid))');
 
 let userSessions = [];
+let resultsCache = {};
 
 /*****************************************************
  * FUNCTION: strip the file extension from a filename
@@ -137,7 +138,7 @@ app.get('/api/courses', (req, res) => res.json(courseList))
 app.get('/api/courses/:courseName', (req, res) => res.json(req.params))
 
 /*****************************************************
- * WEB: get quiz results for all questions
+ * WEB: get course question images
 *****************************************************/
 app.get('/images/:courseName/:imageName', async function (req, res) {
     let fileName = 'data/courses/' + req.params.courseName
@@ -310,6 +311,13 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 *****************************************************/
 app.get('/api/stats/:courseName', async function (req, res) {
     const courseName = req.params.courseName
+    const cacheKey = courseName + '_stats'
+
+    if ( resultsCache.hasOwnProperty(cacheKey) && resultsCache[cacheKey] !== null ) {
+        console.log('using cached result for ' + cacheKey);
+        return res.json(resultsCache[cacheKey])
+    }
+
     let questionList = [...coursesFiles[courseName]]
     questionList.sort(compareVersions);
 
@@ -411,6 +419,7 @@ app.get('/api/stats/:courseName', async function (req, res) {
     questionStats.score_history = Object.values(sessionInfo)
     questionStats.session_info = sessionInfo
 
+    resultsCache[cacheKey] = questionStats
     return res.json(questionStats)
 
 
@@ -420,6 +429,10 @@ app.get('/api/stats/:courseName', async function (req, res) {
  * API: post session answer
 *****************************************************/
 app.post('/api/session/answer', function (req, res) {
+
+    // clear cache on insert ...
+    resultsCache = {};
+
     console.log(req.body);
 
     const thisDate = moment.utc().format('YYYY-MM-DDTHH:MM:SS')
