@@ -98,10 +98,14 @@ function CoursePage() {
 
     const [questionList, setQuestionList] = useState([]);
     const [courseStats, setCourseStats] = useState({});
+    const [allTableData, setAllTableData] = useState([]);
     const [tableData, setTableData] = useState([]);
     const [chartOptions, setChartOptions] = useState({});
     const [scoreHistory, setScoreHistory] = useState([]);
     const [searchText, setSearchText] = useState(null);
+    const [searchTextTmp, setSearchTextTmp] = useState(null);
+    const [filteredRows, setFilteredRows] = useState(null);
+    const [cachedStats, setCachedStats] = useState(null);
     const history = useHistory();
 
     const chartMargin = {top: 20, right: 20, bottom: 30, left: 40};
@@ -118,7 +122,13 @@ function CoursePage() {
 
     const handleOnChangeSearch = (e) => {
         console.log(e.target.value);
-        setSearchText(e.target.value);
+        setSearchTextTmp(e.target.value);
+    };
+
+    const handleSearchSubmit = (e) => {
+        //console.log(e);
+        //console.log(e.target.value);
+        setSearchText(searchTextTmp);
     };
 
     const handleQuestionRowClicked = (row) => {
@@ -168,6 +178,7 @@ function CoursePage() {
                 newTableData.push(thisRowData);
             }
 
+            /*
             if ( searchText !== null && searchText !== "") {
                 newTableData = newTableData.filter(function(row, index, arr) {
                     if ( row.section === undefined ) {
@@ -178,11 +189,21 @@ function CoursePage() {
                     //return true;
                 });
             };
+            */
 
             setTableData(newTableData);
+            setAllTableData(newTableData);
 
         };
 
+        /*
+        if ( questionList === [] ) {
+            fetchQuestionList();
+        }
+        if ( courseStats === [] || tableData === [] ) {
+            fetchCourseStats();
+        }
+        */
         fetchQuestionList();
         fetchCourseStats();
 
@@ -199,8 +220,32 @@ function CoursePage() {
         return () => {
             console.log('cleanup');
         };
-    }, [courseName, searchText]);
+    }, [courseName]);
 
+    // filter the table rows if user types in the search box
+    useEffect(() => {
+        let startList;
+        if ( searchText === null || searchText === "") {
+            startList = [...allTableData];
+        } else {
+            startList = [...tableData];
+        }
+
+        if ( searchText !== null && searchText !== "") {
+            let newTableData = startList.filter(function(row, index, arr) {
+                if ( row.section === undefined ) {
+                    return false;
+                }; 
+                return row.section.includes(searchText);
+                //console.log(row);
+                //return true;
+            });
+            setTableData(newTableData);
+        } else {
+            setTableData(startList);
+        }
+
+    }, [searchText]);
 
     const startQuiz = () => {
         //<Link to={ "/courses/" + courseName + '/quiz' }>start quiz</Link>
@@ -265,8 +310,8 @@ function CoursePage() {
             <div>
                 <input
                     key="table_filter"
-                    onChange={ handleOnChangeSearch }
-                    style={{ width: '100%' }}
+                    style={{ width: '90%' }}
+                    onInput={e => setSearchText(e.target.value)}
                     placeholder="search ..."
                 />
                 <DataTable
