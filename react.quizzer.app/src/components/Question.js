@@ -55,7 +55,7 @@ function QuestionPage() {
     }, [questionApiUrl]);
 
     return (
-        <div>
+        <div style={{ 'margin-top': '20px'}}>
             { questionData.section }
             <hr/>
 

@@ -336,7 +336,8 @@ class ScrapeDMII:
                     'images': {
                         'instructions': instructions_img,
                         'question': None,
-                        'choices': []
+                        'choices': [],
+                        'explanation': None,
                     }
                 }
 
@@ -348,20 +349,18 @@ class ScrapeDMII:
                 choices = []
                 correct_choice_index = None
 
-                '''
-                # screenshot the whole question div
-                fn = '%s.%s-activity-question_div.png' % (question_section_number, idqd)
-                self.get_screenshot_by_id(qd.attrs['id'], fn)
-                '''
-
-                # screenshot the question without inputs ...
+                #---------------------------------------------------------------------
+                #   QUESTION -> SCREENSHOT 
+                #---------------------------------------------------------------------
                 this_question_div = qd.find('div', {'class': 'question'})
                 this_question_text_div = this_question_div.find('div', {'class': 'text'})
                 fn = '%s.%s-activity-question.png' % (question_section_number, idqd)
                 self.get_screenshot_by_classname_with_soup('text', this_question_text_div, fn)
                 qmeta['images']['question'] = fn
 
-                # check if true/false/etc radio buttons
+                #---------------------------------------------------------------------
+                #   RADIO BUTTONS -> CHOICES 
+                #---------------------------------------------------------------------
                 radio_divs = qd.findAll('div', {'class': 'zb-radio-button'})
                 if radio_divs:
                     #answer = None
@@ -377,19 +376,15 @@ class ScrapeDMII:
                             else:
                                 choices.append(newrd.strip())
                         radio_ids.append(rd.attrs['id'])
-                    #for radio_id in radio_ids:
+
+                    ## LOOP THROUGH AND GET SCREENSHOTS ...
                     for idrd,rd in enumerate(radio_divs):
                         radio_id = rd.attrs['id']
                         xpath = '//*[@id="%s"]' % radio_id
 
                         radio_button = self.driver.find_element_by_xpath(xpath)
-                        try:
-                            radio_button.click()
-                        except Exception as e:
-                            print(e)
-                            continue
 
-                        # screenshot this choice ...
+                        # screenshot this choice before clicking it ...
                         if radio_button.text.lower() not in ['true', 'false', 'yes', 'no']:
                             fn = '%s.%s-activity-choice-%s.png' % (question_section_number, idqd, idrd)
                             radio_button_soup = BeautifulSoup(radio_button.get_attribute('innerHTML'), 'html.parser')
@@ -399,10 +394,29 @@ class ScrapeDMII:
                         else:
                             qmeta['images']['choices'].append(None)
 
+                    good_choices = [['True', 'False'], ['Yes', 'No']]
+                    if choices and choices not in good_choices and len(choices) != len(qmeta['images']['choices']):
+                        pprint(choices)
+                        pprint(qmeta['images']['choices'])
+                        import epdb; epdb.st()
+
+                    ## LOOP THROUGH AND FIND ANSWER ...
+                    for idrd,rd in enumerate(radio_divs):
+                        radio_id = rd.attrs['id']
+                        xpath = '//*[@id="%s"]' % radio_id
+
+                        radio_button = self.driver.find_element_by_xpath(xpath)
+
+                        radio_button = self.driver.find_element_by_xpath(xpath)
+                        try:
+                            radio_button.click()
+                        except Exception as e:
+                            print(e)
+                            continue
+
                         radio_button.find_element_by_tag_name('label').click()
                         time.sleep(2)
 
-                        #soup = BeautifulSoup(self.driver.page_source, 'html.parser')
                         qd = self.soup.find(id=qd.attrs['id'])
                         is_correct = qd.find('div', {'class': 'correct'})
                         if is_correct:
@@ -410,12 +424,21 @@ class ScrapeDMII:
                             answer = rd.text.strip()
                             break
 
+                #---------------------------------------------------------------------
+                #   ANSWER 
+                #---------------------------------------------------------------------
                 #question = qd.find('div', {'class': 'question'}).prettify()
                 this_question_div = qd.find('div', {'class': 'question'})
                 question = this_question_div.prettify()
                 if not answer:
-                    answer = qd.find('div', {'class': 'answers'}).text.strip()
+                    if qd.find('div', {'class': 'forfeit-answer'}):
+                        answer = qd.find('div', {'class': 'forfeight-answer'}).text.strip()
+                    else:
+                        answer = qd.find('div', {'class': 'answers'}).text.strip()
 
+                #---------------------------------------------------------------------
+                #   EXPLANATION
+                #---------------------------------------------------------------------
                 explanation = None
                 explanation_div = qd.find('div', {'class': 'explanation'})
                 if explanation_div:
@@ -425,8 +448,21 @@ class ScrapeDMII:
                         self.get_screenshot_by_id(explanation_div.attrs['id'], fn)
                     else:
                         self.get_screenshot_by_classname_with_soup('explanation', explanation_div, fn)
+                    qmeta['images']['explanation'] = fn
 
-                # remove the text input boxes ...
+                elif qd.find('div', {'class': 'zb-explanation'}):
+                    zb_explanation_div = qd.find('div', {'class': 'zb-explanation'})
+                    explanation = zb_explanation_div.prettify()
+                    fn = '%s-activity-explanation_div.png' % (question_section_number)
+                    if 'id' in zb_explanation_div.attrs:
+                        self.get_screenshot_by_id(zb_explanation_div.attrs['id'], fn)
+                    else:
+                        self.get_screenshot_by_classname_with_soup('zb-explanation', zb_explanation_div, fn)
+                    qmeta['images']['explanation'] = fn
+
+                #---------------------------------------------------------------------
+                #   QUESTION CLEANUP 
+                #---------------------------------------------------------------------
                 if this_question_div.find('div', {'class': 'input'}):
                     this_question_div.find('div', {'class': 'input'}).decompose()
                     question = this_question_div.prettify()
@@ -438,14 +474,6 @@ class ScrapeDMII:
                 else:
                     import epdb; epdb.st()
 
-                # log<mn>7</mn>
-                # '2\n 4\n\n·3' vs 2^4 * 3 vs 24*3
-                #if input_type == 'fieldset' and answer not in choices:
-                #    import epdb; epdb.st()
-
-                if input_type == 'input' and '=' in answer:
-                    import epdb; epdb.st()
-
                 # remove the label with 1), A., A) 1. ... etc ..
                 if this_question_div.find('div', {'class': 'label'}):
                     this_question_div.find('div', {'class': 'label'}).decompose()
@@ -453,22 +481,28 @@ class ScrapeDMII:
 
                 question = self.clean_question_div(this_question_div)
 
-                #fn = 'questions/%s_activity_%s.json' % (question_section_number, idqd)
+                #---------------------------------------------------------------------
+                #   MAKE JSON 
+                #---------------------------------------------------------------------
+                jdata = {
+                    'section': title_div.text,
+                    'qid': idqd,
+                    'input_type': input_type,
+                    'instructions': instructions_div, 
+                    'question': question,
+                    'correct_choice_index': correct_choice_index,
+                    'choices': choices,
+                    'answer': answer,
+                    'explanation': explanation
+                }
+                jdata['images'] = qmeta['images']
+
+                #---------------------------------------------------------------------
+                #   WRITE JSON 
+                #---------------------------------------------------------------------
                 fn = os.path.join(self.cdir, 'questions', '%s-activity-%s.json' % (question_section_number, idqd))
                 logger.info('writing %s ...' % fn)
                 with open(fn, 'w') as f:
-                    jdata = {
-                        'section': title_div.text,
-                        'qid': idqd,
-                        'input_type': input_type,
-                        'instructions': instructions_div, 
-                        'question': question,
-                        'correct_choice_index': correct_choice_index,
-                        'choices': choices,
-                        'answer': answer,
-                        'explanation': explanation
-                    }
-                    jdata['images'] = qmeta['images']
                     print(json.dumps(jdata, indent=2))
                     try:
                         f.write(json.dumps(jdata))
@@ -476,6 +510,13 @@ class ScrapeDMII:
                         print(e)
                         import epdb; epdb.st()
 
+                '''
+                if '1.4.3-activity-0' in jdata['section']:
+                    #pprint(jdata)
+                    print(json.dumps(jdata, indent=2))
+                    import epdb; epdb.st()
+                '''
+                #print(json.dumps(jdata, indent=2))
                 #import epdb; epdb.st()
 
     def scrape_exercise_containers(self):
@@ -634,8 +675,17 @@ class ScrapeDMII:
             chapter = int(section[0].split('.')[0])
             chapter_section = int(section[0].split('.')[1].split()[0])
 
-            if chapter < 3 or (chapter == 3 and chapter_section < 17):
+            '''
+            import epdb; epdb.st() 
+            if chapter != 1 or (chapter == 1 and chapter_section != 4):
                 continue
+            '''
+
+            #if not (chapter == 1 and chapter_section == 4):
+            #    continue
+
+            #if not (chapter == 2 and chapter_section == 7):
+            #    continue
 
             checkpattern = os.path.join(self.cdir, 'questions', str(section[0].split()[0]) + '.*.json')
             existing = glob.glob(checkpattern)

@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react';
 import { Link, useHistory, useParams } from "react-router-dom";
 
 import BarChart from 'react-bar-chart';
+import { PieChart } from 'react-minimal-pie-chart';
+import { Doughnut } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import DataTable from 'react-data-table-component';
 
 import moment from 'moment';
@@ -30,6 +33,7 @@ const customStyles = {
     },
     headCells: {
         style: {
+            margin: '20px',
             maxHeight: '10px',
             paddingTop: '5px',
             paddingBottom: '5px',
@@ -254,11 +258,11 @@ function CoursePage() {
     };
 
 	return (
-		<div>
-        	<h2>COURSE: { courseName }</h2>
+		<div style={{ 'margin-top': '30px' }}>
+        	<h2>{ courseName.replace(/_/g, ' ') }</h2>
             <hr/>
 
-            <div>
+            <div style={{ }}>
                 <span style={{ padding: "10px" }}>
                     <Button onClick={startQuiz} color="warning">start quiz</Button>
                 </span>
@@ -268,22 +272,57 @@ function CoursePage() {
             </div>
             <hr/>
 
-            <div>
-                <span style={{ float: "left", width: "50%" }}>
-                    <h5>stats</h5>
-                    <ul>
-                        <li id='statstotal'>total: { courseStats.total }</li>
-                        <li id='statsanswered'>answered: { courseStats.answered }</li>
-                    </ul>
-                    <BarChart
-                        margin={ chartMargin }
-                        ylabel='score'
-                        width={ 800 }
-                        height={ 200 }
-                        data={ scoreHistory }
-                        />
+            <div style={{ float: 'top', width: '100%', height: '200px'}}>
+                <span className="column" style={{ float: "left", margin: '10px', width: "20%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
+                    <h5>total answered</h5>
+                        {/*
+                        <PieChart
+                            label={ (labelRenderProps: LabelRenderProps) => 
+                                'stuff' 
+                            }
+                            data={ [ 
+                                { key: 'answered', title: 'answered', value: courseStats.answered, color: 'green' },
+                                { key: 'unanswered', title: 'unanswered', value: courseStats.total - courseStats.answered, color: 'gray' }
+                            ] }
+                            />
+                        */}
+                    <Doughnut
+                        legend={ {display: true} }
+                        data={ {
+                            labels: ['answered', 'unanswered'],
+                            datasets: [ {
+                                data: [ courseStats.answered, courseStats.total - courseStats.answered ],
+                                backgroundColor: ['green', 'lightgray']
+                            } ]
+                        } }
+                    />
+                        
                 </span>
-                <span style={{ float: "right", width: "50%" }}>
+                <span className="column" style={{ float: "left", margin: '10px', width: "35%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
+                    <h5>session scores</h5>
+                        {/*
+                        <BarChart
+                            margin={ chartMargin }
+                            ylabel='score'
+                            width={ 600 }
+                            height={ 200 }
+                            data={ scoreHistory }
+                            />
+                        */}
+                    <Bar
+                        legend={ {display: false} }
+                        width={ '100%' }
+                        height={ '25' }
+                        data={ {
+                            labels: scoreHistory.map((score, ix) => ix),
+                            datasets: [ {
+                                data: scoreHistory
+                            } ]
+                        } }
+                    />
+                        
+                </span>
+                <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '5px 10px 10px 30px', 'border-radius': '10px', background: 'white', 'font-size': '10px'}}>
                     <h5>sessions</h5>
                     { courseStats.sessionids !== undefined &&
                         courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>
@@ -304,25 +343,34 @@ function CoursePage() {
                     }
                 </span>
             </div>
-            <hr/>
-            <hr/>
 
-            <div>
-                <input
-                    key="table_filter"
-                    style={{ width: '90%' }}
-                    onInput={e => setSearchText(e.target.value)}
-                    placeholder="search ..."
-                />
-                <DataTable
-                    noHeader={ true }
-                    dense={ true }
-                    columns={ tableColumns }
-                    data={ tableData }
-                    onRowClicked={ handleQuestionRowClicked }
-                    customStyles={customStyles}
-                    conditionalRowStyles={conditionalRowStyles}
-                />
+            <br/>
+
+            <div style={{ padding: '20px 150px 10px 0px', margin: '15px' }}>
+                {/*
+                <hr/>
+                <span><hr/>Questions ...</span>
+                <br/>
+                */}
+                <span style={{ }}>
+                    <input
+                        key="table_filter"
+                        style={{ width: '50%' }}
+                        onInput={e => setSearchText(e.target.value)}
+                        placeholder="search ..."
+                    />
+                </span>
+                <span style={{ margin: '900px' }}>
+                    <DataTable
+                        noHeader={ true }
+                        dense={ true }
+                        columns={ tableColumns }
+                        data={ tableData }
+                        onRowClicked={ handleQuestionRowClicked }
+                        customStyles={customStyles}
+                        conditionalRowStyles={conditionalRowStyles}
+                    />
+                </span>
             </div>
 		</div>
 	);

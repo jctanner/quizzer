@@ -121,6 +121,7 @@ for (let i=0; i<courseList.length; i++) {
         return removeFileExtension(filename);
     })
 
+    /*
     if ( courseList[i] === 'C960_discrete_math_II' ) {
         // clear out non-multiplechoice questions if requested ...
         filtered = courseQuestionList.filter(function(value, indx, arr){
@@ -129,6 +130,7 @@ for (let i=0; i<courseList.length; i++) {
         courseQuestionList = filtered
         console.log('after filters: ', courseQuestionList.length)
     }
+    */
 
     coursesFiles[courseList[i]] = courseQuestionList
     console.log('after filters: ', coursesFiles[courseList[i]].length)

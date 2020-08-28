@@ -5,6 +5,7 @@ import CoursePage from './components/Course';
 import QuestionPage from './components/Question';
 import QuizPage from './components/Quiz';
 import SessionPage from './components/Session';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavDropdown, MenuItem } from 'react-bootstrap';
 
 import { useEffect, useState } from 'react';
 
@@ -54,7 +55,28 @@ function App() {
 
 	return (
 		<Router>
-        	<div style={ mainStyle }>
+        	<div style={{ ...mainStyle }}>
+        	    <div style={{ background: '#608f9f', 'border-radius': '5px' }}>
+                    <Navbar bg="transparent" expand="lg">
+                        <Nav>
+                            <NavbarBrand href="/">Quizzer</NavbarBrand>
+                            {/*
+                            <NavItem><NavLink>test</NavLink></NavItem>
+                            <NavItem><NavLink>test2</NavLink></NavItem>
+                            */}
+                            { courseList.map((courseName) =>
+                                <>
+                                <div style={{ 'border-left': '1px solid darkgray' }}></div>
+                                <NavItem>
+                                    <NavLink href={ "/courses/" + courseName } >{ courseName }</NavLink>
+                                </NavItem>
+                                </>
+                            )}
+                            <div style={{ 'border-left': '1px solid darkgray' }}></div>
+                        </Nav>
+                    </Navbar>
+                </div>
+                {/*
 				<ul>
 					<li>
 						<Link key="home" to="/">Home</Link>
@@ -65,7 +87,7 @@ function App() {
                         </li>
 					)}
 				</ul>
-				<hr/>
+                */}
 				<Switch>
 					<Route exact path="/" component={ Home } />
                     <Route path="/courses/:courseName/quiz" component={ QuizPage }/>
