@@ -5,7 +5,7 @@ import CoursePage from './components/Course';
 import QuestionPage from './components/Question';
 import QuizPage from './components/Quiz';
 import SessionPage from './components/Session';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'react-bootstrap';
 
 import { useEffect, useState } from 'react';
 
@@ -13,9 +13,7 @@ import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useParams
+  Route
 } from "react-router-dom";
 
 

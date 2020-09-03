@@ -12,6 +12,8 @@ import DataTable from 'react-data-table-component';
 
 import moment from 'moment';
 
+import StatsDiv from './Stats';
+
 const customStyles = {
     headRows: {
         style: {
@@ -272,78 +274,11 @@ function CoursePage() {
             </div>
             <hr/>
 
-            <div style={{ float: 'top', width: '100%', height: '200px'}}>
-                <span className="column" style={{ float: "left", margin: '10px', width: "20%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
-                    <h5>total answered</h5>
-                        {/*
-                        <PieChart
-                            label={ (labelRenderProps: LabelRenderProps) => 
-                                'stuff' 
-                            }
-                            data={ [ 
-                                { key: 'answered', title: 'answered', value: courseStats.answered, color: 'green' },
-                                { key: 'unanswered', title: 'unanswered', value: courseStats.total - courseStats.answered, color: 'gray' }
-                            ] }
-                            />
-                        */}
-                    <Doughnut
-                        legend={ {display: true} }
-                        data={ {
-                            labels: ['answered', 'unanswered'],
-                            datasets: [ {
-                                data: [ courseStats.answered, courseStats.total - courseStats.answered ],
-                                backgroundColor: ['green', 'lightgray']
-                            } ]
-                        } }
-                    />
-                        
-                </span>
-                <span className="column" style={{ float: "left", margin: '10px', width: "35%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
-                    <h5>session scores</h5>
-                        {/*
-                        <BarChart
-                            margin={ chartMargin }
-                            ylabel='score'
-                            width={ 600 }
-                            height={ 200 }
-                            data={ scoreHistory }
-                            />
-                        */}
-                    <Bar
-                        legend={ {display: false} }
-                        width={ '100%' }
-                        height={ '25' }
-                        data={ {
-                            labels: scoreHistory.map((score, ix) => ix),
-                            datasets: [ {
-                                data: scoreHistory
-                            } ]
-                        } }
-                    />
-                        
-                </span>
-                <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '5px 10px 10px 30px', 'border-radius': '10px', background: 'white', 'font-size': '10px'}}>
-                    <h5>sessions</h5>
-                    { courseStats.sessionids !== undefined &&
-                        courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>
-                            <li key={sessionid} id={sessionid} onClick={() => handleSessionClicked(sessionid)}>
-                                <div>
-                                <span style={{ padding: "5px" }}>
-                                    { moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD") }
-                                </span>
-                                <span style={{ padding: "5px" }}>
-                                    { courseStats.session_info[sessionid].score }
-                                </span>
-                                <span style={{ padding: "5px" }}>
-                                    { sessionid }
-                                </span>
-                                </div>
-                            </li> 
-                        )
-                    }
-                </span>
-            </div>
-
+            <StatsDiv
+                courseStats={ courseStats }
+                scoreHistory={ scoreHistory }
+                handleSessionClicked={ handleSessionClicked }
+            />
             <br/>
 
             <div style={{ padding: '20px 150px 10px 0px', margin: '15px' }}>
