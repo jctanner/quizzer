@@ -10,18 +10,26 @@ function QuestionDiv(props) {
 
     const courseName = props.courseName;
     const questionID = props.questionID;
-    const questionData = props.questionData;
+    let questionData = props.questionData;
+    const handleSelect = props.handleSelect;
     const handleOnChange = props.handleOnChange;
-    const answerHidden = props.answerHidden;
+    let answerHidden = props.answerHidden;
     const toggleAnswer = props.toggleAnswer;
-    const userChoice = props.userChoice;
+    let userChoice = props.userChoice;
     const showPreviousNext = props.showPreviousNext;
-    const showImages = props.showImages;
+    let showImages = props.showImages;
     const toggleImages = props.toggleImages;
 
     console.log('--------------------------------------------')
     console.log(questionData);
     console.log('--------------------------------------------')
+
+    useEffect(() => {
+        console.log('#######################################');
+        console.log('props.currentSelection', props.currentSelection);
+        console.log('props.userSelection', props.userSelection);
+        console.log('#######################################');
+    });
 
     return (
         <div style={{ 'margin-top': '20px'}}>
@@ -49,11 +57,12 @@ function QuestionDiv(props) {
                     { questionData.choices.map((choice, index) => (
                         <div>
                             <input 
-                                onChange={ handleOnChange }
-                                checked={ choice === userChoice }
+                                onChange={ props.handleSelect }
+                                checked={ choice === props.currentSelection || choice === props.userSelection }
                                 type="radio"
                                 value={ choice }
                                 key={ index }
+                                id={ index }
                             />
                             { (!showImages && choice.includes('<div')) && <div dangerouslySetInnerHTML={ { __html: choice } }></div> } 
                             { (!showImages && !choice.includes('<div')) && choice } 
@@ -70,8 +79,10 @@ function QuestionDiv(props) {
             { (questionData.input_type === "input" || questionData.input_type !== "fieldset") && 
                 <form>
                     <input
-                        onChange={ handleOnChange }
+                        key={ props.questionID }
+                        onChange={ props.handleOnChange }
                         type="text"
+                        value={ props.currentSelection }
                     />
                 </form>
             }
@@ -173,7 +184,7 @@ function QuestionPage() {
 
 export const InlineQuestion = (props) => {
 
-    const [userChoice, setUserChoice] = useState(null);
+    //const [userChoice, setUserChoice] = useState(null);
     const [answerHidden, setAnswerHidden] = useState(true);
     const [questionData, setQuestionData] = useState([]);
     const [showImages, setShowImages] = useState(true);
@@ -199,6 +210,7 @@ export const InlineQuestion = (props) => {
         }
     };
 
+    /*
     const handleSelect = (e) => {
         console.log(e);
         console.log('selected Zvalue', e.currentTarget.value);
@@ -206,9 +218,10 @@ export const InlineQuestion = (props) => {
     };
 
     const handleOnChange = (e) => {
-        console.log(e.target.value);
-        setUserChoice(e.target.value);
+        props.console.log(e.target.value);
+        props.setUserChoice(e.target.value);
     };
+    */
 
     useEffect(() => {
 
@@ -226,16 +239,26 @@ export const InlineQuestion = (props) => {
         };
     }, [questionApiUrl]);
 
+    useEffect(() => {
+        console.log('###################################### 1');
+        console.log('props.currentSelection', props.currentSelection);
+        console.log('props.userSelection', props.userSelection);
+        console.log('###################################### 1');
+    });
+
     return (
         <QuestionDiv
-            key={ 1 }
+            key={ questionID }
             courseName={ courseName }
             quesitonID={ questionID }
             questionData={ questionData }
-            handleOnChange={ handleOnChange }
+            handleOnChange={ props.handleOnChange }
+            handleSelect={ props.handleSelect }
             answerHidden={ answerHidden }
             toggleAnswer={ toggleAnswer }
-            userChoice={ userChoice }
+            userChoice={ props.userChoice }
+            userSelection={ props.userSelection }
+            currentSelection={ props.currentSelection }
             showPreviousNext={ false }
             showImages={ showImages }
             toggleImages={ toggleImages }
