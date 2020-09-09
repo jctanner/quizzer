@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start-server": "cross-env NODE_ENV=development nodemon server/server.js --watch server/*",
-    "start-front": "react-scripts start",
+    "start-front": "DANGEROUSLY_DISABLE_HOST_CHECK=true HOST=0.0.0.0 react-scripts start",
     "start-all": "concurrently \"npm run start-server\" \"npm run start-front\" --kill-others",
     "build": "react-scripts build",
     "test": "react-scripts test",
