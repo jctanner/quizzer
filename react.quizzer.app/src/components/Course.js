@@ -119,8 +119,8 @@ function CoursePage() {
 	let { courseName } = useParams();
     const tableColumns = [
         {name: 'questionid', selector: 'questionid', compact: true},
-        {name: 'section', selector: 'section', compact: true},
-        {name: 'average', selector: 'average', compact: true, right: true, sortable: true},
+        {name: 'section', selector: 'section', compact: true, grow: false, wrap: true, minWidth: '600px' },
+        {name: 'average', selector: 'average', compact: true, right: true, sortable: true, maxWidth: '20px' },
         {name: 'total attempts', selector: 'total', compact: true, right: true, sortable: true},
         {name: 'correct', selector: 'correct', compact: true, right: true},
         {name: 'incorrect', selector: 'incorrect', compact: true, right: true}
@@ -166,17 +166,6 @@ function CoursePage() {
             const newStats = await fetch(courseStatsUrl)
                 .then(res => res.json());
             setCourseStats(newStats);
-            /*
-            if ( newStats.score_history.length <= 5 ) {
-                setScoreHistory(newStats.score_history)
-            } else {
-                let tmpScoreHistory = [];
-                for ( let i = 0; i < 5; i++ ) {
-                    tmpScoreHistory.push(newStats.score_history[i]);
-                }
-                setScoreHistory(tmpScoreHistory);
-            }
-            */
             setScoreHistory(newStats.score_history)
 
             // build the rows for the table ...
@@ -266,7 +255,7 @@ function CoursePage() {
             />
             <br/>
 
-            <div style={{ padding: '20px 150px 10px 10px', margin: '15px' }}>
+            <div style={{ padding: '0px 0px 0px 0px', margin: '10px' }}>
                 <span style={{ padding: '0px 10px 100px 10px' }}>
                     <span>
                     <input
@@ -280,10 +269,13 @@ function CoursePage() {
                     <Button style={{ margin: '10px', padding: '10px 10px 10px 10px' }} onClick={startFilteredQuiz}>quiz</Button>
                     </span>
                 </span>
-                <span style={{ margin: '900px', padding: '50px' }}>
+                {/*<span style={{ margin: '900px', padding: '50px' }}>*/}
+                <span>
                     <DataTable
                         noHeader={ true }
                         dense={ true }
+                        wrap={ true }
+                        allowOverflow={ true }
                         columns={ tableColumns }
                         data={ tableData }
                         onRowClicked={ handleQuestionRowClicked }
