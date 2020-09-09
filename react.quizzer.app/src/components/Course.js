@@ -240,15 +240,6 @@ function CoursePage() {
     };
 
     const startFilteredQuiz = () => {
-        /*
-        let qids = [];
-        tableData.forEach((row, id) => {
-            console.log(row);
-            qids.push(row.questionid);
-        });
-        console.log(qids);
-        console.log(searchText);
-        */
         const quizUrl = '/courses/' + courseName + '/quiz' + '?' + 'search_section=' + searchText;
         history.push(quizUrl)
     };
@@ -275,13 +266,8 @@ function CoursePage() {
             />
             <br/>
 
-            <div style={{ padding: '20px 150px 10px 0px', margin: '15px' }}>
-                {/*
-                <hr/>
-                <span><hr/>Questions ...</span>
-                <br/>
-                */}
-                <span>
+            <div style={{ padding: '20px 150px 10px 10px', margin: '15px' }}>
+                <span style={{ padding: '0px 10px 100px 10px' }}>
                     <span>
                     <input
                         key="table_filter"
@@ -291,10 +277,10 @@ function CoursePage() {
                     />
                     </span>
                     <span style={{ padding: '10px 10px 10px 10px' }}>
-                    <Button onClick={startFilteredQuiz}>quiz</Button>
+                    <Button style={{ margin: '10px', padding: '10px 10px 10px 10px' }} onClick={startFilteredQuiz}>quiz</Button>
                     </span>
                 </span>
-                <span style={{ margin: '900px' }}>
+                <span style={{ margin: '900px', padding: '50px' }}>
                     <DataTable
                         noHeader={ true }
                         dense={ true }
