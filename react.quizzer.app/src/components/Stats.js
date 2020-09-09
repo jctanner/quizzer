@@ -54,7 +54,7 @@ function StatsDiv(props) {
                 <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '5px 10px 10px 30px', 'border-radius': '10px', background: 'white', 'font-size': '10px'}}>
                     <h5>sessions</h5>
                     { courseStats.sessionids !== undefined &&
-                        courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>
+                        courseStats.sessionids.slice(0).reverse().slice(0,5).map((sessionid, session_index) =>
                             <li key={sessionid} id={sessionid} onClick={() => handleSessionClicked(sessionid)}>
                                 <div>
                                 <span style={{ padding: "5px" }}>

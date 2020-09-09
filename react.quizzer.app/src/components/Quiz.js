@@ -18,7 +18,6 @@ function getCourseIdFromCurrentUrl() {
     return thisPathParts[totalParts - 2];
 };
 
-
 function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
@@ -55,11 +54,21 @@ function QuizPage({ multiplechoice }) {
     const fetchQuiz = async () => {
 
         let quizurl = null;
+        /*
         if (isMultipleChoice) { 
             quizurl = '/api/quiz/' + courseID + '?muliplechoice=1'
         } else {
             quizurl = '/api/quiz/' + courseID
         }
+        */
+
+        quizurl = '/api/quiz/' + courseID
+        console.log('search query.search ...', query.get('search_section'));
+        const sectionSearchString = query.get('search_section');
+        if ( sectionSearchString !== null && sectionSearchString !== undefined && sectionSearchString !== "" ) {
+            quizurl += '?' + 'search_section=' + sectionSearchString;
+        }
+
         console.log('quizurl', quizurl)
         await fetch(quizurl)
             .then(res => res.json())
@@ -151,6 +160,7 @@ function QuizPage({ multiplechoice }) {
 
                     <InlineQuestion
                         key={ questionIDs[currentQuestionIndex] }
+                        qindex={ currentQuestionIndex }
                         sessionid={ sessionID }
                         courseName={ courseID }
                         questionID={ questionIDs[currentQuestionIndex] }

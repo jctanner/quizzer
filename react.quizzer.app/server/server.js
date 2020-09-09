@@ -221,6 +221,9 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     console.log('------------------------------------------')
     console.log(req.params)
     const courseName = req.params.courseName
+    console.log(req.query)
+    const searchSectionString = req.query.search_section
+    console.log(searchSectionString)
 
     let questionList = [...coursesFiles[req.params.courseName]]
     //let multiplechoice = req.query.multiplechoice
@@ -232,11 +235,11 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     let sql = `SELECT DISTINCT(questionid) FROM answers WHERE coursename='${courseName}'`;
     console.log(sql)
     let rows = db.prepare(sql).all()
-    console.log(rows)
     rows.forEach((row) => {
-        //console.log(row)
         answered.push(row.questionid)
     })
+
+    /*
     let filtered = questionList.filter(function(value, indx, arr){
         return (answered.includes(value) === false);
     });
@@ -244,46 +247,33 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     if (filtered.length === 0) {
         filtered = [...questionList]
     }
-
-
-    /*
-    // clear out non-multiplechoice questions if requested ...
-    let mulipleChoiceFiltered = filtered.filter(function(value, indx, arr){
-        return (fileHasChoices(courseName, value));
-    });
-
-    let integerValFiltered = filtered.filter(function(value, indx, arr){
-        return (fileHasIntegerInputAnswer(courseName, value));
-    });
-
-    let combinedFiltered = []
-    let fSets = [mulipleChoiceFiltered, integerValFiltered]
-    fSets.forEach((fSet, fIndex) => {
-        fSet.forEach((qid, qindex) => {
-            if (! combinedFiltered.includes(qid) ) {
-                combinedFiltered.push(qid)
-            }
-        })
-    })
-
-    //questionList = filtered;
-    questionList = combinedFiltered;
     */
+
+    if (searchSectionString !== null && searchSectionString != undefined && searchSectionString != "") {
+        let filtered = questionList.filter(function(qid, indx, arr){
+            //return (answered.includes(value) === false);
+            const qData = getQuestionData(courseName, qid);
+            //console.log(qData);
+            if (qData.section.includes(searchSectionString)) {
+                console.log(qData);
+                console.log(qData.section);
+                return true;
+            };
+            return false;
+        });
+        questionList = [...filtered];
+    }
 
     // select a random set of questions from the list
     let quizList = [];
-    for (let i=0; i<10; i++) {
-        console.log(questionList.length);
-        const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
-        quizList.push(randomQuestion);
+    if ( questionList.length >= 10 ) {
+        for (let i=0; i<10 && i<questionList.length; i++) {
+            const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
+            quizList.push(randomQuestion);
 
-        /*
-        // remove this question from the available list
-        filtered = questionList.filter(function(value, indx, arr){
-            return (! questionList.includes(randomQuestion));
-        });
-        questionList = filtered;
-        */
+        };
+    } else {
+        quizList = [...questionList];
     };
     quizList.sort(compareVersions);
 

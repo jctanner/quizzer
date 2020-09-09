@@ -166,6 +166,17 @@ function CoursePage() {
             const newStats = await fetch(courseStatsUrl)
                 .then(res => res.json());
             setCourseStats(newStats);
+            /*
+            if ( newStats.score_history.length <= 5 ) {
+                setScoreHistory(newStats.score_history)
+            } else {
+                let tmpScoreHistory = [];
+                for ( let i = 0; i < 5; i++ ) {
+                    tmpScoreHistory.push(newStats.score_history[i]);
+                }
+                setScoreHistory(tmpScoreHistory);
+            }
+            */
             setScoreHistory(newStats.score_history)
 
             // build the rows for the table ...
@@ -184,44 +195,13 @@ function CoursePage() {
                 newTableData.push(thisRowData);
             }
 
-            /*
-            if ( searchText !== null && searchText !== "") {
-                newTableData = newTableData.filter(function(row, index, arr) {
-                    if ( row.section === undefined ) {
-                        return false;
-                    }; 
-                    return row.section.includes(searchText);
-                    //console.log(row);
-                    //return true;
-                });
-            };
-            */
-
             setTableData(newTableData);
             setAllTableData(newTableData);
 
         };
 
-        /*
-        if ( questionList === [] ) {
-            fetchQuestionList();
-        }
-        if ( courseStats === [] || tableData === [] ) {
-            fetchCourseStats();
-        }
-        */
         fetchQuestionList();
         fetchCourseStats();
-
-        /*
-        let newTableData = [];
-        for (let i=0; i<questionList.length; i++) {
-            const qid = questionList[i];
-            let thisRowData = {...questionStats[qid]};
-            newTableData.push(thisRowData);
-        }
-        setTableData([...newTableData]);
-        */
 
         return () => {
             console.log('cleanup');
@@ -259,6 +239,20 @@ function CoursePage() {
         history.push(quizUrl)
     };
 
+    const startFilteredQuiz = () => {
+        /*
+        let qids = [];
+        tableData.forEach((row, id) => {
+            console.log(row);
+            qids.push(row.questionid);
+        });
+        console.log(qids);
+        console.log(searchText);
+        */
+        const quizUrl = '/courses/' + courseName + '/quiz' + '?' + 'search_section=' + searchText;
+        history.push(quizUrl)
+    };
+
 	return (
 		<div style={{ 'margin-top': '30px' }}>
         	<h2>{ courseName.replace(/_/g, ' ') }</h2>
@@ -287,13 +281,18 @@ function CoursePage() {
                 <span><hr/>Questions ...</span>
                 <br/>
                 */}
-                <span style={{ }}>
+                <span>
+                    <span>
                     <input
                         key="table_filter"
                         style={{ width: '50%' }}
                         onInput={e => setSearchText(e.target.value)}
                         placeholder="search ..."
                     />
+                    </span>
+                    <span style={{ padding: '10px 10px 10px 10px' }}>
+                    <Button onClick={startFilteredQuiz}>quiz</Button>
+                    </span>
                 </span>
                 <span style={{ margin: '900px' }}>
                     <DataTable

@@ -189,7 +189,7 @@ export const InlineQuestion = (props) => {
 
     return (
         <div>
-            { questionData.section }
+            <li><strong>{ props.questionID }</strong> { questionData.section }</li>
             <hr/>
 
             {/*
