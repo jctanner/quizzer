@@ -13,6 +13,34 @@ import DataTable from 'react-data-table-component';
 import moment from 'moment';
 
 
+function SessionListItem(props) {
+    const sessionid = props.sessionid;
+    const handleSessionClicked = props.handleSessionClicked;
+    const courseStats = props.courseStats;
+    
+    return (
+       <li key={sessionid} id={sessionid} onClick={() => handleSessionClicked(sessionid)}>
+            <span style={{ padding: "5px" }}>
+                { moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD") }
+            </span>
+            {/*
+            <span style={{ padding: "5px" }}>
+                { sessionid }
+            </span>
+            */}
+            <tt>{ sessionid }</tt>
+            <span style={{ padding: "5px"}}/>
+            {/*
+            <span style={{ padding: "1px", "text-align": "right", monospace: true }}>
+                { '- ' + courseStats.session_info[sessionid].score.toString() + '%' }
+            </span>
+            */}
+            <tt>{ courseStats.session_info[sessionid].score.toString().padStart(4) }</tt>
+        </li> 
+
+    );
+};
+
 // Session statistics display ...
 function StatsDiv(props) {
 
@@ -23,7 +51,7 @@ function StatsDiv(props) {
 	return (
             <div style={{ float: 'top', width: '100%', height: '200px'}}>
                 <span className="column" style={{ float: "left", margin: '10px', width: "20%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
-                    <h5>total answered</h5>
+                    <h5>total questions answered</h5>
                         <Doughnut
                         legend={ {display: true} }
                         data={ {
@@ -37,7 +65,7 @@ function StatsDiv(props) {
                         
                 </span>
                 <span className="column" style={{ float: "left", margin: '10px', width: "35%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
-                    <h5>session scores</h5>
+                    <h5>quiz scores</h5>
                     <Bar
                         legend={ {display: false} }
                         width={ '100%' }
@@ -51,23 +79,15 @@ function StatsDiv(props) {
                     />
                         
                 </span>
-                <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '5px 10px 10px 30px', 'border-radius': '10px', background: 'white', 'font-size': '10px'}}>
-                    <h5>sessions</h5>
+                <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '10px 10px 10px 10px', 'border-radius': '10px', background: 'white', 'font-size': '10px'}}>
+                    <h5>last quiz results</h5>
                     { courseStats.sessionids !== undefined &&
-                        courseStats.sessionids.slice(0).reverse().slice(0,5).map((sessionid, session_index) =>
-                            <li key={sessionid} id={sessionid} onClick={() => handleSessionClicked(sessionid)}>
-                                <div>
-                                <span style={{ padding: "5px" }}>
-                                    { moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD") }
-                                </span>
-                                <span style={{ padding: "5px" }}>
-                                    { courseStats.session_info[sessionid].score }
-                                </span>
-                                <span style={{ padding: "5px" }}>
-                                    { sessionid }
-                                </span>
-                                </div>
-                            </li> 
+                        courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>
+                            <SessionListItem
+                                sessionid={ sessionid }
+                                courseStats={ courseStats }
+                                handleSessionClicked={handleSessionClicked }
+                            />
                         )
                     }
                 </span>
