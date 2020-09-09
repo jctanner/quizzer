@@ -23,18 +23,8 @@ function SessionListItem(props) {
             <span style={{ padding: "5px" }}>
                 { moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD") }
             </span>
-            {/*
-            <span style={{ padding: "5px" }}>
-                { sessionid }
-            </span>
-            */}
             <tt>{ sessionid }</tt>
             <span style={{ padding: "5px"}}/>
-            {/*
-            <span style={{ padding: "1px", "text-align": "right", monospace: true }}>
-                { '- ' + courseStats.session_info[sessionid].score.toString() + '%' }
-            </span>
-            */}
             <tt>{ courseStats.session_info[sessionid].score.toString().padStart(4) }</tt>
         </li> 
 
