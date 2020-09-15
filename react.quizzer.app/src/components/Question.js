@@ -155,6 +155,9 @@ function QuestionPage() {
                 .then(res => res.json());
             console.log(newQuestionData);
             setQuestionData(newQuestionData);
+            if (!('images' in newQuestionData)) {
+                setShowImages(false);
+            };
         };
 
         fetchQuestionData();
@@ -230,6 +233,9 @@ export const InlineQuestion = (props) => {
                 .then(res => res.json());
             setQuestionData(newQuestionData);
             props.setCurrentQuestionData(newQuestionData);
+            if (!('images' in newQuestionData)) {
+                setShowImages(false);
+            };
         };
 
         fetchQuestionData();
