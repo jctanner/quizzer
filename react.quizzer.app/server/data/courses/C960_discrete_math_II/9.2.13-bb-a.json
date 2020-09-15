@@ -1,0 +1,11 @@
+{
+  "section": "9.2.13 probability [bluebook]",
+  "question": "A coin is tossed 4 times. How many distinct outcomes are possible?",
+  "answer": "16",
+  "fn": "9.2.13-bb-a.json",
+  "qid": "a",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

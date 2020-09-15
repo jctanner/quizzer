@@ -1,0 +1,11 @@
+{
+  "section": "9.2.9 probability [bluebook]",
+  "question": "Suppose there are 3 roads from city A to city B and five roads from city B to city C. How many different round trip routes are there from city A to B to C to B and back to A?",
+  "answer": "225",
+  "fn": "9.2.9-bb-b.json",
+  "qid": "b",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

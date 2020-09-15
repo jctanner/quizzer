@@ -1,0 +1,11 @@
+{
+  "section": "9.2.19 probability [bluebook]",
+  "question": "3 officers, president, treasurer and a secretary are to be chosen from 4 people. How many ways can the officers be chosen?",
+  "answer": "14",
+  "fn": "9.2.19-bb-0.json",
+  "qid": 0,
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

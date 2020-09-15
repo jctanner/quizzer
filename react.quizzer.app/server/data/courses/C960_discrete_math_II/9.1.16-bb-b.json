@@ -1,0 +1,11 @@
+{
+  "section": "9.1.16 probability [bluebook]",
+  "question": "2 faces of a 6 sided die are painted red, two are painted blue, and two are painted yellow. The die is rolled three times and the colors that appear face up on the first, second and third rolls are recorded. If all 3 rolls produce different colors (RBY/RYB/etc), what is the probability of the event?",
+  "answer": "2/9",
+  "fn": "9.1.16-bb-b.json",
+  "qid": "b",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

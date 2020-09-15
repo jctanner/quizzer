@@ -1,0 +1,11 @@
+{
+  "section": "9.2.8 probability [bluebook]",
+  "question": "A person buying a computer can choose 3 system modes, 2 keyboard models and two models of printer. How many distinct systems can be purchased?",
+  "answer": "12",
+  "fn": "9.2.8-bb-0.json",
+  "qid": 0,
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

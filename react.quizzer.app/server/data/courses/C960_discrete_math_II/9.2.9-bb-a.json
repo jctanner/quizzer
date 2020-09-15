@@ -1,0 +1,11 @@
+{
+  "section": "9.2.9 probability [bluebook]",
+  "question": "Suppose there are 3 roads from city A to city B and five roads from city B to city C. How many ways is it possible to travel from city C via city B?",
+  "answer": "15",
+  "fn": "9.2.9-bb-a.json",
+  "qid": "a",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

@@ -1,0 +1,11 @@
+{
+  "section": "9.2.34 probability [bluebook]",
+  "question": "5 people are to be seated around a circular table. 2 seatings are considered the same if one is a rotation of another. How many different seatings are possible?",
+  "answer": "24",
+  "fn": "9.2.34-bb-0.json",
+  "qid": 0,
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

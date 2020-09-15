@@ -1,0 +1,11 @@
+{
+  "section": "9.1.7 probability [bluebook]",
+  "question": "If two dice are rolled, what is the probability that the sum of the numbers showing face up is 8?",
+  "answer": "3/8",
+  "fn": "9.1.7-bb-0.json",
+  "qid": "0",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

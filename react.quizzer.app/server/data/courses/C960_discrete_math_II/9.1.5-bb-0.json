@@ -1,0 +1,11 @@
+{
+  "section": "9.1.5 probability [bluebook]",
+  "question": "For a normal deck of cards, what is the probability that a chosen card has a denomination of at least 10 (counting aces high)?",
+  "answer": "5/13",
+  "fn": "9.1.5-bb-0.json",
+  "qid": "0",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

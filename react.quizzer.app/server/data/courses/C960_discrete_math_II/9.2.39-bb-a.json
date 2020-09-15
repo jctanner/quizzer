@@ -1,0 +1,11 @@
+{
+  "section": "9.2.39 probability [bluebook]",
+  "question": "How many ways can three of the letters of the word ALGORITHM be selected and written in a row?",
+  "answer": "504",
+  "fn": "9.2.39-bb-a.json",
+  "qid": "a",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

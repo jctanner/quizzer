@@ -1,0 +1,11 @@
+{
+  "section": "9.1.9 probability [bluebook]",
+  "question": "If two dice are rolled, what is the probability that the sum of the numbers showing face up is at most 6?",
+  "answer": "15/36",
+  "fn": "9.1.9-bb-0.json",
+  "qid": "0",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

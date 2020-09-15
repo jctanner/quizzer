@@ -1,0 +1,11 @@
+{
+  "section": "9.2.11 probability [bluebook]",
+  "question": "A bit string is a finite sequence of 0's and 1's. How many bit strings have length 8?",
+  "answer": "256",
+  "fn": "9.2.11-bb-a.json",
+  "qid": "a",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

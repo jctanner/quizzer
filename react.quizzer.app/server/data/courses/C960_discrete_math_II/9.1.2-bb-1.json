@@ -1,0 +1,11 @@
+{
+  "section": "9.1.2 probability [bluebook]",
+  "question": "If two quarters are tossed, what is the probability that coin A is a head?",
+  "answer": "1/2",
+  "fn": "9.1.2-bb-1.json",
+  "qid": "1",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

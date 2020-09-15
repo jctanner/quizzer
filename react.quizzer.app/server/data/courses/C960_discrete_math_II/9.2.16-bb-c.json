@@ -1,0 +1,11 @@
+{
+  "section": "9.2.16 probability [bluebook]",
+  "question": "How many integers from 10 through 99 have distinct digits?",
+  "answer": "81",
+  "fn": "9.2.16-bb-c.json",
+  "qid": "c",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

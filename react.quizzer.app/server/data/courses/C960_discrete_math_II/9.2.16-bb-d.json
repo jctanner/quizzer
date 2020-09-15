@@ -1,0 +1,11 @@
+{
+  "section": "9.2.16 probability [bluebook]",
+  "question": "How many odd integers from 10 though 99 have distinct digits?",
+  "answer": "40",
+  "fn": "9.2.16-bb-d.json",
+  "qid": "d",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

@@ -1,0 +1,11 @@
+{
+  "section": "9.2.16 probability [bluebook]",
+  "question": "How many odd integers are there from 10 through 99?",
+  "answer": "45",
+  "fn": "9.2.16-bb-b.json",
+  "qid": "b",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

@@ -1,0 +1,11 @@
+{
+  "section": "9.1.21 probability [bluebook]",
+  "question": "How many positive two-digit integers are multiples of 3?",
+  "answer": "30",
+  "fn": "9.1.21-bb-a.json",
+  "qid": "a",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

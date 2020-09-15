@@ -1,0 +1,11 @@
+{
+  "section": "9.2.1 probability [bluebook]",
+  "question": "If the first team to win four games will win the series and there are 2 teams. Suppose team A wins the first 3 games, how many ways can the world series be completed?",
+  "answer": "5",
+  "fn": "9.2.1-bb-0.json",
+  "qid": 0,
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

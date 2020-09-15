@@ -1,0 +1,11 @@
+{
+  "section": "9.2.9 probability [bluebook]",
+  "question": "Suppose there are 3 roads from city A to city B and five roads from city B to city C. How many different routes are there from cities A to B to C to B and back to A in which no road is traversed twice?",
+  "answer": "120",
+  "fn": "9.2.9-bb-c.json",
+  "qid": "c",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

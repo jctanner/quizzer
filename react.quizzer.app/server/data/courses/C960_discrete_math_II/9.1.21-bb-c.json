@@ -1,0 +1,11 @@
+{
+  "section": "9.1.21 probability [bluebook]",
+  "question": "What is the probability that a randomly chosen postive 2-digit integer is a multiple of 4?",
+  "answer": "22/90",
+  "fn": "9.1.21-bb-c.json",
+  "qid": "c",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

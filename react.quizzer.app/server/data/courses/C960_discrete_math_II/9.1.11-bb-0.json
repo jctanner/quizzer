@@ -1,0 +1,11 @@
+{
+  "section": "9.1.11.b.i probability [bluebook]",
+  "question": "A coin is tossed 3 times. Head or tails is equally likely. What is the probability that exacly one toss results in a head?",
+  "answer": "3/8",
+  "fn": "9.1.11-bb-0.json",
+  "qid": 0,
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

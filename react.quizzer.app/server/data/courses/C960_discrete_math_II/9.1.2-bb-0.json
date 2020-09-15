@@ -1,0 +1,11 @@
+{
+  "section": "9.1.2 probability [bluebook]",
+  "question": "If two quarters are tossed, what is the probability that at least one head is obtained?",
+  "answer": "3/4",
+  "fn": "9.1.2-bb-0.json",
+  "qid": "0",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}

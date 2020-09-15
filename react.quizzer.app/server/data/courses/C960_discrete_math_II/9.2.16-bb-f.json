@@ -1,0 +1,11 @@
+{
+  "section": "9.2.16 probability [bluebook]",
+  "question": "What is the probabiity that a randomly chosen 2 digit integer has distinct digits and is odd?",
+  "answer": "4/9",
+  "fn": "9.2.16-bb-f.json",
+  "qid": "f",
+  "instructions": null,
+  "input_type": "input",
+  "choices": [],
+  "explanation": null
+}
