@@ -1,6 +1,6 @@
 {
   "section": "9.2.19 probability [bluebook]",
-  "question": "3 officers, president, treasurer and a secretary are to be chosen from 4 people. How many ways can the officers be chosen?",
+  "question": "3 officers, president, treasurer and a secretary are to be chosen from 4 people. One person can not be treasurer. One can not be the secretary. How many ways can the officers be chosen?",
   "answer": "14",
   "fn": "9.2.19-bb-0.json",
   "qid": 0,
