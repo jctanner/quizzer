@@ -12,7 +12,7 @@ def main():
     BAD = set()
 
     for jf in jfiles:
-        print(jf)
+        #print(jf)
         if not jf:
             continue
         changed = False
@@ -20,10 +20,11 @@ def main():
             jd = json.loads(f.read())
         if not jd:
             BAD.add(jf)
-        if jd.get('answer') is None:
+        if jd.get('answer') is None or jd['answer'] == '':
+            print(jf)
             BAD.add(jf)
             continue
-        print(jd['answer'])
+        #print(jd['answer'])
         if isinstance(jd['answer'], int):
             continue
         if 'because' in jd['answer']:
@@ -31,8 +32,18 @@ def main():
             #changed = True
             pass
 
-        if ' or ' in jd['answer']:
-            import epdb; epdb.st()
+        #if ' or ' in jd['answer']:
+        #    import epdb; epdb.st()
+
+    for bad in BAD:
+        with open(bad, 'r') as f:
+            jdata = json.loads(f.read())
+        if jdata.get('enabled') == True:
+            continue
+
+        jdata['enabled'] = False
+        with open(bad, 'w') as f:
+            f.write(json.dumps(jdata, indent=2, sort_keys=True))
 
     import epdb; epdb.st()
 

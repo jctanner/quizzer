@@ -6,6 +6,37 @@ import { Link, useParams } from "react-router-dom";
 import { postSessionAnswer } from '../Api';
 
 
+function QuestionInstructions(props) {
+
+    const courseName = props.courseName;
+    const questionData = props.questionData;
+    const showImages = props.showImages;
+   
+    let imgfile = null; 
+    if (questionData.images && questionData.images.instructions !== undefined) {
+        imgfile = '/images/' + courseName + '/' + questionData.images.instructions;
+    }
+
+    console.log(questionData);
+    console.log('imgfile', imgfile);
+
+    return (
+        <>
+            { (showImages && imgfile) && (
+                <>
+                    <img src={ imgfile }/>
+                    <br/>
+                    <br/>
+                </>
+            )}
+            { ((imgfile === null || !showImages) && questionData.instructions) && (
+                <div dangerouslySetInnerHTML={ { __html: questionData.instructions } }></div> 
+            )}
+        </>
+    )
+}
+
+
 function QuestionDiv(props) {
 
     const courseName = props.courseName;
@@ -31,6 +62,7 @@ function QuestionDiv(props) {
         console.log('#######################################');
     });
 
+
     return (
         <div style={{ 'margin-top': '20px'}}>
             <li><strong>{ questionID }</strong> { questionData.section }</li>
@@ -39,11 +71,12 @@ function QuestionDiv(props) {
             { ( !showImages ) && <button onClick={ toggleImages }>images</button> }
             <hr/>
 
-            { (!showImages) && <div dangerouslySetInnerHTML={ { __html: questionData.instructions } }></div> }
-            { (showImages && questionData.images) && <img src={ '/images/' + courseName + '/' + questionData.images.instructions }/> }
-
-            { (showImages) && <br/> }
-            { (showImages) && <br/> }
+            <QuestionInstructions
+                key={ questionID }
+                courseName={ courseName }
+                questionData={ questionData }
+                showImages={ showImages }
+            />
 
             { (!showImages) && <div dangerouslySetInnerHTML={ { __html: questionData.question } }></div> }
             { (showImages && questionData.images) && <img src={ '/images/' + courseName + '/' + questionData.images.question }/> }

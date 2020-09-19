@@ -92,6 +92,21 @@ function fileHasSafeAnswer(courseName, filename) {
     return true
 };
 
+/*****************************************************
+ * FUNCTION: int or fraction or power?
+*****************************************************/
+function fileIsEnabled(courseName, filename) {
+    const rfilename = 'server/data/courses/' + courseName + '/' + removeFileExtension(filename) + '.json'
+    let filedata = fs.readFileSync(rfilename);
+    let jData = JSON.parse(filedata);
+
+    let enabled = jData.enabled
+    if ( enabled === false ) {
+        return false
+    }
+
+    return true
+};
 
 /*****************************************************
  * FUNCTION: get question data
@@ -131,6 +146,12 @@ for (let i=0; i<courseList.length; i++) {
         console.log('after filters: ', courseQuestionList.length)
     }
     */
+
+    if ( courseList[i] === 'C960_discrete_math_II' ) {
+        filtered = courseQuestionList.filter(function(value, indx, arr){
+            return fileIsEnabled(courseList[i], value);
+        });
+    } 
 
     coursesFiles[courseList[i]] = courseQuestionList
     console.log('after filters: ', coursesFiles[courseList[i]].length)
