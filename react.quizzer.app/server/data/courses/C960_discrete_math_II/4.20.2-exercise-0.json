@@ -1,1 +1,17 @@
-{"section": "Exercise 4.20.2: Generalized pigeonhole principle.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   There are 121.4 million people in the United States who earn an annual income \nthat is at least $10,000 and less than $1,000,000. Annual income is rounded to the nearest dollar.\nShow that there are 123 people who earn the same annual income in dollars.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "4.20.2-exercise-instructions_div.png", "question": "4.20.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.20.2-exercise-instructions_div.png",
+    "question": "4.20.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   There are 121.4 million people in the United States who earn an annual income \nthat is at least $10,000 and less than $1,000,000. Annual income is rounded to the nearest dollar.\nShow that there are 123 people who earn the same annual income in dollars.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.20.2: Generalized pigeonhole principle."
+}

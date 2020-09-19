@@ -1,1 +1,17 @@
-{"section": "Exercise 3.7.1: Building a car collection.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  A Silicon Valley billionaire purchases 3 new cars for his collection at the end of every month. \nLet a\n  <sub>\n   n\n  </sub>\n  denote the number of cars he has after n months. \nLet a\n  <sub>\n   0\n  </sub>\n  = 23.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   If he pays $50 each month to have each car maintained, how much does he pay for maintenance after 2 years? \nNo need to calculate the actual number. \nInstead give a closed form (without the summation) mathematical expression for the number. \nNote that he purchases the new cars at the end of each month, so during the first month, he is only maintaining 23 cars.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "3.7.1-exercise-instructions_div.png", "question": "3.7.1.1-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "3.7.1-exercise-instructions_div.png",
+    "question": "3.7.1.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A Silicon Valley billionaire purchases 3 new cars for his collection at the end of every month. \nLet a\n  <sub>\n   n\n  </sub>\n  denote the number of cars he has after n months. \nLet a\n  <sub>\n   0\n  </sub>\n  = 23.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   If he pays $50 each month to have each car maintained, how much does he pay for maintenance after 2 years? \nNo need to calculate the actual number. \nInstead give a closed form (without the summation) mathematical expression for the number. \nNote that he purchases the new cars at the end of each month, so during the first month, he is only maintaining 23 cars.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 3.7.1: Building a car collection."
+}

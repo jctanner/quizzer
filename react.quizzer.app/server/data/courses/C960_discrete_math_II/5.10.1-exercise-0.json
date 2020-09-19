@@ -1,1 +1,17 @@
-{"section": "Exercise 5.10.1: Bayes' Theorem - detecting a biased coin.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Sally has two coins. The first coin is a fair coin and the second coin is biased. The biased coin comes up heads with probability .75 and tails with probability .25. She selects a coin at random and flips the coin ten times. The results of the coin flips are mutually independent. The result of the 10 flips is:\n   <span style=\"white-space: nowrap;\">\n    T,T,H,T,H,T,T,T,H,T.\n   </span>\n   What is the probability that she selected the biased coin?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "5.10.1-exercise-instructions_div.png", "question": "5.10.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.10.1-exercise-instructions_div.png",
+    "question": "5.10.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Sally has two coins. The first coin is a fair coin and the second coin is biased. The biased coin comes up heads with probability .75 and tails with probability .25. She selects a coin at random and flips the coin ten times. The results of the coin flips are mutually independent. The result of the 10 flips is:\n   <span style=\"white-space: nowrap;\">\n    T,T,H,T,H,T,T,T,H,T.\n   </span>\n   What is the probability that she selected the biased coin?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.10.1: Bayes' Theorem - detecting a biased coin."
+}

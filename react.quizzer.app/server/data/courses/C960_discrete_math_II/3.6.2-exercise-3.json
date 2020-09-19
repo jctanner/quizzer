@@ -1,1 +1,17 @@
-{"section": "Exercise 3.6.2: Expressing sums using summation notation.", "qid": 3, "instructions": "<div class=\"setup\">\n <p>\n  Express the following sums using summation notation.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (d)\n </span>\n <div class=\"text\">\n  <p>\n   The sum of the squares of the odd integers between 0 and 100.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "3.6.2-exercise-instructions_div.png", "question": "3.6.2.3-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "3.6.2-exercise-instructions_div.png",
+    "question": "3.6.2.3-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Express the following sums using summation notation.\n </p>\n</div>\n",
+  "qid": 3,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (d)\n </span>\n <div class=\"text\">\n  <p>\n   The sum of the squares of the odd integers between 0 and 100.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 3.6.2: Expressing sums using summation notation."
+}

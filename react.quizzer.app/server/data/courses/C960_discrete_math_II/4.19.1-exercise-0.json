@@ -1,1 +1,17 @@
-{"section": "Exercise 4.19.1: Using the binomial theorem to find coefficients in binomials.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the coefficient of x\n   <sup>\n    3\n   </sup>\n   y\n   <sup>\n    4\n   </sup>\n   in\n   <span style=\"white-space: nowrap;\">\n    (-3x + 4y)\n    <sup>\n     7\n    </sup>\n    ?\n   </span>\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "4.19.1-exercise-instructions_div.png", "question": "4.19.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.19.1-exercise-instructions_div.png",
+    "question": "4.19.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the coefficient of x\n   <sup>\n    3\n   </sup>\n   y\n   <sup>\n    4\n   </sup>\n   in\n   <span style=\"white-space: nowrap;\">\n    (-3x + 4y)\n    <sup>\n     7\n    </sup>\n    ?\n   </span>\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.19.1: Using the binomial theorem to find coefficients in binomials."
+}

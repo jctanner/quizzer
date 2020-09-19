@@ -1,1 +1,17 @@
-{"section": "Exercise 4.9.1: Selecting students for jobs.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   A teacher selects 4 students from her class of 37 to work together on a project.\nHow many ways are there for her to select the students?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "4.9.1-exercise-instructions_div.png", "question": "4.9.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.9.1-exercise-instructions_div.png",
+    "question": "4.9.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   A teacher selects 4 students from her class of 37 to work together on a project.\nHow many ways are there for her to select the students?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.9.1: Selecting students for jobs."
+}

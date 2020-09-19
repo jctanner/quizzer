@@ -1,1 +1,17 @@
-{"section": "Exercise 2.4.1: Tables for multiplication and addition modulo 6.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Give the tables for multiplication and addition modulo 6.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "2.4.1-exercise-instructions_div.png", "question": "2.4.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.4.1-exercise-instructions_div.png",
+    "question": "2.4.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Give the tables for multiplication and addition modulo 6.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.4.1: Tables for multiplication and addition modulo 6."
+}

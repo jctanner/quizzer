@@ -1,1 +1,17 @@
-{"section": "Exercise 4.9.4: Hiring a software engineer.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  A search committee is formed to find a new software engineer.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   If 100 applicants apply for the job, how many ways are there to select a subset of 9 for a short list?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "4.9.4-exercise-instructions_div.png", "question": "4.9.4.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.9.4-exercise-instructions_div.png",
+    "question": "4.9.4.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A search committee is formed to find a new software engineer.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   If 100 applicants apply for the job, how many ways are there to select a subset of 9 for a short list?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.9.4: Hiring a software engineer."
+}

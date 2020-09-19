@@ -1,1 +1,17 @@
-{"section": "Exercise 4.12.2: Counting 5-card hands from a deck of standard playing cards.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  A 5-card hand is drawn from a deck of standard playing cards.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   How many 5-card hands have at least two cards with the same rank?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "4.12.2-exercise-instructions_div.png", "question": "4.12.2.1-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.12.2-exercise-instructions_div.png",
+    "question": "4.12.2.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A 5-card hand is drawn from a deck of standard playing cards.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   How many 5-card hands have at least two cards with the same rank?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.12.2: Counting 5-card hands from a deck of standard playing cards."
+}

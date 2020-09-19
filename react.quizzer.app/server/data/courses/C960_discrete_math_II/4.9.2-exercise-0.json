@@ -1,1 +1,17 @@
-{"section": "Exercise 4.9.2: Results of a piano competition.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  120 pianists compete in a piano competition.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   In the first round, 30 of the 120 are selected to go on to the next round. How many different\noutcomes are there for the first round?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "4.9.2-exercise-instructions_div.png", "question": "4.9.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.9.2-exercise-instructions_div.png",
+    "question": "4.9.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  120 pianists compete in a piano competition.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   In the first round, 30 of the 120 are selected to go on to the next round. How many different\noutcomes are there for the first round?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.9.2: Results of a piano competition."
+}

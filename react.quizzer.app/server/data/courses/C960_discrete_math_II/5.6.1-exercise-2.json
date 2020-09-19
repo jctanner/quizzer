@@ -1,1 +1,17 @@
-{"section": "Exercise 5.6.1: The probability of an event -  coin flips.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  A fair coin is flipped n times. Give an expression for each of the probabilities below as a function of n. Simplify your final expression as much as possible.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   The number of heads is different from the number of tails. (Assume that n is even, otherwise the probability is one.)\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "", "explanation": null, "images": {"instructions": "5.6.1-exercise-instructions_div.png", "question": "5.6.1.2-exercise-question.png", "choices": []}}
+{
+  "answer": "",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": false,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.6.1-exercise-instructions_div.png",
+    "question": "5.6.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A fair coin is flipped n times. Give an expression for each of the probabilities below as a function of n. Simplify your final expression as much as possible.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   The number of heads is different from the number of tails. (Assume that n is even, otherwise the probability is one.)\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.6.1: The probability of an event -  coin flips."
+}
