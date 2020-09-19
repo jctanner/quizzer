@@ -1,1 +1,21 @@
-{"section": "Exercise 4.12.1: Counting passwords.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  How many different passwords are there that contain only digits and lower-case letters and satisfy the given restrictions?\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Length is 6 and the password must contain at least one digit.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 36\n  <sup>\n   6\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 26\n  <sup>\n   6\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 36\n  <sup>\n   6\n  </sup>\n  - 26\n  <sup>\n   6\n  </sup>\n  .\n </p>\n</div>\n", "explanation": null, "images": {"instructions": "4.12.1-exercise-instructions_div.png", "question": "4.12.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 36\n  <sup>\n   6\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 26\n  <sup>\n   6\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 36\n  <sup>\n   6\n  </sup>\n  - 26\n  <sup>\n   6\n  </sup>\n  .\n </p>\n</div>\n",
+  "choices": [
+    "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 37\n  <sup>\n   13\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 28\n  <sup>\n   12\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 41\n  <sup>\n   13\n  </sup>\n  - 33\n  <sup>\n   13\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 43\n  <sup>\n   7\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 30\n  <sup>\n   12\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 40\n  <sup>\n   13\n  </sup>\n  - 34\n  <sup>\n   9\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 36\n  <sup>\n   6\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 26\n  <sup>\n   6\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 36\n  <sup>\n   6\n  </sup>\n  - 26\n  <sup>\n   6\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 43\n  <sup>\n   11\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 30\n  <sup>\n   12\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 38\n  <sup>\n   15\n  </sup>\n  - 32\n  <sup>\n   7\n  </sup>\n  .\n </p>\n</div>\n"
+  ],
+  "correct_choice_index": 2,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.12.1-exercise-instructions_div.png",
+    "question": "4.12.1.0-exercise-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"setup\">\n <p>\n  How many different passwords are there that contain only digits and lower-case letters and satisfy the given restrictions?\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Length is 6 and the password must contain at least one digit.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.12.1: Counting passwords."
+}

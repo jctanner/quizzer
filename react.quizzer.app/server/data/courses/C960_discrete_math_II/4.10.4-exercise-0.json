@@ -1,1 +1,21 @@
-{"section": "Exercise 4.10.4: Scheduling meals at a school.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  A school cook plans her calendar for the month of February in which there are 20 school days.  \nShe plans exactly one meal per school day.\nUnfortunately, she only knows how to cook ten different meals.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   How many ways are there for her to plan her schedule of menus for the 20 school days if there are no restrictions on the number of times she cooks a particular type of meal?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n20 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 20 school days is 10\n  <sup>\n   20\n  </sup>\n  .\n </p>\n</div>\n", "explanation": null, "images": {"instructions": "4.10.4-exercise-instructions_div.png", "question": "4.10.4.0-exercise-question.png", "choices": []}}
+{
+  "answer": "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n20 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 20 school days is 10\n  <sup>\n   20\n  </sup>\n  .\n </p>\n</div>\n",
+  "choices": [
+    "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n29 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 27 school days is 17\n  <sup>\n   27\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n20 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 20 school days is 10\n  <sup>\n   20\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n28 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 29 school days is 19\n  <sup>\n   23\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n28 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 22 school days is 16\n  <sup>\n   28\n  </sup>\n  .\n </p>\n</div>\n"
+  ],
+  "correct_choice_index": 1,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.10.4-exercise-instructions_div.png",
+    "question": "4.10.4.0-exercise-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"setup\">\n <p>\n  A school cook plans her calendar for the month of February in which there are 20 school days.  \nShe plans exactly one meal per school day.\nUnfortunately, she only knows how to cook ten different meals.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   How many ways are there for her to plan her schedule of menus for the 20 school days if there are no restrictions on the number of times she cooks a particular type of meal?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.10.4: Scheduling meals at a school."
+}

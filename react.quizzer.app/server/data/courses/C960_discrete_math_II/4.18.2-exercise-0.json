@@ -1,1 +1,21 @@
-{"section": "Exercise 4.18.2: Counting binary strings.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Count the number of binary strings of length 10 subject to each of the following restrictions.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   The string has at least one 1.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 1's: 00000000000.\nThere are 2\n  <sup>\n   10\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 1 is 2\n  <sup>\n   10\n  </sup>\n  - 1.\n </p>\n</div>\n", "explanation": null, "images": {"instructions": "4.18.2-exercise-instructions_div.png", "question": "4.18.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 1's: 00000000000.\nThere are 2\n  <sup>\n   10\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 1 is 2\n  <sup>\n   10\n  </sup>\n  - 1.\n </p>\n</div>\n",
+  "choices": [
+    "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 6's: 4.\nThere are 47\n  <sup>\n   38\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 1 is 2\n  <sup>\n   10\n  </sup>\n  - 1.\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 8's: 7.\nThere are 4\n  <sup>\n   49\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 9 is 5\n  <sup>\n   18\n  </sup>\n  - 1.\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 1's: 00000000000.\nThere are 2\n  <sup>\n   10\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 1 is 2\n  <sup>\n   10\n  </sup>\n  - 1.\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 3's: 6.\nThere are 7\n  <sup>\n   33\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 9 is 11\n  <sup>\n   17\n  </sup>\n  - 1.\n </p>\n</div>\n"
+  ],
+  "correct_choice_index": 2,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.18.2-exercise-instructions_div.png",
+    "question": "4.18.2.0-exercise-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"setup\">\n <p>\n  Count the number of binary strings of length 10 subject to each of the following restrictions.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   The string has at least one 1.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.18.2: Counting binary strings."
+}

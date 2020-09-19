@@ -1,1 +1,16 @@
-{"section": "Exercise 4.8.1: Mapping permutations to subsets.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  Consider a function f that maps 5-permutations from the set S = {1, \u2026, 20}  to 5-subsets from\nS. \nThe function takes a 5-permutation and removes the ordering on the elements.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Is (12, 3, 12, 4, 19)  a 5-permutation?  Why or why not?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "No because 12 appears twice.", "explanation": null, "images": {"instructions": "4.8.1-exercise-instructions_div.png", "question": "4.8.1.1-exercise-question.png", "choices": []}}
+{
+  "answer": "No",
+  "choices": [],
+  "correct_choice_index": null,
+  "explanation": "No because 12 appears twice.",
+  "images": {
+    "choices": [],
+    "instructions": "4.8.1-exercise-instructions_div.png",
+    "question": "4.8.1.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Consider a function f that maps 5-permutations from the set S = {1, \u2026, 20}  to 5-subsets from\nS. \nThe function takes a 5-permutation and removes the ordering on the elements.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Is (12, 3, 12, 4, 19)  a 5-permutation?  Why or why not?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.8.1: Mapping permutations to subsets."
+}

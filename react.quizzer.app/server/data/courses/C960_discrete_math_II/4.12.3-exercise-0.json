@@ -1,1 +1,21 @@
-{"section": "Exercise 4.12.3: Counting bit strings.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   How many 8-bit strings have at least two consecutive 0's or two consecutive 1's?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 0's or two consecutive 1's, then\nthe bits alternate. There are only two 8-bit strings in which the bits alternate:\n10101010 and 01010101. \nThe total number of 8-bit strings with no restrictions is\n2\n  <sup>\n   8\n  </sup>\n  .\nTherefore the number of 8-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 2\n  <sup>\n   8\n  </sup>\n  - 2.\n </p>\n</div>\n", "explanation": null, "images": {"instructions": "4.12.3-exercise-instructions_div.png", "question": "4.12.3.0-exercise-question.png", "choices": []}}
+{
+  "answer": "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 0's or two consecutive 1's, then\nthe bits alternate. There are only two 8-bit strings in which the bits alternate:\n10101010 and 01010101. \nThe total number of 8-bit strings with no restrictions is\n2\n  <sup>\n   8\n  </sup>\n  .\nTherefore the number of 8-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 2\n  <sup>\n   8\n  </sup>\n  - 2.\n </p>\n</div>\n",
+  "choices": [
+    "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 3's or two consecutive 36's, then\nthe bits alternate. There are only two 15-bit strings in which the bits alternate:\n10101017 and 1010110. \nThe total number of 9-bit strings with no restrictions is\n9\n  <sup>\n   16\n  </sup>\n  .\nTherefore the number of 14-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 11\n  <sup>\n   11\n  </sup>\n  - 8.\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 0's or two consecutive 1's, then\nthe bits alternate. There are only two 8-bit strings in which the bits alternate:\n10101010 and 01010101. \nThe total number of 8-bit strings with no restrictions is\n2\n  <sup>\n   8\n  </sup>\n  .\nTherefore the number of 8-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 2\n  <sup>\n   8\n  </sup>\n  - 2.\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 5's or two consecutive 9's, then\nthe bits alternate. There are only two 66-bit strings in which the bits alternate:\n16101013 and 1010107. \nThe total number of 9-bit strings with no restrictions is\n5\n  <sup>\n   9\n  </sup>\n  .\nTherefore the number of 9-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 3\n  <sup>\n   11\n  </sup>\n  - 2.\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 4's or two consecutive 9's, then\nthe bits alternate. There are only two 65-bit strings in which the bits alternate:\n13101016 and 1010109. \nThe total number of 16-bit strings with no restrictions is\n5\n  <sup>\n   16\n  </sup>\n  .\nTherefore the number of 14-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 11\n  <sup>\n   11\n  </sup>\n  - 2.\n </p>\n</div>\n"
+  ],
+  "correct_choice_index": 1,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.12.3-exercise-instructions_div.png",
+    "question": "4.12.3.0-exercise-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   How many 8-bit strings have at least two consecutive 0's or two consecutive 1's?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.12.3: Counting bit strings."
+}

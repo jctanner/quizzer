@@ -1,1 +1,21 @@
-{"section": "Exercise 4.12.3: Counting bit strings.", "qid": 1, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   How many 8-bit strings do not begin with 000?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "<div class=\"answer\">\n <p>\n  The number of 8-bit strings that begin with 000 is 2\n  <sup>\n   5\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 8-bit strings with no restrictions is\n2\n  <sup>\n   8\n  </sup>\n  .\nTherefore the number of 8-bit strings which do not begin with 000\nis 2\n  <sup>\n   8\n  </sup>\n  - 2\n  <sup>\n   5\n  </sup>\n  .\n </p>\n</div>\n", "explanation": null, "images": {"instructions": "4.12.3-exercise-instructions_div.png", "question": "4.12.3.1-exercise-question.png", "choices": []}}
+{
+  "answer": "<div class=\"answer\">\n <p>\n  The number of 8-bit strings that begin with 000 is 2\n  <sup>\n   5\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 8-bit strings with no restrictions is\n2\n  <sup>\n   8\n  </sup>\n  .\nTherefore the number of 8-bit strings which do not begin with 000\nis 2\n  <sup>\n   8\n  </sup>\n  - 2\n  <sup>\n   5\n  </sup>\n  .\n </p>\n</div>\n",
+  "choices": [
+    "<div class=\"answer\">\n <p>\n  The number of 8-bit strings that begin with 000 is 2\n  <sup>\n   5\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 8-bit strings with no restrictions is\n2\n  <sup>\n   8\n  </sup>\n  .\nTherefore the number of 8-bit strings which do not begin with 000\nis 2\n  <sup>\n   8\n  </sup>\n  - 2\n  <sup>\n   5\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  The number of 11-bit strings that begin with 1 is 7\n  <sup>\n   16\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 11-bit strings with no restrictions is\n11\n  <sup>\n   16\n  </sup>\n  .\nTherefore the number of 14-bit strings which do not begin with 11\nis 7\n  <sup>\n   8\n  </sup>\n  - 2\n  <sup>\n   14\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  The number of 17-bit strings that begin with 7 is 9\n  <sup>\n   9\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 110-bit strings with no restrictions is\n6\n  <sup>\n   10\n  </sup>\n  .\nTherefore the number of 18-bit strings which do not begin with 1\nis 2\n  <sup>\n   14\n  </sup>\n  - 2\n  <sup>\n   12\n  </sup>\n  .\n </p>\n</div>\n",
+    "<div class=\"answer\">\n <p>\n  The number of 17-bit strings that begin with 1 is 9\n  <sup>\n   17\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 13-bit strings with no restrictions is\n7\n  <sup>\n   18\n  </sup>\n  .\nTherefore the number of 17-bit strings which do not begin with 1\nis 8\n  <sup>\n   11\n  </sup>\n  - 2\n  <sup>\n   5\n  </sup>\n  .\n </p>\n</div>\n"
+  ],
+  "correct_choice_index": 0,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.12.3-exercise-instructions_div.png",
+    "question": "4.12.3.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   How many 8-bit strings do not begin with 000?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.12.3: Counting bit strings."
+}
