@@ -80,7 +80,7 @@ function QuestionChoices(props) {
                             <div dangerouslySetInnerHTML={ { __html: choice } } />
                         )}
                         { ((!showImages || hasChoiceImages == null) && !choice.includes('<div') ) && (
-                            <>{ choice }</>
+                            <>{ choice }<br/></>
                         )}
                     </>
                 ))}
