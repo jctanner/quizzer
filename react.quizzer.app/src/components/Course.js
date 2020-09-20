@@ -228,6 +228,12 @@ function CoursePage() {
         history.push(quizUrl)
     };
 
+    const startTest = () => {
+        //<Link to={ "/courses/" + courseName + '/quiz' }>start quiz</Link>
+        const quizUrl = '/courses/' + courseName + '/quiz' + '?' + 'count=30';
+        history.push(quizUrl)
+    };
+
     const startFilteredQuiz = () => {
         const quizUrl = '/courses/' + courseName + '/quiz' + '?' + 'search_section=' + searchText;
         history.push(quizUrl)
@@ -243,7 +249,7 @@ function CoursePage() {
                     <Button onClick={startQuiz} color="warning">start quiz</Button>
                 </span>
                 <span style={{ padding: "10px" }}>
-                    <Button onClick={startQuiz} color="danger">start test</Button>
+                    <Button onClick={startTest} color="danger">start test</Button>
                 </span>
             </div>
             <hr/>

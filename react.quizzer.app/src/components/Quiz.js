@@ -64,9 +64,17 @@ function QuizPage({ multiplechoice }) {
 
         quizurl = '/api/quiz/' + courseID
         console.log('search query.search ...', query.get('search_section'));
+
+        let qCount = query.get('count');
+        if (qCount === null || qCount === undefined) {
+            qCount = "10";
+        };
+
         const sectionSearchString = query.get('search_section');
         if ( sectionSearchString !== null && sectionSearchString !== undefined && sectionSearchString !== "" ) {
-            quizurl += '?' + 'search_section=' + sectionSearchString;
+            quizurl += '?' + 'search_section=' + sectionSearchString + '&count=' + qCount;
+        } else {
+            quizurl += '?' + 'count=' + qCount;
         }
 
         console.log('quizurl', quizurl)

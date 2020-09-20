@@ -246,6 +246,14 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     const searchSectionString = req.query.search_section
     console.log(searchSectionString)
 
+    let qCount = req.query.count
+    if (qCount === undefined || qCount === null) {
+        qCount = "10"
+    }
+    qCount = parseInt(qCount)
+
+    console.log('#### qCount', qCount)
+
     let questionList = [...coursesFiles[req.params.courseName]]
     //let multiplechoice = req.query.multiplechoice
     //console.log(multiplechoice)
@@ -287,8 +295,8 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 
     // select a random set of questions from the list
     let quizList = [];
-    if ( questionList.length >= 10 ) {
-        for (let i=0; i<10 && i<questionList.length; i++) {
+    if ( questionList.length >= qCount ) {
+        for (let i=0; i<qCount && i<questionList.length; i++) {
             const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
             quizList.push(randomQuestion);
 

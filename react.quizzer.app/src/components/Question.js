@@ -36,6 +36,60 @@ function QuestionInstructions(props) {
     )
 }
 
+function QuestionChoices(props) {
+
+    const courseName = props.courseName;
+    const questionData = props.questionData;
+    const showImages = props.showImages;
+    const userSelection = props.userSelection;
+    const currentSelection = props.currentSelection;
+    const handleSelect = props.handleSelect;
+
+    const getChoiceImageUrl = (index) => {
+        let imgurl = null;
+        if (questionData.images && questionData.images.choices && questionData.images.choices[index]) {
+            imgurl = '/images/' + courseName + '/' + questionData.images.choices[index];
+        }
+        return imgurl;
+    }
+
+    const hasChoiceImages = getChoiceImageUrl(0);
+
+    return (
+        <>
+            <h3>choices</h3>
+            <form>
+                <fieldset>
+                { questionData.choices.map((choice, index) => (
+                    <>
+                        <input 
+                            onChange={ handleSelect }
+                            checked={ choice === currentSelection || choice === userSelection }
+                            type="radio"
+                            value={ choice }
+                            key={ index }
+                            id={ index }
+                        />
+                        { (showImages && questionData.images && questionData.images.choices[index]) && (
+                            <>
+                                <img src={ getChoiceImageUrl(index) }/>
+                                <br/>
+                            </>
+                        )}
+                        { ((!showImages || hasChoiceImages == null) && choice.includes('<div') ) && (
+                            <div dangerouslySetInnerHTML={ { __html: choice } } />
+                        )}
+                        { ((!showImages || hasChoiceImages == null) && !choice.includes('<div') ) && (
+                            <>{ choice }</>
+                        )}
+                    </>
+                ))}
+                </fieldset>
+            </form>
+        </>
+    )
+}
+
 
 function QuestionDiv(props) {
 
@@ -82,6 +136,7 @@ function QuestionDiv(props) {
             { (showImages && questionData.images) && <img src={ '/images/' + courseName + '/' + questionData.images.question }/> }
 
             <hr/>
+            {/*
             { (questionData.input_type === "fieldset") && 
                 <div>
                 <h3>choices</h3>
@@ -108,6 +163,17 @@ function QuestionDiv(props) {
                     </fieldset>
                 </form>
                 </div>
+            }
+            */}
+            { (questionData.input_type === "fieldset") && 
+                <QuestionChoices
+                    courseName={ courseName }
+                    questionData={ questionData }
+                    showImages={ showImages }
+                    handleSelect={ props.handleSelect }
+                    currentSelection={ props.currentSelection }
+                    userSelection={ props.userSelection }
+                />
             }
             { (questionData.input_type === "input" || questionData.input_type !== "fieldset") && 
                 <form>
