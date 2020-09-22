@@ -17,15 +17,31 @@ function SessionListItem(props) {
     const sessionid = props.sessionid;
     const handleSessionClicked = props.handleSessionClicked;
     const courseStats = props.courseStats;
+
+    const sessionInfo = courseStats.session_info[sessionid];
+    let sDate = null;
+    if (sessionInfo) {
+        sDate = courseStats.session_info[sessionid].date;
+    }
+    if (sDate) {
+        sDate = moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD");
+    } else {
+        sDate = 'null';
+    }
+
+    let score = null;
+    if (sessionInfo && sessionInfo.score) {
+        score = sessionInfo.score.toString().padStart(4);
+    }
     
     return (
        <li key={sessionid} id={sessionid} onClick={() => handleSessionClicked(sessionid)}>
             <span style={{ padding: "5px" }}>
-                { moment(courseStats.session_info[sessionid].date - 1000).format("YYYY-MM-DD") }
+                { sDate }
             </span>
             <tt>{ sessionid }</tt>
             <span style={{ padding: "5px"}}/>
-            <tt>{ courseStats.session_info[sessionid].score.toString().padStart(4) }</tt>
+            <tt>{ score }</tt>
         </li> 
 
     );

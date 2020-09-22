@@ -1,7 +1,9 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
+import { Button } from 'reactstrap';
 
 import { postSessionAnswer } from '../Api';
 
@@ -16,9 +18,6 @@ function QuestionInstructions(props) {
     if (questionData.images && questionData.images.instructions !== undefined) {
         imgfile = '/images/' + courseName + '/' + questionData.images.instructions;
     }
-
-    console.log(questionData);
-    console.log('imgfile', imgfile);
 
     return (
         <>
@@ -135,24 +134,54 @@ function QuestionDiv(props) {
     let showImages = props.showImages;
     const toggleImages = props.toggleImages;
 
-    console.log('--------------------------------------------')
-    console.log(questionData);
-    console.log('--------------------------------------------')
+    const showCheckButton = props.showCheckButton;
+    const questionApiUrl = '/api/courses/' + courseName + '/questions/' + questionID;
 
-    useEffect(() => {
-        console.log('#######################################');
-        console.log('props.currentSelection', props.currentSelection);
-        console.log('props.userSelection', props.userSelection);
-        console.log('#######################################');
-    });
+    // use these to highlight correct/incorrect answers
+    const isChecked = props.isChecked;
+    const isCorrect = props.isCorrect;
 
+    let inputStyle = {};
+    if (isChecked) {
+        if (isCorrect) {
+            inputStyle = {color: 'green'}
+        } else {
+            inputStyle = {color: 'red'}
+        }
+    }
 
     return (
         <div style={{ marginTop: '20px'}}>
             <li><strong>{ questionID }</strong> { questionData.section }</li>
+            <li>{ questionData.filename }</li>
             <hr/>
-            { ( showImages ) && <button onClick={ toggleImages }>html</button> }
-            { ( !showImages ) && <button onClick={ toggleImages }>images</button> }
+            { ( showImages ) && <Button onClick={ toggleImages }>use html</Button> }
+            { ( !showImages ) && <Button onClick={ toggleImages }>use images</Button> }
+
+            { (showCheckButton) && (
+                <Button style={{ marginLeft: '10px' }} onClick={ props.handleCheck }>check</Button>
+            )}
+
+            { (answerHidden === true) &&
+                <Button style={{ marginLeft: '10px' }} onClick={ toggleAnswer }>show answer</Button>
+            }
+            { (answerHidden !== true) &&
+                <Button style={{ marginLeft: '10px' }} onClick={ toggleAnswer }>hide answer</Button>
+            }
+
+            { (showPreviousNext && questionData.previous !== null) && (
+                <Button style={{ marginLeft: '400px' }} onClick={ props.handlePrevious }>
+                    {/*<a href={ questionData.previous }>previous</a> */}
+                    Last
+                </Button> 
+            )}
+            { (showPreviousNext &&  questionData.next !== null) && (
+                <Button style={{ marginLeft: '10px' }} onClick={ props.handleNext }>
+                    {/*<a href={ questionData.next }>next</a>*/}
+                    Next 
+                </Button> 
+            )}
+
             <hr/>
 
             <QuestionInstructions
@@ -176,51 +205,40 @@ function QuestionDiv(props) {
                     userSelection={ props.userSelection }
                 />
             }
-            { (questionData.input_type === "input" || questionData.input_type !== "fieldset") && 
+            { (questionData.input_type === "input" || questionData.input_type !== "fieldset") &&  (
                 <form>
                     <input
+                        style={ inputStyle }
                         key={ props.questionID }
                         onChange={ props.handleOnChange }
                         type="text"
                         value={ props.currentSelection }
                     />
                 </form>
-            }
-            <hr/>
-            { (answerHidden === true) &&
-                <button onClick={ toggleAnswer }>show answer</button>
-            }
-            { (answerHidden !== true) &&
-                <button onClick={ toggleAnswer }>hide answer</button>
-            }
-
-            {/*
-            { (answerHidden === false && !showImages) && <div><h3>answer</h3><div dangerouslySetInnerHTML={ { __html: questionData.answer } }></div><h3>explanation</h3><div dangerouslySetInnerHTML={ { __html: questionData.explanation } }></div></div> }
-            { (answerHidden === false && showImages && questionData.images) && <div>
-                <img src={ '/images/' + courseName + '/' + questionData.images.explanation }/>
-                </div> }
-            */}
+            )}
+            {( isChecked && isCorrect ) && (<div style={{ color: 'green' }}>Correct!</div>)}
+            {( isChecked && !isCorrect ) && (<div style={{ color: 'red' }}>incorrect.</div>)}
 
             { (!answerHidden) && (
+                <>
+                <hr/>
                 <QuestionAnswer
                     showImages={showImages}
                     courseName={courseName}
                     questionData={questionData}
                 />
+                </>
             )}
-
-            <hr/>
-            { (showPreviousNext && questionData.previous !== null) && <button><a href={ questionData.previous }>previous</a></button> }
-            { (showPreviousNext &&  questionData.next !== null) && <button><a href={ questionData.next }>next</a></button> }
 
         </div>
     );
 };
 
-// A SINGLE QUESTION
+// A SINGLE QUESTION (NOT PART OF A QUIZ VIEW)
 function QuestionPage() {
-   
-    console.log('question page ...');
+
+    const [isChecked, setIsChecked] = useState(false);
+    const [isCorrect, setIsCorrect] = useState(false);
 
     const [showImages, setShowImages] = useState(true);
     const [userChoice, setUserChoice] = useState(null);
@@ -228,16 +246,41 @@ function QuestionPage() {
     const [questionData, setQuestionData] = useState([]);
     let { courseName, questionId } = useParams();
     const questionApiUrl = '/api/courses/' + courseName + '/questions/' + questionId;
-    console.log(questionApiUrl)
+    const history = useHistory();
+
+    const handlePrevious = (e) => {
+        setIsChecked(false);
+        setIsCorrect(false)
+        history.push(questionData.previous);
+    }
+    const handleNext = (e) => {
+        setIsChecked(false);
+        setIsCorrect(false)
+        history.push(questionData.next);
+    }
+
+    const handleCheck = (e) => {
+        setIsChecked(true);
+        console.log('checking:', e);
+        console.log('checking userChoice:', userChoice);
+
+        if (userChoice == questionData.answer) {
+            setIsCorrect(true)
+        } else {
+            setIsCorrect(false)
+        }
+
+        postSessionAnswer(null, courseName, questionId, userChoice, null);
+    };
 
     const handleSelect = (e) => {
-        console.log(e);
-        console.log('selected Zvalue', e.currentTarget.value);
+        //console.log(e);
+        //console.log('selected Zvalue', e.currentTarget.value);
         setUserChoice(e.currentTarget.value);
     };
 
     const handleOnChange = (e) => {
-        console.log(e.target.value);
+        //console.log(e.target.value);
         setUserChoice(e.target.value);
     };
 
@@ -260,10 +303,10 @@ function QuestionPage() {
     useEffect(() => {
 
         const fetchQuestionData = async () => {
-            console.log('fetching ' + questionApiUrl)
+            //console.log('fetching ' + questionApiUrl)
             const newQuestionData = await fetch(questionApiUrl)
                 .then(res => res.json());
-            console.log(newQuestionData);
+            //console.log(newQuestionData);
             setQuestionData(newQuestionData);
             if (!('images' in newQuestionData)) {
                 setShowImages(false);
@@ -273,7 +316,7 @@ function QuestionPage() {
         fetchQuestionData();
 
         return () => {
-            console.log('cleanup');
+            //console.log('cleanup');
         };
     }, [questionApiUrl]);
 
@@ -290,6 +333,12 @@ function QuestionPage() {
             showPreviousNext={ true }
             showImages={ showImages }
             toggleImages={ toggleImages }
+            showCheckButton={ true }
+            isChecked={ isChecked }
+            isCorrect={ isCorrect }
+            handleCheck={ handleCheck }
+            handlePrevious={ handlePrevious }
+            handleNext={ handleNext }
         />
     );
 };
@@ -305,7 +354,7 @@ export const InlineQuestion = (props) => {
     const courseName = props.courseName;
     const questionID = props.questionID;
     const questionApiUrl = '/api/courses/' + courseName + '/questions/' + questionID;
-    console.log(questionApiUrl)
+    //console.log(questionApiUrl)
 
     const toggleAnswer = (e) => {
         if ( answerHidden === true ) {
@@ -323,19 +372,6 @@ export const InlineQuestion = (props) => {
         }
     };
 
-    /*
-    const handleSelect = (e) => {
-        console.log(e);
-        console.log('selected Zvalue', e.currentTarget.value);
-        setUserChoice(e.currentTarget.value);
-    };
-
-    const handleOnChange = (e) => {
-        props.console.log(e.target.value);
-        props.setUserChoice(e.target.value);
-    };
-    */
-
     useEffect(() => {
 
         const fetchQuestionData = async () => {
@@ -351,15 +387,17 @@ export const InlineQuestion = (props) => {
         fetchQuestionData();
 
         return () => {
-            console.log('cleanup');
+            //console.log('cleanup');
         };
     }, [questionApiUrl]);
 
     useEffect(() => {
+        /*
         console.log('###################################### 1');
         console.log('props.currentSelection', props.currentSelection);
         console.log('props.userSelection', props.userSelection);
         console.log('###################################### 1');
+        */
     });
 
     return (
@@ -378,6 +416,7 @@ export const InlineQuestion = (props) => {
             showPreviousNext={ false }
             showImages={ showImages }
             toggleImages={ toggleImages }
+            showCheckButton={ false }
         />
     );
 };

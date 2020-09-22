@@ -426,13 +426,19 @@ app.get('/api/stats/:courseName', async function (req, res) {
             `SELECT * FROM sessions WHERE sessionid='${sessionID}'`
         ).all()
         const thisSessionData = rows[0]
-        const thisSessionQuestionIds = JSON.parse(thisSessionData.qidsjson)
-        const thisTotalQuestions = thisSessionQuestionIds.length
-        sessionInfo[sessionID].date = thisSessionData.started
-        sessionInfo[sessionID].total = thisTotalQuestions
-        sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
-        sessionInfo[sessionID].y = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
-        sessionInfo[sessionID].value = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+        //let thisSessionQuestionIds = []
+        //let thisTotalQuestions = 1
+        if ( thisSessionData !== undefined ) {
+            const thisSessionQuestionIds = JSON.parse(thisSessionData.qidsjson)
+            const thisTotalQuestions = thisSessionQuestionIds.length
+            sessionInfo[sessionID].date = thisSessionData.started
+            sessionInfo[sessionID].total = thisTotalQuestions
+            sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+            sessionInfo[sessionID].y = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+            sessionInfo[sessionID].value = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+        } else {
+            delete sessionInfo[sessionID]
+        }
     })
 
     console.log(sessionInfo)
@@ -526,8 +532,12 @@ app.get('/api/results/:sessionid', async function (req, res) {
     ).all()
     console.log(rows)
     const sessionData = rows[0]
-    const sessionQuestionIds = JSON.parse(sessionData.qidsjson)
-    const totalQuestions = sessionQuestionIds.length
+    let sessionQuestionIds = []
+    let totalQuestions = 1
+    if ( sessionData.qidsjson !== undefined ) {
+        sessionQuestionIds = JSON.parse(sessionData.qidsjson)
+        totalQuestions = sessionQuestionIds.length
+    }
 
     // how many were answered?
     rows = db.prepare(
