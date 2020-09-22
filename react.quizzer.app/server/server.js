@@ -457,11 +457,16 @@ app.post('/api/session/answer', function (req, res) {
     console.log(req.body);
 
     const thisDate = moment.utc().format('YYYY-MM-DDTHH:MM:SS')
-    const sessionid = req.body.sessionid;
+    let sessionid = req.body.sessionid;
     const coursename = req.body.coursename;
     const questionid = req.body.questionid;
     const answer = req.body.answer;
     const choiceindex = req.body.choiceindex;
+
+    // if there is no session, then this is an adhoc question result ...
+    if (sessionid === null || sessionid === undefined) {
+        sessionid = uuidv4()
+    }
 
     // check if the answer is correct or not
     const qData = getQuestionData(coursename, questionid)
