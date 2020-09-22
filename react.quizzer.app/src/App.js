@@ -54,7 +54,7 @@ function App() {
 	return (
 		<Router>
         	<div style={{ ...mainStyle }}>
-        	    <div style={{ background: '#608f9f', 'border-radius': '5px' }}>
+        	    <div style={{ background: '#608f9f', borderRadius: '5px' }}>
                     <Navbar bg="transparent" expand="lg">
                         <Nav>
                             <NavbarBrand href="/">Quizzer</NavbarBrand>
