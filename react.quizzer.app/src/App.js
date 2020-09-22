@@ -56,12 +56,12 @@ function App() {
                         <Nav>
                             <NavbarBrand href="/">Quizzer</NavbarBrand>
                             { courseList.map((courseName) =>
-                                <>
+                                <div key={ courseName }>
                                 <div style={{ borderLeft: '1px solid darkgray' }}></div>
-                                <NavItem>
-                                    <NavLink href={ "/courses/" + courseName } >{ courseName }</NavLink>
+                                <NavItem key={ courseName }>
+                                    <NavLink key={ courseName } href={ "/courses/" + courseName } >{ courseName }</NavLink>
                                 </NavItem>
-                                </>
+                                </div>
                             )}
                             <div style={{ borderLeft: '1px solid darkgray' }}></div>
                         </Nav>

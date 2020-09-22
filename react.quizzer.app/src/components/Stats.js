@@ -42,7 +42,8 @@ function StatsDiv(props) {
             <div style={{ float: 'top', width: '100%', height: '200px'}}>
                 <span className="column" style={{ float: "left", margin: '10px', width: "20%", height: '100%', padding: '10px', borderRadius: '10px', background: 'white'}}>
                     <h5>total questions answered</h5>
-                        <Doughnut
+                    <Doughnut
+                        key='doughnut'
                         legend={ {display: true} }
                         data={ {
                             labels: ['answered', 'unanswered'],
@@ -52,14 +53,14 @@ function StatsDiv(props) {
                             } ]
                         } }
                     />
-                        
                 </span>
                 <span className="column" style={{ float: "left", margin: '10px', width: "35%", height: '100%', padding: '10px', borderRadius: '10px', background: 'white'}}>
                     <h5>quiz scores</h5>
                     <Bar
+                        key='bar'
                         legend={ {display: false} }
-                        width={ '100%' }
-                        height={ '25' }
+                        width={ 100 }
+                        height={ 25 }
                         data={ {
                             labels: scoreHistory.map((score, ix) => ix),
                             datasets: [ {
@@ -67,13 +68,13 @@ function StatsDiv(props) {
                             } ]
                         } }
                     />
-                        
                 </span>
                 <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '10px 10px 10px 10px', borderRadius: '10px', background: 'white', fontSize: '10px'}}>
                     <h5>last quiz results</h5>
                     { courseStats.sessionids !== undefined &&
                         courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>
                             <SessionListItem
+                                key={ sessionid }
                                 sessionid={ sessionid }
                                 courseStats={ courseStats }
                                 handleSessionClicked={handleSessionClicked }
