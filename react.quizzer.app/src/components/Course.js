@@ -127,33 +127,25 @@ function CoursePage() {
     ];
 
     const handleOnChangeSearch = (e) => {
-        console.log(e.target.value);
         setSearchTextTmp(e.target.value);
     };
 
     const handleSearchSubmit = (e) => {
-        //console.log(e);
-        //console.log(e.target.value);
         setSearchText(searchTextTmp);
     };
 
     const handleQuestionRowClicked = (row) => {
-        console.log(row);
         const rowQuestionId = row.questionid;
         const questionUrl = '/courses/' + courseName + '/questions/' + rowQuestionId;
         window.location = questionUrl;
     };
 
     const handleSessionClicked = (sessionid) => {
-        console.log(sessionid)
         const sessionUrl = '/sessions/' + sessionid;
         window.location = sessionUrl;
     };
 
     useEffect(() => {
-        //let isMounted = true;
-        console.log('coursepage useeffect ...');
-
         const fetchQuestionList = async () => {
             const courseApiUrl = '/api/courses/' + courseName;
             const newQuestionList = await fetch(courseApiUrl + '/questions')
@@ -172,7 +164,6 @@ function CoursePage() {
             let newTableData = [];
             for (let i=0; i<newStats.questionlist.length; i++) {
                 const qid = newStats.questionlist[i];
-                console.log(qid);
                 let thisRowData = newStats.questions[qid];
                 thisRowData.id = i;
                 if ( thisRowData.total > 0 ) {
@@ -180,7 +171,6 @@ function CoursePage() {
                 } else {
                     thisRowData.average = 0;
                 };
-                console.log(thisRowData);
                 newTableData.push(thisRowData);
             }
 
@@ -193,7 +183,6 @@ function CoursePage() {
         fetchCourseStats();
 
         return () => {
-            console.log('cleanup');
         };
     }, [courseName]);
 
@@ -212,8 +201,6 @@ function CoursePage() {
                     return false;
                 }; 
                 return row.section.includes(searchText);
-                //console.log(row);
-                //return true;
             });
             setTableData(newTableData);
         } else {
@@ -240,7 +227,7 @@ function CoursePage() {
     };
 
 	return (
-		<div style={{ 'margin-top': '30px' }}>
+		<div style={{ marginTop: '30px' }}>
         	<h2>{ courseName.replace(/_/g, ' ') }</h2>
             <hr/>
 

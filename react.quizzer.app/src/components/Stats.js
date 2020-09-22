@@ -40,7 +40,7 @@ function StatsDiv(props) {
 
 	return (
             <div style={{ float: 'top', width: '100%', height: '200px'}}>
-                <span className="column" style={{ float: "left", margin: '10px', width: "20%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
+                <span className="column" style={{ float: "left", margin: '10px', width: "20%", height: '100%', padding: '10px', borderRadius: '10px', background: 'white'}}>
                     <h5>total questions answered</h5>
                         <Doughnut
                         legend={ {display: true} }
@@ -54,7 +54,7 @@ function StatsDiv(props) {
                     />
                         
                 </span>
-                <span className="column" style={{ float: "left", margin: '10px', width: "35%", height: '100%', padding: '10px', 'border-radius': '10px', background: 'white'}}>
+                <span className="column" style={{ float: "left", margin: '10px', width: "35%", height: '100%', padding: '10px', borderRadius: '10px', background: 'white'}}>
                     <h5>quiz scores</h5>
                     <Bar
                         legend={ {display: false} }
@@ -69,7 +69,7 @@ function StatsDiv(props) {
                     />
                         
                 </span>
-                <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '10px 10px 10px 10px', 'border-radius': '10px', background: 'white', 'font-size': '10px'}}>
+                <span className="column" style={{ float: "left", margin: '10px', width: "33%", height: '100%', padding: '10px 10px 10px 10px', borderRadius: '10px', background: 'white', fontSize: '10px'}}>
                     <h5>last quiz results</h5>
                     { courseStats.sessionids !== undefined &&
                         courseStats.sessionids.slice(0).reverse().slice(0,10).map((sessionid, session_index) =>

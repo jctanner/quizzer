@@ -41,15 +41,12 @@ function App() {
     const fetchCourseList = async () => {
         const newCourseList = await fetch('/api/courses')
             .then(res => res.json())
-        console.log(typeof newCourseList);
         setCourseList(newCourseList);
     };
 
     useEffect(() => {
         fetchCourseList();
     }, [])
-
-    console.log('cl type', typeof courseList);
 
 	return (
 		<Router>

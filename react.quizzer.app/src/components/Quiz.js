@@ -12,7 +12,6 @@ import { postSessionAnswer } from '../Api';
 function getCourseIdFromCurrentUrl() {
     // http://localhost:3000/courses/C960_discrete_math_II/quiz
     const thisPath = window.location.pathname;
-    console.log('thisPath', thisPath);
     const thisPathParts = thisPath.split('/');
     const totalParts = thisPathParts.length;
     return thisPathParts[totalParts - 2];
@@ -54,16 +53,7 @@ function QuizPage({ multiplechoice }) {
     const fetchQuiz = async () => {
 
         let quizurl = null;
-        /*
-        if (isMultipleChoice) { 
-            quizurl = '/api/quiz/' + courseID + '?muliplechoice=1'
-        } else {
-            quizurl = '/api/quiz/' + courseID
-        }
-        */
-
         quizurl = '/api/quiz/' + courseID
-        console.log('search query.search ...', query.get('search_section'));
 
         let qCount = query.get('count');
         if (qCount === null || qCount === undefined) {
@@ -77,11 +67,9 @@ function QuizPage({ multiplechoice }) {
             quizurl += '?' + 'count=' + qCount;
         }
 
-        console.log('quizurl', quizurl)
         await fetch(quizurl)
             .then(res => res.json())
             .then((quizData) => {
-                console.log('quizData', quizData);
                 setTimeStarted(quizData.started);
                 setTimeFinished(quizData.finished);
                 setSessionID(quizData.sessionid);
@@ -109,23 +97,16 @@ function QuizPage({ multiplechoice }) {
 
     // radio box selected ...
     const handleSelect = (e) => {
-        console.log('e', e);
-        console.log('e.currentTargte', e.currentTarget);
-        console.log('selected value', e.currentTarget.value);
-        //setUserChoice(e.currentTarget.value);
         const newAnswers = [...userAnswers];
         newAnswers[currentQuestionIndex] = e.currentTarget.value;
         setUserAnswers([...newAnswers]);
 
-        console.log('currentQuestionData', currentQuestionData);
         const choiceIndex = parseInt(e.currentTarget.id);
         postSessionAnswer(sessionID, courseID, questionIDs[currentQuestionIndex], null, choiceIndex)
     };
 
     // input box typed in ...
     const handleOnChange = (e) => {
-        console.log(e.target.value);
-        //setUserChoice(e.target.value);
         const newAnswers = [...userAnswers];
         newAnswers[currentQuestionIndex] = e.currentTarget.value;
         setUserAnswers([...newAnswers]);
