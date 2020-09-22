@@ -1,1 +1,18 @@
-{"section": "2.22.5: Simple encryption scheme.", "qid": 0, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  In the questions below, let N = 79 and k = 43. Use the simple cryptosystem defined above.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Encrypt the plaintext m = 62.\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "26", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   26\n  </span>\n </div>\n c = (m + k) mod N = (62 + 43) mod 79 = 26.\n</div>\n", "images": {"instructions": "2.22.5-activity-instructions_div.png", "question": "2.22.5.0-activity-question.png", "choices": [], "explanation": "2.22.5-activity-explanation_div.png"}}
+{
+  "answer": "26",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   26\n  </span>\n </div>\n c = (m + k) mod N = (62 + 43) mod 79 = 26.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "2.22.5-activity-explanation_div.png",
+    "instructions": "2.22.5-activity-instructions_div.png",
+    "question": "2.22.5.0-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  In the questions below, let N = 79 and k = 43. Use the simple cryptosystem defined above.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  Encrypt the plaintext m = 62.\n </div>\n</div>",
+  "section": "2.22.5: Simple encryption scheme."
+}

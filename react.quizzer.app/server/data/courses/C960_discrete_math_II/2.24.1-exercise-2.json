@@ -1,1 +1,17 @@
-{"section": "Exercise 2.24.1: Encrypting and decrypting a message with RSA.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  In this problem, we will implement the RSA algorithm to encrypt and decrypt the message \"HI\". For this exercise, you may want to use a calculator that can compute the mod function.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   The value for e is chosen to be 29. Use Euclid's algorithm to verify that e and \u03c6 are relatively prime and to find d, the multiplicative inverse of e mod \u03c6.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "3276 \u00a0\u00a0\u00a0\u00a0 29 \u00a0\u00a0\u00a0\u00a0 28 \n \u00a0\u00a0\u00a0\u00a0 1", "explanation": null, "images": {"instructions": "2.24.1-exercise-instructions_div.png", "question": "2.24.1.2-exercise-question.png", "choices": []}}
+{
+  "answer": "3276 \u00a0\u00a0\u00a0\u00a0 29 \u00a0\u00a0\u00a0\u00a0 28 \n \u00a0\u00a0\u00a0\u00a0 1",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.24.1-exercise-instructions_div.png",
+    "question": "2.24.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  In this problem, we will implement the RSA algorithm to encrypt and decrypt the message \"HI\". For this exercise, you may want to use a calculator that can compute the mod function.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   The value for e is chosen to be 29. Use Euclid's algorithm to verify that e and \u03c6 are relatively prime and to find d, the multiplicative inverse of e mod \u03c6.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.24.1: Encrypting and decrypting a message with RSA."
+}

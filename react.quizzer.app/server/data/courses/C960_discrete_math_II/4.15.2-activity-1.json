@@ -1,1 +1,24 @@
-{"section": "4.15.2: Comparing n-tuples lexicographically.", "qid": 1, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  (2, 1, 2, 3, 5, 8) &lt; (2, 1, 2, 7, 1, 1)\n </div>\n</div>", "correct_choice_index": 0, "choices": ["True", "False"], "answer": "True", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The 6-tuples first differ at the fourth entry.\n <br/>\n Since 3 &lt; 7, (2, 1, 2, 3, 5) &lt; (2, 1, 2, 7, 1).\n</div>\n", "images": {"instructions": "4.15.2-activity-instructions_div.png", "question": "4.15.2.1-activity-question.png", "choices": [null, null], "explanation": "4.15.2-activity-explanation_div.png"}}
+{
+  "answer": "True",
+  "choices": [
+    "True",
+    "False"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The 6-tuples first differ at the fourth entry.\n <br/>\n Since 3 &lt; 7, (2, 1, 2, 3, 5) &lt; (2, 1, 2, 7, 1).\n</div>\n",
+  "images": {
+    "choices": [
+      null,
+      null
+    ],
+    "explanation": "4.15.2-activity-explanation_div.png",
+    "instructions": "4.15.2-activity-instructions_div.png",
+    "question": "4.15.2.1-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  (2, 1, 2, 3, 5, 8) &lt; (2, 1, 2, 7, 1, 1)\n </div>\n</div>",
+  "section": "4.15.2: Comparing n-tuples lexicographically."
+}

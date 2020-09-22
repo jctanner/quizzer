@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "2380",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "20 - 7 = 13 jobs to distribute. nCr(13+5-1,5-1) = nCr(17,4)",
   "images": {
     "choices": [],
     "instructions": "4.13.5-exercise-instructions_div.png",

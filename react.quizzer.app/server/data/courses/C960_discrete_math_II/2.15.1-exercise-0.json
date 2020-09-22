@@ -1,1 +1,17 @@
-{"section": "Exercise 2.15.1: Converting from hex to binary.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Give a binary representation for each number given below in hex. Drop the leading zeroes in your binary representation.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   (A3)\n   <sub>\n    16\n   </sub>\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "(10100011)2", "explanation": null, "images": {"instructions": "2.15.1-exercise-instructions_div.png", "question": "2.15.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "(10100011)2",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.15.1-exercise-instructions_div.png",
+    "question": "2.15.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Give a binary representation for each number given below in hex. Drop the leading zeroes in your binary representation.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   (A3)\n   <sub>\n    16\n   </sub>\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.15.1: Converting from hex to binary."
+}

@@ -1,1 +1,26 @@
-{"section": "2.7.1: Prime factorizations.", "qid": 0, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Which of the following is the prime factorization for 48?\n </div>\n</div>", "correct_choice_index": 1, "choices": ["3\u00b74\n 2", "2\n 4\n\n\u00b73", "2\u00b73\n 2"], "answer": "24\u00b73", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n 2\n <sup>\n  4\n </sup>\n \u00b73 = 48. Also, 2 and 3 are both prime numbers.\n</div>\n", "images": {"instructions": "2.7.1-activity-instructions_div.png", "question": "2.7.1.0-activity-question.png", "choices": ["2.7.1.0-activity-choice-0.png", "2.7.1.0-activity-choice-1.png", "2.7.1.0-activity-choice-2.png"], "explanation": "2.7.1-activity-explanation_div.png"}}
+{
+  "answer": "24\u00b73",
+  "choices": [
+    "3\u00b74\n 2",
+    "2\n 4\n\n\u00b73",
+    "2\u00b73\n 2"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n 2\n <sup>\n  4\n </sup>\n \u00b73 = 48. Also, 2 and 3 are both prime numbers.\n</div>\n",
+  "images": {
+    "choices": [
+      "2.7.1.0-activity-choice-0.png",
+      "2.7.1.0-activity-choice-1.png",
+      "2.7.1.0-activity-choice-2.png"
+    ],
+    "explanation": "2.7.1-activity-explanation_div.png",
+    "instructions": "2.7.1-activity-instructions_div.png",
+    "question": "2.7.1.0-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  Which of the following is the prime factorization for 48?\n </div>\n</div>",
+  "section": "2.7.1: Prime factorizations."
+}

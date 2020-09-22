@@ -1,1 +1,17 @@
-{"section": "Exercise 3.17.2: Interpreting a recursive definition of a set of strings.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   The recursive definition given below defines a set S of strings over the alphabet {a, b}:\n  </p>\n  <ul>\n   <li>\n    Base case:  \u03bb \u2208 S and a \u2208 S\n   </li>\n   <li>\n    Recursive rule: if x \u2208 S  then,\n    <br/>\n    <br/>\n    <ul>\n     <li>\n      xb \u2208 S\n     </li>\n     <li>\n      xba \u2208 S\n     </li>\n    </ul>\n   </li>\n  </ul>\n  <p>\n   List all the strings of length at most 3 in S.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "We will refer to the first recursive rule as Rule 1 and the second recursive rule as Rule 2.", "explanation": null, "images": {"instructions": "3.17.2-exercise-instructions_div.png", "question": "3.17.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "We will refer to the first recursive rule as Rule 1 and the second recursive rule as Rule 2.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "3.17.2-exercise-instructions_div.png",
+    "question": "3.17.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   The recursive definition given below defines a set S of strings over the alphabet {a, b}:\n  </p>\n  <ul>\n   <li>\n    Base case:  \u03bb \u2208 S and a \u2208 S\n   </li>\n   <li>\n    Recursive rule: if x \u2208 S  then,\n    <br/>\n    <br/>\n    <ul>\n     <li>\n      xb \u2208 S\n     </li>\n     <li>\n      xba \u2208 S\n     </li>\n    </ul>\n   </li>\n  </ul>\n  <p>\n   List all the strings of length at most 3 in S.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 3.17.2: Interpreting a recursive definition of a set of strings."
+}

@@ -1,1 +1,18 @@
-{"section": "4.7.2: Counting r-permutations.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  A class has ten students. A teacher will give out three prizes: One student gets a gift card, one gets a book, and one gets a movie ticket. No student can receive more than one prize. How many ways can the teacher distribute the prizes?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "720", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   720\n  </span>\n </div>\n 10 students to select from for the first prize. Once the first prize has been given, there are 9 students to select from for the second prize, and then 8 students to select from for the third prize.\n <br/>\n <br/>\n P(10, 3) = 10 \u00b7 9 \u00b7 8 = 720\n</div>\n", "images": {"instructions": "4.7.2-activity-instructions_div.png", "question": "4.7.2.2-activity-question.png", "choices": [], "explanation": "4.7.2-activity-explanation_div.png"}}
+{
+  "answer": "720",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   720\n  </span>\n </div>\n 10 students to select from for the first prize. Once the first prize has been given, there are 9 students to select from for the second prize, and then 8 students to select from for the third prize.\n <br/>\n <br/>\n P(10, 3) = 10 \u00b7 9 \u00b7 8 = 720\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "4.7.2-activity-explanation_div.png",
+    "instructions": "4.7.2-activity-instructions_div.png",
+    "question": "4.7.2.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  A class has ten students. A teacher will give out three prizes: One student gets a gift card, one gets a book, and one gets a movie ticket. No student can receive more than one prize. How many ways can the teacher distribute the prizes?\n </div>\n</div>",
+  "section": "4.7.2: Counting r-permutations."
+}

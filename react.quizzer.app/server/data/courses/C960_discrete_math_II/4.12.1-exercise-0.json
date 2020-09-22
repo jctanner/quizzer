@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  The total number of passwords with no restrictions is 43\n  <sup>\n   11\n  </sup>\n  .\nThe number of passwords with no digits (i.e., only letters) is 30\n  <sup>\n   12\n  </sup>\n  .\nTherefore the number of passwords with at least\none digit is 38\n  <sup>\n   15\n  </sup>\n  - 32\n  <sup>\n   7\n  </sup>\n  .\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

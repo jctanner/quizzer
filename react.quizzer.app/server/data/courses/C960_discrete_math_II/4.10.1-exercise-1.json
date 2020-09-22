@@ -1,1 +1,17 @@
-{"section": "Exercise 4.10.1: Permuting letters in words.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  How many ways are there to permute the letters in each of the following words?\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   DISCRETE\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "There are eight letters in the word DISCRETE. The only repeated letters in DISCRETE are two E's. Therefore there are 8!/2! = 8!/2 = 4\u00b77!\nways to permute the letters in DISCRETE.", "explanation": null, "images": {"instructions": "4.10.1-exercise-instructions_div.png", "question": "4.10.1.1-exercise-question.png", "choices": []}}
+{
+  "answer": "There are eight letters in the word DISCRETE. The only repeated letters in DISCRETE are two E's. Therefore there are 8!/2! = 8!/2 = 4\u00b77!\nways to permute the letters in DISCRETE.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.10.1-exercise-instructions_div.png",
+    "question": "4.10.1.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  How many ways are there to permute the letters in each of the following words?\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   DISCRETE\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.10.1: Permuting letters in words."
+}

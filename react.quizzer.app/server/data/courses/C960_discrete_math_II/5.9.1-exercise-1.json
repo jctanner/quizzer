@@ -1,1 +1,17 @@
-{"section": "Exercise 5.9.1: Independence of events - random permutations.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  A wedding party of eight people is lined up in a random order.\nEvery way of lining up the people in the wedding party is equally likely.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   What is the probability that the maid of honor is in the leftmost position?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "Once the maid of honor is placed in the leftmost position, there are 7! ways to order the rest of the people, so the probability that the maid of honor is in the leftmost position is 7!/8! = 1/8.", "explanation": null, "images": {"instructions": "5.9.1-exercise-instructions_div.png", "question": "5.9.1.1-exercise-question.png", "choices": []}}
+{
+  "answer": "Once the maid of honor is placed in the leftmost position, there are 7! ways to order the rest of the people, so the probability that the maid of honor is in the leftmost position is 7!/8! = 1/8.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.9.1-exercise-instructions_div.png",
+    "question": "5.9.1.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A wedding party of eight people is lined up in a random order.\nEvery way of lining up the people in the wedding party is equally likely.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   What is the probability that the maid of honor is in the leftmost position?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.9.1: Independence of events - random permutations."
+}

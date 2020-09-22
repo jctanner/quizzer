@@ -1,11 +1,12 @@
 {
-  "section": "9.1.14 probability [bluebook]",
-  "question": "3 people have been exposed to a certain illness. Once exposed, a person has a 50-50 chance of actually becomming ill. What is the probability that exactly one of the people becomes ill.",
   "answer": "3/8",
-  "fn": "9.1.14-bb-a.json",
-  "qid": "a",
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.1.14-bb-a.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": "a",
+  "question": "3 people have been exposed to a certain illness. Once exposed, a person has a 50-50 chance of actually becomming ill. What is the probability that exactly one of the people becomes ill.",
+  "section": "9.1.14 probability [bluebook]"
 }

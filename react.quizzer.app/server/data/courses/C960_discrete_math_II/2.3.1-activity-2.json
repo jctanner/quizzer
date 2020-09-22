@@ -1,1 +1,24 @@
-{"section": "2.3.1: Integer divisibility.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Does 8 divide 99?\n </div>\n</div>", "correct_choice_index": 1, "choices": ["Yes", "No"], "answer": "No", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n There is no integer k such that 99 = 8k.\n</div>\n", "images": {"instructions": "2.3.1-activity-instructions_div.png", "question": "2.3.1.2-activity-question.png", "choices": [null, null], "explanation": "2.3.1-activity-explanation_div.png"}}
+{
+  "answer": "No",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n There is no integer k such that 99 = 8k.\n</div>\n",
+  "images": {
+    "choices": [
+      null,
+      null
+    ],
+    "explanation": "2.3.1-activity-explanation_div.png",
+    "instructions": "2.3.1-activity-instructions_div.png",
+    "question": "2.3.1.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  Does 8 divide 99?\n </div>\n</div>",
+  "section": "2.3.1: Integer divisibility."
+}

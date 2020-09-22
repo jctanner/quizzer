@@ -1,1 +1,17 @@
-{"section": "Exercise 1.7.1: Writing algorithms in pseudocode.", "qid": 4, "instructions": "<div class=\"setup\">\n <p>\n  Write an algorithm in pseudocode for each description of  the input and output.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (e)\n </span>\n <div class=\"text\">\n  <p>\n   Input: a\n   <sub>\n    1\n   </sub>\n   , a\n   <sub>\n    2\n   </sub>\n   ,...,a\n   <sub>\n    n\n   </sub>\n   , a sequence of distinct numbers, where n \u2265 2\n   <br/>\n   n, the length of the sequence.\n   <br/>\n   Output: The second smallest number in the sequence.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "ai\nEnd-for\nReturn( secondMin )", "explanation": null, "images": {"instructions": "1.7.1-exercise-instructions_div.png", "question": "1.7.1.4-exercise-question.png", "choices": []}}
+{
+  "answer": "ai\nEnd-for\nReturn( secondMin )",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "1.7.1-exercise-instructions_div.png",
+    "question": "1.7.1.4-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Write an algorithm in pseudocode for each description of  the input and output.\n </p>\n</div>\n",
+  "qid": 4,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (e)\n </span>\n <div class=\"text\">\n  <p>\n   Input: a\n   <sub>\n    1\n   </sub>\n   , a\n   <sub>\n    2\n   </sub>\n   ,...,a\n   <sub>\n    n\n   </sub>\n   , a sequence of distinct numbers, where n \u2265 2\n   <br/>\n   n, the length of the sequence.\n   <br/>\n   Output: The second smallest number in the sequence.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 1.7.1: Writing algorithms in pseudocode."
+}

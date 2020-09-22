@@ -1,1 +1,17 @@
-{"section": "Exercise 2.3.1: Computing div and mod.", "qid": 5, "instructions": "<div class=\"setup\">\n <p>\n  Compute the value of the following expressions:\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (f)\n </span>\n <div class=\"text\">\n  <p>\n   215 div 7\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "30", "explanation": null, "images": {"instructions": "2.3.1-exercise-instructions_div.png", "question": "2.3.1.5-exercise-question.png", "choices": []}}
+{
+  "answer": "30",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.3.1-exercise-instructions_div.png",
+    "question": "2.3.1.5-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Compute the value of the following expressions:\n </p>\n</div>\n",
+  "qid": 5,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (f)\n </span>\n <div class=\"text\">\n  <p>\n   215 div 7\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.3.1: Computing div and mod."
+}

@@ -1,1 +1,24 @@
-{"section": "4.20.3: Generalized pigeonhole principle.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Indicate whether the generalized pigeonhole principle can be used to prove the following statements.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  A group of 42 employees are assigned to 7 different printers. There must be a printer to which 7 employees are assigned.\n </div>\n</div>", "correct_choice_index": 1, "choices": ["Yes", "No"], "answer": "No", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n It's possible for the 42 employees to be divided evenly between the seven printers in which case there would be exactly 6 employees assigned to each printer.\n</div>\n", "images": {"instructions": "4.20.3-activity-instructions_div.png", "question": "4.20.3.2-activity-question.png", "choices": [null, null], "explanation": "4.20.3-activity-explanation_div.png"}}
+{
+  "answer": "No",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n It's possible for the 42 employees to be divided evenly between the seven printers in which case there would be exactly 6 employees assigned to each printer.\n</div>\n",
+  "images": {
+    "choices": [
+      null,
+      null
+    ],
+    "explanation": "4.20.3-activity-explanation_div.png",
+    "instructions": "4.20.3-activity-instructions_div.png",
+    "question": "4.20.3.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Indicate whether the generalized pigeonhole principle can be used to prove the following statements.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  A group of 42 employees are assigned to 7 different printers. There must be a printer to which 7 employees are assigned.\n </div>\n</div>",
+  "section": "4.20.3: Generalized pigeonhole principle."
+}

@@ -1,1 +1,17 @@
-{"section": "Exercise 2.22.2: Deducing the key from a single (plaintext, ciphertext) pair.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Suppose Alice and Bob use the simple encryption scheme in which\n   <span style=\"white-space: nowrap;\">\n    c = (m + k) mod N\n   </span>\n   and\n   <span style=\"white-space: nowrap;\">\n    m = (c \u2212 k) mod N.\n   </span>\n   Suppose that Eve knows that\n   <span style=\"white-space: nowrap;\">\n    N = 4657.\n   </span>\n   Suppose that she also manages to learn that the message m corresponding to\n   <span style=\"white-space: nowrap;\">\n    c = 1322\n   </span>\n   is 3411. \nCan she infer the value for k? \nWhat is k?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "2568", "explanation": null, "images": {"instructions": "2.22.2-exercise-instructions_div.png", "question": "2.22.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "2568",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.22.2-exercise-instructions_div.png",
+    "question": "2.22.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Suppose Alice and Bob use the simple encryption scheme in which\n   <span style=\"white-space: nowrap;\">\n    c = (m + k) mod N\n   </span>\n   and\n   <span style=\"white-space: nowrap;\">\n    m = (c \u2212 k) mod N.\n   </span>\n   Suppose that Eve knows that\n   <span style=\"white-space: nowrap;\">\n    N = 4657.\n   </span>\n   Suppose that she also manages to learn that the message m corresponding to\n   <span style=\"white-space: nowrap;\">\n    c = 1322\n   </span>\n   is 3411. \nCan she infer the value for k? \nWhat is k?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.22.2: Deducing the key from a single (plaintext, ciphertext) pair."
+}

@@ -1,1 +1,18 @@
-{"section": "5.5.3: Probabilities of unions of events.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  The following questions pertain to an experiment in which a fair coin is flipped three times. Define the following three events:\n </p>\n <ul>\n  <li>\n   A: The first two flips come up heads.\n  </li>\n  <li>\n   B: The last two flips come up heads.\n  </li>\n  <li>\n   C: The last two flips come up tails.\n  </li>\n </ul>\n <p>\n  Enter your answer as a simplified fraction. Ex: If your answer is 2/4, then enter: 1/2\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the probability that the first two flips come up heads and the last two flips come up tails?  (What is p(A \u2229 C)?)\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "0", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   0\n  </span>\n </div>\n |A \u2229 C| = 0. p(A \u2229 C) = |A \u2229 C|/8 = 0/8 = 0.\n</div>\n", "images": {"instructions": "5.5.3-activity-instructions_div.png", "question": "5.5.3.1-activity-question.png", "choices": [], "explanation": "5.5.3-activity-explanation_div.png"}}
+{
+  "answer": "0",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   0\n  </span>\n </div>\n |A \u2229 C| = 0. p(A \u2229 C) = |A \u2229 C|/8 = 0/8 = 0.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "5.5.3-activity-explanation_div.png",
+    "instructions": "5.5.3-activity-instructions_div.png",
+    "question": "5.5.3.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  The following questions pertain to an experiment in which a fair coin is flipped three times. Define the following three events:\n </p>\n <ul>\n  <li>\n   A: The first two flips come up heads.\n  </li>\n  <li>\n   B: The last two flips come up heads.\n  </li>\n  <li>\n   C: The last two flips come up tails.\n  </li>\n </ul>\n <p>\n  Enter your answer as a simplified fraction. Ex: If your answer is 2/4, then enter: 1/2\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  What is the probability that the first two flips come up heads and the last two flips come up tails?  (What is p(A \u2229 C)?)\n </div>\n</div>",
+  "section": "5.5.3: Probabilities of unions of events."
+}

@@ -1,16 +1,17 @@
 {
-  "section": "Exercise 2.11.1: Applying the Euclidean Algorithm and the Extended Euclidean Algorithm.",
-  "qid": 2,
-  "instructions": "<div class=\"setup\">\n <p>\n  For each of the following pairs of numbers, find the gcd of the two numbers, and express the gcd as a linear combination of the two numbers.\n </p>\n</div>\n",
-  "input_type": null,
-  "question": "GCD of 259 and 77",
+  "answer": 7,
   "choices": [],
   "correct_choice_index": null,
-  "answer": 7,
+  "enabled": true,
   "explanation": null,
   "images": {
+    "choices": [],
     "instructions": "2.11.1-exercise-instructions_div.png",
-    "question": "2.11.1.2-exercise-question.png",
-    "choices": []
-  }
+    "question": "2.11.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  For each of the following pairs of numbers, find the gcd of the two numbers, and express the gcd as a linear combination of the two numbers.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "GCD of 259 and 77",
+  "section": "Exercise 2.11.1: Applying the Euclidean Algorithm and the Extended Euclidean Algorithm."
 }

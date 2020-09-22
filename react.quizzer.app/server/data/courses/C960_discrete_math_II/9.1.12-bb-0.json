@@ -1,11 +1,12 @@
 {
-  "section": "9.1.12.b.i probability [bluebook]",
-  "question": "Boy or girl are equally likely. A family has 3 children. What is the probability that exactly one child is a girl?",
   "answer": "3/8",
-  "fn": "9.1.12-bb-0.json",
-  "qid": 0,
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.1.12-bb-0.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": 0,
+  "question": "Boy or girl are equally likely. A family has 3 children. What is the probability that exactly one child is a girl?",
+  "section": "9.1.12.b.i probability [bluebook]"
 }

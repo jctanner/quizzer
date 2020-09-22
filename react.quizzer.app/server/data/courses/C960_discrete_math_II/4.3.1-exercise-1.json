@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  The sets of strings of length 16, 16, and 15 are mutually disjoint.\nThe number of strings of length j with no other restrictions on the characters is\n4118\n  <sup>\n   j\n  </sup>\n  . Therefore, by the sum rule,  the total number of strings of length 16, 11, or 9 is:\n </p>\n <p>\n  41\n  <sup>\n   9\n  </sup>\n  + 49\n  <sup>\n   8\n  </sup>\n  + 42\n  <sup>\n   9\n  </sup>\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

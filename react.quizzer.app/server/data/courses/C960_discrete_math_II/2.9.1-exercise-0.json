@@ -1,1 +1,17 @@
-{"section": "Exercise 2.9.1: Estimating the number of primes.", "qid": 0, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Use the prime number theorem to give an approximation for the number of prime numbers in the range 2 through\n   <span style=\"white-space: nowrap;\">\n    10,000,000.\n   </span>\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "107. The number of prime numbers in the range 2 through 107  is approximately 107/ln(107)\n\u2248 620421", "explanation": null, "images": {"instructions": "2.9.1-exercise-instructions_div.png", "question": "2.9.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "107. The number of prime numbers in the range 2 through 107  is approximately 107/ln(107)\n\u2248 620421",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.9.1-exercise-instructions_div.png",
+    "question": "2.9.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Use the prime number theorem to give an approximation for the number of prime numbers in the range 2 through\n   <span style=\"white-space: nowrap;\">\n    10,000,000.\n   </span>\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.9.1: Estimating the number of primes."
+}

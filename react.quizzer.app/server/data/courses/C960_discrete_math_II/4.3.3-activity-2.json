@@ -1,1 +1,18 @@
-{"section": "4.3.3: Using the product rule to count sets of strings.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  How many strings of length 4 are there over the alphabet {a, b, c}?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "81", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   81\n  </span>\n </div>\n <span style=\"white-space: nowrap;\">\n  |{a, b, c}\n  <sup>\n   4\n  </sup>\n  | = |{a, b, c}|\n  <sup>\n   4\n  </sup>\n  = 3\n  <sup>\n   4\n  </sup>\n  = 81\n </span>\n</div>\n", "images": {"instructions": "4.3.3-activity-instructions_div.png", "question": "4.3.3.2-activity-question.png", "choices": [], "explanation": "4.3.3-activity-explanation_div.png"}}
+{
+  "answer": "81",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   81\n  </span>\n </div>\n <span style=\"white-space: nowrap;\">\n  |{a, b, c}\n  <sup>\n   4\n  </sup>\n  | = |{a, b, c}|\n  <sup>\n   4\n  </sup>\n  = 3\n  <sup>\n   4\n  </sup>\n  = 81\n </span>\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "4.3.3-activity-explanation_div.png",
+    "instructions": "4.3.3-activity-instructions_div.png",
+    "question": "4.3.3.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  How many strings of length 4 are there over the alphabet {a, b, c}?\n </div>\n</div>",
+  "section": "4.3.3: Using the product rule to count sets of strings."
+}

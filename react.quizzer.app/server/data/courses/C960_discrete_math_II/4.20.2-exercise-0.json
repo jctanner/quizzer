@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "123",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "S = 999,999 - 9,999 = 990,000. [121,400,000/990,000] = 123",
   "images": {
     "choices": [],
     "instructions": "4.20.2-exercise-instructions_div.png",

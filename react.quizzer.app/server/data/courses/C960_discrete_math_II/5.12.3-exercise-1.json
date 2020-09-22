@@ -1,1 +1,17 @@
-{"section": "Exercise 5.12.3: Distribution over a random variable - selecting student council reps.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  Two student council representatives are chosen at random from a group of 7 girls and 3 boys. Let G denote the distribution over the number of girls chosen.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Give the distribution over the random variable G.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "(0,1/15),(1,7/15),(2,7/15)", "explanation": null, "images": {"instructions": "5.12.3-exercise-instructions_div.png", "question": "5.12.3.1-exercise-question.png", "choices": []}}
+{
+  "answer": "(0,1/15),(1,7/15),(2,7/15)",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.12.3-exercise-instructions_div.png",
+    "question": "5.12.3.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Two student council representatives are chosen at random from a group of 7 girls and 3 boys. Let G denote the distribution over the number of girls chosen.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Give the distribution over the random variable G.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.12.3: Distribution over a random variable - selecting student council reps."
+}

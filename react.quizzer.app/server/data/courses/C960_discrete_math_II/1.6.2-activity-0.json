@@ -1,1 +1,18 @@
-{"section": "1.6.2: While-loops.", "qid": 0, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider the following pseudocode fragment:\n </p>\n <div style=\"float: left;\">\n  <div class=\"zyblock\">\n   product := 1\n   <br/>\n   count := 5\n   <br/>\n   While ( count &gt; 0 )\n   <br/>\n   product := product\n   <font size=\"4\">\n    \u22c5\n   </font>\n   count\n   <br/>\n   count := count - 2\n   <br/>\n   End-while\n  </div>\n </div>\n <div style=\"display: block; height: 0px; clear: both;\">\n </div>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the value of product after the second iteration?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "15", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   15\n  </span>\n </div>\n In the first iteration, count = 5. In the second iteration, count = 3. 5\n <font size=\"4\">\n  \u22c5\n </font>\n 3 = 15.\n</div>\n", "images": {"instructions": "1.6.2-activity-instructions_div.png", "question": "1.6.2.0-activity-question.png", "choices": [], "explanation": "1.6.2-activity-explanation_div.png"}}
+{
+  "answer": "15",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   15\n  </span>\n </div>\n In the first iteration, count = 5. In the second iteration, count = 3. 5\n <font size=\"4\">\n  \u22c5\n </font>\n 3 = 15.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "1.6.2-activity-explanation_div.png",
+    "instructions": "1.6.2-activity-instructions_div.png",
+    "question": "1.6.2.0-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider the following pseudocode fragment:\n </p>\n <div style=\"float: left;\">\n  <div class=\"zyblock\">\n   product := 1\n   <br/>\n   count := 5\n   <br/>\n   While ( count &gt; 0 )\n   <br/>\n   product := product\n   <font size=\"4\">\n    \u22c5\n   </font>\n   count\n   <br/>\n   count := count - 2\n   <br/>\n   End-while\n  </div>\n </div>\n <div style=\"display: block; height: 0px; clear: both;\">\n </div>\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  What is the value of product after the second iteration?\n </div>\n</div>",
+  "section": "1.6.2: While-loops."
+}

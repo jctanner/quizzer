@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "64531/66640",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "S = nCr(52,5), combinations with one club = nCr(52-13,4) = nCr(39,4). 1 - (nCr(39,4)/nCr(52,5)) = 64531/66640",
   "images": {
     "choices": [],
     "instructions": "5.6.4-exercise-instructions_div.png",

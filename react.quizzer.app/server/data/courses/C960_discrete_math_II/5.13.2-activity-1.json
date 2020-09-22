@@ -1,1 +1,18 @@
-{"section": "5.13.2: Calculating the expected value of a random variable.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Express the expectation as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  A fair die is tossed. Define random variable Y to be 1 if the outcome is a six and 0 otherwise. What is E[Y]?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "1/6", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   1/6\n  </span>\n </div>\n The sample space is {1, 2, 3, 4, 5, 6}. Each outcome has probability 1/6. Y(6) = 1 and Y = 0 for all the other outcomes.\n <br/>\n <br/>\n E[Y] = 1 \u00b7 (1/6) + 0 \u00b7 (5/6) = 1/6.\n</div>\n", "images": {"instructions": "5.13.2-activity-instructions_div.png", "question": "5.13.2.1-activity-question.png", "choices": [], "explanation": "5.13.2-activity-explanation_div.png"}}
+{
+  "answer": "1/6",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   1/6\n  </span>\n </div>\n The sample space is {1, 2, 3, 4, 5, 6}. Each outcome has probability 1/6. Y(6) = 1 and Y = 0 for all the other outcomes.\n <br/>\n <br/>\n E[Y] = 1 \u00b7 (1/6) + 0 \u00b7 (5/6) = 1/6.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "5.13.2-activity-explanation_div.png",
+    "instructions": "5.13.2-activity-instructions_div.png",
+    "question": "5.13.2.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Express the expectation as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  A fair die is tossed. Define random variable Y to be 1 if the outcome is a six and 0 otherwise. What is E[Y]?\n </div>\n</div>",
+  "section": "5.13.2: Calculating the expected value of a random variable."
+}

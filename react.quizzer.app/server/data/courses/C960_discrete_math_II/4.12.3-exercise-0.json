@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  If a string does not have two consecutive 4's or two consecutive 9's, then\nthe bits alternate. There are only two 65-bit strings in which the bits alternate:\n13101016 and 1010109. \nThe total number of 16-bit strings with no restrictions is\n5\n  <sup>\n   16\n  </sup>\n  .\nTherefore the number of 14-bit strings which have at least two consecutive 0's or at least two consecutive 1's \nis 11\n  <sup>\n   11\n  </sup>\n  - 2.\n </p>\n</div>\n"
   ],
   "correct_choice_index": 1,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

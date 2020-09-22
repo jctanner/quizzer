@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "-870912",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "n=8, k=5, a=3, b=-4 ... nCr(8,5) * 3^5 * -4^3 = 56 * 243 * -64 = -870912",
   "images": {
     "choices": [],
     "instructions": "4.19.1-exercise-instructions_div.png",

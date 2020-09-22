@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "1665",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "nCr(17,4) - nCr(13,4)",
   "images": {
     "choices": [],
     "instructions": "4.13.5-exercise-instructions_div.png",

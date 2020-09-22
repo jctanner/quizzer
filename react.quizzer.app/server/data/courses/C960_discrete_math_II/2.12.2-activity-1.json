@@ -1,1 +1,18 @@
-{"section": "2.12.2: Find the multiplicative inverse using the results of the Extended Euclidean Algorithm.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Euclid's algorithm returns\n  <br/>\n  gcd(14, 33) = 1 = 3 \u00b7 33 - 7 \u00b7 14.\n  <br/>\n  <br/>\n  What is the multiplicative inverse of 14 in\n  <b>\n   Z\n  </b>\n  <sub>\n   33\n  </sub>\n  ?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "26", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   26\n  </span>\n </div>\n -7 is the coefficient of 14 in the equation:\n <br/>\n 1 = 3 \u00b7 33 - 7 \u00b7 14\n <br/>\n <br/>\n The inverse of 14 in\n <b>\n  Z\n </b>\n <sub>\n  33\n </sub>\n is (c mod 33), where c is the coefficient of 14:\n <br/>\n -7 mod 33 = 26\n</div>\n", "images": {"instructions": "2.12.2-activity-instructions_div.png", "question": "2.12.2.1-activity-question.png", "choices": [], "explanation": "2.12.2-activity-explanation_div.png"}}
+{
+  "answer": "26",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   26\n  </span>\n </div>\n -7 is the coefficient of 14 in the equation:\n <br/>\n 1 = 3 \u00b7 33 - 7 \u00b7 14\n <br/>\n <br/>\n The inverse of 14 in\n <b>\n  Z\n </b>\n <sub>\n  33\n </sub>\n is (c mod 33), where c is the coefficient of 14:\n <br/>\n -7 mod 33 = 26\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "2.12.2-activity-explanation_div.png",
+    "instructions": "2.12.2-activity-instructions_div.png",
+    "question": "2.12.2.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  Euclid's algorithm returns\n  <br/>\n  gcd(14, 33) = 1 = 3 \u00b7 33 - 7 \u00b7 14.\n  <br/>\n  <br/>\n  What is the multiplicative inverse of 14 in\n  <b>\n   Z\n  </b>\n  <sub>\n   33\n  </sub>\n  ?\n </div>\n</div>",
+  "section": "2.12.2: Find the multiplicative inverse using the results of the Extended Euclidean Algorithm."
+}

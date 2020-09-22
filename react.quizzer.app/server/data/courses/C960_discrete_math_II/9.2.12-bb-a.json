@@ -1,11 +1,12 @@
 {
-  "section": "9.2.12 probability [bluebook]",
-  "question": "Hex numbers are made using the 16 hex digits 0-9,A-F. How many hex numbers begin with one of the digits 3 through B, end with one of the digits 5 through F and are 5 digits long?",
   "answer": "405504",
-  "fn": "9.2.12-bb-a.json",
-  "qid": "a",
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.2.12-bb-a.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": "a",
+  "question": "Hex numbers are made using the 16 hex digits 0-9,A-F. How many hex numbers begin with one of the digits 3 through B, end with one of the digits 5 through F and are 5 digits long?",
+  "section": "9.2.12 probability [bluebook]"
 }

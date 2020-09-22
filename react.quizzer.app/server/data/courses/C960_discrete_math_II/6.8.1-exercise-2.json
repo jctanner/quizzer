@@ -1,1 +1,17 @@
-{"section": "Exercise 6.8.1: Output for an DFA on a given input - example 1.", "qid": 2, "instructions": "<div class=\"setup\">\n <img alt=\"A FSM with the states 0 and 1. The start state is 0. The FSM contains the following transitions: a returning edge at 0 labeled 0/0, an outgoing edge from 0 to 1 labeled 1/1, and two returning edges at 1 labeled 0/1 and 1/1.\" class=\"zyimage centered-image\" height=\"undefined\" src=\"https://zytools.zybooks.com/zyAuthor/WGU_C960_DiscreteMath2/6/IMAGES/embedded_image_1_56b7e6e0-abdc-5365-408e-62a7b28ab5a2_opnN1qmz0r0Jh2oVqcHn.png\" title=\"\" width=\"350\"/>\n <p>\n  The input and output alphabet for the DFA shown above is {0, 1}. Give the output for the DFA for each input string.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   111\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "111", "explanation": null, "images": {"instructions": "6.8.1-exercise-instructions_div.png", "question": "6.8.1.2-exercise-question.png", "choices": []}}
+{
+  "answer": "111",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "6.8.1-exercise-instructions_div.png",
+    "question": "6.8.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <img alt=\"A FSM with the states 0 and 1. The start state is 0. The FSM contains the following transitions: a returning edge at 0 labeled 0/0, an outgoing edge from 0 to 1 labeled 1/1, and two returning edges at 1 labeled 0/1 and 1/1.\" class=\"zyimage centered-image\" height=\"undefined\" src=\"https://zytools.zybooks.com/zyAuthor/WGU_C960_DiscreteMath2/6/IMAGES/embedded_image_1_56b7e6e0-abdc-5365-408e-62a7b28ab5a2_opnN1qmz0r0Jh2oVqcHn.png\" title=\"\" width=\"350\"/>\n <p>\n  The input and output alphabet for the DFA shown above is {0, 1}. Give the output for the DFA for each input string.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   111\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 6.8.1: Output for an DFA on a given input - example 1."
+}

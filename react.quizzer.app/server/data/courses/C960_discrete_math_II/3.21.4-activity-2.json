@@ -1,1 +1,26 @@
-{"section": "3.21.4: Solving linear homogeneous recurrence relations.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Suppose that another one of the initial values for the previous question is g\n  <sub>\n   1\n  </sub>\n  = 3. Which one of the linear equations holds for variables s and t?\n </div>\n</div>", "correct_choice_index": 0, "choices": ["3s - 2t = 3.", "3s - 2t = 1.", "-3s + 2t = 3."], "answer": "3s - 2t = 3.", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The solutions are s3\n <sup>\n  n\n </sup>\n + t(-2)\n <sup>\n  n\n </sup>\n . Plug in n = 1 and the result is equal to 3.\n <br/>\n <br/>\n s3\n <sup>\n  1\n </sup>\n + t(-2)\n <sup>\n  1\n </sup>\n = 3s - 2t = 3\n</div>\n", "images": {"instructions": "3.21.4-activity-instructions_div.png", "question": "3.21.4.2-activity-question.png", "choices": ["3.21.4.2-activity-choice-0.png", "3.21.4.2-activity-choice-1.png", "3.21.4.2-activity-choice-2.png"], "explanation": "3.21.4-activity-explanation_div.png"}}
+{
+  "answer": "3s - 2t = 3.",
+  "choices": [
+    "3s - 2t = 3.",
+    "3s - 2t = 1.",
+    "-3s + 2t = 3."
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The solutions are s3\n <sup>\n  n\n </sup>\n + t(-2)\n <sup>\n  n\n </sup>\n . Plug in n = 1 and the result is equal to 3.\n <br/>\n <br/>\n s3\n <sup>\n  1\n </sup>\n + t(-2)\n <sup>\n  1\n </sup>\n = 3s - 2t = 3\n</div>\n",
+  "images": {
+    "choices": [
+      "3.21.4.2-activity-choice-0.png",
+      "3.21.4.2-activity-choice-1.png",
+      "3.21.4.2-activity-choice-2.png"
+    ],
+    "explanation": "3.21.4-activity-explanation_div.png",
+    "instructions": "3.21.4-activity-instructions_div.png",
+    "question": "3.21.4.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  Suppose that another one of the initial values for the previous question is g\n  <sub>\n   1\n  </sub>\n  = 3. Which one of the linear equations holds for variables s and t?\n </div>\n</div>",
+  "section": "3.21.4: Solving linear homogeneous recurrence relations."
+}

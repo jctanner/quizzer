@@ -1,11 +1,12 @@
 {
-  "section": "9.1.13.b.i probability [bluebook]",
-  "question": "On a true/false exam, you have no idea what the answers to 3 questions are. You choose answers at random with 50-50 chance of being correct. What is the probability that exactly one answer is correct?",
   "answer": "3/8",
-  "fn": "9.1.13-bb-0.json",
-  "qid": 0,
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.1.13-bb-0.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": 0,
+  "question": "On a true/false exam, you have no idea what the answers to 3 questions are. You choose answers at random with 50-50 chance of being correct. What is the probability that exactly one answer is correct?",
+  "section": "9.1.13.b.i probability [bluebook]"
 }

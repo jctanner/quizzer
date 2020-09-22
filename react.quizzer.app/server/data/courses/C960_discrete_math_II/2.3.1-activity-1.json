@@ -1,1 +1,24 @@
-{"section": "2.3.1: Integer divisibility.", "qid": 1, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  7\u00b718 + 14\u00b717 = 364.\nDoes 7 divide 364?\n </div>\n</div>", "correct_choice_index": 0, "choices": ["Yes", "No"], "answer": "Yes", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n 364 is a linear combination of 7 and 14. 7 divides both 7 and 14.\n</div>\n", "images": {"instructions": "2.3.1-activity-instructions_div.png", "question": "2.3.1.1-activity-question.png", "choices": [null, null], "explanation": "2.3.1-activity-explanation_div.png"}}
+{
+  "answer": "Yes",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n 364 is a linear combination of 7 and 14. 7 divides both 7 and 14.\n</div>\n",
+  "images": {
+    "choices": [
+      null,
+      null
+    ],
+    "explanation": "2.3.1-activity-explanation_div.png",
+    "instructions": "2.3.1-activity-instructions_div.png",
+    "question": "2.3.1.1-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  7\u00b718 + 14\u00b717 = 364.\nDoes 7 divide 364?\n </div>\n</div>",
+  "section": "2.3.1: Integer divisibility."
+}

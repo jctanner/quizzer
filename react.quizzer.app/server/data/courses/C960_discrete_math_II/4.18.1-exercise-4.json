@@ -1,1 +1,17 @@
-{"section": "Exercise 4.18.1: Counting strings over {a, b, c}.", "qid": 4, "instructions": "<div class=\"setup\">\n <p>\n  Count the number of strings of length 9 over the alphabet {a, b, c} subject to each of the following restrictions.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (e)\n </span>\n <div class=\"text\">\n  <p>\n   The string contains at least seven consecutive a's.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "Define the following sets:", "explanation": null, "images": {"instructions": "4.18.1-exercise-instructions_div.png", "question": "4.18.1.4-exercise-question.png", "choices": []}}
+{
+  "answer": "Define the following sets:",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.18.1-exercise-instructions_div.png",
+    "question": "4.18.1.4-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Count the number of strings of length 9 over the alphabet {a, b, c} subject to each of the following restrictions.\n </p>\n</div>\n",
+  "qid": 4,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (e)\n </span>\n <div class=\"text\">\n  <p>\n   The string contains at least seven consecutive a's.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.18.1: Counting strings over {a, b, c}."
+}

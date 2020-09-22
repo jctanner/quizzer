@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "4272048",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "nCr(26+8-1,8-1) per multiset counting formula",
   "images": {
     "choices": [],
     "instructions": "4.13.4-exercise-instructions_div.png",

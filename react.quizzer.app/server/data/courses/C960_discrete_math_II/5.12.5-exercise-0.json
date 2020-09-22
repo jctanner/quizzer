@@ -1,1 +1,17 @@
-{"section": "Exercise 5.12.5: Distribution over a random variable - 10 coin tosses.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  A coin is tossed ten times. Let X be the random variable denoting the number of heads minus the number of tails.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the range of X?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "{-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10}", "explanation": null, "images": {"instructions": "5.12.5-exercise-instructions_div.png", "question": "5.12.5.0-exercise-question.png", "choices": []}}
+{
+  "answer": "{-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10}",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.12.5-exercise-instructions_div.png",
+    "question": "5.12.5.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A coin is tossed ten times. Let X be the random variable denoting the number of heads minus the number of tails.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the range of X?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.12.5: Distribution over a random variable - 10 coin tosses."
+}

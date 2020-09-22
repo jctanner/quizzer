@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "q3",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "",
   "images": {
     "choices": [],
     "instructions": "6.7.1-exercise-instructions_div.png",

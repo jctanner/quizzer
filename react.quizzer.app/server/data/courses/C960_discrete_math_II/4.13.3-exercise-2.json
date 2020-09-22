@@ -1,1 +1,17 @@
-{"section": "Exercise 4.13.3: Selecting coins from piles.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  A large number of coins are divided into four piles according to whether they are pennies, nickels, dimes or quarters.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   Suppose the pile only has 10 quarters. How many ways are there to select 25 coins?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "At most 10  quarters selected is equivalent to not selecting at least eleven\nquarters. The number of ways to select the 25 coins with at most 10 quarters selected  is\nequal to the number of ways to select the coins with no restrictions minus the number of\nways to select the coins with at least eleven quarters:", "explanation": null, "images": {"instructions": "4.13.3-exercise-instructions_div.png", "question": "4.13.3.2-exercise-question.png", "choices": []}}
+{
+  "answer": "At most 10  quarters selected is equivalent to not selecting at least eleven\nquarters. The number of ways to select the 25 coins with at most 10 quarters selected  is\nequal to the number of ways to select the coins with no restrictions minus the number of\nways to select the coins with at least eleven quarters:",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.13.3-exercise-instructions_div.png",
+    "question": "4.13.3.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A large number of coins are divided into four piles according to whether they are pennies, nickels, dimes or quarters.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   Suppose the pile only has 10 quarters. How many ways are there to select 25 coins?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.13.3: Selecting coins from piles."
+}

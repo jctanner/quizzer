@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "4/9",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "if Alex+Jose on team A, there are nCr(8,3) ways to pick rest of the team. Same goes for team B, so total = 2 * nCr(8,3) / nCr(10,5) = 4/9",
   "images": {
     "choices": [],
     "instructions": "5.4.2-exercise-instructions_div.png",

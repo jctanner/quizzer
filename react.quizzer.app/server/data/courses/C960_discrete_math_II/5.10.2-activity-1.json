@@ -1,1 +1,18 @@
-{"section": "5.10.2: Another Bayes problem with the fair and loaded dice.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider the example with the fair and loaded die. The gambler selects one of the two die at random and rolls the die  twice. \nThe outcomes of the two rolls are independent. The first outcome  is not a 6 and the second outcome is a 6. Define Y to be the event that two rolls of the die result in the first roll not coming up 6 and the second roll coming up 6.\n </p>\n <p>\n  Express probabilities as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is p(Y|\n  <span style=\"text-decoration: overline\">\n   F\n  </span>\n  )?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "10/49", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   10/49\n  </span>\n </div>\n If the gambler picks the loaded die, the probability of not getting six is 5/7. The probability of getting a 6 is 2/7. Since the two rolls are independent, the two probabilities can be multiplied to get 10/49.\n</div>\n", "images": {"instructions": "5.10.2-activity-instructions_div.png", "question": "5.10.2.1-activity-question.png", "choices": [], "explanation": "5.10.2-activity-explanation_div.png"}}
+{
+  "answer": "10/49",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   10/49\n  </span>\n </div>\n If the gambler picks the loaded die, the probability of not getting six is 5/7. The probability of getting a 6 is 2/7. Since the two rolls are independent, the two probabilities can be multiplied to get 10/49.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "5.10.2-activity-explanation_div.png",
+    "instructions": "5.10.2-activity-instructions_div.png",
+    "question": "5.10.2.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider the example with the fair and loaded die. The gambler selects one of the two die at random and rolls the die  twice. \nThe outcomes of the two rolls are independent. The first outcome  is not a 6 and the second outcome is a 6. Define Y to be the event that two rolls of the die result in the first roll not coming up 6 and the second roll coming up 6.\n </p>\n <p>\n  Express probabilities as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  What is p(Y|\n  <span style=\"text-decoration: overline\">\n   F\n  </span>\n  )?\n </div>\n</div>",
+  "section": "5.10.2: Another Bayes problem with the fair and loaded dice."
+}

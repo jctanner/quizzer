@@ -1,1 +1,18 @@
-{"section": "4.9.2: Selecting subsets or permutations.", "qid": 0, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Provide solutions in the form \"P(n, r)\" or \"n choose r\" (e.g. P(8, 3) or 8 choose 3).\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Dave swims three times in the week. How many ways are there to plan his workout schedule (i.e. which days he will swim) for a given week?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "7 choose 3", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   7 choose 3\n  </span>\n </div>\n A schedule for Dave's workouts consists of the set of three days he will swim (e.g., {Mon, Wed, Sat}). The order in which he selects the three days of the week does not affect the schedule.\n <br/>\n <br/>\n Therefore, Dave is selecting a subset of 3 days from the 7 days of the week.\n</div>\n", "images": {"instructions": "4.9.2-activity-instructions_div.png", "question": "4.9.2.0-activity-question.png", "choices": [], "explanation": "4.9.2-activity-explanation_div.png"}}
+{
+  "answer": "7 choose 3",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   7 choose 3\n  </span>\n </div>\n A schedule for Dave's workouts consists of the set of three days he will swim (e.g., {Mon, Wed, Sat}). The order in which he selects the three days of the week does not affect the schedule.\n <br/>\n <br/>\n Therefore, Dave is selecting a subset of 3 days from the 7 days of the week.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "4.9.2-activity-explanation_div.png",
+    "instructions": "4.9.2-activity-instructions_div.png",
+    "question": "4.9.2.0-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Provide solutions in the form \"P(n, r)\" or \"n choose r\" (e.g. P(8, 3) or 8 choose 3).\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  Dave swims three times in the week. How many ways are there to plan his workout schedule (i.e. which days he will swim) for a given week?\n </div>\n</div>",
+  "section": "4.9.2: Selecting subsets or permutations."
+}

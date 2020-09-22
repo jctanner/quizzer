@@ -1,1 +1,26 @@
-{"section": "3.12.2: The principle of strong induction with general range for the base case.", "qid": 1, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Select the choice that is equivalent to the following statement:\n  <br/>\n  <br/>\n  For k \u2265 7, if P(j) is true for all j in the range 2 through k, then P(k+1) is true.\n </div>\n</div>", "correct_choice_index": 1, "choices": ["For k \u2265 7,\n(P(2) \u2227 P(3) \u2227...P(j))\n implies P(j+1)", "For k \u2265 7,\n(P(2) \u2227 P(3) \u2227...P(k))\n implies P(k+1)", "For k \u2265 7,\n(P(7) \u2227 P(8) \u2227...P(k))\n implies P(k+1)"], "answer": "For k \u2265 7,\n(P(2) \u2227 P(3) \u2227...P(k)) implies P(k+1)", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Saying that P(j) is true for all j in the range 2 through k is the same as saying (P(2) \u2227 P(3) \u2227...P(k))\n</div>\n", "images": {"instructions": "3.12.2-activity-instructions_div.png", "question": "3.12.2.1-activity-question.png", "choices": ["3.12.2.1-activity-choice-0.png", "3.12.2.1-activity-choice-1.png", "3.12.2.1-activity-choice-2.png"], "explanation": "3.12.2-activity-explanation_div.png"}}
+{
+  "answer": "For k \u2265 7,\n(P(2) \u2227 P(3) \u2227...P(k)) implies P(k+1)",
+  "choices": [
+    "For k \u2265 7,\n(P(2) \u2227 P(3) \u2227...P(j))\n implies P(j+1)",
+    "For k \u2265 7,\n(P(2) \u2227 P(3) \u2227...P(k))\n implies P(k+1)",
+    "For k \u2265 7,\n(P(7) \u2227 P(8) \u2227...P(k))\n implies P(k+1)"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Saying that P(j) is true for all j in the range 2 through k is the same as saying (P(2) \u2227 P(3) \u2227...P(k))\n</div>\n",
+  "images": {
+    "choices": [
+      "3.12.2.1-activity-choice-0.png",
+      "3.12.2.1-activity-choice-1.png",
+      "3.12.2.1-activity-choice-2.png"
+    ],
+    "explanation": "3.12.2-activity-explanation_div.png",
+    "instructions": "3.12.2-activity-instructions_div.png",
+    "question": "3.12.2.1-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  Select the choice that is equivalent to the following statement:\n  <br/>\n  <br/>\n  For k \u2265 7, if P(j) is true for all j in the range 2 through k, then P(k+1) is true.\n </div>\n</div>",
+  "section": "3.12.2: The principle of strong induction with general range for the base case."
+}

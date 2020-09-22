@@ -1,1 +1,26 @@
-{"section": "5.12.1: Values and ranges of random variables.", "qid": 1, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Consider the sample space of all outcomes of a roll of a blue and a red die. Define M to be the value obtained by subtracting the number on the red die from the number on the blue die. What is the range of M?\n </div>\n</div>", "correct_choice_index": 1, "choices": ["{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}", "{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}", "{-5, -4, -3, -2, -1, 0}"], "answer": "{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The value of M(1, 6) is -5. The value of M(6, 1) is 5. Every other integer from -5 to 5 is in the range of M.\n</div>\n", "images": {"instructions": "5.12.1-activity-instructions_div.png", "question": "5.12.1.1-activity-question.png", "choices": ["5.12.1.1-activity-choice-0.png", "5.12.1.1-activity-choice-1.png", "5.12.1.1-activity-choice-2.png"], "explanation": "5.12.1-activity-explanation_div.png"}}
+{
+  "answer": "{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}",
+  "choices": [
+    "{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}",
+    "{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}",
+    "{-5, -4, -3, -2, -1, 0}"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The value of M(1, 6) is -5. The value of M(6, 1) is 5. Every other integer from -5 to 5 is in the range of M.\n</div>\n",
+  "images": {
+    "choices": [
+      "5.12.1.1-activity-choice-0.png",
+      "5.12.1.1-activity-choice-1.png",
+      "5.12.1.1-activity-choice-2.png"
+    ],
+    "explanation": "5.12.1-activity-explanation_div.png",
+    "instructions": "5.12.1-activity-instructions_div.png",
+    "question": "5.12.1.1-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  Consider the sample space of all outcomes of a roll of a blue and a red die. Define M to be the value obtained by subtracting the number on the red die from the number on the blue die. What is the range of M?\n </div>\n</div>",
+  "section": "5.12.1: Values and ranges of random variables."
+}

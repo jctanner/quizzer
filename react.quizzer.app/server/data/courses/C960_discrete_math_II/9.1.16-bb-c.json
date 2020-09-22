@@ -1,11 +1,12 @@
 {
-  "section": "9.1.16 probability [bluebook]",
-  "question": "2 faces of a 6 sided die are painted red, two are painted blue, and two are painted yellow. The die is rolled three times and the colors that appear face up on the first, second and third rolls are recorded. If 2 of the rolls are the same color(RRB/BBY/etc), what is the probability of the event?",
   "answer": "2/3",
-  "fn": "9.1.16-bb-c.json",
-  "qid": "c",
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.1.16-bb-c.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": "c",
+  "question": "2 faces of a 6 sided die are painted red, two are painted blue, and two are painted yellow. The die is rolled three times and the colors that appear face up on the first, second and third rolls are recorded. If 2 of the rolls are the same color(RRB/BBY/etc), what is the probability of the event?",
+  "section": "9.1.16 probability [bluebook]"
 }

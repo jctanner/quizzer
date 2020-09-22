@@ -1,1 +1,18 @@
-{"section": "4.12.2: Counting by complement.", "qid": 3, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Give numerical answers for the questions below.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Four people (John, Paul, George, and Ringo) are seated in a row on a bench. The number of ways to order the four people so that John is next to Paul is 12. How many ways are there to order the four people on the bench so that John is not next to Paul?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "12", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   12\n  </span>\n </div>\n The number of ways to line up the 4 people so that John is not next to Paul is the total number of ways to line them up with no restrictions\n <span style=\"white-space: nowrap;\">\n  (4! = 24)\n </span>\n minus the number of ways to line them up so that John is next to Paul (12). The answer is\n <span style=\"white-space: nowrap;\">\n  24 - 12 = 12\n </span>\n .\n</div>\n", "images": {"instructions": "4.12.2-activity-instructions_div.png", "question": "4.12.2.3-activity-question.png", "choices": [], "explanation": "4.12.2-activity-explanation_div.png"}}
+{
+  "answer": "12",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   12\n  </span>\n </div>\n The number of ways to line up the 4 people so that John is not next to Paul is the total number of ways to line them up with no restrictions\n <span style=\"white-space: nowrap;\">\n  (4! = 24)\n </span>\n minus the number of ways to line them up so that John is next to Paul (12). The answer is\n <span style=\"white-space: nowrap;\">\n  24 - 12 = 12\n </span>\n .\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "4.12.2-activity-explanation_div.png",
+    "instructions": "4.12.2-activity-instructions_div.png",
+    "question": "4.12.2.3-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Give numerical answers for the questions below.\n </p>\n</div>\n",
+  "qid": 3,
+  "question": "<div>\n <div class=\"text\">\n  Four people (John, Paul, George, and Ringo) are seated in a row on a bench. The number of ways to order the four people so that John is next to Paul is 12. How many ways are there to order the four people on the bench so that John is not next to Paul?\n </div>\n</div>",
+  "section": "4.12.2: Counting by complement."
+}

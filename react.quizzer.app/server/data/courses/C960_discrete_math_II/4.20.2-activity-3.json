@@ -1,1 +1,24 @@
-{"section": "4.20.2: Pigeonhole principle.", "qid": 3, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Indicate whether the pigeonhole principle can be used to prove the following statements.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  There are four people whose weight is at least 100 pounds and less than 130 pounds. There must be at least two people in the group whose weight differs by at most 10 pounds.\n </div>\n</div>", "correct_choice_index": 0, "choices": ["Yes", "No"], "answer": "Yes", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Define three ranges: 100 up to 110 lbs, 110 up to 120 lbs, and 120 up to 130 lbs. Since there are three ranges and four people, there must be two people whose weight falls in the same range. \nSince a range spans less than 10 lbs, two people whose weight falls in the same range must have weights that\nare within 10 lbs of each other.\n</div>\n", "images": {"instructions": "4.20.2-activity-instructions_div.png", "question": "4.20.2.3-activity-question.png", "choices": [null, null], "explanation": "4.20.2-activity-explanation_div.png"}}
+{
+  "answer": "Yes",
+  "choices": [
+    "Yes",
+    "No"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Define three ranges: 100 up to 110 lbs, 110 up to 120 lbs, and 120 up to 130 lbs. Since there are three ranges and four people, there must be two people whose weight falls in the same range. \nSince a range spans less than 10 lbs, two people whose weight falls in the same range must have weights that\nare within 10 lbs of each other.\n</div>\n",
+  "images": {
+    "choices": [
+      null,
+      null
+    ],
+    "explanation": "4.20.2-activity-explanation_div.png",
+    "instructions": "4.20.2-activity-instructions_div.png",
+    "question": "4.20.2.3-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Indicate whether the pigeonhole principle can be used to prove the following statements.\n </p>\n</div>\n",
+  "qid": 3,
+  "question": "<div>\n <div class=\"text\">\n  There are four people whose weight is at least 100 pounds and less than 130 pounds. There must be at least two people in the group whose weight differs by at most 10 pounds.\n </div>\n</div>",
+  "section": "4.20.2: Pigeonhole principle."
+}

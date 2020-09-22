@@ -1,1 +1,17 @@
-{"section": "Exercise 4.16.2: Find the next permutation in lexicographic order.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  For each permutation of {1, 2, 3, 4, 5, 6, 7}, give the next largest permutation or indicate that the permutation is the last one in lexicographic order.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   (1, 2, 3, 4, 5, 6, 7)\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "(1, 2, 3, 4, 5, 7, 6)", "explanation": null, "images": {"instructions": "4.16.2-exercise-instructions_div.png", "question": "4.16.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "(1, 2, 3, 4, 5, 7, 6)",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.16.2-exercise-instructions_div.png",
+    "question": "4.16.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  For each permutation of {1, 2, 3, 4, 5, 6, 7}, give the next largest permutation or indicate that the permutation is the last one in lexicographic order.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   (1, 2, 3, 4, 5, 6, 7)\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.16.2: Find the next permutation in lexicographic order."
+}

@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "252",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "once A team is set, B is the leftover, so only choose A ... nCr(10,5) = 252",
   "images": {
     "choices": [],
     "instructions": "5.4.2-exercise-instructions_div.png",

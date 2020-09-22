@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  There are two binary strings of length ten with no 8's or no 3's. Those are\n6 and 7111111117. Therefore the number of binary strings with at least one 7 and\nat least one 1 is 8\n  <sup>\n   13\n  </sup>\n  - 3.\n </p>\n</div>\n"
   ],
   "correct_choice_index": 1,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

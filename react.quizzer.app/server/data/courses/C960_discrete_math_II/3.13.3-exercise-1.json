@@ -1,1 +1,17 @@
-{"section": "Exercise 3.13.3: Proof by the well-ordering principle.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  Prove each of the following statements using the principle of well-ordering.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Prove that any amount of postage worth 8 cents or more can be made from 3-cent or 5-cent\nstamps.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "Let S be the set of all integers n, such that n \u2265 8 and it is not possible to make n cents worth of stamps\nfrom 3-cent and 5-cent stamps. By the well-ordering principle, S has a smallest element m.\nSince any integer must be at least 8 to be in S, m \u2265 8. Also by definition of m, it is impossible\nto make m cents worth of stamps and for any j in the range 8 through m-1, it is\npossible to make j cents worth of stamps. For each of the following cases, we\nobtain a contradiction:", "explanation": null, "images": {"instructions": "3.13.3-exercise-instructions_div.png", "question": "3.13.3.1-exercise-question.png", "choices": []}}
+{
+  "answer": "Let S be the set of all integers n, such that n \u2265 8 and it is not possible to make n cents worth of stamps\nfrom 3-cent and 5-cent stamps. By the well-ordering principle, S has a smallest element m.\nSince any integer must be at least 8 to be in S, m \u2265 8. Also by definition of m, it is impossible\nto make m cents worth of stamps and for any j in the range 8 through m-1, it is\npossible to make j cents worth of stamps. For each of the following cases, we\nobtain a contradiction:",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "3.13.3-exercise-instructions_div.png",
+    "question": "3.13.3.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Prove each of the following statements using the principle of well-ordering.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Prove that any amount of postage worth 8 cents or more can be made from 3-cent or 5-cent\nstamps.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 3.13.3: Proof by the well-ordering principle."
+}

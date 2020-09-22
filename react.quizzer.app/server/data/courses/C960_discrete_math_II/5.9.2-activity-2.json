@@ -1,1 +1,18 @@
-{"section": "5.9.2: Determining whether two events are independent - three coin flips.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  A fair coin is flipped 3 times.  Define the following events:\n </p>\n <ul>\n  <li>\n   F: the first flip comes up heads.\n  </li>\n  <li>\n   E: the number of heads is even. (Zero is an even number.)\n  </li>\n  <li>\n   W: at least two of the three flips come up heads.\n  </li>\n </ul>\n <p>\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the probability that the first flip comes up heads and there is an even number of heads? (What is p(F \u2229 E)?)\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "1/4", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   1/4\n  </span>\n </div>\n F \u2229 E = {HHT, HTH}. p(F \u2229 E) = 2/8 = 1/4.\n</div>\n", "images": {"instructions": "5.9.2-activity-instructions_div.png", "question": "5.9.2.2-activity-question.png", "choices": [], "explanation": "5.9.2-activity-explanation_div.png"}}
+{
+  "answer": "1/4",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   1/4\n  </span>\n </div>\n F \u2229 E = {HHT, HTH}. p(F \u2229 E) = 2/8 = 1/4.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "5.9.2-activity-explanation_div.png",
+    "instructions": "5.9.2-activity-instructions_div.png",
+    "question": "5.9.2.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  A fair coin is flipped 3 times.  Define the following events:\n </p>\n <ul>\n  <li>\n   F: the first flip comes up heads.\n  </li>\n  <li>\n   E: the number of heads is even. (Zero is an even number.)\n  </li>\n  <li>\n   W: at least two of the three flips come up heads.\n  </li>\n </ul>\n <p>\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  What is the probability that the first flip comes up heads and there is an even number of heads? (What is p(F \u2229 E)?)\n </div>\n</div>",
+  "section": "5.9.2: Determining whether two events are independent - three coin flips."
+}

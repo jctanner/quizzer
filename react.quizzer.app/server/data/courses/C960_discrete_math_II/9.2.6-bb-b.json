@@ -1,11 +1,12 @@
 {
-  "section": "9.2.6 probability [bluebook]",
-  "question": "An urn contains two black balls (B1 & B2) and one white ball. A second urn contains one black ball and two white balls (W1 & W2). One urn is chosen at random. Next a ball is chosen at random from the urn. Then a second ball is chosen from the same urn without replacing the first ball. What is the total number of outcomes?",
   "answer": "12",
-  "fn": "9.2.6-bb-b.json",
-  "qid": "b",
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.2.6-bb-b.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": "b",
+  "question": "An urn contains two black balls (B1 & B2) and one white ball. A second urn contains one black ball and two white balls (W1 & W2). One urn is chosen at random. Next a ball is chosen at random from the urn. Then a second ball is chosen from the same urn without replacing the first ball. What is the total number of outcomes?",
+  "section": "9.2.6 probability [bluebook]"
 }

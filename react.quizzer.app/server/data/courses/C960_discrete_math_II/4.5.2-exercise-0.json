@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  There are three choices for the first character.\nThere are two choices in selecting each of the next\n11 characters from left to right because each character can be any element\nfrom the set {a, b, c}, except  the one that was chosen to be the previous character.\nPutting together all the choices by the generalized product rule, the\nnumber of strings of length 118 that do not have two consecutive characters that\nare the same  is\n4\u00b79\n  <sup>\n   9\n  </sup>\n  .\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

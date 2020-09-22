@@ -1,1 +1,17 @@
-{"section": "Exercise 2.5.2: Congruence modulo n.", "qid": 1, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Group the numbers from the given set into classes of congruence.  That is, put two numbers in the same group if they are equivalent modulo 13.\n  </p>\n  <p>\n   {\u221263, -54, -41, 11, 13, 76, 80, 130, 132, 137}\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "Congruent to 0 modulo 13: 13, 130", "explanation": null, "images": {"instructions": "2.5.2-exercise-instructions_div.png", "question": "2.5.2.1-exercise-question.png", "choices": []}}
+{
+  "answer": "Congruent to 0 modulo 13: 13, 130",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.5.2-exercise-instructions_div.png",
+    "question": "2.5.2.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   Group the numbers from the given set into classes of congruence.  That is, put two numbers in the same group if they are equivalent modulo 13.\n  </p>\n  <p>\n   {\u221263, -54, -41, 11, 13, 76, 80, 130, 132, 137}\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.5.2: Congruence modulo n."
+}

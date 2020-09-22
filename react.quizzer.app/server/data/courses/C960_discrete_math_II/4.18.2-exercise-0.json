@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  There is only one binary string of length ten with no 3's: 6.\nThere are 7\n  <sup>\n   33\n  </sup>\n  binary strings of length ten. Therefore the number of binary strings\nof length ten with at least one 9 is 11\n  <sup>\n   17\n  </sup>\n  - 1.\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

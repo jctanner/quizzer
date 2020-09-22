@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "-241920",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "nCr(7,3) * -3^3 * 4^4 = 35 * -27 * 256 = -241920",
   "images": {
     "choices": [],
     "instructions": "4.19.1-exercise-instructions_div.png",

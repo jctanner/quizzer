@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "4774/27417",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "(nCr(5,2) * nCr(35,5)) / nCr(40,7)",
   "images": {
     "choices": [],
     "instructions": "5.12.4-exercise-instructions_div.png",

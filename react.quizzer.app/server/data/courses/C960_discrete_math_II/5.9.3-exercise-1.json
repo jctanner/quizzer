@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  (6/10)\n  <sup>\n   6\n  </sup>\n  (7/11)\n  <sup>\n   5\n  </sup>\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

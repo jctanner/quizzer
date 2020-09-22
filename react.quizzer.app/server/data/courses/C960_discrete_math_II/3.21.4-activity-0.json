@@ -1,1 +1,26 @@
-{"section": "3.21.4: Solving linear homogeneous recurrence relations.", "qid": 0, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Consider a linear homogeneous recurrence relation whose characteristic equation is (x - 3)(x + 2) = 0.\nWhich expression characterizes the set of all solutions to the recurrence relation? The variables s and t can be any real numbers.\n </div>\n</div>", "correct_choice_index": 0, "choices": ["s\u00b73\n n\n\n + t\u00b7(-2)\n n", "s\u00b73\n n\n\n + t\u00b72\n n", "s\u00b7(-3)\n n\n\n + t\u00b72\n n"], "answer": "s\u00b73n + t\u00b7(-2)n", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The solutions to  the characteristic equation are x = 3 and x = -2. Therefore the solutions are a linear combination of 3\n <sup>\n  n\n </sup>\n and (-2)\n <sup>\n  n\n </sup>\n .\n</div>\n", "images": {"instructions": "3.21.4-activity-instructions_div.png", "question": "3.21.4.0-activity-question.png", "choices": ["3.21.4.0-activity-choice-0.png", "3.21.4.0-activity-choice-1.png", "3.21.4.0-activity-choice-2.png"], "explanation": "3.21.4-activity-explanation_div.png"}}
+{
+  "answer": "s\u00b73n + t\u00b7(-2)n",
+  "choices": [
+    "s\u00b73\n n\n\n + t\u00b7(-2)\n n",
+    "s\u00b73\n n\n\n + t\u00b72\n n",
+    "s\u00b7(-3)\n n\n\n + t\u00b72\n n"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The solutions to  the characteristic equation are x = 3 and x = -2. Therefore the solutions are a linear combination of 3\n <sup>\n  n\n </sup>\n and (-2)\n <sup>\n  n\n </sup>\n .\n</div>\n",
+  "images": {
+    "choices": [
+      "3.21.4.0-activity-choice-0.png",
+      "3.21.4.0-activity-choice-1.png",
+      "3.21.4.0-activity-choice-2.png"
+    ],
+    "explanation": "3.21.4-activity-explanation_div.png",
+    "instructions": "3.21.4-activity-instructions_div.png",
+    "question": "3.21.4.0-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  Consider a linear homogeneous recurrence relation whose characteristic equation is (x - 3)(x + 2) = 0.\nWhich expression characterizes the set of all solutions to the recurrence relation? The variables s and t can be any real numbers.\n </div>\n</div>",
+  "section": "3.21.4: Solving linear homogeneous recurrence relations."
+}

@@ -1,11 +1,12 @@
 {
-  "section": "9.2.3 probability [bluebook]",
-  "question": "If the first team to win four games will win the series and there are 2 teams. How many ways can a world series be played if team A wins four games in a row?",
   "answer": "4",
-  "fn": "9.2.3-bb-0.json",
-  "qid": 0,
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.2.3-bb-0.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": 0,
+  "question": "If the first team to win four games will win the series and there are 2 teams. How many ways can a world series be played if team A wins four games in a row?",
+  "section": "9.2.3 probability [bluebook]"
 }

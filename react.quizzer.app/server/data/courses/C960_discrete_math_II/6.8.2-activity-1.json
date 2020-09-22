@@ -1,1 +1,18 @@
-{"section": "6.8.2: The gumball machine DFA.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  How many gumballs are purchased after the following input sequence: NICKEL, DIME, NICKEL, BUY, DIME, NICKEL, BUY? Write your answer in numerical form.\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "1\nor\none", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answers\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   1\n  </span>\n  <span class=\"or-text\">\n   or\n  </span>\n  <span class=\"forfeit-answer\">\n   one\n  </span>\n </div>\n At the point of the first BUY, the FSM is in state q\n <sub>\n  20\n </sub>\n and a gumball is released at which point the FSM returns to q\n <sub>\n  0\n </sub>\n . After the next DIME and NICKEL, the FSM is in state q\n <sub>\n  15\n </sub>\n and a gumball is not released after the second BUY.\n</div>\n", "images": {"instructions": "6.8.2-activity-instructions_div.png", "question": "6.8.2.1-activity-question.png", "choices": [], "explanation": "6.8.2-activity-explanation_div.png"}}
+{
+  "answer": "1\nor\none",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answers\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   1\n  </span>\n  <span class=\"or-text\">\n   or\n  </span>\n  <span class=\"forfeit-answer\">\n   one\n  </span>\n </div>\n At the point of the first BUY, the FSM is in state q\n <sub>\n  20\n </sub>\n and a gumball is released at which point the FSM returns to q\n <sub>\n  0\n </sub>\n . After the next DIME and NICKEL, the FSM is in state q\n <sub>\n  15\n </sub>\n and a gumball is not released after the second BUY.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "6.8.2-activity-explanation_div.png",
+    "instructions": "6.8.2-activity-instructions_div.png",
+    "question": "6.8.2.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  How many gumballs are purchased after the following input sequence: NICKEL, DIME, NICKEL, BUY, DIME, NICKEL, BUY? Write your answer in numerical form.\n </div>\n</div>",
+  "section": "6.8.2: The gumball machine DFA."
+}

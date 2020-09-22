@@ -1,1 +1,26 @@
-{"section": "5.12.4: Distributions over random variables.", "qid": 0, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Consider an experiment in which a fair coin is flipped 3 times. Define the random variable A to be the number of flips that come up heads.  Which choice corresponds to the distribution over A?\n </div>\n</div>", "correct_choice_index": 0, "choices": ["(3,1/8), (2,3/8), \n (1, 3/8), (0,1/8)", "(3,1/4), (2,1/4), \n (1, 1/4), (0,1/4)", "(3,1/8), (2,3/8), \n (1, 3/8)"], "answer": "(3,1/8), (2,3/8), \n(1, 3/8), (0,1/8)", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n A has  a value of 3 for only one outcome (HHH), so p(A = 3) = 1/8.\n <br/>\n A has a value of 2 for three outcomes (HHT, HTH, THH), so p(A = 2) = 3/8.\n <br/>\n A has a value of 1 for three outcomes (HTT, THT, TTH), so p(A = 1) = 3/8.\n <br/>\n A has  avalue of 0 for only one outcome (TTT), so p(A = 0) = 1/8.\n</div>\n", "images": {"instructions": "5.12.4-activity-instructions_div.png", "question": "5.12.4.0-activity-question.png", "choices": ["5.12.4.0-activity-choice-0.png", "5.12.4.0-activity-choice-1.png", "5.12.4.0-activity-choice-2.png"], "explanation": "5.12.4-activity-explanation_div.png"}}
+{
+  "answer": "(3,1/8), (2,3/8), \n(1, 3/8), (0,1/8)",
+  "choices": [
+    "(3,1/8), (2,3/8), \n (1, 3/8), (0,1/8)",
+    "(3,1/4), (2,1/4), \n (1, 1/4), (0,1/4)",
+    "(3,1/8), (2,3/8), \n (1, 3/8)"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n A has  a value of 3 for only one outcome (HHH), so p(A = 3) = 1/8.\n <br/>\n A has a value of 2 for three outcomes (HHT, HTH, THH), so p(A = 2) = 3/8.\n <br/>\n A has a value of 1 for three outcomes (HTT, THT, TTH), so p(A = 1) = 3/8.\n <br/>\n A has  avalue of 0 for only one outcome (TTT), so p(A = 0) = 1/8.\n</div>\n",
+  "images": {
+    "choices": [
+      "5.12.4.0-activity-choice-0.png",
+      "5.12.4.0-activity-choice-1.png",
+      "5.12.4.0-activity-choice-2.png"
+    ],
+    "explanation": "5.12.4-activity-explanation_div.png",
+    "instructions": "5.12.4-activity-instructions_div.png",
+    "question": "5.12.4.0-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  Consider an experiment in which a fair coin is flipped 3 times. Define the random variable A to be the number of flips that come up heads.  Which choice corresponds to the distribution over A?\n </div>\n</div>",
+  "section": "5.12.4: Distributions over random variables."
+}

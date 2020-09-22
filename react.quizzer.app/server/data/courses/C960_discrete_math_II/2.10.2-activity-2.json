@@ -1,1 +1,18 @@
-{"section": "2.10.2: Euclid's Algorithm.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider an Euclid's algorithm with input integers y = 156 and x = 54.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the value of r  after the second  iteration of the loop in Euclid's algorithm?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "0", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   0\n  </span>\n </div>\n x = 48,  y = 6, r = 48 mod 6 = 0\n</div>\n", "images": {"instructions": "2.10.2-activity-instructions_div.png", "question": "2.10.2.2-activity-question.png", "choices": [], "explanation": "2.10.2-activity-explanation_div.png"}}
+{
+  "answer": "0",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   0\n  </span>\n </div>\n x = 48,  y = 6, r = 48 mod 6 = 0\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "2.10.2-activity-explanation_div.png",
+    "instructions": "2.10.2-activity-instructions_div.png",
+    "question": "2.10.2.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider an Euclid's algorithm with input integers y = 156 and x = 54.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  What is the value of r  after the second  iteration of the loop in Euclid's algorithm?\n </div>\n</div>",
+  "section": "2.10.2: Euclid's Algorithm."
+}

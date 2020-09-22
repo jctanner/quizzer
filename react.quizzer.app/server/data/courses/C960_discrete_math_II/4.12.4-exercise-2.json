@@ -1,1 +1,17 @@
-{"section": "Exercise 4.12.4: Lining up a wedding party for a photo.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  Ten members of a wedding party are lining up in a row for a photograph.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   How many ways are there for the wedding party to line up if the groom is not at one end (i.e. in the leftmost or rightmost positions)?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "There are 10! ways to line up the ten people in the wedding party if there are no restrictions\non how the people are placed. \nThe number of ways to line up the ten people if the groom is in the leftmost position is 9!.\nThe number of ways to line up the ten people if the groom is in the rightmost position is 9!.\nThe number of ways to line up the ten people if the groom is in the rightmost or the leftmost \nposition is 9! + 9! = 2\u00b79!.\nTherefore the number of ways to line up the ten people in the wedding party in which\nthe groom is not in the leftmost or rightmost position is 10! - 2\u00b79! = 8\u00b79!.", "explanation": null, "images": {"instructions": "4.12.4-exercise-instructions_div.png", "question": "4.12.4.2-exercise-question.png", "choices": []}}
+{
+  "answer": "There are 10! ways to line up the ten people in the wedding party if there are no restrictions\non how the people are placed. \nThe number of ways to line up the ten people if the groom is in the leftmost position is 9!.\nThe number of ways to line up the ten people if the groom is in the rightmost position is 9!.\nThe number of ways to line up the ten people if the groom is in the rightmost or the leftmost \nposition is 9! + 9! = 2\u00b79!.\nTherefore the number of ways to line up the ten people in the wedding party in which\nthe groom is not in the leftmost or rightmost position is 10! - 2\u00b79! = 8\u00b79!.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.12.4-exercise-instructions_div.png",
+    "question": "4.12.4.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Ten members of a wedding party are lining up in a row for a photograph.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   How many ways are there for the wedding party to line up if the groom is not at one end (i.e. in the leftmost or rightmost positions)?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.12.4: Lining up a wedding party for a photo."
+}

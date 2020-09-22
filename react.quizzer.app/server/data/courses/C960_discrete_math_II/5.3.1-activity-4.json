@@ -1,1 +1,26 @@
-{"section": "5.3.1: Experiments, outcomes and events.", "qid": 4, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  In the experiment where the coin is flipped three times, which set corresponds to the event that at least two of the three flips come up heads?\n </div>\n</div>", "correct_choice_index": 1, "choices": ["{HHH, HHT}", "{HHH, HHT, HTH, THH}", "{HHH, TTH, THT, HTT}"], "answer": "{HHH, HHT, HTH, THH}", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The set corresponds to exactly those  outcomes in which the coin comes up heads at least two times.\n</div>\n", "images": {"instructions": "5.3.1-activity-instructions_div.png", "question": "5.3.1.4-activity-question.png", "choices": ["5.3.1.4-activity-choice-0.png", "5.3.1.4-activity-choice-1.png", "5.3.1.4-activity-choice-2.png"], "explanation": "5.3.1-activity-explanation_div.png"}}
+{
+  "answer": "{HHH, HHT, HTH, THH}",
+  "choices": [
+    "{HHH, HHT}",
+    "{HHH, HHT, HTH, THH}",
+    "{HHH, TTH, THT, HTT}"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The set corresponds to exactly those  outcomes in which the coin comes up heads at least two times.\n</div>\n",
+  "images": {
+    "choices": [
+      "5.3.1.4-activity-choice-0.png",
+      "5.3.1.4-activity-choice-1.png",
+      "5.3.1.4-activity-choice-2.png"
+    ],
+    "explanation": "5.3.1-activity-explanation_div.png",
+    "instructions": "5.3.1-activity-instructions_div.png",
+    "question": "5.3.1.4-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 4,
+  "question": "<div>\n <div class=\"text\">\n  In the experiment where the coin is flipped three times, which set corresponds to the event that at least two of the three flips come up heads?\n </div>\n</div>",
+  "section": "5.3.1: Experiments, outcomes and events."
+}

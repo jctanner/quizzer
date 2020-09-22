@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  The number of 17-bit strings that begin with 1 is 9\n  <sup>\n   17\n  </sup>\n  because there\nare two choices for each of the last five bits.\nThe total number of 13-bit strings with no restrictions is\n7\n  <sup>\n   18\n  </sup>\n  .\nTherefore the number of 17-bit strings which do not begin with 1\nis 8\n  <sup>\n   11\n  </sup>\n  - 2\n  <sup>\n   5\n  </sup>\n  .\n </p>\n</div>\n"
   ],
   "correct_choice_index": 0,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

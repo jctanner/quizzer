@@ -1,11 +1,12 @@
 {
-  "section": "9.1.2 probability [bluebook]",
-  "question": "If two quarters are tossed, what is the probability that coins A and B are either both heads or both tails?",
   "answer": "1/2",
-  "fn": "9.1.2-bb-3.json",
-  "qid": "3",
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.1.2-bb-3.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": "3",
+  "question": "If two quarters are tossed, what is the probability that coins A and B are either both heads or both tails?",
+  "section": "9.1.2 probability [bluebook]"
 }

@@ -1,1 +1,26 @@
-{"section": "4.15.5: Finding the next permutation in lexicographic order.", "qid": 0, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the next permutation after (1, 5, 4, 2, 3, 6) in lexicographic order?\n </div>\n</div>", "correct_choice_index": 1, "choices": ["(1, 5, 2, 3, 4, 6)", "(1, 5, 4, 2, 6, 3)", "(1, 5, 4, 6, 3, 2)"], "answer": "(1, 5, 4, 2, 6, 3)", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Since 3 &lt; 6, only the last two elements in\n <span style=\"white-space: nowrap;\">\n  (1, 5, 4, 2, 3, 6)\n </span>\n need to  be reordered to produce a larger permutation.\n</div>\n", "images": {"instructions": "4.15.5-activity-instructions_div.png", "question": "4.15.5.0-activity-question.png", "choices": ["4.15.5.0-activity-choice-0.png", "4.15.5.0-activity-choice-1.png", "4.15.5.0-activity-choice-2.png"], "explanation": "4.15.5-activity-explanation_div.png"}}
+{
+  "answer": "(1, 5, 4, 2, 6, 3)",
+  "choices": [
+    "(1, 5, 2, 3, 4, 6)",
+    "(1, 5, 4, 2, 6, 3)",
+    "(1, 5, 4, 6, 3, 2)"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Since 3 &lt; 6, only the last two elements in\n <span style=\"white-space: nowrap;\">\n  (1, 5, 4, 2, 3, 6)\n </span>\n need to  be reordered to produce a larger permutation.\n</div>\n",
+  "images": {
+    "choices": [
+      "4.15.5.0-activity-choice-0.png",
+      "4.15.5.0-activity-choice-1.png",
+      "4.15.5.0-activity-choice-2.png"
+    ],
+    "explanation": "4.15.5-activity-explanation_div.png",
+    "instructions": "4.15.5-activity-instructions_div.png",
+    "question": "4.15.5.0-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  What is the next permutation after (1, 5, 4, 2, 3, 6) in lexicographic order?\n </div>\n</div>",
+  "section": "4.15.5: Finding the next permutation in lexicographic order."
+}

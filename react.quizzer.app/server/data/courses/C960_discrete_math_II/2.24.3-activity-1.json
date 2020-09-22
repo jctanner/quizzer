@@ -1,1 +1,18 @@
-{"section": "2.24.3: Encrypting and decrypting a message with RSA.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Suppose that Alice and Bob are using the RSA cryptosystem to send a message. Bob selects p = 3 and q = 11.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the value of \u03c6?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "20", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   20\n  </span>\n </div>\n \u03c6 = (p-1)(q-1) = 2\u00b710 = 20.\n</div>\n", "images": {"instructions": "2.24.3-activity-instructions_div.png", "question": "2.24.3.1-activity-question.png", "choices": [], "explanation": "2.24.3-activity-explanation_div.png"}}
+{
+  "answer": "20",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   20\n  </span>\n </div>\n \u03c6 = (p-1)(q-1) = 2\u00b710 = 20.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "2.24.3-activity-explanation_div.png",
+    "instructions": "2.24.3-activity-instructions_div.png",
+    "question": "2.24.3.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Suppose that Alice and Bob are using the RSA cryptosystem to send a message. Bob selects p = 3 and q = 11.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  What is the value of \u03c6?\n </div>\n</div>",
+  "section": "2.24.3: Encrypting and decrypting a message with RSA."
+}

@@ -1,1 +1,17 @@
-{"section": "Exercise 4.3.1: Counting passwords made up  of letters, digits, and special characters.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  Consider the following definitions for sets of characters:\n </p>\n <ul>\n  <li>\n   Digits =  { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }\n  </li>\n  <li>\n   Letters =  { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }\n  </li>\n  <li>\n   Special characters = { *, &amp;, $,  # }\n  </li>\n </ul>\n <p>\n  Compute the number of passwords that satisfy the given constraints.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   Strings of length 7, 8, or 9. \nCharacters can be special characters, digits, or letters.\nThe first character cannot be a letter.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "14(406 + 407 + 408)", "explanation": null, "images": {"instructions": "4.3.1-exercise-instructions_div.png", "question": "4.3.1.2-exercise-question.png", "choices": []}}
+{
+  "answer": "14(406 + 407 + 408)",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.3.1-exercise-instructions_div.png",
+    "question": "4.3.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Consider the following definitions for sets of characters:\n </p>\n <ul>\n  <li>\n   Digits =  { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }\n  </li>\n  <li>\n   Letters =  { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }\n  </li>\n  <li>\n   Special characters = { *, &amp;, $,  # }\n  </li>\n </ul>\n <p>\n  Compute the number of passwords that satisfy the given constraints.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   Strings of length 7, 8, or 9. \nCharacters can be special characters, digits, or letters.\nThe first character cannot be a letter.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.3.1: Counting passwords made up  of letters, digits, and special characters."
+}

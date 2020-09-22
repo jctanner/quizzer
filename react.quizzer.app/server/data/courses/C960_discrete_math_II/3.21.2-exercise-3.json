@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  a\n  <sub>\n   7\n  </sub>\n  11\n  <sup>\n   n\n  </sup>\n  + a\n  <sub>\n   7\n  </sub>\n  n10\n  <sup>\n   n\n  </sup>\n  + a\n  <sub>\n   111\n  </sub>\n  (-12)\n  <sup>\n   n\n  </sup>\n  + a\n  <sub>\n   10\n  </sub>\n  n(-12)\n  <sup>\n   n\n  </sup>\n  + a\n  <sub>\n   11\n  </sub>\n  n\n  <sup>\n   2\n  </sup>\n  (-11)\n  <sup>\n   n\n  </sup>\n  + a\n  <sub>\n   6\n  </sub>\n  n\n  <sup>\n   3\n  </sup>\n  (-5)\n  <sup>\n   n\n  </sup>\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

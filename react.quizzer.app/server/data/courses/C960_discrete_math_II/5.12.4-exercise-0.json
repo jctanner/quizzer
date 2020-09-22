@@ -1,1 +1,17 @@
-{"section": "Exercise 5.12.4: Probabilities and random variables - redundant storage.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  In a network of 40 computers, 5 hold a copy of a particular file. Suppose that 7 computers at random fail. Let F denote the number of computers that fail and have a copy of the file.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the range of F?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "{0, 1, 2, 3, 4, 5}", "explanation": null, "images": {"instructions": "5.12.4-exercise-instructions_div.png", "question": "5.12.4.0-exercise-question.png", "choices": []}}
+{
+  "answer": "{0, 1, 2, 3, 4, 5}",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.12.4-exercise-instructions_div.png",
+    "question": "5.12.4.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  In a network of 40 computers, 5 hold a copy of a particular file. Suppose that 7 computers at random fail. Let F denote the number of computers that fail and have a copy of the file.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the range of F?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.12.4: Probabilities and random variables - redundant storage."
+}

@@ -1,1 +1,17 @@
-{"section": "Exercise 4.9.1: Selecting students for jobs.", "qid": 1, "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   A teacher selects students from her class of 37 students to do 4 different jobs in the classroom:\npick up homework, hand out permission slips, staple worksheets, and\norganize the classroom library. Each job is performed by exactly one student in the\nclass and no student can get more than one job. How many ways are there for her to select\nstudents and assign them to the jobs?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "Suppose that the teacher assigns each selected student to the\njobs in order. That is, the first student selected is assigned\nto pick up homework, the second student will hand out permission slips, the third\nstudent will staple worksheets, and the fourth student will\norganize the classroom library. \nThe order in which the students are selected is important because the order determines\nwhich student gets which job. The number of ways\nto select an ordered list of four students from a set of 37 with no\nrepetitions is P(37, 4).", "explanation": null, "images": {"instructions": "4.9.1-exercise-instructions_div.png", "question": "4.9.1.1-exercise-question.png", "choices": []}}
+{
+  "answer": "Suppose that the teacher assigns each selected student to the\njobs in order. That is, the first student selected is assigned\nto pick up homework, the second student will hand out permission slips, the third\nstudent will staple worksheets, and the fourth student will\norganize the classroom library. \nThe order in which the students are selected is important because the order determines\nwhich student gets which job. The number of ways\nto select an ordered list of four students from a set of 37 with no\nrepetitions is P(37, 4).",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.9.1-exercise-instructions_div.png",
+    "question": "4.9.1.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <!-- -->\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   A teacher selects students from her class of 37 students to do 4 different jobs in the classroom:\npick up homework, hand out permission slips, staple worksheets, and\norganize the classroom library. Each job is performed by exactly one student in the\nclass and no student can get more than one job. How many ways are there for her to select\nstudents and assign them to the jobs?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.9.1: Selecting students for jobs."
+}

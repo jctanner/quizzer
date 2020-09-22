@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "1/126",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "There is only one way for all the girls to be on teh A team and only one way for all the girls to be on the B team. Therefore, there are two ways for the girls to be on the same team. 2 / nCr(10,5) = 1/126",
   "images": {
     "choices": [],
     "instructions": "5.6.1-exercise-instructions_div.png",

@@ -1,8 +1,8 @@
 {
-  "answer": "",
+  "answer": "nCr(35,10) * nCr(30,10)",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

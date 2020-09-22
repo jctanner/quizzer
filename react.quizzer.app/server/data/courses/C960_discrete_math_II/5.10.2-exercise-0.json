@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "0.597",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "see text",
   "images": {
     "choices": [],
     "instructions": "5.10.2-exercise-instructions_div.png",

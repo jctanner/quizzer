@@ -1,1 +1,26 @@
-{"section": "3.8.2: The components of an inductive proof.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n <p>\n </p>\n <p>\n  <b>\n   Theorem:\n  </b>\n  For all n \u2208\n  <b>\n   Z\n  </b>\n  <sup>\n   +\n  </sup>\n  , Q(n) is true,\n  <br/>\n  <br/>\n  where Q(n) is a statement that is parameterized by a positive integer n.\n </p>\n <p>\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  If the inductive step says that for all positive integers Q(k) implies Q(k+1), then what is the inductive hypothesis?\n </div>\n</div>", "correct_choice_index": 2, "choices": ["Q(k+1)", "Q(n)", "Q(k)"], "answer": "Q(k)", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Q(k) is the hypothesis of the conditional statement that Q(k) implies Q(k+1)\n</div>\n", "images": {"instructions": "3.8.2-activity-instructions_div.png", "question": "3.8.2.2-activity-question.png", "choices": ["3.8.2.2-activity-choice-0.png", "3.8.2.2-activity-choice-1.png", "3.8.2.2-activity-choice-2.png"], "explanation": "3.8.2-activity-explanation_div.png"}}
+{
+  "answer": "Q(k)",
+  "choices": [
+    "Q(k+1)",
+    "Q(n)",
+    "Q(k)"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n Q(k) is the hypothesis of the conditional statement that Q(k) implies Q(k+1)\n</div>\n",
+  "images": {
+    "choices": [
+      "3.8.2.2-activity-choice-0.png",
+      "3.8.2.2-activity-choice-1.png",
+      "3.8.2.2-activity-choice-2.png"
+    ],
+    "explanation": "3.8.2-activity-explanation_div.png",
+    "instructions": "3.8.2-activity-instructions_div.png",
+    "question": "3.8.2.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n </p>\n <p>\n  <b>\n   Theorem:\n  </b>\n  For all n \u2208\n  <b>\n   Z\n  </b>\n  <sup>\n   +\n  </sup>\n  , Q(n) is true,\n  <br/>\n  <br/>\n  where Q(n) is a statement that is parameterized by a positive integer n.\n </p>\n <p>\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  If the inductive step says that for all positive integers Q(k) implies Q(k+1), then what is the inductive hypothesis?\n </div>\n</div>",
+  "section": "3.8.2: The components of an inductive proof."
+}

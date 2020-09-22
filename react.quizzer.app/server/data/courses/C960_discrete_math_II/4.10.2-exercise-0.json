@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  For each comic book, there are five different choices for which kid will receive that comic book.\n24 decisions are made, one for each comic book with five different possibilities for each choice.\nThe number of ways to distribute the comic books to the five kids is 8\n  <sup>\n   29\n  </sup>\n  .\n </p>\n</div>\n"
   ],
   "correct_choice_index": 1,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

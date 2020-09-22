@@ -1,1 +1,17 @@
-{"section": "Exercise 2.5.1: Computing using modular arithmetic.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  Compute the value of the following expressions:\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   (77 \u00b7 (\u221265) + 147) mod 7\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "(77 \u00b7 (\u221265) + 147) mod 7 = ((77 mod 7) \u00b7 (\u221265) + (147 mod 7)) mod 7\n=", "explanation": null, "images": {"instructions": "2.5.1-exercise-instructions_div.png", "question": "2.5.1.2-exercise-question.png", "choices": []}}
+{
+  "answer": "(77 \u00b7 (\u221265) + 147) mod 7 = ((77 mod 7) \u00b7 (\u221265) + (147 mod 7)) mod 7\n=",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.5.1-exercise-instructions_div.png",
+    "question": "2.5.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Compute the value of the following expressions:\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   (77 \u00b7 (\u221265) + 147) mod 7\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.5.1: Computing using modular arithmetic."
+}

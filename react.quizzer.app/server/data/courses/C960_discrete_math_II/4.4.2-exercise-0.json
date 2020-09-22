@@ -1,1 +1,17 @@
-{"section": "Exercise 4.4.2: Using the bijection rule to count binary strings with even parity.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Let B = {0, 1}. B\n  <sup>\n   n\n  </sup>\n  is the set of binary strings with n bits.\nDefine the set E\n  <sub>\n   n\n  </sub>\n  to be the set of binary strings with n bits that have an even number\nof 1's. Note that zero is an even number, so a string with zero 1's (i.e., a string that is all 0's)\nhas an even number of 1's.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Show a bijection between B\n   <sup>\n    9\n   </sup>\n   and E\n   <sub>\n    10\n   </sub>\n   .\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "y.\nTherefore, f is onto", "explanation": null, "images": {"instructions": "4.4.2-exercise-instructions_div.png", "question": "4.4.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "y.\nTherefore, f is onto",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.4.2-exercise-instructions_div.png",
+    "question": "4.4.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Let B = {0, 1}. B\n  <sup>\n   n\n  </sup>\n  is the set of binary strings with n bits.\nDefine the set E\n  <sub>\n   n\n  </sub>\n  to be the set of binary strings with n bits that have an even number\nof 1's. Note that zero is an even number, so a string with zero 1's (i.e., a string that is all 0's)\nhas an even number of 1's.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Show a bijection between B\n   <sup>\n    9\n   </sup>\n   and E\n   <sub>\n    10\n   </sub>\n   .\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.4.2: Using the bijection rule to count binary strings with even parity."
+}

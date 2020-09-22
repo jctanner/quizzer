@@ -1,11 +1,12 @@
 {
-  "section": "9.2.39 probability [bluebook]",
-  "question": "How many ways can six of the letters of the wod ALGORITHM be selected and written in a row if the first letter must be A?",
   "answer": "6720",
-  "fn": "9.2.39-bb-c.json",
-  "qid": "c",
-  "instructions": null,
-  "input_type": "input",
   "choices": [],
-  "explanation": null
+  "enabled": true,
+  "explanation": null,
+  "fn": "9.2.39-bb-c.json",
+  "input_type": "input",
+  "instructions": null,
+  "qid": "c",
+  "question": "How many ways can six of the letters of the wod ALGORITHM be selected and written in a row if the first letter must be A?",
+  "section": "9.2.39 probability [bluebook]"
 }

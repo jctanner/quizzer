@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "21",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "[621/31] = 21",
   "images": {
     "choices": [],
     "instructions": "4.20.2-exercise-instructions_div.png",

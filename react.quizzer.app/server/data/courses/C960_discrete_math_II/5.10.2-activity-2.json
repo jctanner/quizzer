@@ -1,1 +1,18 @@
-{"section": "5.10.2: Another Bayes problem with the fair and loaded dice.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider the example with the fair and loaded die. The gambler selects one of the two die at random and rolls the die  twice. \nThe outcomes of the two rolls are independent. The first outcome  is not a 6 and the second outcome is a 6. Define Y to be the event that two rolls of the die result in the first roll not coming up 6 and the second roll coming up 6.\n </p>\n <p>\n  Express probabilities as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Apply the results from the previous two questions to Bayes' Theorem to determine p(F|Y).\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "49/121", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   49/121\n  </span>\n </div>\n The numerator is (5/36)(1/2). The denominator is (5/36)(1/2) + (10/49)(1/2).\n</div>\n", "images": {"instructions": "5.10.2-activity-instructions_div.png", "question": "5.10.2.2-activity-question.png", "choices": [], "explanation": "5.10.2-activity-explanation_div.png"}}
+{
+  "answer": "49/121",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   49/121\n  </span>\n </div>\n The numerator is (5/36)(1/2). The denominator is (5/36)(1/2) + (10/49)(1/2).\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "5.10.2-activity-explanation_div.png",
+    "instructions": "5.10.2-activity-instructions_div.png",
+    "question": "5.10.2.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Consider the example with the fair and loaded die. The gambler selects one of the two die at random and rolls the die  twice. \nThe outcomes of the two rolls are independent. The first outcome  is not a 6 and the second outcome is a 6. Define Y to be the event that two rolls of the die result in the first roll not coming up 6 and the second roll coming up 6.\n </p>\n <p>\n  Express probabilities as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  Apply the results from the previous two questions to Bayes' Theorem to determine p(F|Y).\n </div>\n</div>",
+  "section": "5.10.2: Another Bayes problem with the fair and loaded dice."
+}

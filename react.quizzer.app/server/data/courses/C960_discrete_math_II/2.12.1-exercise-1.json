@@ -1,1 +1,17 @@
-{"section": "Exercise 2.12.1: Computing a multiplicative inverse.", "qid": 1, "instructions": "<div class=\"setup\">\n <p>\n  For each x and n, find the multiplicative inverse mod n of x. Your answer should be an integer s in the range 0 through n - 1.\nCheck your solution by verifying that sx mod n = 1.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   x =  77, n = 52\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "From the solution to the previous problem:", "explanation": null, "images": {"instructions": "2.12.1-exercise-instructions_div.png", "question": "2.12.1.1-exercise-question.png", "choices": []}}
+{
+  "answer": "From the solution to the previous problem:",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.12.1-exercise-instructions_div.png",
+    "question": "2.12.1.1-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  For each x and n, find the multiplicative inverse mod n of x. Your answer should be an integer s in the range 0 through n - 1.\nCheck your solution by verifying that sx mod n = 1.\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (b)\n </span>\n <div class=\"text\">\n  <p>\n   x =  77, n = 52\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.12.1: Computing a multiplicative inverse."
+}

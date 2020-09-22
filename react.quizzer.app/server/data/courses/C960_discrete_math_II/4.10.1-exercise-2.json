@@ -1,16 +1,17 @@
 {
-  "section": "Exercise 4.10.1: Permuting letters in words.",
-  "qid": 2,
-  "instructions": "<div class=\"setup\">\n <p>\n  How many ways are there to permute the letters in each of the following words?\n </p>\n</div>\n",
-  "input_type": null,
-  "question": "SUBSETS",
+  "answer": 5040,
   "choices": [],
   "correct_choice_index": null,
-  "answer": 5040,
+  "enabled": true,
   "explanation": null,
   "images": {
+    "choices": [],
     "instructions": "4.10.1-exercise-instructions_div.png",
-    "question": "4.10.1.2-exercise-question.png",
-    "choices": []
-  }
+    "question": "4.10.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  How many ways are there to permute the letters in each of the following words?\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "SUBSETS",
+  "section": "Exercise 4.10.1: Permuting letters in words."
 }

@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "65351/99960",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "",
   "images": {
     "choices": [],
     "instructions": "5.6.4-exercise-instructions_div.png",

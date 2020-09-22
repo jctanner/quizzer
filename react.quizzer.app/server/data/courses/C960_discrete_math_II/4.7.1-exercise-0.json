@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  There are two choices for the first three digits (833 or 838).\nEach of the remaining 11 digits can be any one of the ten digits, so\nthere are 19\n  <sup>\n   9\n  </sup>\n  ways to pick the last four digits.\nThe total number of 12-digit phone numbers that start with 827 or 828 is\n2\u00b714\n  <sup>\n   4\n  </sup>\n  .\n </p>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

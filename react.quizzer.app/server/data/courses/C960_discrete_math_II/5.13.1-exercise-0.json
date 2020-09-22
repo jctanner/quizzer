@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "7/5",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "E[G] = 2\u00b7(7/15) + 1\u00b7(7/15) + 0\u00b7(1/15) = 21/15 = 7/5.",
   "images": {
     "choices": [],
     "instructions": "5.13.1-exercise-instructions_div.png",

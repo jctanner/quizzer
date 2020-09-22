@@ -1,8 +1,8 @@
 {
-  "answer": "",
+  "answer": "k = -2 to 6, k^5",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

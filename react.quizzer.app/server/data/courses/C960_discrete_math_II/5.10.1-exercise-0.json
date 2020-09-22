@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "0.257",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "27 / (27 + 2^10) ~ 0.0257",
   "images": {
     "choices": [],
     "instructions": "5.10.1-exercise-instructions_div.png",

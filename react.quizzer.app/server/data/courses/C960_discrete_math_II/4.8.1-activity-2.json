@@ -1,1 +1,26 @@
-{"section": "4.8.1: Distinguishing between r-subsets and r-permutations.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Let S = {a, b, c}.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  How many different\n  <span style=\"white-space: nowrap;\">\n   2-permutations\n  </span>\n  from S are there?\n </div>\n</div>", "correct_choice_index": 0, "choices": ["6", "3", "1"], "answer": "6", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The 2-permutations from S are:\n <span style=\"white-space: nowrap;\">\n  (a, b)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (b, a)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (a, c)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (c, a)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (b, c)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (c, b)\n </span>\n .\n</div>\n", "images": {"instructions": "4.8.1-activity-instructions_div.png", "question": "4.8.1.2-activity-question.png", "choices": ["4.8.1.2-activity-choice-0.png", "4.8.1.2-activity-choice-1.png", "4.8.1.2-activity-choice-2.png"], "explanation": "4.8.1-activity-explanation_div.png"}}
+{
+  "answer": "6",
+  "choices": [
+    "6",
+    "3",
+    "1"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The 2-permutations from S are:\n <span style=\"white-space: nowrap;\">\n  (a, b)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (b, a)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (a, c)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (c, a)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (b, c)\n </span>\n ,\n <span style=\"white-space: nowrap;\">\n  (c, b)\n </span>\n .\n</div>\n",
+  "images": {
+    "choices": [
+      "4.8.1.2-activity-choice-0.png",
+      "4.8.1.2-activity-choice-1.png",
+      "4.8.1.2-activity-choice-2.png"
+    ],
+    "explanation": "4.8.1-activity-explanation_div.png",
+    "instructions": "4.8.1-activity-instructions_div.png",
+    "question": "4.8.1.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Let S = {a, b, c}.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  How many different\n  <span style=\"white-space: nowrap;\">\n   2-permutations\n  </span>\n  from S are there?\n </div>\n</div>",
+  "section": "4.8.1: Distinguishing between r-subsets and r-permutations."
+}

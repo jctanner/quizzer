@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "-2240",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "n=7, k=6, a=-2, b=-5 ... nCr(7,6) * -2^6 * -5^1 = -1 * nCr(7,6) * 2^6 * 5 = -1 * 7 * 64 * 5 = -2240",
   "images": {
     "choices": [],
     "instructions": "4.19.1-exercise-instructions_div.png",

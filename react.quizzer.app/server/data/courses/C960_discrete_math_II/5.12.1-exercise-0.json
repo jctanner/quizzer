@@ -1,1 +1,17 @@
-{"section": "Exercise 5.12.1: Probabilities and random variables - a roll of two dice.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Consider an experiment in which a red die and a blue die are thrown. Let X be the random variable whose value is the product of the numbers on the red and blue dice.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the range of X?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "{1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 25, 30, 36}", "explanation": null, "images": {"instructions": "5.12.1-exercise-instructions_div.png", "question": "5.12.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "{1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 25, 30, 36}",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.12.1-exercise-instructions_div.png",
+    "question": "5.12.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Consider an experiment in which a red die and a blue die are thrown. Let X be the random variable whose value is the product of the numbers on the red and blue dice.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   What is the range of X?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.12.1: Probabilities and random variables - a roll of two dice."
+}

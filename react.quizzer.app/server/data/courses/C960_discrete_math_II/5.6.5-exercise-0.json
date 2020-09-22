@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "big fraction",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "see text",
   "images": {
     "choices": [],
     "instructions": "5.6.5-exercise-instructions_div.png",

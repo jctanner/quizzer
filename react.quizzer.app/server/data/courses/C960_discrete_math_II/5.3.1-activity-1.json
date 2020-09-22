@@ -1,1 +1,24 @@
-{"section": "5.3.1: Experiments, outcomes and events.", "qid": 1, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  <p>\n   In the experiment of a 5-card hand, is the following an outcome or an event?\n  </p>\n  <p>\n   {{4\n   <font size=\"4\">\n    \u2663\n   </font>\n   , 6\n   <font size=\"4\">\n    \u2660\n   </font>\n   , 7\n   <font color=\"red\" size=\"4\">\n    \u2665\n   </font>\n   , Q\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   , K\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   }, {4\n   <font size=\"4\">\n    \u2660\n   </font>\n   , 9\n   <font color=\"red\" size=\"4\">\n    \u2665\n   </font>\n   , 9\n   <font size=\"4\">\n    \u2663\n   </font>\n   , 9\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   , K\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   }}\n  </p>\n </div>\n</div>", "correct_choice_index": 1, "choices": ["outcome", "event"], "answer": "event", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The given set has two elements, each of which is a set of 5 cards. Therefore, the set is an event with two outcomes.\n</div>\n", "images": {"instructions": "5.3.1-activity-instructions_div.png", "question": "5.3.1.1-activity-question.png", "choices": ["5.3.1.1-activity-choice-0.png", "5.3.1.1-activity-choice-1.png"], "explanation": "5.3.1-activity-explanation_div.png"}}
+{
+  "answer": "event",
+  "choices": [
+    "outcome",
+    "event"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The given set has two elements, each of which is a set of 5 cards. Therefore, the set is an event with two outcomes.\n</div>\n",
+  "images": {
+    "choices": [
+      "5.3.1.1-activity-choice-0.png",
+      "5.3.1.1-activity-choice-1.png"
+    ],
+    "explanation": "5.3.1-activity-explanation_div.png",
+    "instructions": "5.3.1-activity-instructions_div.png",
+    "question": "5.3.1.1-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  <p>\n   In the experiment of a 5-card hand, is the following an outcome or an event?\n  </p>\n  <p>\n   {{4\n   <font size=\"4\">\n    \u2663\n   </font>\n   , 6\n   <font size=\"4\">\n    \u2660\n   </font>\n   , 7\n   <font color=\"red\" size=\"4\">\n    \u2665\n   </font>\n   , Q\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   , K\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   }, {4\n   <font size=\"4\">\n    \u2660\n   </font>\n   , 9\n   <font color=\"red\" size=\"4\">\n    \u2665\n   </font>\n   , 9\n   <font size=\"4\">\n    \u2663\n   </font>\n   , 9\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   , K\n   <font color=\"red\" size=\"4\">\n    \u2666\n   </font>\n   }}\n  </p>\n </div>\n</div>",
+  "section": "5.3.1: Experiments, outcomes and events."
+}

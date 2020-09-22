@@ -1,1 +1,17 @@
-{"section": "Exercise 3.13.1: Proofs by strong induction - combining stamps.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Prove each of the following statements using strong induction.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Prove that any amount of postage worth 8 cents or more can be made from 3-cent or 5-cent\nstamps.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "By induction on the amount of postage.", "explanation": null, "images": {"instructions": "3.13.1-exercise-instructions_div.png", "question": "3.13.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "By induction on the amount of postage.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "3.13.1-exercise-instructions_div.png",
+    "question": "3.13.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Prove each of the following statements using strong induction.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Prove that any amount of postage worth 8 cents or more can be made from 3-cent or 5-cent\nstamps.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 3.13.1: Proofs by strong induction - combining stamps."
+}

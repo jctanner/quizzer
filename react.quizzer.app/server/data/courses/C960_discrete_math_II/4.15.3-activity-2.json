@@ -1,1 +1,26 @@
-{"section": "4.15.3: Generating permutations in lexicographic order.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Which one of the choices given is the next permutation after\n  <span style=\"white-space: nowrap;\">\n   P = (5, 2, 4, 3, 1)\n  </span>\n  in lexicographic order?\n </div>\n</div>", "correct_choice_index": 2, "choices": ["(5, 2, 4, 1, 3)", "(5, 3, 4, 2, 1)", "(5, 3, 1, 2, 4)"], "answer": "(5, 3, 1, 2, 4)", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n (5, 3, 1, 2, 4) is larger than P. Furthermore, there is no permutation that comes in between P and (5, 3, 1, 2, 4) in lexicographic order.\n</div>\n", "images": {"instructions": "4.15.3-activity-instructions_div.png", "question": "4.15.3.2-activity-question.png", "choices": ["4.15.3.2-activity-choice-0.png", "4.15.3.2-activity-choice-1.png", "4.15.3.2-activity-choice-2.png"], "explanation": "4.15.3-activity-explanation_div.png"}}
+{
+  "answer": "(5, 3, 1, 2, 4)",
+  "choices": [
+    "(5, 2, 4, 1, 3)",
+    "(5, 3, 4, 2, 1)",
+    "(5, 3, 1, 2, 4)"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n (5, 3, 1, 2, 4) is larger than P. Furthermore, there is no permutation that comes in between P and (5, 3, 1, 2, 4) in lexicographic order.\n</div>\n",
+  "images": {
+    "choices": [
+      "4.15.3.2-activity-choice-0.png",
+      "4.15.3.2-activity-choice-1.png",
+      "4.15.3.2-activity-choice-2.png"
+    ],
+    "explanation": "4.15.3-activity-explanation_div.png",
+    "instructions": "4.15.3-activity-instructions_div.png",
+    "question": "4.15.3.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  Which one of the choices given is the next permutation after\n  <span style=\"white-space: nowrap;\">\n   P = (5, 2, 4, 3, 1)\n  </span>\n  in lexicographic order?\n </div>\n</div>",
+  "section": "4.15.3: Generating permutations in lexicographic order."
+}

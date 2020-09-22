@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <p>\n  For each day, there are ten different choices for what she will cook that day.\n28 decisions are made, one for each day with ten different possibilities for each choice.\nThe number of ways to plan her schedule of menus for the 22 school days is 16\n  <sup>\n   28\n  </sup>\n  .\n </p>\n</div>\n"
   ],
   "correct_choice_index": 1,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

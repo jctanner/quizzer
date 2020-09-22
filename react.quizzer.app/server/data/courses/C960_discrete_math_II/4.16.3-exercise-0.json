@@ -1,1 +1,17 @@
-{"section": "Exercise 4.16.3: Find the next subset in lexicographic order.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  For each 7-subset of {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}, give the next largest\n  <span style=\"white-space: nowrap;\">\n   7-subset\n  </span>\n  or indicate\nthat the\n  <span style=\"white-space: nowrap;\">\n   7-subset\n  </span>\n  is the last one in lexicographic order.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   {1, 2, 3, 4, 5, 6, 7}\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "{1, 2, 3, 4, 5, 6, 8}", "explanation": null, "images": {"instructions": "4.16.3-exercise-instructions_div.png", "question": "4.16.3.0-exercise-question.png", "choices": []}}
+{
+  "answer": "{1, 2, 3, 4, 5, 6, 8}",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.16.3-exercise-instructions_div.png",
+    "question": "4.16.3.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  For each 7-subset of {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}, give the next largest\n  <span style=\"white-space: nowrap;\">\n   7-subset\n  </span>\n  or indicate\nthat the\n  <span style=\"white-space: nowrap;\">\n   7-subset\n  </span>\n  is the last one in lexicographic order.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   {1, 2, 3, 4, 5, 6, 7}\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.16.3: Find the next subset in lexicographic order."
+}

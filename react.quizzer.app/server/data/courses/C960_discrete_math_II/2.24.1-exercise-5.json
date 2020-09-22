@@ -1,1 +1,17 @@
-{"section": "Exercise 2.24.1: Encrypting and decrypting a message with RSA.", "qid": 5, "instructions": "<div class=\"setup\">\n <p>\n  In this problem, we will implement the RSA algorithm to encrypt and decrypt the message \"HI\". For this exercise, you may want to use a calculator that can compute the mod function.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (f)\n </span>\n <div class=\"text\">\n  <p>\n   Verify that the decrypted message is the same as m. Convert m back into a text message.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "The decrypted message is 809, the original value for m.", "explanation": null, "images": {"instructions": "2.24.1-exercise-instructions_div.png", "question": "2.24.1.5-exercise-question.png", "choices": []}}
+{
+  "answer": "The decrypted message is 809, the original value for m.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.24.1-exercise-instructions_div.png",
+    "question": "2.24.1.5-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  In this problem, we will implement the RSA algorithm to encrypt and decrypt the message \"HI\". For this exercise, you may want to use a calculator that can compute the mod function.\n </p>\n</div>\n",
+  "qid": 5,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (f)\n </span>\n <div class=\"text\">\n  <p>\n   Verify that the decrypted message is the same as m. Convert m back into a text message.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.24.1: Encrypting and decrypting a message with RSA."
+}

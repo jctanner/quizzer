@@ -1,1 +1,26 @@
-{"section": "2.9.2: Finding a random number.", "qid": 0, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Use a calculator for this question if needed.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Consider a random integer selected from the range from 2 to 1,000,000,000,000. Approximately, what are the chances that the selected number is prime?\n </div>\n</div>", "correct_choice_index": 2, "choices": [".0032", ".312", ".036"], "answer": ".036", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The chances the selected number is prime is 1/ln(1,000,000,000,000) which is approximately 0.036.\n</div>\n", "images": {"instructions": "2.9.2-activity-instructions_div.png", "question": "2.9.2.0-activity-question.png", "choices": ["2.9.2.0-activity-choice-0.png", "2.9.2.0-activity-choice-1.png", "2.9.2.0-activity-choice-2.png"], "explanation": "2.9.2-activity-explanation_div.png"}}
+{
+  "answer": ".036",
+  "choices": [
+    ".0032",
+    ".312",
+    ".036"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n The chances the selected number is prime is 1/ln(1,000,000,000,000) which is approximately 0.036.\n</div>\n",
+  "images": {
+    "choices": [
+      "2.9.2.0-activity-choice-0.png",
+      "2.9.2.0-activity-choice-1.png",
+      "2.9.2.0-activity-choice-2.png"
+    ],
+    "explanation": "2.9.2-activity-explanation_div.png",
+    "instructions": "2.9.2-activity-instructions_div.png",
+    "question": "2.9.2.0-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Use a calculator for this question if needed.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  Consider a random integer selected from the range from 2 to 1,000,000,000,000. Approximately, what are the chances that the selected number is prime?\n </div>\n</div>",
+  "section": "2.9.2: Finding a random number."
+}

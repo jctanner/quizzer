@@ -1,1 +1,18 @@
-{"section": "1.4.3: If-else-statement.", "qid": 0, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Give your answers to the following question in numerical form (e.g., \"4\" and not \"four\").\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  <p>\n   What is the value of abs after the following lines of code are run?\n  </p>\n  <div class=\"code\">\n   <pre>x := 2\nIf ( x &gt; 0 )\n    abs := x\nElse\n    abs := -x\nEnd-if</pre>\n  </div>\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "2", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   2\n  </span>\n </div>\n The condition ( x &gt; 0 ) evaluates to true because the value of x is 2. The line abs := x is executed and the line abs := -x is skipped. Therefore the final value of abs is 2.\n</div>\n", "images": {"instructions": "1.4.3-activity-instructions_div.png", "question": "1.4.3.0-activity-question.png", "choices": [], "explanation": "1.4.3-activity-explanation_div.png"}}
+{
+  "answer": "2",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   2\n  </span>\n </div>\n The condition ( x &gt; 0 ) evaluates to true because the value of x is 2. The line abs := x is executed and the line abs := -x is skipped. Therefore the final value of abs is 2.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "1.4.3-activity-explanation_div.png",
+    "instructions": "1.4.3-activity-instructions_div.png",
+    "question": "1.4.3.0-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Give your answers to the following question in numerical form (e.g., \"4\" and not \"four\").\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div>\n <div class=\"text\">\n  <p>\n   What is the value of abs after the following lines of code are run?\n  </p>\n  <div class=\"code\">\n   <pre>x := 2\nIf ( x &gt; 0 )\n    abs := x\nElse\n    abs := -x\nEnd-if</pre>\n  </div>\n </div>\n</div>",
+  "section": "1.4.3: If-else-statement."
+}

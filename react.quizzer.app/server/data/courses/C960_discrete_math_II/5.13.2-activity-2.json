@@ -1,1 +1,18 @@
-{"section": "5.13.2: Calculating the expected value of a random variable.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Express the expectation as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  A single share of a stock is purchased for $200. With probability 0.3, the company will meet the deadline for their new product and the value of the stock will go to $300 in the next week. With probability 0.7, the company will miss the deadline and the value of the stock will go down to $100. What is the expected value of the stock next week?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "160", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   160\n  </span>\n </div>\n Expected value is 300(0.3) + 100(0.7) = 90 + 70 = 160.\n</div>\n", "images": {"instructions": "5.13.2-activity-instructions_div.png", "question": "5.13.2.2-activity-question.png", "choices": [], "explanation": "5.13.2-activity-explanation_div.png"}}
+{
+  "answer": "160",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   160\n  </span>\n </div>\n Expected value is 300(0.3) + 100(0.7) = 90 + 70 = 160.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "5.13.2-activity-explanation_div.png",
+    "instructions": "5.13.2-activity-instructions_div.png",
+    "question": "5.13.2.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Express the expectation as a simplified fraction (e.g., 0, 3/4 or 1/7, but not 4/8).\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  A single share of a stock is purchased for $200. With probability 0.3, the company will meet the deadline for their new product and the value of the stock will go to $300 in the next week. With probability 0.7, the company will miss the deadline and the value of the stock will go down to $100. What is the expected value of the stock next week?\n </div>\n</div>",
+  "section": "5.13.2: Calculating the expected value of a random variable."
+}

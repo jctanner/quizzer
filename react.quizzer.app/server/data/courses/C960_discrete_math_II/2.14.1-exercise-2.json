@@ -1,1 +1,17 @@
-{"section": "Exercise 2.14.1: Converting from non-decimal bases to decimal.", "qid": 2, "instructions": "<div class=\"setup\">\n <p>\n  Compute the decimal representation for each of the following numbers.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   (120121)\n   <sub>\n    3\n   </sub>\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "421", "explanation": null, "images": {"instructions": "2.14.1-exercise-instructions_div.png", "question": "2.14.1.2-exercise-question.png", "choices": []}}
+{
+  "answer": "421",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.14.1-exercise-instructions_div.png",
+    "question": "2.14.1.2-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Compute the decimal representation for each of the following numbers.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (c)\n </span>\n <div class=\"text\">\n  <p>\n   (120121)\n   <sub>\n    3\n   </sub>\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.14.1: Converting from non-decimal bases to decimal."
+}

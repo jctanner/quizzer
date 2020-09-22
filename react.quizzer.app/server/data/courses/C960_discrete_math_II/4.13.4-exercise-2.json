@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "256038156",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "nCr(29+8-1,8-1) = nCr(36,7) ways to select at least 21 cans of coke ... nCr(57,7)-nCr(36,7) for at most 20 cases of coke",
   "images": {
     "choices": [],
     "instructions": "4.13.4-exercise-instructions_div.png",

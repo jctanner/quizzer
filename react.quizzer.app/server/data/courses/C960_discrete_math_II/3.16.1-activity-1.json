@@ -1,1 +1,18 @@
-{"section": "3.16.1: How many applications of the recursive rule to build a string?.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n</div>\n", "question": "<div>\n <div class=\"text\">\n  How many applications of the recursive rule given in the definition of B\n  <sup>\n   *\n  </sup>\n  are required to construct the string 11001?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "5", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   5\n  </span>\n </div>\n The basis starts with  \u03bb which has zero bits. Then, each application of  the recursive rule adds one bit. The string 11001 has 5 bits, therefore 5 applications of the recursive rule are required.\n</div>\n", "images": {"instructions": "3.16.1-activity-instructions_div.png", "question": "3.16.1.1-activity-question.png", "choices": [], "explanation": "3.16.1-activity-explanation_div.png"}}
+{
+  "answer": "5",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   5\n  </span>\n </div>\n The basis starts with  \u03bb which has zero bits. Then, each application of  the recursive rule adds one bit. The string 11001 has 5 bits, therefore 5 applications of the recursive rule are required.\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "3.16.1-activity-explanation_div.png",
+    "instructions": "3.16.1-activity-instructions_div.png",
+    "question": "3.16.1.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  How many applications of the recursive rule given in the definition of B\n  <sup>\n   *\n  </sup>\n  are required to construct the string 11001?\n </div>\n</div>",
+  "section": "3.16.1: How many applications of the recursive rule to build a string?."
+}

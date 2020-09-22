@@ -1,1 +1,18 @@
-{"section": "4.12.2: Counting by complement.", "qid": 2, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Give numerical answers for the questions below.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  The math team has 6 girls and 4 boys. How many ways are there to select the two competitors so that at least one boy is chosen?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "30", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   30\n  </span>\n </div>\n The number of ways to select the two competitors so that at least one boy is chosen is the total number of ways to select the competitors (without restrictions) minus the number of ways to select the competitors in which no boys are selected. \nThe answer is\n <span style=\"white-space: nowrap;\">\n  45 - 15 = 30\n </span>\n .\n</div>\n", "images": {"instructions": "4.12.2-activity-instructions_div.png", "question": "4.12.2.2-activity-question.png", "choices": [], "explanation": "4.12.2-activity-explanation_div.png"}}
+{
+  "answer": "30",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   30\n  </span>\n </div>\n The number of ways to select the two competitors so that at least one boy is chosen is the total number of ways to select the competitors (without restrictions) minus the number of ways to select the competitors in which no boys are selected. \nThe answer is\n <span style=\"white-space: nowrap;\">\n  45 - 15 = 30\n </span>\n .\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "4.12.2-activity-explanation_div.png",
+    "instructions": "4.12.2-activity-instructions_div.png",
+    "question": "4.12.2.2-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Give numerical answers for the questions below.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  The math team has 6 girls and 4 boys. How many ways are there to select the two competitors so that at least one boy is chosen?\n </div>\n</div>",
+  "section": "4.12.2: Counting by complement."
+}

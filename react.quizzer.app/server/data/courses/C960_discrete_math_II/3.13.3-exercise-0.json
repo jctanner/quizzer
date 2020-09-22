@@ -1,8 +1,8 @@
 {
-  "answer": "",
+  "answer": "2^m + 3^m + 7^(m+2) which is a contradiction",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

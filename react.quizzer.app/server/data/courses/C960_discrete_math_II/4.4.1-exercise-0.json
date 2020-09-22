@@ -1,8 +1,8 @@
 {
-  "answer": "",
+  "answer": "f(x) = [x/3]",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

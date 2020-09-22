@@ -1,1 +1,24 @@
-{"section": "3.13.1: Using the well-ordering principle.", "qid": 2, "input_type": "fieldset", "instructions": "<div class=\"activity-instructions\">\n <p>\n  The well-ordering principle can be used to prove any fact which can be proven by standard or strong induction.\n </p>\n <p>\n  Consider again the problem of purchasing cans of juice. Suppose that juice is sold in 2-packs or 5-packs. Let Q(n) be the statement that it is possible to buy n cans of juice by combining 2-packs and 5-packs. We can use the principle of well-ordering to show that for\n  <span style=\"white-space: nowrap;\">\n   n \u2265 4,\n  </span>\n  Q(n) is true.\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  What is the contradiction that results if m = 4 or m = 5?\n </div>\n</div>", "correct_choice_index": 1, "choices": ["Since it is possible to buy 2 or 3 cans, just add an extra 2-pack to get 4 or 5 cans.", "It is possible to buy 4 cans (two 2-packs) and 5 cans (one 5-pack). Therefore, Q(4) and Q(5) are both true."], "answer": "It is possible to buy 4 cans (two 2-packs) and 5 cans (one 5-pack). Therefore, Q(4) and Q(5) are both true.", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n We know that Q(m) is false, but Q(4) and Q(5) are both true.\n</div>\n", "images": {"instructions": "3.13.1-activity-instructions_div.png", "question": "3.13.1.2-activity-question.png", "choices": ["3.13.1.2-activity-choice-0.png", "3.13.1.2-activity-choice-1.png"], "explanation": "3.13.1-activity-explanation_div.png"}}
+{
+  "answer": "It is possible to buy 4 cans (two 2-packs) and 5 cans (one 5-pack). Therefore, Q(4) and Q(5) are both true.",
+  "choices": [
+    "Since it is possible to buy 2 or 3 cans, just add an extra 2-pack to get 4 or 5 cans.",
+    "It is possible to buy 4 cans (two 2-packs) and 5 cans (one 5-pack). Therefore, Q(4) and Q(5) are both true."
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation correct\" role=\"alert\">\n <p class=\"message\">\n  Correct\n </p>\n We know that Q(m) is false, but Q(4) and Q(5) are both true.\n</div>\n",
+  "images": {
+    "choices": [
+      "3.13.1.2-activity-choice-0.png",
+      "3.13.1.2-activity-choice-1.png"
+    ],
+    "explanation": "3.13.1-activity-explanation_div.png",
+    "instructions": "3.13.1-activity-instructions_div.png",
+    "question": "3.13.1.2-activity-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  The well-ordering principle can be used to prove any fact which can be proven by standard or strong induction.\n </p>\n <p>\n  Consider again the problem of purchasing cans of juice. Suppose that juice is sold in 2-packs or 5-packs. Let Q(n) be the statement that it is possible to buy n cans of juice by combining 2-packs and 5-packs. We can use the principle of well-ordering to show that for\n  <span style=\"white-space: nowrap;\">\n   n \u2265 4,\n  </span>\n  Q(n) is true.\n </p>\n</div>\n",
+  "qid": 2,
+  "question": "<div>\n <div class=\"text\">\n  What is the contradiction that results if m = 4 or m = 5?\n </div>\n</div>",
+  "section": "3.13.1: Using the well-ordering principle."
+}

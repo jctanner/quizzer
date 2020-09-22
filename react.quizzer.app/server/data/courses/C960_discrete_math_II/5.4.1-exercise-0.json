@@ -1,1 +1,17 @@
-{"section": "Exercise 5.4.1: Coin flips and events.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  A coin is flipped four times. For each of the events described below, express the event as a set in roster notation. Each outcome is written as a string of length 4 from\n  <span style=\"white-space: nowrap;\">\n   {H, T},\n  </span>\n  such as HHTH. Assuming the coin is a fair coin, give the probability of each event.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   The first and last flips come up heads.\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "E = {HHHH, HHTH, HTHH, HTTH}. p(E) = 4/16 = 1/4.", "explanation": null, "images": {"instructions": "5.4.1-exercise-instructions_div.png", "question": "5.4.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "E = {HHHH, HHTH, HTHH, HTTH}. p(E) = 4/16 = 1/4.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "5.4.1-exercise-instructions_div.png",
+    "question": "5.4.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  A coin is flipped four times. For each of the events described below, express the event as a set in roster notation. Each outcome is written as a string of length 4 from\n  <span style=\"white-space: nowrap;\">\n   {H, T},\n  </span>\n  such as HHTH. Assuming the coin is a fair coin, give the probability of each event.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   The first and last flips come up heads.\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 5.4.1: Coin flips and events."
+}

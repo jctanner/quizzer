@@ -1,9 +1,9 @@
 {
-  "answer": "",
+  "answer": "1/4",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
-  "explanation": null,
+  "enabled": true,
+  "explanation": "BnG = 2*7!, S=8! ... 2*7! / 8! = 1/4",
   "images": {
     "choices": [],
     "instructions": "5.9.2-exercise-instructions_div.png",

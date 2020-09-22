@@ -1,1 +1,18 @@
-{"section": "4.9.2: Selecting subsets or permutations.", "qid": 1, "input_type": "input", "instructions": "<div class=\"activity-instructions\">\n <p>\n  Provide solutions in the form \"P(n, r)\" or \"n choose r\" (e.g. P(8, 3) or 8 choose 3).\n </p>\n</div>\n", "question": "<div>\n <div class=\"text\">\n  Dave will swim one day, run one day, and bike another day in a week. He does at most one activity on any particular day. How many ways are there for him to select his workout schedule (i.e. which activities he does which days)?\n </div>\n</div>", "correct_choice_index": null, "choices": [], "answer": "P(7, 3)", "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   P(7, 3)\n  </span>\n </div>\n First Dave picks his swimming day, then his running day, and then his biking day. Since each activity is different, the order in which he selects the days matters. Therefore the number of selections is P(7, 3).\n</div>\n", "images": {"instructions": "4.9.2-activity-instructions_div.png", "question": "4.9.2.1-activity-question.png", "choices": [], "explanation": "4.9.2-activity-explanation_div.png"}}
+{
+  "answer": "P(7, 3)",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": "<div aria-atomic=\"true\" class=\"zb-explanation has-explanation forfeit\" role=\"alert\">\n <p class=\"message\">\n  Answer\n </p>\n <div class=\"answers\">\n  <!-- -->\n  <span class=\"forfeit-answer\">\n   P(7, 3)\n  </span>\n </div>\n First Dave picks his swimming day, then his running day, and then his biking day. Since each activity is different, the order in which he selects the days matters. Therefore the number of selections is P(7, 3).\n</div>\n",
+  "images": {
+    "choices": [],
+    "explanation": "4.9.2-activity-explanation_div.png",
+    "instructions": "4.9.2-activity-instructions_div.png",
+    "question": "4.9.2.1-activity-question.png"
+  },
+  "input_type": "input",
+  "instructions": "<div class=\"activity-instructions\">\n <p>\n  Provide solutions in the form \"P(n, r)\" or \"n choose r\" (e.g. P(8, 3) or 8 choose 3).\n </p>\n</div>\n",
+  "qid": 1,
+  "question": "<div>\n <div class=\"text\">\n  Dave will swim one day, run one day, and bike another day in a week. He does at most one activity on any particular day. How many ways are there for him to select his workout schedule (i.e. which activities he does which days)?\n </div>\n</div>",
+  "section": "4.9.2: Selecting subsets or permutations."
+}

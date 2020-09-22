@@ -7,6 +7,7 @@
     "<div class=\"answer\">\n <ul>\n  <li>\n   Base case:  \u03bb \u2208 A\n   <sup>\n    *\n   </sup>\n  </li>\n  <li>\n   Recursive rule: if x \u2208 A\n   <sup>\n    *\n   </sup>\n   then,\n   <br/>\n   <br/>\n   <ul>\n    <li>\n     xa \u2208 A\n     <sup>\n      *\n     </sup>\n    </li>\n    <li>\n     xb \u2208 A\n     <sup>\n      *\n     </sup>\n    </li>\n   </ul>\n  </li>\n </ul>\n</div>\n"
   ],
   "correct_choice_index": 2,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],

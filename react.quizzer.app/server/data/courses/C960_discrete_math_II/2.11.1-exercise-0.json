@@ -1,1 +1,17 @@
-{"section": "Exercise 2.11.1: Applying the Euclidean Algorithm and the Extended Euclidean Algorithm.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  For each of the following pairs of numbers, find the gcd of the two numbers, and express the gcd as a linear combination of the two numbers.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   56 and 42\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "56 \u00a0\u00a0\u00a0\u00a0 42 \u00a0\u00a0\u00a0\u00a0 14 \n\u00a0\u00a0\u00a0\u00a0 0", "explanation": null, "images": {"instructions": "2.11.1-exercise-instructions_div.png", "question": "2.11.1.0-exercise-question.png", "choices": []}}
+{
+  "answer": "56 \u00a0\u00a0\u00a0\u00a0 42 \u00a0\u00a0\u00a0\u00a0 14 \n\u00a0\u00a0\u00a0\u00a0 0",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "2.11.1-exercise-instructions_div.png",
+    "question": "2.11.1.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  For each of the following pairs of numbers, find the gcd of the two numbers, and express the gcd as a linear combination of the two numbers.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   56 and 42\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 2.11.1: Applying the Euclidean Algorithm and the Extended Euclidean Algorithm."
+}

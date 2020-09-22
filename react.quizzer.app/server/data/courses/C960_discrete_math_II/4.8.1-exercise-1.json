@@ -2,6 +2,7 @@
   "answer": "No",
   "choices": [],
   "correct_choice_index": null,
+  "enabled": true,
   "explanation": "No because 12 appears twice.",
   "images": {
     "choices": [],

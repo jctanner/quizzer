@@ -1,1 +1,17 @@
-{"section": "Exercise 3.11.2: Proving explicit formulas for recurrence relations by induction.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Prove each of the following statements using mathematical induction.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Define the sequence {c\n   <sub>\n    n\n   </sub>\n   } as follows:\n  </p>\n  <ul>\n   <li>\n    <span style=\"white-space: nowrap;\">\n     c\n     <sub>\n      0\n     </sub>\n     = 5\n    </span>\n   </li>\n   <li>\n    <span style=\"white-space: nowrap;\">\n     c\n     <sub>\n      k\n     </sub>\n     = (c\n     <sub>\n      k-1\n     </sub>\n     )\n     <sup>\n      2\n     </sup>\n    </span>\n    for\n    <span style=\"white-space: nowrap;\">\n     k \u2265 1\n    </span>\n   </li>\n  </ul>\n  <p>\n   Prove that for\n   <span style=\"white-space: nowrap;\">\n    n \u2265 0\n   </span>\n   ,\n   <span style=\"white-space: nowrap;\">\n    c\n    <sub>\n     n\n    </sub>\n    = 5\n    <sup>\n     2\n     <sup>\n      n\n     </sup>\n    </sup>\n   </span>\n   .\n  </p>\n  <p>\n   Note that in the explicit formula for c\n   <sub>\n    n\n   </sub>\n   , the exponent of 5 is 2\n   <sup>\n    n\n   </sup>\n   .\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "By induction on n.", "explanation": null, "images": {"instructions": "3.11.2-exercise-instructions_div.png", "question": "3.11.2.0-exercise-question.png", "choices": []}}
+{
+  "answer": "By induction on n.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "3.11.2-exercise-instructions_div.png",
+    "question": "3.11.2.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Prove each of the following statements using mathematical induction.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   Define the sequence {c\n   <sub>\n    n\n   </sub>\n   } as follows:\n  </p>\n  <ul>\n   <li>\n    <span style=\"white-space: nowrap;\">\n     c\n     <sub>\n      0\n     </sub>\n     = 5\n    </span>\n   </li>\n   <li>\n    <span style=\"white-space: nowrap;\">\n     c\n     <sub>\n      k\n     </sub>\n     = (c\n     <sub>\n      k-1\n     </sub>\n     )\n     <sup>\n      2\n     </sup>\n    </span>\n    for\n    <span style=\"white-space: nowrap;\">\n     k \u2265 1\n    </span>\n   </li>\n  </ul>\n  <p>\n   Prove that for\n   <span style=\"white-space: nowrap;\">\n    n \u2265 0\n   </span>\n   ,\n   <span style=\"white-space: nowrap;\">\n    c\n    <sub>\n     n\n    </sub>\n    = 5\n    <sup>\n     2\n     <sup>\n      n\n     </sup>\n    </sup>\n   </span>\n   .\n  </p>\n  <p>\n   Note that in the explicit formula for c\n   <sub>\n    n\n   </sub>\n   , the exponent of 5 is 2\n   <sup>\n    n\n   </sup>\n   .\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 3.11.2: Proving explicit formulas for recurrence relations by induction."
+}

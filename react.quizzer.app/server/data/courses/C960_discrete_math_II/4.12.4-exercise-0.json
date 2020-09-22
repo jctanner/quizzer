@@ -1,1 +1,17 @@
-{"section": "Exercise 4.12.4: Lining up a wedding party for a photo.", "qid": 0, "instructions": "<div class=\"setup\">\n <p>\n  Ten members of a wedding party are lining up in a row for a photograph.\n </p>\n</div>\n", "input_type": null, "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   How many ways are there for the wedding party to line up in which the bride is not next to the groom?\n  </p>\n </div>\n</div>\n", "choices": [], "correct_choice_index": null, "answer": "There are 10! ways to line up the ten people in the wedding party if there are no restrictions\non how the people are placed. As shown earlier, the number of ways to line up the ten people in the\nwedding party in which the bride and the groom are next to each other is 2\u00b79!.\nTherefore  the number of ways to line up the ten people in the wedding party in which the\nbride is not next to the groom is 10! - 2\u00b79! = 8\u00b79!.", "explanation": null, "images": {"instructions": "4.12.4-exercise-instructions_div.png", "question": "4.12.4.0-exercise-question.png", "choices": []}}
+{
+  "answer": "There are 10! ways to line up the ten people in the wedding party if there are no restrictions\non how the people are placed. As shown earlier, the number of ways to line up the ten people in the\nwedding party in which the bride and the groom are next to each other is 2\u00b79!.\nTherefore  the number of ways to line up the ten people in the wedding party in which the\nbride is not next to the groom is 10! - 2\u00b79! = 8\u00b79!.",
+  "choices": [],
+  "correct_choice_index": null,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "choices": [],
+    "instructions": "4.12.4-exercise-instructions_div.png",
+    "question": "4.12.4.0-exercise-question.png"
+  },
+  "input_type": null,
+  "instructions": "<div class=\"setup\">\n <p>\n  Ten members of a wedding party are lining up in a row for a photograph.\n </p>\n</div>\n",
+  "qid": 0,
+  "question": "<div class=\"question\">\n <span class=\"part\">\n  (a)\n </span>\n <div class=\"text\">\n  <p>\n   How many ways are there for the wedding party to line up in which the bride is not next to the groom?\n  </p>\n </div>\n</div>\n",
+  "section": "Exercise 4.12.4: Lining up a wedding party for a photo."
+}

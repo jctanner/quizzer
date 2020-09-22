@@ -1,8 +1,8 @@
 {
-  "answer": "",
+  "answer": "k = 2 to 8, 2^k",
   "choices": [],
   "correct_choice_index": null,
-  "enabled": false,
+  "enabled": true,
   "explanation": null,
   "images": {
     "choices": [],
