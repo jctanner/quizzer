@@ -58,34 +58,18 @@ function App() {
                     <Navbar bg="transparent" expand="lg">
                         <Nav>
                             <NavbarBrand href="/">Quizzer</NavbarBrand>
-                            {/*
-                            <NavItem><NavLink>test</NavLink></NavItem>
-                            <NavItem><NavLink>test2</NavLink></NavItem>
-                            */}
                             { courseList.map((courseName) =>
                                 <>
-                                <div style={{ 'border-left': '1px solid darkgray' }}></div>
+                                <div style={{ borderLeft: '1px solid darkgray' }}></div>
                                 <NavItem>
                                     <NavLink href={ "/courses/" + courseName } >{ courseName }</NavLink>
                                 </NavItem>
                                 </>
                             )}
-                            <div style={{ 'border-left': '1px solid darkgray' }}></div>
+                            <div style={{ borderLeft: '1px solid darkgray' }}></div>
                         </Nav>
                     </Navbar>
                 </div>
-                {/*
-				<ul>
-					<li>
-						<Link key="home" to="/">Home</Link>
-					</li>
-            		{courseList.map((courseName) => 
-                        <li key={courseName }>
-					        <Link to={ "/courses/" + courseName }>{ courseName }</Link>
-                        </li>
-					)}
-				</ul>
-                */}
 				<Switch>
 					<Route exact path="/" component={ Home } />
                     <Route path="/courses/:courseName/quiz" component={ QuizPage }/>

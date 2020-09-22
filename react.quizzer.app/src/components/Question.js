@@ -91,6 +91,36 @@ function QuestionChoices(props) {
 }
 
 
+function QuestionAnswer(props) {
+    const showImages = props.showImages;
+    const courseName = props.courseName;
+    const questionData = props.questionData;
+
+    let explanationImg = null; 
+    if (questionData.images && questionData.images.explanation !== undefined && questionData.images.explanation !== null) {
+        explanationImg = '/images/' + courseName + '/' + questionData.images.explanation;
+    }
+
+    return (
+        <>
+            <h3>answer</h3>
+            <div dangerouslySetInnerHTML={ { __html: questionData.answer } }></div>
+            { (!showImages && questionData && questionData.explanation) && (
+                <>
+                    <h3>explanation</h3>
+                    <div dangerouslySetInnerHTML={ { __html: questionData.explanation } }></div>
+                </>
+            )}
+            { (showImages && explanationImg) && (
+                <>
+                    <h3>explanation</h3>
+                    <img src={ explanationImg }/>
+                </>
+            )}
+        </>
+    )
+}
+
 function QuestionDiv(props) {
 
     const courseName = props.courseName;
@@ -118,7 +148,7 @@ function QuestionDiv(props) {
 
 
     return (
-        <div style={{ 'margin-top': '20px'}}>
+        <div style={{ marginTop: '20px'}}>
             <li><strong>{ questionID }</strong> { questionData.section }</li>
             <hr/>
             { ( showImages ) && <button onClick={ toggleImages }>html</button> }
@@ -136,35 +166,6 @@ function QuestionDiv(props) {
             { (showImages && questionData.images) && <img src={ '/images/' + courseName + '/' + questionData.images.question }/> }
 
             <hr/>
-            {/*
-            { (questionData.input_type === "fieldset") && 
-                <div>
-                <h3>choices</h3>
-                <form>
-                    <fieldset>
-                    { questionData.choices.map((choice, index) => (
-                        <div>
-                            <input 
-                                onChange={ props.handleSelect }
-                                checked={ choice === props.currentSelection || choice === props.userSelection }
-                                type="radio"
-                                value={ choice }
-                                key={ index }
-                                id={ index }
-                            />
-                            { (!showImages && choice.includes('<div')) && <div dangerouslySetInnerHTML={ { __html: choice } }></div> } 
-                            { (!showImages && !choice.includes('<div')) && choice } 
-                            { (showImages && questionData.images && questionData.images.choices) &&
-                                <img src={ '/images/' + courseName + '/' + questionData.images.choices[index] }/>
-                            }
-
-                        </div>
-                    ))}
-                    </fieldset>
-                </form>
-                </div>
-            }
-            */}
             { (questionData.input_type === "fieldset") && 
                 <QuestionChoices
                     courseName={ courseName }
@@ -193,10 +194,20 @@ function QuestionDiv(props) {
                 <button onClick={ toggleAnswer }>hide answer</button>
             }
 
+            {/*
             { (answerHidden === false && !showImages) && <div><h3>answer</h3><div dangerouslySetInnerHTML={ { __html: questionData.answer } }></div><h3>explanation</h3><div dangerouslySetInnerHTML={ { __html: questionData.explanation } }></div></div> }
             { (answerHidden === false && showImages && questionData.images) && <div>
                 <img src={ '/images/' + courseName + '/' + questionData.images.explanation }/>
                 </div> }
+            */}
+
+            { (!answerHidden) && (
+                <QuestionAnswer
+                    showImages={showImages}
+                    courseName={courseName}
+                    questionData={questionData}
+                />
+            )}
 
             <hr/>
             { (showPreviousNext && questionData.previous !== null) && <button><a href={ questionData.previous }>previous</a></button> }

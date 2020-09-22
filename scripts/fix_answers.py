@@ -7,6 +7,8 @@ import os
 import random
 import re
 
+from distutils.version import LooseVersion
+
 
 def randomize_answer(a):
     newa = a
@@ -28,7 +30,10 @@ def main():
     dpath = os.path.join('react.quizzer.app', 'server', 'data', 'courses', 'C960_discrete_math_II')
     jfiles = glob.glob('%s/*.json' % dpath)
 
+    jfiles = sorted(jfiles, key=lambda x: LooseVersion(x))
+
     BAD = set()
+    nullanswers = []
 
     for jf in jfiles:
         #print(jf)
@@ -37,19 +42,34 @@ def main():
         changed = False
         with open(jf, 'r') as f:
             jd = json.loads(f.read())
-        print(jd.get('input_type'))
+
+        #print(jd.get('input_type'))
         if not jd:
             BAD.add(jf)
+            continue
+
+        '''
         if jd.get('enabled') == False:
             continue
+        '''
+
+        '''
         if jd.get('answer') is None or jd['answer'] == '':
             #print(jf)
             BAD.add(jf)
+            continue
+        '''
+
+        if jd.get('answer') not in ['', None]:
+            jd['enabled'] = True
+            with open(jf, 'w') as f:
+                f.write(json.dumps(jd, indent=2, sort_keys=True))
             continue
 
         #print(jd['answer'])
         if isinstance(jd['answer'], int):
             continue
+
         if 'because' in jd['answer']:
             #jd['answer'] = jd['answer'].split('because')[0].strip()
             #changed = True
@@ -67,7 +87,6 @@ def main():
         #if ' or ' in jd['answer']:
         #    import epdb; epdb.st()
 
-        print(jf)
         #if 'mathjax' in jd.get('answer'):
         #    import epdb; epdb.st()
 
@@ -97,6 +116,12 @@ def main():
                 f.write(json.dumps(jd, indent=2, sort_keys=True))
             #import epdb; epdb.st()
 
+        if jd.get('answer') == "" and jd.get('correct_choice_index') == None:
+            print(jf)
+            nullanswers.append(jf)
+            #import epdb; epdb.st()
+            pass
+
 
     '''
     for bad in BAD:
@@ -110,6 +135,24 @@ def main():
             f.write(json.dumps(jdata, indent=2, sort_keys=True))
     '''
     #import epdb; epdb.st()
+
+    print('total empty answers: %s' % len(nullanswers))
+    for idx,najf in enumerate(nullanswers):
+        with open(najf, 'r') as f:
+            jd = json.loads(f.read())
+        print('%s %s' % (len(nullanswers) - idx, najf))
+        na = input('new answer: ')
+        if na not in ["", None]:
+            jd['answer'] = na
+
+        if not jd.get('explanation'):
+            exp = input('explanation: ')
+            jd['explanation'] = exp
+
+        jd['enabled'] = True
+        with open(najf, 'w') as f:
+            f.write(json.dumps(jd, indent=2, sort_keys=True))
+        #import epdb; epdb.st()
 
 
 if __name__ == "__main__":
