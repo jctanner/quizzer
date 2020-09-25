@@ -57,6 +57,13 @@ def main():
         if rc.isCoPrime(ds['phi'], int(ans)):
             break
         print('Incorrect, try again.')
+    
+    # ds['d'] = rc.get_multiplicative_inverse(ds['e'], ds['phi'])
+    while True:
+        ans = input(f"Given p={ds['p']} q={ds['q']} N={ds['N']} and e={ds['e']} what is d? ")
+        if ans.strip() == str(ds['d']):
+            break
+        print('Incorrect, try again.')
 
     while True:
         ans = input('What two variables make up the pubkey?: ')
