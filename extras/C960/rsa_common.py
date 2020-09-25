@@ -94,6 +94,10 @@ def getCoPrimes(minimum=None, maximum=None):
         _primes = [x for x in _primes if x > minimum]
     if maximum:
         _primes = [x for x in _primes if x <= maximum]
+    
+    if max(_primes) > maximum:
+        import epdb; epdb.st()
+
     while True:
         a = random.choice(_primes)
         b = random.choice(_primes)
@@ -132,6 +136,10 @@ def getPrimes(count=100, start=1, end=None):
         if isPrime(counter):
             primes.append(counter)
         counter += 1
+    
+    if end and max(primes) > end:
+        import epdb; epdb.st()
+
     return primes
 
 
