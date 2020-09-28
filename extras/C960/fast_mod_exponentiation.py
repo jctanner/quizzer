@@ -18,7 +18,7 @@ def fe(x, y, n):
         count += 1
         #print('%s: p=%s r=%s' % (count, p, r))
         #print('%s: r:%s s:%s p:%s n:%s' % (count, r, s, p, n))
-        print('%2d: r:%9d s:%9d p:%9d n:%9d' % (count, r, s, p, n))
+        print('%2d. \tr:%9d \ts:%9d \tp:%9d \tn:%9d' % (count, r, s, p, n))
 
     return p
 
@@ -27,6 +27,9 @@ def main():
     #x = 3
     #y = 13
     #n = 7
+    x = 11
+    y = 20
+    n = 33
 
     #x = 5
     #y = 35
@@ -36,13 +39,13 @@ def main():
     #y = 68
     #n = 7
 
-    x = 78
-    y = 859
-    n = 1829
+    #x = 78
+    #y = 859
+    #n = 1829
 
-    x = 7879
-    y = 459173
-    n = 373097
+    #x = 7879
+    #y = 459173
+    #n = 373097
 
     print('--------------------------')
     print('x=%s y=%s n=%s' % (x,y,n))

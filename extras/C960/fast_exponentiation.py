@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-def fe(x, y):
+def fe(x, y, debug=False):
     p = 1
     s = x
     r = y
@@ -15,7 +15,8 @@ def fe(x, y):
         s = s * s
         r = int(r / 2)
         count += 1
-        #print('%s: p=%s r=%s' % (count, p, r))
+        if debug:
+            print('\tp=%s r=%s s=%s' % (p, r, s))
 
     return p
 
@@ -23,7 +24,7 @@ def fe(x, y):
 def main():
     x = 3
     y = 13
-    res = fe(x,y)
+    res = fe(x,y, debug=True)
     print(res)
 
 
