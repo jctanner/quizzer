@@ -71,6 +71,8 @@ def get_missing_args(args):
         args.e = random.choice(es)
 
     if not args.d and args.e and args.phi:
+        if args.debug:
+            print(f'computing d as the multiplicative inverse of {args.e} mod {args.phi}')
         args.d = rc.get_multiplicative_inverse(args.e, args.phi)
 
 
