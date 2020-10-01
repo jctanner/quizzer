@@ -226,6 +226,11 @@ function CoursePage() {
         history.push(quizUrl)
     };
 
+    const startPA = () => {
+        const quizUrl = '/courses/' + courseName + '/quiz' + '?' + 'search_section=' + 'PA' + '&count=60';
+        history.push(quizUrl)
+    }
+
 	return (
 		<div style={{ marginTop: '30px' }}>
         	<h2>{ courseName.replace(/_/g, ' ') }</h2>
@@ -234,6 +239,9 @@ function CoursePage() {
             <div style={{ }}>
                 <span style={{ padding: "10px" }}>
                     <Button onClick={startQuiz} color="warning">start quiz</Button>
+                </span>
+                <span style={{ padding: "10px" }}>
+                    <Button onClick={startPA} color="danger">start PA</Button>
                 </span>
                 <span style={{ padding: "10px" }}>
                     <Button onClick={startTest} color="danger">start test</Button>
