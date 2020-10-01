@@ -32,6 +32,6 @@ if __name__ == "__main__":
     step2 = Merge(A[:], step1)
 
     print('============================')
-    print(step1)
-    print(step2)
+    print('Merge(B,A): %s' % step1)
+    print('Merge(A, Merge(B,A)): %s' % step2)
 
