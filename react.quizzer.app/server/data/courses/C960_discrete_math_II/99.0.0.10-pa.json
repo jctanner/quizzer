@@ -1,0 +1,23 @@
+{
+  "answer": "9",
+  "choices": [
+    "1",
+    "3",
+    "7",
+    "9"
+  ],
+  "correct_choice_index": 3,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-10-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 10,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  What is the ones digit of the number 3\n </span>\n <span>\n  <sup>\n   902\n  </sup>\n </span>\n <span>\n  ?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

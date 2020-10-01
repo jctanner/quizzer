@@ -1,0 +1,23 @@
+{
+  "answer": "<div><em>\n O\n</em>\n(log <sub>\n 2\n</sub>\n <em>\n N\n</em>\n)</div>",
+  "choices": [
+    "<div><em>\n O\n</em>\n(log <sub>\n 2\n</sub>\n <em>\n N\n</em>\n)</div>",
+    "<div><em>\n O\n</em>\n( <em>\n N\n</em>\n/2)</div>",
+    "<div><em>\n O\n</em>\n( <em>\n N\n</em>\n)</div>",
+    "<div><em>\n O\n</em>\n( <em>\n N\n</em>\nlog <sub>\n 2\n</sub>\n <em>\n N\n</em>\n)</div>"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-4-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 4,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Given this pseudocode that extracts a sample sequence from the data sequence of length\n <em>\n  N\n </em>\n :\n <br/>\n <br/>\n <span>\n  Function Sampler (Sequence Data)\n </span>\n <br/>\n <span>\n  Set Sample to an empty sequence\n </span>\n <br/>\n <span>\n  Set N to the length of Data\n </span>\n <br/>\n <span>\n  While N&gt;=1\n </span>\n <br/>\n <span>\n  Append element N of Data to Sample\n </span>\n <br/>\n <span>\n  N:= N/2\n </span>\n <br/>\n <span>\n  Return Sample\n </span>\n <br/>\n <br/>\n What is the worst-case run time for Function Sampler?\n</p>\n",
+  "section": "99.0.0: PA"
+}

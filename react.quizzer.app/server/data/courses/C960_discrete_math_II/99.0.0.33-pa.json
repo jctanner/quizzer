@@ -1,0 +1,23 @@
+{
+  "answer": "36",
+  "choices": [
+    "21",
+    "36",
+    "210",
+    "343"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-33-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 33,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n How many ways can 7 soccer balls be divided among 3 coaches for practice?\n</p>\n",
+  "section": "99.0.0: PA"
+}

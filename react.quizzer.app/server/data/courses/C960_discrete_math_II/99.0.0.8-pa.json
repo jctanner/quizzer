@@ -1,0 +1,28 @@
+{
+  "answer": "empty set",
+  "choices": [
+    "empty set",
+    "empty set",
+    "empty set",
+    "empty set"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [
+      "PA-8-choice-0.png",
+      "PA-8-choice-1.png",
+      "PA-8-choice-2.png",
+      "PA-8-choice-3.png"
+    ],
+    "explanation": null,
+    "question": "PA-8-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 8,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Which function is \u0398(\n <i>\n  x\n </i>\n <sup>\n  3\n </sup>\n )?\n</p>\n",
+  "section": "99.0.0: PA"
+}

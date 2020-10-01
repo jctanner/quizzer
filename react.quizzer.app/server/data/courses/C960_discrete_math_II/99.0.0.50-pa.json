@@ -1,0 +1,23 @@
+{
+  "answer": "1110",
+  "choices": [
+    "0000",
+    "1101",
+    "1110",
+    "1111"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-50-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 50,
+  "question": "Given the finite state machine (FSM):   \u00a0 Which input is accepted by the FSM?",
+  "section": "99.0.0: PA"
+}

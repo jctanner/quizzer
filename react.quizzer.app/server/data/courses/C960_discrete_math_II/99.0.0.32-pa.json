@@ -1,0 +1,23 @@
+{
+  "answer": "12",
+  "choices": [
+    "5",
+    "6",
+    "12",
+    "120"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-32-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 32,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  A mother, father, and their 3 children are having their picture taken. They will all be seated elbow-to-elbow on the living room couch, and the children will not be permitted to sit next to each other.\n </span>\n <br/>\n <br/>\n <span>\n  How many different arrangements are possible for the picture?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

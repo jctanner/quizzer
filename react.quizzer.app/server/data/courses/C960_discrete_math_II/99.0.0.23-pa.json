@@ -1,0 +1,28 @@
+{
+  "answer": "empty set",
+  "choices": [
+    "empty set",
+    "empty set",
+    "empty set",
+    "empty set"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [
+      "PA-23-choice-0.jpg",
+      "PA-23-choice-1.jpg",
+      "PA-23-choice-2.jpg",
+      "PA-23-choice-3.jpg"
+    ],
+    "explanation": null,
+    "question": "PA-23-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 23,
+  "question": "Which expression is equivalent to the given expression? \u00a0  ",
+  "section": "99.0.0: PA"
+}

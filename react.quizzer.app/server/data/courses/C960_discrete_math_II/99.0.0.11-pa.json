@@ -1,0 +1,23 @@
+{
+  "answer": "3",
+  "choices": [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-11-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 11,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  <i>\n   N\n  </i>\n  is an integer between 0 and 9.\n </span>\n <br/>\n <br/>\n <span>\n  For how many values of\n  <i>\n   N\n  </i>\n  does [123,3\n  <i>\n   N\n  </i>\n  2] = [0] mod 8, where 123,3\n  <i>\n   N\n  </i>\n  2 is a six-digit number?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

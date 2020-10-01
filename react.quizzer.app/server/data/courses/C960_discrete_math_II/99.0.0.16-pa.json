@@ -1,0 +1,23 @@
+{
+  "answer": "7",
+  "choices": [
+    "3",
+    "7",
+    "30",
+    "36"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-16-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 16,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Let\n  <i>\n   N\n  </i>\n  = 12 = 2\n  <sup>\n   2\n  </sup>\n  + 2\n  <sup>\n   3\n  </sup>\n  .\n </span>\n <br/>\n <br/>\n <span>\n  Given that\n  <i>\n   M\n  </i>\n  <sup>\n   2\n  </sup>\n </span>\n <span>\n  \u2261\n </span>\n <span>\n  51 (mod 59), what is\n  <i>\n   M\n  </i>\n  <sup>\n   12\n  </sup>\n  (mod 59)?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

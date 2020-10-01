@@ -1,0 +1,23 @@
+{
+  "answer": "3",
+  "choices": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-39-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 39,
+  "question": "An 11-person musical ensemble is on a stage with a tuba and a cello. Only 1 of the 11\u00a0can play both instruments, and exactly 4 can play neither instrument. The number of ensemble members who play only the cello equals the number who play only the tuba. \u00a0    How many members of the 11-person ensemble play only the cello?",
+  "section": "99.0.0: PA"
+}

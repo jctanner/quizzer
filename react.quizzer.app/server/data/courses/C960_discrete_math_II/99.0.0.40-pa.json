@@ -1,0 +1,23 @@
+{
+  "answer": "27",
+  "choices": [
+    "27",
+    "52",
+    "53",
+    "650"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-40-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 40,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  How many people must be in a group to ensure that at least 2 individuals have the same first initial?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

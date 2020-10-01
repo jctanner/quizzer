@@ -1,0 +1,28 @@
+{
+  "answer": "empty set",
+  "choices": [
+    "empty set",
+    "empty set",
+    "empty set",
+    "empty set"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [
+      "PA-47-choice-0.jpg",
+      "PA-47-choice-1.jpg",
+      "PA-47-choice-2.jpg",
+      "PA-47-choice-3.jpg"
+    ],
+    "explanation": null,
+    "question": "PA-47-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 47,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Which formula is the expected value of the random variable\u00a0Y?\n</p>\n",
+  "section": "99.0.0: PA"
+}

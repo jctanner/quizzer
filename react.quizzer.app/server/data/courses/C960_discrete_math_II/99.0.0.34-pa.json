@@ -1,0 +1,23 @@
+{
+  "answer": "11,880",
+  "choices": [
+    "48",
+    "495",
+    "11,880",
+    "20,736"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-34-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 34,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  How many ways can a club select a president, a vice president, a secretary, and a treasurer if the club consist of 12 people?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

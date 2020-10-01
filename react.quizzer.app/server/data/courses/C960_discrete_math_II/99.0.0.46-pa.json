@@ -1,0 +1,23 @@
+{
+  "answer": "P(S) = 0.60, P(P) = 0.40,P(D|P) = 0.08, P(D|S) = 0.01, and the answer is 0.8421.",
+  "choices": [
+    "P(S) = 0.60, P(P) = 0.40,P(D|P) = 0.08, P(D|S) = 0.01, and the answer is 0.8421.",
+    "P(S) = 0.60, P(P) = 0.40, P(D|P) = 0.01, P(D|S) = 0.08, and the answer is 0.6154.",
+    "P(S) = 0.40, P(P) = 0.60, P(D|P) = 0.08, P(D|S) = 0.01, and the answer is 0.9231.",
+    "P(S) = 0.40, P(P) = 0.60, P(D|P) = 0.01, P(D|S) = 0.08, and the answer is 0.1579."
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-46-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 46,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  A life insurance company issues standard or preferred policies.\n </span>\n <br/>\n <br/>\n <span>\n  Of the company's policyholders, 60% have standard policies and a probability of 0.01 of dying in the next year, and 40% have preferred policies and a probability of 0.08 of dying in the next year.\n </span>\n <br/>\n <br/>\n <span>\n  A policyholder dies in the next year.\n </span>\n <br/>\n <br/>\n <span>\n  What is the conditional probability of the deceased having a preferred policy?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

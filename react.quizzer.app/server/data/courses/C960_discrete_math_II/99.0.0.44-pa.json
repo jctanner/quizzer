@@ -1,0 +1,23 @@
+{
+  "answer": ".40",
+  "choices": [
+    ".00",
+    ".01",
+    ".40",
+    ".60"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-44-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 44,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Assume that a test for a disease gives a positive result for 1.5% of people who do not have the disease, but does not test negative if the person has the disease.\n <br/>\n <br/>\n What is the probability that a person who tested positive has the disease, if 1% of people have the disease?\n</p>\n",
+  "section": "99.0.0: PA"
+}

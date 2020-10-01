@@ -1,0 +1,23 @@
+{
+  "answer": "(4, 5, 2, 3, 1, 6)",
+  "choices": [
+    "(4, 6, 3, 2, 1, 5)",
+    "(4, 5, 2, 3, 6, 1)",
+    "(4, 5, 2, 3, 1, 6)",
+    "(4, 6, 5, 3, 2, 1)"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-37-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 37,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Which permutation of the set {1, 2, 3, 4, 5, 6} is first in lexicographic order?\n</p>\n",
+  "section": "99.0.0: PA"
+}

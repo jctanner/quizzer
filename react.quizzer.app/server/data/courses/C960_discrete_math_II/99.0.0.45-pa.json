@@ -1,0 +1,23 @@
+{
+  "answer": "0.3",
+  "choices": [
+    "0.2",
+    "0.3",
+    "0.4",
+    "0.5"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-45-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 45,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  There are two coins, one fair and one biased. The biased coin comes up heads with a probability 0.8 and tails with a probability 0.2.\n </span>\n <br/>\n <br/>\n <span>\n  One of the coins is selected at random and flipped ten times. The results of the coin flips are mutually independent.\n </span>\n <br/>\n <br/>\n <span>\n  The result of the 10 flips is H, T, T, H, H, T, H, H, T, H.\n </span>\n <br/>\n <br/>\n <span>\n  What is the probability that the coin flipped was the biased coin? (Round to the nearest tenth.)\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

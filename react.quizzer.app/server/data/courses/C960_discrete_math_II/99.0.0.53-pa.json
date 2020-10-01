@@ -1,0 +1,23 @@
+{
+  "answer": "001010",
+  "choices": [
+    "000000",
+    "001010",
+    "101010",
+    "110101"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-53-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 53,
+  "question": "This finite state machine (FSM) has the input alphabet {0, 1} and the state set {A, B, C}. \u00a0   \u00a0  Which input string will be accepted by the FSM?",
+  "section": "99.0.0: PA"
+}

@@ -1,0 +1,23 @@
+{
+  "answer": "<div><span>\n <em>\n  O\n </em>\n (\n <em>\n  n\n </em>\n</span>\n <span>\n <sup>\n  2\n </sup>\n</span>\n <span>\n )\n</span></div>",
+  "choices": [
+    "O(1)",
+    "O(n)",
+    "<div><span>\n <em>\n  O\n </em>\n (\n <em>\n  n\n </em>\n</span>\n <span>\n <sup>\n  2\n </sup>\n</span>\n <span>\n )\n</span></div>",
+    "O(n log(n))"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-5-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 5,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Given this algorithm:\n </span>\n <br/>\n <br/>\n <span>\n  <span>\n   Simple Sort\n  </span>\n  <br/>\n  <span>\n   This algorithm sorts the elements of an array.\n  </span>\n  <br/>\n  <br/>\n  <span>\n   Input: numb, an array of n integers\n  </span>\n  <br/>\n  <span>\n   Output: numb, in ascending order\n  </span>\n  <br/>\n  <br/>\n  <span>\n   for i = 1 to n\n  </span>\n  <br/>\n  <span>\n   for j = 1 to n\u00a0\u2013 i\n  </span>\n  <br/>\n  <span>\n   if numb(j) &gt; numb(j + 1)\n  </span>\n  <br/>\n  <span>\n   temp = numb(j)\n  </span>\n  <br/>\n  <span>\n   numb(j) = numb(j + 1)\n  </span>\n  <br/>\n  <span>\n   numb(j + 1) = temp\n  </span>\n  <br/>\n  <span>\n   end for\n  </span>\n  <br/>\n  <span>\n   end for\n  </span>\n </span>\n <br/>\n <br/>\n <span>\n  What is the asymptotic worst-case complexity?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

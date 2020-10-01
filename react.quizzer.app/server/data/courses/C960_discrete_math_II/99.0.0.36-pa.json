@@ -1,0 +1,23 @@
+{
+  "answer": "C(12,5)\u00a0\u00d7\u00a0C(8,4)",
+  "choices": [
+    "5!4!",
+    "C(20,9)",
+    "C(12,5)\u00a0\u00d7\u00a0C(8,4)",
+    "C(20,12)\u00a0\u00d7\u00a0C(20,8)"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-36-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 36,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Twenty people have volunteered for an experiment. Twelve of the volunteers are men and eight are women.\n </span>\n <br/>\n <br/>\n <span>\n  How many ways are there to select a group of five men and four women?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

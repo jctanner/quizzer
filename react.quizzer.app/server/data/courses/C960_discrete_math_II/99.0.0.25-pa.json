@@ -1,0 +1,28 @@
+{
+  "answer": "empty set",
+  "choices": [
+    "empty set",
+    "empty set",
+    "empty set",
+    "empty set"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [
+      "PA-25-choice-0.png",
+      "PA-25-choice-1.png",
+      "PA-25-choice-2.png",
+      "PA-25-choice-3.png"
+    ],
+    "explanation": null,
+    "question": "PA-25-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 25,
+  "question": "In the inductive proof of: \u00a0   \u00a0  The inductive hypothesis is that for any n = k,  \u00a0   \u00a0  What must be proven assuming the inductive hypothesis is true?",
+  "section": "99.0.0: PA"
+}

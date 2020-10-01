@@ -1,0 +1,23 @@
+{
+  "answer": "153",
+  "choices": [
+    "29",
+    "36",
+    "153",
+    "306"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-14-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 14,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n What is the decimal expansion of (10011001)\n <sub>\n  2\n </sub>\n ?\n</p>\n",
+  "section": "99.0.0: PA"
+}

@@ -52,6 +52,21 @@ function QuestionChoices(props) {
         return imgurl;
     }
 
+    const getDisplayTypeForChoice = (index) => {
+        let dtype = null;
+        if (questionData.images.choices[index] !== null && questionData.images.choices[index] !== undefined) {
+            dtype = 'img';
+        } 
+        if (!showImages || dtype === null) {
+            if (questionData.choices[index].includes('<div')) {
+                dtype = 'html'
+            } else {
+                dtype = 'text';    
+            }
+        }
+        return dtype;
+    }
+
     const hasChoiceImages = getChoiceImageUrl(0);
 
     return (
@@ -69,7 +84,8 @@ function QuestionChoices(props) {
                             key={ index }
                             id={ index }
                         />
-                        { (showImages && questionData.images && questionData.images.choices[index]) && (
+                        {/*}
+                        { (showImages && questionData.images && questionData.images.choices[index] !== null) && (
                             <>
                                 <img src={ getChoiceImageUrl(index) }/>
                                 <br/>
@@ -79,6 +95,19 @@ function QuestionChoices(props) {
                             <div dangerouslySetInnerHTML={ { __html: choice } } />
                         )}
                         { ((!showImages || hasChoiceImages == null) && !choice.includes('<div') ) && (
+                            <>3{ choice }<br/></>
+                        )}
+                        */}
+                        { (getDisplayTypeForChoice(index) === 'img') && (
+                            <>
+                            <img src={ getChoiceImageUrl(index) }/>
+                            <br/>
+                            </>
+                        )}
+                        { (getDisplayTypeForChoice(index) === 'html') && (
+                             <div dangerouslySetInnerHTML={ { __html: choice } } />
+                        )}
+                        { (getDisplayTypeForChoice(index) === 'text') && (
                             <>{ choice }<br/></>
                         )}
                     </>

@@ -1,0 +1,23 @@
+{
+  "answer": "(n + 1)(n + 2)(2n + 3)/6",
+  "choices": [
+    "n(n + 1)(2n + 1)/2",
+    "(n + 1)(2n2 + 3n + 6)/6",
+    "(n + 1)(n + 2)(2n + 3)/6",
+    "n(n + 1)(2n + 3)/6 + (n + 1)2"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-24-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 24,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n In the proof for the sum of squares, the inductive hypothesis for any natural number is:\n <br/>\n <br/>\n <i>\n  P\n </i>\n (\n <i>\n  n\n </i>\n ): 0\n <sup>\n  2\n </sup>\n + 1\n <sup>\n  2\n </sup>\n + 2\n <sup>\n  2\n </sup>\n + ... +\n <i>\n  n\n </i>\n <sup>\n  2\n </sup>\n =\n <i>\n  n\n </i>\n (\n <i>\n  n\n </i>\n + 1)(2\n <i>\n  n\n </i>\n + 1)/6,\n <i>\n  n\n </i>\n <span>\n  \u22650.\n </span>\n <br/>\n <br/>\n If\n <i>\n  n\n </i>\n = 0, then the left-hand side of\n <i>\n  P\n </i>\n (0) = 0\n <sup>\n  2\n </sup>\n = 0, and right-hand side of\n <i>\n  P\n </i>\n (0) = 0 \u00d7\u00a0(0 + 1)(2\u00a0\u00d7\u00a00 + 1)/6 = 0 .\n <br/>\n <br/>\n What is the right-hand side of\n <i>\n  P\n </i>\n (\n <i>\n  n\n </i>\n +1)?\n</p>\n",
+  "section": "99.0.0: PA"
+}

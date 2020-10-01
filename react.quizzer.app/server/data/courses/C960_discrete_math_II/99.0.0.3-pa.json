@@ -1,0 +1,23 @@
+{
+  "answer": "32",
+  "choices": [
+    "4",
+    "16",
+    "32",
+    "64"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-3-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 3,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Given the pseudocode fragment:\n </span>\n <br/>\n <span>\n </span>\n <br/>\n <span>\n  <span>\n   x := 2\n  </span>\n </span>\n <br/>\n <span>\n  <span>\n   count := 4\n  </span>\n </span>\n <br/>\n <span>\n  <span>\n   while (count &gt; 0)\n  </span>\n </span>\n <br/>\n <span>\n  <span>\n   x := 2 \u00d7\u00a0x\n  </span>\n </span>\n <br/>\n <span>\n  <span>\n   count := count - 1\n  </span>\n </span>\n <br/>\n <span>\n  <span>\n   End-while\n  </span>\n </span>\n <br/>\n <span>\n </span>\n <br/>\n <span>\n  What is the final value for x?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

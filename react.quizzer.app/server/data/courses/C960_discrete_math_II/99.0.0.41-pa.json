@@ -1,0 +1,23 @@
+{
+  "answer": "12",
+  "choices": [
+    "12",
+    "16",
+    "18",
+    "24"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-41-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 41,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Set\n  <i>\n   A\n  </i>\n  has 8 elements,\n  <i>\n   B\n  </i>\n  has 10 elements, and their intersection has 6 elements.\n </span>\n <br/>\n <br/>\n <span>\n  How many elements are in the union of these two sets?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

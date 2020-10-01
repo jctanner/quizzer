@@ -1,0 +1,23 @@
+{
+  "answer": "1,320",
+  "choices": [
+    "36",
+    "1,320",
+    "1,728",
+    "3,960"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-30-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 30,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  A club of 12 people would like to choose a person for each office of president, a vice president, and a secretary.\n </span>\n <br/>\n <br/>\n <span>\n  How many different ways are there to select the officers so that only one person holds each office?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

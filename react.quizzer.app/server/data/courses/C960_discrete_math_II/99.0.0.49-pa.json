@@ -1,0 +1,23 @@
+{
+  "answer": "5",
+  "choices": [
+    "4",
+    "5",
+    "20",
+    "80"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-49-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 49,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  There are four different colored balls in a bag. There is equal probability of selecting the red, black, green, or blue ball.\n </span>\n <br/>\n <br/>\n <span>\n  What is the expected value of getting a green ball out of 20 experiments with replacement?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

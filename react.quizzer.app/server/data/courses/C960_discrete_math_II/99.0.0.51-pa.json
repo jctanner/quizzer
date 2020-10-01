@@ -1,0 +1,23 @@
+{
+  "answer": "3",
+  "choices": [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-51-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 51,
+  "question": "The diagram below shows a deterministic finite automaton with alphabet {0, 1}: \u00a0   What state is the automaton in after processing the string \u201c 1 0 1 1\u00a0\u00a0 0 1 1 0\u00a0\u00a0 0 0 1 1\u00a0\u00a0 1 \u201d?",
+  "section": "99.0.0: PA"
+}

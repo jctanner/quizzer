@@ -1,0 +1,23 @@
+{
+  "answer": "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n <sup>\n 3\n</sup>\nlog <em>\n n\n</em>\n)</div>",
+  "choices": [
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\nlog <em>\n n\n</em>\n)</div>",
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n <sup>\n 2\n</sup>\nlog <em>\n n\n</em>\n)</div>",
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n <sup>\n 3\n</sup>\nlog <em>\n n\n</em>\n)</div>",
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n <sup>\n 3\n</sup>\n)</div>"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-7-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 7,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Assume that the Sort(list L) function operates in\n <em>\n  O\n </em>\n (\n <em>\n  n\n </em>\n log\n <em>\n  n\n </em>\n ) time, where\n <em>\n  n\n </em>\n is the length of the list (of numbers.)\n <br/>\n <br/>\n Variables\n <em>\n  L1\n </em>\n ,\n <em>\n  L2\n </em>\n ,\n <em>\n </em>\n and\n <em>\n  L3\n </em>\n are lists of real numbers, all of length\n <em>\n  n\n </em>\n .\n <br/>\n <br/>\n Given the following pseudocode function:\n <br/>\n <span>\n </span>\n <br/>\n <span>\n  Function Sort3(L1, L2, L3)\n </span>\n <br/>\n <span>\n  K1 = Sort(L1)\n </span>\n <br/>\n <span>\n  For each element, E1, of L1,\n </span>\n <br/>\n <span>\n  Add E1 to each element of L2\n </span>\n <br/>\n <span>\n  K2 = Sort(L2)\n </span>\n <br/>\n <span>\n  For each element, E2, of L2\n </span>\n <br/>\n <span>\n  Add E2 to each element of L3\n </span>\n <br/>\n <span>\n  K3 = Sort(L3)\n </span>\n <br/>\n <span>\n  End-For\n </span>\n <br/>\n <span>\n  End-For\n </span>\n <br/>\n <span>\n  L = Append lists K3, K1, and K2\n </span>\n <br/>\n <span>\n  return L\n </span>\n <br/>\n <span>\n </span>\n <br/>\n Which function dominates the run time of Sort3(\n <em>\n  L1\n </em>\n ,\n <em>\n  L2\n </em>\n ,\n <em>\n  L3\n </em>\n )?\n</p>\n",
+  "section": "99.0.0: PA"
+}

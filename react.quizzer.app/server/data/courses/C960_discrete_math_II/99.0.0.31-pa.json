@@ -1,0 +1,23 @@
+{
+  "answer": "<div><span>\n 2\n</span>\n <span>\n <i>\n  <sup>\n   n\n  </sup>\n </i>\n</span></div>",
+  "choices": [
+    "2n",
+    "<div><span>\n 2\n</span>\n <span>\n <i>\n  <sup>\n   n\n  </sup>\n </i>\n</span></div>",
+    "<div><span>\n <i>\n  n\n </i>\n</span>\n <span>\n <sup>\n  2\n </sup>\n</span></div>",
+    "n!"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-31-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 31,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  A fair coin is flipped\n  <i>\n   n\n  </i>\n  times and the results recorded.\n </span>\n <br/>\n <br/>\n <span>\n  How many different sequences of heads and tails are possible?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

@@ -1,0 +1,23 @@
+{
+  "answer": "18\u00a0\u00a0\u00a0 2\u00a0\u00a0\u00a0 0\u00a0\u00a0\u00a0",
+  "choices": [
+    "18\u00a0\u00a0\u00a0 2\u00a0\u00a0\u00a0 0\u00a0\u00a0\u00a0",
+    "8\u00a0\u00a0\u00a0 2\u00a0\u00a0\u00a0 0",
+    "8\u00a0\u00a0\u00a0 4\u00a0\u00a0\u00a0 2\u00a0\u00a0\u00a0 1\u00a0\u00a0\u00a0 0",
+    "18\u00a0\u00a0\u00a0 4\u00a0\u00a0\u00a0 2\u00a0\u00a0\u00a0 1\u00a0\u00a0\u00a0 0"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-13-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 13,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n What is the sequence of remainders obtained when using Euclid\u2019s algorithm to compute the greatest common divisor (GCD) of 178 and 20?\n</p>\n",
+  "section": "99.0.0: PA"
+}

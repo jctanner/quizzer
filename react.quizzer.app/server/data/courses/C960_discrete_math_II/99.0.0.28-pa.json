@@ -1,0 +1,23 @@
+{
+  "answer": "1 + 2(n+1)",
+  "choices": [
+    "2 + 2n",
+    "<div>3 +  <i>\n n\u00a0\u00d7\n</i>\n2 <i>\n <sup>\n  n\n </sup>\n</i></div>",
+    "1 + 2(n+1)",
+    "<div>3 +  <i>\n n\u00a0\u00d7\n</i>\n2 <sup>\n (\n</sup>\n <i>\n <sup>\n  n\n </sup>\n</i>\n <sup>\n +1)\n</sup></div>"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-28-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 28,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Given the recurrence relation\n <i>\n  a\n </i>\n <i>\n  <sub>\n   n\n  </sub>\n </i>\n <sub>\n  +1\n </sub>\n = 2\u00a0\u00d7\n <i>\n  a\n </i>\n <i>\n  <sub>\n   n\n  </sub>\n </i>\n - 1, with a\n <sub>\n  0\n </sub>\n = 3.\n <br/>\n <br/>\n What is\n <i>\n  a\n </i>\n <i>\n  <sub>\n   n\n  </sub>\n </i>\n when expressed as an explicit function of\n <i>\n  n\n </i>\n ?\n</p>\n",
+  "section": "99.0.0: PA"
+}

@@ -1,0 +1,23 @@
+{
+  "answer": "O(n2)",
+  "choices": [
+    "O(1)",
+    "O(n)",
+    "O(n2)",
+    "O(n log(n))"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-6-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 6,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Given the pseudocode:\n </span>\n <br/>\n <br/>\n <span>\n  <span>\n   procedure bubbleSort( A : list of sortable items )\n  </span>\n  <br/>\n  <span>\n   n = length(A)\n  </span>\n  <br/>\n  <span>\n   repeat\n  </span>\n  <br/>\n  <span>\n   newn = 0\n  </span>\n  <br/>\n  <span>\n   for i = 1 to n-1 inclusive do\n  </span>\n  <br/>\n  <span>\n   if A[i-1] &gt; A[i] then\n  </span>\n  <br/>\n  <span>\n   swap(A[i-1], A[i])\n  </span>\n  <br/>\n  <span>\n   newn = i\n  </span>\n  <br/>\n  <span>\n   end if\n  </span>\n  <br/>\n  <span>\n   end for\n  </span>\n  <br/>\n  <span>\n   n = newn\n  </span>\n  <br/>\n  <span>\n   until n = 0\n  </span>\n  <br/>\n  <span>\n   end procedure\n  </span>\n </span>\n <br/>\n <br/>\n <span>\n  \u200bWhat is the worst case performance?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

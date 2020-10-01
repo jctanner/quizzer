@@ -1,0 +1,23 @@
+{
+  "answer": "Any input that includes any positive\u00a0number of f\u2019s, s\u2019s and k\u2019s will terminate at FSK.",
+  "choices": [
+    "The only inputs that end at state FSK are the permutations of {f,s,k}.",
+    "The only input that ends at state FSK is {f,s,k}.",
+    "Only inputs that include the same number of f\u2019s, s\u2019s and k\u2019s will terminate at FSK.",
+    "Any input that includes any positive\u00a0number of f\u2019s, s\u2019s and k\u2019s will terminate at FSK."
+  ],
+  "correct_choice_index": 3,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-52-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 52,
+  "question": "The finite state machine (FSM) describes setting a table with a knife, fork, and spoon. There only needs to be one of each, so once a state is reached, if a second addition of an existing utensil is attempted, the machine loops back to the same state. \u00a0   \u00a0 Which statement is correct?",
+  "section": "99.0.0: PA"
+}

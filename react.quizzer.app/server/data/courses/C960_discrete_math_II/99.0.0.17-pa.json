@@ -1,0 +1,23 @@
+{
+  "answer": "<div><span>\n (17\n</span>\n <span>\n <sup>\n  16\n </sup>\n</span>\n <span>\n x 17\n</span>\n <span>\n <sup>\n  4\n </sup>\n</span>\n <span>\n x 17) mod\n <i>\n  n\n </i>\n</span></div>",
+  "choices": [
+    "<div><span>\n (17\n</span>\n <span>\n <sup>\n  2\n </sup>\n</span>\n <span>\n x 17\n</span>\n <span>\n <sup>\n  10\n </sup>\n</span>\n <span>\n + 17) mod\n <i>\n  n\n </i>\n</span></div>",
+    "<div><span>\n (17\n</span>\n <span>\n <sup>\n  4\n </sup>\n</span>\n <span>\n x 17\n</span>\n <span>\n <sup>\n  5\n </sup>\n</span>\n <span>\n + 17) mod\n <i>\n  n\n </i>\n</span></div>",
+    "<div><span>\n (17\n</span>\n <span>\n <sup>\n  12\n </sup>\n</span>\n <span>\n x 17\n</span>\n <span>\n <sup>\n  8\n </sup>\n</span>\n <span>\n x 17) mod\n <i>\n  n\n </i>\n</span></div>",
+    "<div><span>\n (17\n</span>\n <span>\n <sup>\n  16\n </sup>\n</span>\n <span>\n x 17\n</span>\n <span>\n <sup>\n  4\n </sup>\n</span>\n <span>\n x 17) mod\n <i>\n  n\n </i>\n</span></div>"
+  ],
+  "correct_choice_index": 3,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-17-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 17,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  The binary representation of 21 is 10101.\n </span>\n <br/>\n <br/>\n <span>\n  What is 17\n </span>\n <span>\n  <sup>\n   21\n  </sup>\n </span>\n <span>\n  mod\n  <i>\n   n\n  </i>\n  ?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

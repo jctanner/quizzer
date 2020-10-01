@@ -1,0 +1,25 @@
+{
+  "answer": "{2, 3, 5, 7, 11, 13, 17, 19}",
+  "choices": [
+    "empty set",
+    "{2, 3, 5, 7}",
+    "{11, 13, 17, 19}",
+    "{2, 3, 5, 7, 11, 13, 17, 19}"
+  ],
+  "correct_choice_index": 3,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [
+      "PA-2-choice-0.jpg"
+    ],
+    "explanation": null,
+    "question": "PA-2-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 2,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Given this pseudocode:\n <br/>\n <br/>\n <span>\n  S = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}\n </span>\n <br/>\n <span>\n  x = 2\n </span>\n <br/>\n <span>\n  While(x&lt;11):\n </span>\n <br/>\n <span>\n  For i in S:\n </span>\n <br/>\n <span>\n  If 0 \u2261 i mod x and i \u2260 x:\n </span>\n <br/>\n <span>\n  delete i from S\n </span>\n <br/>\n <span>\n  end-If\n </span>\n <br/>\n <span>\n  end-For\n </span>\n <br/>\n <span>\n  x = x + 1\n </span>\n <br/>\n <span>\n  end-While\n </span>\n <br/>\n <br/>\n What is\n <em>\n  S\n </em>\n at the end of this code?\n</p>\n",
+  "section": "99.0.0: PA"
+}

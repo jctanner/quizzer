@@ -1,0 +1,23 @@
+{
+  "answer": "B",
+  "choices": [
+    "A",
+    "B",
+    "C",
+    "Input string is not valid."
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-54-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 54,
+  "question": "This finite state machine (FSM) has the input alphabet {0, 1} and the state set {A, B, C} with C being the only accepting state. \u00a0   \u00a0  What is its current state if the input string 110110 has been fed to the FSM?",
+  "section": "99.0.0: PA"
+}

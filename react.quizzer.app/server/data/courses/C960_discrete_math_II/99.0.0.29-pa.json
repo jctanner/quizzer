@@ -1,0 +1,23 @@
+{
+  "answer": "2n",
+  "choices": [
+    "2n",
+    "n + 1",
+    "(-1)n + 3n",
+    "(-2)n + 4n"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-29-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 29,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  Suppose\n  <i>\n   a\n  </i>\n  <i>\n   <sub>\n    n+1\n   </sub>\n  </i>\n  = 3\n  <i>\n   a\n  </i>\n  <i>\n   <sub>\n    n\n   </sub>\n  </i>\n  - 2\n  <i>\n   a\n  </i>\n  <sub>\n   n-1\n  </sub>\n  and\n  <i>\n   a\n  </i>\n  <sub>\n   0\n  </sub>\n  = 1,\n  <i>\n   a\n  </i>\n  <sub>\n   1\n  </sub>\n  = 2.\n </span>\n <br/>\n <br/>\n <span>\n  What is\n  <i>\n   a\n  </i>\n  <i>\n   <sub>\n    n\n   </sub>\n  </i>\n  expressed as a function of\n  <i>\n   n\n  </i>\n  ?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

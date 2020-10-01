@@ -1,0 +1,23 @@
+{
+  "answer": "785",
+  "choices": [
+    "632",
+    "657",
+    "720",
+    "785"
+  ],
+  "correct_choice_index": 3,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-48-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 48,
+  "question": "A circle of radius 1 is inscribed in a square with side length 2 as shown in the diagram below:   If 1,000 points are selected randomly inside the square with all points equally likely to be selected, how many of those points are expected to lie inside the circle?",
+  "section": "99.0.0: PA"
+}

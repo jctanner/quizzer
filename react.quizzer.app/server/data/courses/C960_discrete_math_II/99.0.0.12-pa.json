@@ -1,0 +1,23 @@
+{
+  "answer": "{4, 12, 20, 28}",
+  "choices": [
+    "{2, 10, 18, 26}",
+    "{4, 12, 20, 28}",
+    "{6, 14, 22, 30}",
+    "{8, 16, 24, 32}"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-12-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 12,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Which set contains the multiplicative inverse of 13 mod 33?\n</p>\n",
+  "section": "99.0.0: PA"
+}

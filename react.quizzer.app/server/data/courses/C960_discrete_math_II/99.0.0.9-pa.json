@@ -1,0 +1,23 @@
+{
+  "answer": "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n <sup>\n 3\n</sup>\n)</div>",
+  "choices": [
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n <sup>\n 3\n</sup>\n)</div>",
+    "<div><em>\n O\n</em>\n(log( <em>\n n\n</em>\n <sup>\n 2\n</sup>\n))</div>",
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n \u00d7 log( <em>\n n\n</em>\n <sup>\n 2\n</sup>\n))</div>",
+    "<div><em>\n O\n</em>\n( <em>\n n\n</em>\n2)</div>"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-9-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 9,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Assume\n <em>\n  n\n </em>\n <sub>\n  0\n </sub>\n =\u00a01.\n <br/>\n <br/>\n What is the big-\n <em>\n  O\n </em>\n notation for the function\n <em>\n  f\n </em>\n (\n <em>\n  n\n </em>\n )\u00a0=\n <em>\n  n\n </em>\n \u00d7\u00a0log(\n <em>\n  n\n </em>\n <sup>\n  2\n </sup>\n )\u00a0+\u00a07\n <em>\n  n\n </em>\n <sup>\n  3\n </sup>\n +\u00a05\n <em>\n  n\n </em>\n +\u00a03?\n</p>\n",
+  "section": "99.0.0: PA"
+}

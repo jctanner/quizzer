@@ -1,0 +1,23 @@
+{
+  "answer": "Your approximation is 17/12.",
+  "choices": [
+    "Your approximation is 17/12.",
+    "Your approximation is 17/7.",
+    "Your approximation is 12/7.",
+    "Your approximation is 12/5."
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-21-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 21,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n Given the recursive algorithm in this pseudocode:\n <br/>\n <br/>\n <span>\n  RTC(n)\n </span>\n <br/>\n <span>\n </span>\n <br/>\n <span>\n  Input:\u00a0 A nonnegative integer, n\n </span>\n <br/>\n <span>\n  Output:\u00a0 A numerator or denominator (depending on parity of n) in an approximation of\n </span>\n <br/>\n <span>\n </span>\n <br/>\n <span>\n  If n &lt; 3\n </span>\n <br/>\n <span>\n  Return (n + 1)\n </span>\n <br/>\n <span>\n  If n &gt;= 3\n </span>\n <br/>\n <span>\n  t: = RTC(n \u2013 1)\n </span>\n <br/>\n <span>\n  If n is odd\n </span>\n <br/>\n <span>\n  s:= RTC(n \u2013 2)\n </span>\n <br/>\n <span>\n  Return (s + t)\n </span>\n <br/>\n <span>\n  If n is even\n </span>\n <br/>\n <span>\n  r:= RTC(n \u2013 3)\n </span>\n <br/>\n <span>\n  Return (r + t)\n </span>\n <br/>\n <span>\n  If n is even\n </span>\n <br/>\n <span>\n  print \u2018Your approximation is \u2018 , RTC(n) , \u2018/\u2019 , RTC(n \u2013 1) , \u2018.\u2019\n </span>\n <br/>\n <br/>\n <span>\n </span>\n What is the output for the algorithm if the input\n <em>\n  n\n </em>\n is 6?\n</p>\n",
+  "section": "99.0.0: PA"
+}

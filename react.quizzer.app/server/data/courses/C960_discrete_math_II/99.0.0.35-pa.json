@@ -1,0 +1,23 @@
+{
+  "answer": "84",
+  "choices": [
+    "84",
+    "120",
+    "210",
+    "286"
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-35-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 35,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n A grocery store stocks 1-gallon cartons of skim milk, 1% milk, 2% milk, and whole milk. A customer is asked to buy 10 gallons of milk. The customer needs to buy at least one carton of each type of milk.\n <br/>\n <br/>\n How many different ways can the kinds of milk to buy be selected?\n</p>\n",
+  "section": "99.0.0: PA"
+}

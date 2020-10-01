@@ -1,0 +1,23 @@
+{
+  "answer": "151",
+  "choices": [
+    "56",
+    "151",
+    "352",
+    "384"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-20-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 20,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  An individual has chosen a public key of\n  <i>\n   N\n  </i>\n  = 391 = 17\n </span>\n <span>\n  \u00d7\n </span>\n <span>\n  23 and\n  <i>\n   e\n  </i>\n  = 7.\n </span>\n <br/>\n <br/>\n <span>\n  What is the private key using RSA encryption?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

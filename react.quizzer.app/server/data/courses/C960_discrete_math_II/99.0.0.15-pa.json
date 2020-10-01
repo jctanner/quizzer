@@ -1,0 +1,23 @@
+{
+  "answer": "6",
+  "choices": [
+    "4",
+    "5",
+    "6",
+    "10"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-15-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 15,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  What is the minimum number of bits required for the binary representation of a number greater than 32?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

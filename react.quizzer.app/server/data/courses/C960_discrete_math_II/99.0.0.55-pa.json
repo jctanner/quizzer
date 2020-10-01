@@ -1,0 +1,23 @@
+{
+  "answer": "A",
+  "choices": [
+    "A",
+    "C",
+    "{A, B} ",
+    "{A, C} "
+  ],
+  "correct_choice_index": 0,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-55-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 55,
+  "question": "Given this finite state machine (FSM):  \u00a0     What is the current state after the FSM has processed the input sequence 11011 beginning in state B?",
+  "section": "99.0.0: PA"
+}

@@ -1,0 +1,23 @@
+{
+  "answer": "4",
+  "choices": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-43-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 43,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  A random experiment consists of tossing a fair six-sided die repeatedly.\n </span>\n <br/>\n <br/>\n <span>\n  How many tosses are required to be certain that the probability that at least one '6' appears is greater than or equal to 1/2?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

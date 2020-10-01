@@ -1,0 +1,23 @@
+{
+  "answer": "19",
+  "choices": [
+    "9",
+    "14",
+    "19",
+    "25"
+  ],
+  "correct_choice_index": 2,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-22-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 22,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n <span>\n  The recurrence relation is given by\n  <i>\n   a\n  </i>\n  <i>\n   <sub>\n    n\n   </sub>\n  </i>\n  =\n  <i>\n   a\n  </i>\n  <sub>\n   n\n  </sub>\n  <sub>\n   \u22121\n  </sub>\n  +\n  <i>\n   n\n  </i>\n  with initial term\n  <i>\n   a\n  </i>\n  <i>\n   <sub>\n    0\n   </sub>\n  </i>\n  =4.\n </span>\n <br/>\n <br/>\n <span>\n  What is the value of\n  <i>\n   a\n  </i>\n  <sub>\n   5\n  </sub>\n  ?\n </span>\n</p>\n",
+  "section": "99.0.0: PA"
+}

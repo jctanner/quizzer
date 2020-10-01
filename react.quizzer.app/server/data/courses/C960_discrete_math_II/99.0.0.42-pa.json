@@ -1,0 +1,23 @@
+{
+  "answer": "33",
+  "choices": [
+    "28",
+    "33",
+    "37",
+    "50"
+  ],
+  "correct_choice_index": 1,
+  "enabled": true,
+  "explanation": null,
+  "images": {
+    "answer": null,
+    "choices": [],
+    "explanation": null,
+    "question": "PA-42-question.png"
+  },
+  "input_type": "fieldset",
+  "instructions": null,
+  "qid": 42,
+  "question": "<p class=\"text--bold\" ng-bind-html=\"question.topQuestionText\">\n A company has three\u00a0active projects:\u00a0Domino, Falcon, and Giant. There are 19 employees charging time to Domino, 16 to Falcon, and 15 to Giant. Those totals include 8 employees charging both Domino and Falcon, 6 charging both Falcon and Giant, and 7 charging both Giant and Domino. Included in those subtotals is the 4-person IT team, all of whose members charge all three projects.\n <br/>\n <br/>\n How many employees are working on the projects?\n</p>\n",
+  "section": "99.0.0: PA"
+}
