@@ -115,20 +115,42 @@ function QuestionAnswer(props) {
         explanationImg = '/images/' + courseName + '/' + questionData.images.explanation;
     }
 
+    const getDisplayTypeForExplanation = () => {
+        let dtype = null;
+        if (showImages && questionData.images.explanation !== null && questionData.images.explanation !== undefined) {
+            dtype = 'img';
+        } 
+        if (dtype === null && questionData.explanation !== null && questionData.explanation !== undefined) {
+            if (questionData.explanation.includes('<div')) {
+                dtype = 'html'
+            } else {
+                dtype = 'text';    
+            }
+        }
+        return dtype;
+    }
+
     return (
         <>
             <h3>answer</h3>
             <div dangerouslySetInnerHTML={ { __html: questionData.answer } }></div>
-            { (!showImages && questionData && questionData.explanation) && (
+
+            {( getDisplayTypeForExplanation() == 'img') && (
                 <>
-                    <h3>explanation</h3>
-                    <div dangerouslySetInnerHTML={ { __html: questionData.explanation } }></div>
+                <h3>explanation</h3>
+                <img src={ explanationImg }/>
                 </>
             )}
-            { (showImages && explanationImg) && (
+            {( getDisplayTypeForExplanation() == 'html') && (
                 <>
-                    <h3>explanation</h3>
-                    <img src={ explanationImg }/>
+                <h3>explanation</h3>
+                <div dangerouslySetInnerHTML={ { __html: questionData.explanation } } />
+                </>
+            )}
+            {( getDisplayTypeForExplanation() == 'text') && (
+                <>
+                <h3>explanation</h3>
+                <div>{questionData.explanation}</div>
                 </>
             )}
         </>
