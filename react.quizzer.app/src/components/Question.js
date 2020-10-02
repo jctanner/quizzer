@@ -84,20 +84,6 @@ function QuestionChoices(props) {
                             key={ index }
                             id={ index }
                         />
-                        {/*}
-                        { (showImages && questionData.images && questionData.images.choices[index] !== null) && (
-                            <>
-                                <img src={ getChoiceImageUrl(index) }/>
-                                <br/>
-                            </>
-                        )}
-                        { ((!showImages || hasChoiceImages == null) && choice.includes('<div') ) && (
-                            <div dangerouslySetInnerHTML={ { __html: choice } } />
-                        )}
-                        { ((!showImages || hasChoiceImages == null) && !choice.includes('<div') ) && (
-                            <>3{ choice }<br/></>
-                        )}
-                        */}
                         { (getDisplayTypeForChoice(index) === 'img') && (
                             <>
                             <img src={ getChoiceImageUrl(index) }/>
