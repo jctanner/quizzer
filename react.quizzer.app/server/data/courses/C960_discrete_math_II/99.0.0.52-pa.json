@@ -8,7 +8,7 @@
   ],
   "correct_choice_index": 3,
   "enabled": true,
-  "explanation": null,
+  "explanation": "The 'same' number of each input is false because it could be zero. Any 'positive' number of each is correct because as long as there's at least one of each, the FSM is going to complete.",
   "images": {
     "answer": null,
     "choices": [],
