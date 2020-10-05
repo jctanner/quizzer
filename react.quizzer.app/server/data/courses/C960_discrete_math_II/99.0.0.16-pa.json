@@ -12,7 +12,7 @@
   "images": {
     "answer": null,
     "choices": [],
-    "explanation": null,
+    "explanation": "PA-16-explanation.jpg",
     "question": "PA-16-question.png"
   },
   "input_type": "fieldset",
