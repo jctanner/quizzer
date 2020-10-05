@@ -353,21 +353,24 @@ def fast_exponentiation(b, exp, modulus, debug=False):
     s = x
     r = y
 
+    count = 1
     while r > 0:
 
         ## THIS IS SLOW ...
         #if debug: print('p=len(%s) s=len(%s) r=%s' % (len(str(_p)), len(str(s)), r))
-        if debug: print('p=%s s=%s r=%s' % (_p, s, r))
+        if debug: print('%s. p=%s s=%s r=%s' % (count, _p, s, r))
 
         if (r % 2) == 1:
             #if debug: print('compute p = p*s')
             _p = _p *s
+            if debug: print('\t new p=%s' % (_p))
         #if debug: print('compute s = s*s')
         s = s*s
         #if debug: print('compute r = r//2')
         r = r // 2 
+        count += 1
 
-    if debug: print('p is %s digits long' % len(str(_p)))
+    if debug: print('final p is %s digits long' % len(str(_p)))
     if modulus is None:
         return _p
 
