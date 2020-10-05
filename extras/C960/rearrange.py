@@ -21,7 +21,8 @@ def main():
     combs = [x for x in combinations(numbers, 5)]
     '''
 
-    letters = 'MASK'[:]
+    #letters = 'MASK'[:]
+    letters = 'STATISTICS'[:]
     count = len(letters)
     print('choices: %s' % letters)
     perms = [x for x in permutations(letters, count)]
