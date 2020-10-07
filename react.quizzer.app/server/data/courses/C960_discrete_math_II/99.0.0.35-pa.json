@@ -8,7 +8,7 @@
   ],
   "correct_choice_index": 0,
   "enabled": true,
-  "explanation": null,
+  "explanation": "4 varieties, pick 10 total ... but you have to pick 1 of each, so it's actually pick 6 [10-4] ... nCr(6+4-1, 4-1) = 84",
   "images": {
     "answer": null,
     "choices": [],
