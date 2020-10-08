@@ -122,6 +122,129 @@ function getQuestionData(courseName, questionid) {
 };
 
 /*****************************************************
+ * FUNCTION: get course statistics
+*****************************************************/
+function getCourseStatistics(courseName) {
+    const cacheKey = courseName + '_stats'
+
+    if ( resultsCache.hasOwnProperty(cacheKey) && resultsCache[cacheKey] !== null ) {
+        console.log('using cached result for ' + cacheKey);
+        return resultsCache[cacheKey]
+    }
+
+    let questionList = [...coursesFiles[courseName]]
+    questionList.sort(compareVersions);
+
+    let questionStats = {
+        coursename: courseName,
+        total: questionList.length,
+        answered: 0,
+        unanswered: 0,
+        questionlist: questionList,
+        questions: {},
+        score_history: [],
+        sessionids: []
+    };
+    for (let i=0; i<questionList.length; i++) {
+        questionStats.questions[questionList[i]] = {
+            coursename: courseName,
+            questionid: questionList[i],
+            total: 0,
+            correct: 0,
+            incorrect: 0
+        }
+    }
+
+    let sessionIDs = []
+    let sessionInfo = {}
+    let answered = []
+    let unanswered = [...questionList]
+
+    rows = db.prepare(
+        `SELECT * FROM answers WHERE coursename='${courseName}'`
+    ).all()
+    
+    let sessionIndex = 0
+    rows.forEach((row, row_index) => {
+        //console.log(row)
+
+        if (!answered.includes(row.questionid)) {
+            answered.push(row.questionid)
+        }
+
+        if (!sessionIDs.includes(row.sessionid)) {
+            sessionIndex += 1
+            sessionIDs.push(row.sessionid)
+            sessionInfo[row.sessionid] = {
+                sessionid: row.sessionid,
+                date: row.datetime,
+                label: sessionIndex,
+                text: sessionIndex,
+                correct: 0,
+                incorrect: 0,
+                score: 0,
+                y: 0
+            }
+        }
+
+        // get the section for display on the coursepage datatable ...
+        const qData = getQuestionData(courseName, row.questionid)
+        questionStats.questions[row.questionid].section = qData.section
+
+        questionStats.questions[row.questionid].total += 1
+        if (row.correct === boolTrue) {
+            questionStats.questions[row.questionid].correct += 1
+            sessionInfo[row.sessionid]['correct'] += 1
+        } else {
+            questionStats.questions[row.questionid].incorrect += 1
+            sessionInfo[row.sessionid]['incorrect'] += 1
+        }
+    })
+
+    // get the section for display on the coursepage datatable ...
+    questionList.forEach((questionid, qid) => {
+        if ( questionStats.questions[questionid].section === null ||  questionStats.questions[questionid].section === undefined ) {
+            const qData = getQuestionData(courseName, questionid)
+            questionStats.questions[questionid].section = qData.section
+        }
+    });
+
+    questionStats.answered = answered.length;
+    questionStats.unanswered = unanswered.length;
+    questionStats.sessionids = sessionIDs;
+
+    sessionIDs.forEach(sessionID => {
+        console.log(sessionID);
+        rows = db.prepare(
+            `SELECT * FROM sessions WHERE sessionid='${sessionID}'`
+        ).all()
+        const thisSessionData = rows[0]
+        //let thisSessionQuestionIds = []
+        //let thisTotalQuestions = 1
+        if ( thisSessionData !== undefined ) {
+            const thisSessionQuestionIds = JSON.parse(thisSessionData.qidsjson)
+            const thisTotalQuestions = thisSessionQuestionIds.length
+            sessionInfo[sessionID].date = thisSessionData.started
+            sessionInfo[sessionID].total = thisTotalQuestions
+            sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+            sessionInfo[sessionID].y = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+            sessionInfo[sessionID].value = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
+        } else {
+            delete sessionInfo[sessionID]
+        }
+    })
+
+    console.log(sessionInfo)
+    console.log(Object.values(sessionInfo))
+    questionStats.score_history = Object.values(sessionInfo)
+    questionStats.session_info = sessionInfo
+
+    resultsCache[cacheKey] = questionStats
+    return questionStats
+};
+
+
+/*****************************************************
  * CONST: hash of courses and their questions
 *****************************************************/
 const courseList = fs.readdirSync('server/data/courses')
@@ -243,8 +366,13 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     console.log(req.params)
     const courseName = req.params.courseName
     console.log(req.query)
+
     const searchSectionString = req.query.search_section
     console.log(searchSectionString)
+    const byUnanswered = req.query.unanswered
+    console.log(byUnanswered)
+    const byIncorrect = req.query.incorrect
+    console.log(byIncorrect)
 
     let qCount = req.query.count
     if (qCount === undefined || qCount === null) {
@@ -255,30 +383,9 @@ app.get('/api/quiz/:courseName', async function (req, res) {
     console.log('#### qCount', qCount)
 
     let questionList = [...coursesFiles[req.params.courseName]]
-    //let multiplechoice = req.query.multiplechoice
-    //console.log(multiplechoice)
     multiplechoice = true;
 
-    // get rid of already answered questions
-    let answered = []
-    let sql = `SELECT DISTINCT(questionid) FROM answers WHERE coursename='${courseName}'`;
-    console.log(sql)
-    let rows = db.prepare(sql).all()
-    rows.forEach((row) => {
-        answered.push(row.questionid)
-    })
-
-    /*
-    let filtered = questionList.filter(function(value, indx, arr){
-        return (answered.includes(value) === false);
-    });
-
-    if (filtered.length === 0) {
-        filtered = [...questionList]
-    }
-    */
-
-    if (searchSectionString !== null && searchSectionString != undefined && searchSectionString != "") {
+    if (searchSectionString !== null && searchSectionString !== undefined && searchSectionString != "") {
         let filtered = questionList.filter(function(qid, indx, arr){
             //return (answered.includes(value) === false);
             const qData = getQuestionData(courseName, qid);
@@ -291,6 +398,31 @@ app.get('/api/quiz/:courseName', async function (req, res) {
             return false;
         });
         questionList = [...filtered];
+
+    } else {
+
+        const stats = getCourseStatistics(courseName)
+
+        if (byUnanswered !== undefined) {
+            let filtered = questionList.filter(function(qid, indx, arr){
+                if (stats.questions[qid].total === 0) {
+                    return true
+                }
+                return false
+            });
+            questionList = [...filtered];
+        }
+
+        if (byIncorrect !== undefined) {
+            let filtered = questionList.filter(function(qid, indx, arr){
+                if (stats.questions[qid].incorrect > 0) {
+                    return true
+                }
+                return false
+            });
+            questionList = [...filtered];
+        }
+
     }
 
     // select a random set of questions from the list
@@ -332,125 +464,10 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 *****************************************************/
 app.get('/api/stats/:courseName', async function (req, res) {
     const courseName = req.params.courseName
-    const cacheKey = courseName + '_stats'
-
-    if ( resultsCache.hasOwnProperty(cacheKey) && resultsCache[cacheKey] !== null ) {
-        console.log('using cached result for ' + cacheKey);
-        return res.json(resultsCache[cacheKey])
-    }
-
-    let questionList = [...coursesFiles[courseName]]
-    questionList.sort(compareVersions);
-
-    let questionStats = {
-        coursename: courseName,
-        total: questionList.length,
-        answered: 0,
-        unanswered: 0,
-        questionlist: questionList,
-        questions: {},
-        score_history: [],
-        sessionids: []
-    };
-    for (let i=0; i<questionList.length; i++) {
-        questionStats.questions[questionList[i]] = {
-            coursename: courseName,
-            questionid: questionList[i],
-            total: 0,
-            correct: 0,
-            incorrect: 0
-        }
-    }
-
-    let sessionIDs = []
-    let sessionInfo = {}
-    let answered = []
-    let unanswered = [...questionList]
-
-    rows = db.prepare(
-        `SELECT * FROM answers WHERE coursename='${courseName}'`
-    ).all()
-    
-    let sessionIndex = 0
-    rows.forEach((row, row_index) => {
-        //console.log(row)
-
-        if (!answered.includes(row.questionid)) {
-            answered.push(row.questionid)
-        }
-
-        if (!sessionIDs.includes(row.sessionid)) {
-            sessionIndex += 1
-            sessionIDs.push(row.sessionid)
-            sessionInfo[row.sessionid] = {
-                sessionid: row.sessionid,
-                date: row.datetime,
-                label: sessionIndex,
-                text: sessionIndex,
-                correct: 0,
-                incorrect: 0,
-                score: 0,
-                y: 0
-            }
-        }
-
-        // get the section for display on the coursepage datatable ...
-        const qData = getQuestionData(courseName, row.questionid)
-        questionStats.questions[row.questionid].section = qData.section
-
-        questionStats.questions[row.questionid].total += 1
-        if (row.correct === boolTrue) {
-            questionStats.questions[row.questionid].correct += 1
-            sessionInfo[row.sessionid]['correct'] += 1
-        } else {
-            questionStats.questions[row.questionid].incorrect += 1
-            sessionInfo[row.sessionid]['incorrect'] += 1
-        }
-    })
-
-    // get the section for display on the coursepage datatable ...
-    questionList.forEach((questionid, qid) => {
-        if ( questionStats.questions[questionid].section === null ||  questionStats.questions[questionid].section === undefined ) {
-            const qData = getQuestionData(courseName, questionid)
-            questionStats.questions[questionid].section = qData.section
-        }
-    });
-
-    questionStats.answered = answered.length;
-    questionStats.unanswered = unanswered.length;
-    questionStats.sessionids = sessionIDs;
-
-    sessionIDs.forEach(sessionID => {
-        console.log(sessionID);
-        rows = db.prepare(
-            `SELECT * FROM sessions WHERE sessionid='${sessionID}'`
-        ).all()
-        const thisSessionData = rows[0]
-        //let thisSessionQuestionIds = []
-        //let thisTotalQuestions = 1
-        if ( thisSessionData !== undefined ) {
-            const thisSessionQuestionIds = JSON.parse(thisSessionData.qidsjson)
-            const thisTotalQuestions = thisSessionQuestionIds.length
-            sessionInfo[sessionID].date = thisSessionData.started
-            sessionInfo[sessionID].total = thisTotalQuestions
-            sessionInfo[sessionID].score = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
-            sessionInfo[sessionID].y = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
-            sessionInfo[sessionID].value = (sessionInfo[sessionID].correct / thisTotalQuestions) * 100
-        } else {
-            delete sessionInfo[sessionID]
-        }
-    })
-
-    console.log(sessionInfo)
-    console.log(Object.values(sessionInfo))
-    questionStats.score_history = Object.values(sessionInfo)
-    questionStats.session_info = sessionInfo
-
-    resultsCache[cacheKey] = questionStats
-    return res.json(questionStats)
-
-
+    const stats = getCourseStatistics(courseName)
+    return res.json(stats)
 });
+
 
 /*****************************************************
  * API: post session answer

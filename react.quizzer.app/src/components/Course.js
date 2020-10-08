@@ -112,6 +112,7 @@ function CoursePage() {
     const [searchTextTmp, setSearchTextTmp] = useState(null);
     const [filteredRows, setFilteredRows] = useState(null);
     const [cachedStats, setCachedStats] = useState(null);
+    const [filteredBy, setFilteredBy] = useState(null); 
     const history = useHistory();
 
     const chartMargin = {top: 20, right: 20, bottom: 30, left: 40};
@@ -186,8 +187,40 @@ function CoursePage() {
         };
     }, [courseName]);
 
+    // filter the table rows by status
+    useEffect(() => {
+
+        let startList;
+        if ( searchText === null || searchText === "") {
+            startList = [...allTableData];
+        } else {
+            startList = [...tableData];
+        }
+
+        if ( filteredBy !== null) {
+            let newTableData = startList.filter(function(row, index, arr) {
+                console.log(row);
+                if (filteredBy === 'incorrect' && row.incorrect >= 1) {
+                    return true;
+                }
+                if (filteredBy === 'unanswered' && row.total === 0) {
+                    return true;
+                }
+                return false;
+            });
+            setTableData(newTableData);
+        } else {
+            setTableData(startList);
+        }
+
+    }, [filteredBy]);
+
     // filter the table rows if user types in the search box
     useEffect(() => {
+   
+        // clear other filters first ...
+        setFilteredBy(null);
+
         let startList;
         if ( searchText === null || searchText === "") {
             startList = [...allTableData];
@@ -222,8 +255,25 @@ function CoursePage() {
     };
 
     const startFilteredQuiz = () => {
-        const quizUrl = '/courses/' + courseName + '/quiz' + '?' + 'search_section=' + searchText;
+        let quizUrl = '/courses/' + courseName + '/quiz' + '?';
+        if ( filteredBy === null ) {
+            quizUrl = quizUrl + 'search_section=' + searchText;
+        } else {
+            if ( filteredBy === 'incorrect' ) {
+                quizUrl = quizUrl + 'incorrect=1';
+            } else {
+                quizUrl = quizUrl + 'unanswered=1';
+            }
+        }
         history.push(quizUrl)
+    };
+
+    const filterByUnanswered = () => {
+        setFilteredBy('unanswered');
+    };
+
+    const filterByIncorrect = () => {
+        setFilteredBy('incorrect');
     };
 
     const startPA = () => {
@@ -267,6 +317,8 @@ function CoursePage() {
                     />
                     </span>
                     <span style={{ padding: '10px 10px 10px 10px' }}>
+                    <Button style={{ margin: '10px', padding: '10px 10px 10px 10px' }} onClick={filterByUnanswered}>filterby:unanswered</Button>
+                    <Button style={{ margin: '10px', padding: '10px 10px 10px 10px' }} onClick={filterByIncorrect}>filterby:incorrect</Button>
                     <Button style={{ margin: '10px', padding: '10px 10px 10px 10px' }} onClick={startFilteredQuiz}>quiz</Button>
                     </span>
                 </span>
