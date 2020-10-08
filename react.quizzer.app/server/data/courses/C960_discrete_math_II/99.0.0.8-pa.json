@@ -1,10 +1,10 @@
 {
   "answer": "empty set",
   "choices": [
-    "empty set",
-    "empty set",
-    "empty set",
-    "empty set"
+    "image0",
+    "image1",
+    "image2",
+    "image3"
   ],
   "correct_choice_index": 2,
   "enabled": true,
