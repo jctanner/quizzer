@@ -40,9 +40,12 @@ function QuestionChoices(props) {
     const courseName = props.courseName;
     const questionData = props.questionData;
     const showImages = props.showImages;
+    const isSelected = props.isSelected;
     const userSelection = props.userSelection;
     const currentSelection = props.currentSelection;
     const handleSelect = props.handleSelect;
+    const handleOnChange = props.handleOnChange;
+    const isChecked = props.isChecked;
 
     const getChoiceImageUrl = (index) => {
         let imgurl = null;
@@ -67,6 +70,13 @@ function QuestionChoices(props) {
         return dtype;
     }
 
+    /*
+    const isChecked = (index,choice) => {
+        console.log('isChecked', choice, '===', currentSelection);
+        return false;
+    }
+    */
+
     const hasChoiceImages = getChoiceImageUrl(0);
 
     return (
@@ -77,8 +87,8 @@ function QuestionChoices(props) {
                 { questionData.choices.map((choice, index) => (
                     <>
                         <input 
-                            onChange={ handleSelect }
-                            checked={ choice === currentSelection || choice === userSelection }
+                            onChange={ handleOnChange }
+                            checked={ isSelected(choice) }
                             type="radio"
                             value={ choice }
                             key={ index }
@@ -162,6 +172,7 @@ function QuestionDiv(props) {
     const courseName = props.courseName;
     const questionID = props.questionID;
     let questionData = props.questionData;
+    const isSelected = props.isSelected;
     const handleSelect = props.handleSelect;
     const handleOnChange = props.handleOnChange;
     let answerHidden = props.answerHidden;
@@ -237,6 +248,8 @@ function QuestionDiv(props) {
                     courseName={ courseName }
                     questionData={ questionData }
                     showImages={ showImages }
+                    isSelected={ isSelected }
+                    handleOnChange={ props.handleOnChange }
                     handleSelect={ props.handleSelect }
                     currentSelection={ props.currentSelection }
                     userSelection={ props.userSelection }
@@ -285,6 +298,11 @@ function QuestionPage() {
     const questionApiUrl = '/api/courses/' + courseName + '/questions/' + questionId;
     const history = useHistory();
 
+    const isSelected = (value) => {
+        console.log('isSelected?', value, ' === ', userChoice);
+        return (value === userChoice);
+    }
+
     const handlePrevious = (e) => {
         setIsChecked(false);
         setIsCorrect(false)
@@ -313,6 +331,7 @@ function QuestionPage() {
     const handleSelect = (e) => {
         //console.log(e);
         //console.log('selected Zvalue', e.currentTarget.value);
+        console.log('seetting selection to', e.currentTarget.value);
         setUserChoice(e.currentTarget.value);
     };
 
@@ -371,6 +390,7 @@ function QuestionPage() {
             showImages={ showImages }
             toggleImages={ toggleImages }
             showCheckButton={ true }
+            isSelected={ isSelected }
             isChecked={ isChecked }
             isCorrect={ isCorrect }
             handleCheck={ handleCheck }
@@ -392,6 +412,12 @@ export const InlineQuestion = (props) => {
     const questionID = props.questionID;
     const questionApiUrl = '/api/courses/' + courseName + '/questions/' + questionID;
     //console.log(questionApiUrl)
+
+    const isSelected = (value) => {
+        console.log('isSelected?', value, ' === ', props.userSelection);
+        console.log('isSelected?', value, ' === ', props.currentSelection);
+        return (value === props.currentSelection);
+    }
 
     const toggleAnswer = (e) => {
         if ( answerHidden === true ) {
@@ -449,6 +475,7 @@ export const InlineQuestion = (props) => {
             toggleAnswer={ toggleAnswer }
             userChoice={ props.userChoice }
             userSelection={ props.userSelection }
+            isSelected={ isSelected }
             currentSelection={ props.currentSelection }
             showPreviousNext={ false }
             showImages={ showImages }
