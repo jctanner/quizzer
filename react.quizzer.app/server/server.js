@@ -415,7 +415,14 @@ app.get('/api/quiz/:courseName', async function (req, res) {
 
         if (byIncorrect !== undefined) {
             let filtered = questionList.filter(function(qid, indx, arr){
-                if (stats.questions[qid].incorrect > 0) {
+                const total = stats.questions[qid].total
+                const incorrect = stats.questions[qid].incorrect
+                let raverage = 1
+                if ( incorrect >= 1) {
+                    raverage = 1 - (incorrect / total)
+                }
+
+                if (stats.questions[qid].incorrect > 0 && average < .90 ) {
                     return true
                 }
                 return false

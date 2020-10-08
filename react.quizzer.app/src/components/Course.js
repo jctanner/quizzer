@@ -200,7 +200,11 @@ function CoursePage() {
         if ( filteredBy !== null) {
             let newTableData = startList.filter(function(row, index, arr) {
                 console.log(row);
-                if (filteredBy === 'incorrect' && row.incorrect >= 1) {
+                let raverage = 1
+                if ( row.incorrect >= 1) {
+                    raverage = 1 - (row.incorrect / row.total)
+                }
+                if (filteredBy === 'incorrect' && raverage < .90) {
                     return true;
                 }
                 if (filteredBy === 'unanswered' && row.total === 0) {
